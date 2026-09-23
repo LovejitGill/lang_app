@@ -6,7 +6,14 @@ SpeakWell is a proposed voice-based language-learning application designed to he
 
 **English is the initial proof of concept (PoC).** It will be used to develop and validate the core speaking and feedback experience before adding other languages. The broader product is a multilingual language tutor; support for additional languages has not yet been implemented or validated.
 
-**Project status: Proposal stage.** This README describes the intended application. Application code, installation commands, and a demo are not yet available. Features below are planned, not implemented or tested.
+**Project status: Recorded-turn voice input implemented (Milestones 0–5).** Record a short English message, transcribe it locally, review/edit the text, then send it through the existing tutor and SQLite history. Typed input remains available. See [recorded voice setup and verification](docs/recorded_voice.md); live turn detection, spoken replies, and pronunciation assessment remain planned. Model feedback is still inaccurate in observed cases.
+
+**Milestone 6:** Testing and evaluation completed with documented failures in
+feedback quality, recall, and response time. See [evaluation evidence](docs/evaluation.md).
+
+**Milestone 7:** Freeze preparation is verified; the user will create the commit
+and `mvp-v1` tag. See [checkpoint and recovery instructions](docs/mvp_freeze.md).
+A checkpoint will preserve known limitations, not mark feedback quality or the two-second target as passed.
 
 ## Why SpeakWell?
 
@@ -104,7 +111,11 @@ See [Streamlit audio input](https://docs.streamlit.io/develop/api-reference/widg
 
 ## Running the App
 
-**There is no runnable release yet.** Exact setup instructions will be added after the application has been implemented and verified.
+Follow [Environment Setup](docs/environment_setup.md), then the [Streamlit launch and verification guide](docs/streamlit_ui.md). The working UI is text-only; the voice workflow elsewhere in this README remains the planned product vision. The [terminal LLM component](docs/llm_call.md) remains available independently.
+
+For structured language feedback, add `--tutor` and a learner sentence. See
+[Tutoring Prompt Design](docs/tutoring_prompt.md) for the full command guide and
+[live evaluation results](docs/tutoring_evaluation.md) for the current limitations.
 
 The application will run locally instead of in Google Colab. The proposed local setup includes:
 
@@ -166,6 +177,14 @@ Each additional language will be tested across transcription, conversation, spok
 ## Development Roadmap
 
 - [x] Define the project concept, learner tiers, and proposal.
+- [x] Set up and verify the local Python/Ollama environment (Milestone 0).
+- [x] Call the local LLM from Python with one prompt, basic error handling, and offline tests (Milestone 1).
+- [x] Add level/scenario tutoring prompts, validated reply/feedback JSON, and live text evaluations (Milestone 2).
+- [x] Save completed turns in SQLite and reload bounded context for the same session (Milestone 3).
+- [x] Build the text-first Streamlit UI with settings, transcript, feedback, counter, and saved-session refresh recovery (Milestone 4).
+- [x] Add local recorded-turn transcription and editable transcript review (Milestone 5); personal microphone/voice validation remains a manual checkpoint.
+- [x] Complete the testing/error-handling/evaluation pass with known quality failures and measured timings (Milestone 6).
+- [ ] Create local `mvp-v1` commit/tag after freeze verification (Milestone 7; user-managed Git step).
 - [ ] Validate model memory usage and inference speed on the chosen runtime.
 - [ ] Validate the proposed Streamlit component and Pipecat audio connection, including UI reruns and session cleanup.
 - [ ] Implement microphone input, pause detection, and speech transcription.
@@ -189,7 +208,27 @@ The initial success criterion is completing a short spoken practice session in e
 - Time from the end of learner speech to the beginning of the tutor’s spoken reply.
 - Handling of silence, unclear recordings, and unavailable compute resources.
 
-No evaluation results are available at the proposal stage.
+### Milestone 6 evaluation (2026-09-22)
+
+96 automated tests and Ruff checks pass. Shared error codes now distinguish
+unavailable Ollama, invalid tutor output, speech errors, and storage failures;
+tested failures preserve drafts and do not save failed turns.
+
+| Live text input | Feedback rating (1–3) | Observed result |
+|---|---:|---|
+| Yesterday I go to the store. | 3 | Correct go → went |
+| I enjoy hiking with my friends. | 1 | False correction to valid hiking |
+| My brother work in a bank. | 3 | Correct work → works |
+| I usually hike on Saturdays. | 1 | False correction to hikes |
+| Where does my brother work? | 1 | False pronoun correction; failed recall |
+
+These are assistant qualitative ratings, pending learner/instructor review.
+All five turns completed, but **feedback quality remains a failed gate**.
+Text Send-to-render median was **4.061 s**; five repeated recorded-audio
+processing turns had median **5.572 s**, excluding capture, human review, and
+spoken output. The two-second target is unmet. See [Milestone 6 evidence and
+verification commands](docs/evaluation.md) for test coverage, exact responses,
+timing boundaries, and exercises; these small samples are not a general benchmark.
 
 ## Project Context
 

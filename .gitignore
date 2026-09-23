@@ -1,0 +1,26 @@
+# Local environments, installers, model weights, and caches
+.venv/
+.cache/
+.tools/
+.models/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Private runtime data and configuration
+.env
+.env.*
+!.env.example
+data/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.log

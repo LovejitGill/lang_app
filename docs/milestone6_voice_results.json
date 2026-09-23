@@ -1,0 +1,98 @@
+{
+  "timestamp_utc": "2026-09-23T01:22:29.776206+00:00",
+  "model": "qwen3:1.7b",
+  "timing_scope": "Completed WAV through STT, immediate Send, LLM, SQLite and rendered reply; excludes capture/human review/TTS",
+  "context": "Five sequential beginner/daily-activities turns; model loading state uncontrolled",
+  "saved_turns": 5,
+  "rerun_no_duplicate": true,
+  "median_seconds": 5.572,
+  "max_seconds": 7.844,
+  "cases": [
+    {
+      "case": "audio_repeat_1",
+      "input": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+      "expected": "Review transcription and feedback; repeated clip is a timing probe, not diverse accuracy evidence.",
+      "seconds": 7.844,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+        "tutor_reply": "Tell me about a time when you helped your country. You can begin: 'I think...'",
+        "feedback": [
+          "Change 'asked not what your country can do for you' to 'asked not what your country can do for you'. Use 'can' with 'your country' in the present tense."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "audio_repeat_2",
+      "input": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+      "expected": "Review transcription and feedback; repeated clip is a timing probe, not diverse accuracy evidence.",
+      "seconds": 5.382,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+        "tutor_reply": "Tell me about a time when you helped your country. You can begin: 'I think...'",
+        "feedback": [
+          "Change 'your' to 'my' for consistency. 'I think...' is a good start for your story."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "audio_repeat_3",
+      "input": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+      "expected": "Review transcription and feedback; repeated clip is a timing probe, not diverse accuracy evidence.",
+      "seconds": 5.572,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+        "tutor_reply": "Tell me about a time when you helped your country. You can begin: 'I think...'",
+        "feedback": [
+          "Change 'your country' to 'your country' (correct). Use 'your' with 'country' in this context."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "audio_repeat_4",
+      "input": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+      "expected": "Review transcription and feedback; repeated clip is a timing probe, not diverse accuracy evidence.",
+      "seconds": 5.551,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+        "tutor_reply": "Tell me about a time when you helped your country. You can begin: 'I think...'",
+        "feedback": [
+          "Change 'your country' to 'your country' (correct). Use 'your' with 'country' in this context."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "audio_repeat_5",
+      "input": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+      "expected": "Review transcription and feedback; repeated clip is a timing probe, not diverse accuracy evidence.",
+      "seconds": 5.702,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "And so my fellow Americans asked not what your country can do for you, asked what you can do for your country.",
+        "tutor_reply": "Tell me about a time when you helped your country. You can begin: 'I think...'",
+        "feedback": [
+          "Change 'your country' to 'your country' (correct). Use 'your' with 'country' in this context."
+        ],
+        "saved": true
+      }
+    }
+  ],
+  "fixture": "Public Whisper tests/jfk.flac, converted to 11-second PCM16 mono 16kHz WAV; repeated five times, not five speakers"
+}
