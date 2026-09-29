@@ -318,3 +318,49 @@ tests in 13.82 seconds. This verifies source/environment isolation, not a fresh
 internet bootstrap or new-machine model inference. No commit, tag, or push was
 created. Per the user's preference, all Git changes are user-managed; follow
 the freeze guide to finish the checkpoint. Optional enhancements remain pending.
+
+## Milestone 2 — Tutoring Prompt Design (text-only, no UI)
+
+### Focused evaluation improvement — 2026-09-24
+
+Implemented the balanced evaluation workflow: 20 development cases and 20
+held-out cases, each with 10 acceptable and 10 erroneous inputs; six historical
+failures stay separate. Both main sets cover all levels and scenarios. Labels
+were authored/reviewed by the assistant; independent human review is pending.
+
+The opt-in evaluator uses the existing parser and retry path, excludes labels
+from model messages, leaves learner history untouched, and records model digest,
+settings, prompt/dataset hashes, exact output, timing, and retry count. Frozen
+template snapshots, raw results, separate semantic review, and the selection
+decision are retained under `evaluation/`. 101 software tests and Ruff pass.
+
+**Observed result:** The baseline falsely corrected 10/10 acceptable development
+inputs; it supplied useful, accurately explained corrections on 6/10 erroneous
+inputs. The shorter conservative candidate produced no feedback on all 20
+inputs—zero false corrections in the feedback array, but zero explicit useful
+corrections. Conversation quality also regressed. Median measured call times
+were 5.299 s and 3.267 s respectively; reduced output does not establish a useful
+latency improvement. All 40 development calls parsed without retry.
+
+**Decision:** Candidate rejected; app default unchanged. No candidate qualified
+for held-out validation, so the held-out set and repeated-run acceptance gate
+remain unused. This is an unsuccessful prompt experiment with improved evaluation
+infrastructure, **not a fix for inaccurate feedback**. The historical regression
+check reproduced baseline false corrections and candidate missed corrections.
+See [results and rationale](docs/feedback_quality.md).
+
+| Priority | Remaining limitation | Next bounded experiment | Verification |
+|---|---|---|---|
+| 1 | Baseline overcorrects; conservative instructions suppress all feedback | Compare one further development-only approach that separates deciding whether an error exists from phrasing the correction; preserve current outputs as controls | Count both false corrections and useful explained corrections; reject always-empty output and silent rewrites |
+| 1 | Model capability may limit improvement | If further controlled prompting fails, evaluate one alternative local model with measured CPU cost rather than accumulating rules per sentence | Same development labels/settings where applicable; no model switch without a recorded quality/latency comparison |
+| 1 | Labels and semantic scores have only assistant review | Learner/instructor independently reviews ambiguous labels and output judgments before relying on the acceptance gate | Identify reviewer and disagreements; version changed datasets and never relabel cases just to improve a score |
+| 2 | Conversation replies may contain misleading advice despite empty feedback | Continue scoring reply grammar, grounding, and elaboration independently | Check false suggestions in the reply as well as the feedback field |
+| 2 | Held-out gates not reached | Reserve held-out cases until a development-selected candidate exists, then run twice without further tuning | Zero invented corrections on 10 correct inputs and at least 9/10 useful explained corrections in each run; retain failures |
+| 2 | Single-run timings, no voice/UI cost, uncontrolled model loading | Repeat stage timing only for an acceptable candidate, including cold/warm conditions and full pipeline separately | Report median, tails, retries, and output quality together; no two-second claim from this experiment |
+
+### Learning checkpoint
+
+Review five cases yourself and compare replacement, explanation, preserved
+meaning, reply grammar and follow-up usefulness. Explain why a candidate that
+never corrects anything can have zero false corrections and still fail as a tutor.
+Git operations remain user-managed; no commit, tag, or push was performed.

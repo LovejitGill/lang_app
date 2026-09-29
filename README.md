@@ -210,6 +210,14 @@ The initial success criterion is completing a short spoken practice session in e
 
 ### Milestone 6 evaluation (2026-09-22)
 
+**Focused follow-up (2026-09-24):** Added balanced development/held-out datasets
+and an opt-in prompt comparator. On 20 development inputs, the baseline falsely
+corrected all 10 valid sentences; a shorter conservative prompt left them alone
+but missed explicit feedback on all 10 erroneous sentences. The candidate was
+rejected and the application default retained. The 20 held-out cases remain
+reserved for a candidate selected on development results. [Experiment and
+verification guide](docs/feedback_quality.md). The expanded suite has 101 tests.
+
 96 automated tests and Ruff checks pass. Shared error codes now distinguish
 unavailable Ollama, invalid tutor output, speech errors, and storage failures;
 tested failures preserve drafts and do not save failed turns.

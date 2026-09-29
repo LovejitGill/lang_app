@@ -1,0 +1,865 @@
+{
+  "started_utc": "2026-09-24T23:52:02.012235+00:00",
+  "split": "development",
+  "dataset_sha256": "df92e649a2efd5ef1c6c52b197cfce57269d0e88f0b8992343c26e10b8dea49c",
+  "model": {
+    "name": "qwen3:1.7b",
+    "model": "qwen3:1.7b",
+    "modified_at": "2026-09-22T19:32:46.067236479-04:00",
+    "size": 1359293444,
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 40960,
+      "embedding_length": 2048
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "settings": {
+    "think": false,
+    "temperature": 0.2,
+    "num_predict": 256,
+    "num_ctx": 4096,
+    "history": "none; independent cases",
+    "timing": "LLM/parser/retry only; no STT/UI",
+    "seed": "unset; variation possible",
+    "order": "variant order alternates by case"
+  },
+  "rows": [
+    {
+      "id": "development-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I live near the station.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a place you like near the station. You can begin: 'I like...'",
+        "feedback": [
+          "Change 'I live near the station' to 'I live near the station'\u2014it's already correct. Use simple language and invite just two short sentences."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 14.856,
+      "run": 1
+    },
+    {
+      "id": "development-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I live near the station.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "Great to hear that! Living near the station makes it easy to get around.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 4.248,
+      "run": 1
+    },
+    {
+      "id": "development-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "She walk to work every morning.",
+      "expected_error": true,
+      "expected_issue": "walk \u2192 walks; third-person singular present",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "She walks to work every morning.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.481,
+      "run": 1
+    },
+    {
+      "id": "development-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "She walk to work every morning.",
+      "expected_error": true,
+      "expected_issue": "walk \u2192 walks; third-person singular present",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a morning walk you enjoyed. You can begin: 'I go for a walk...'",
+        "feedback": [
+          "Change 'walk' to 'walks'. Use 'walks' with 'she' in the present tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.677,
+      "run": 1
+    },
+    {
+      "id": "development-03",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "Could we have separate bills, please?",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "27f59cef6cf2e715068ae83ed4a7bf4c6f3478692c1abe7a1731bcd874108526",
+      "prompt_characters": 3275,
+      "review": null,
+      "result": {
+        "reply": "Of course. Tell me about a time when you wanted separate bills and why it was important to you.",
+        "feedback": [
+          "Change 'please' to 'would you like' for natural phrasing. Use would you like instead of please."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 9.885,
+      "run": 1
+    },
+    {
+      "id": "development-03",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "Could we have separate bills, please?",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "8c1709508befb4239d5662a5690452633a94b0b8eb17bbdfce440548115c1024",
+      "prompt_characters": 1449,
+      "review": null,
+      "result": {
+        "reply": "Sure, we can have separate bills. Let me check the details.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 4.111,
+      "run": 1
+    },
+    {
+      "id": "development-04",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "I would like two sandwich, please.",
+      "expected_error": true,
+      "expected_issue": "sandwich \u2192 sandwiches; plural after two",
+      "variant": "conservative",
+      "prompt_sha256": "8c1709508befb4239d5662a5690452633a94b0b8eb17bbdfce440548115c1024",
+      "prompt_characters": 1449,
+      "review": null,
+      "result": {
+        "reply": "Sure, I'll get you two sandwiches. Enjoy your meal!",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.016,
+      "run": 1
+    },
+    {
+      "id": "development-04",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "I would like two sandwich, please.",
+      "expected_error": true,
+      "expected_issue": "sandwich \u2192 sandwiches; plural after two",
+      "variant": "baseline",
+      "prompt_sha256": "27f59cef6cf2e715068ae83ed4a7bf4c6f3478692c1abe7a1731bcd874108526",
+      "prompt_characters": 3275,
+      "review": null,
+      "result": {
+        "reply": "Of course. Tell me about a time you wanted two sandwiches and how you got them.",
+        "feedback": [
+          "Change 'two sandwich' to 'two sandwiches'. Use plural for plural nouns."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.133,
+      "run": 1
+    },
+    {
+      "id": "development-05",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "My sister and I cycle to work.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "d2f9d8c05cfb099ad0ce03ce2f657d28eceeb341a1821fe9589212cac69d7697",
+      "prompt_characters": 3281,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time when you both enjoyed cycling to work.",
+        "feedback": [
+          "Change 'cycle' to 'cycles'. Use plural form as it refers to both you and your sister."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 10.126,
+      "run": 1
+    },
+    {
+      "id": "development-05",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "My sister and I cycle to work.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "64451c8ad25ff64f01092815dfb2e438b8c434bc319e85162dcc69ffb25b7717",
+      "prompt_characters": 1455,
+      "review": null,
+      "result": {
+        "reply": "That's a great habit! Cycling to work is both healthy and environmentally friendly.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 4.878,
+      "run": 1
+    },
+    {
+      "id": "development-06",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I am engineer.",
+      "expected_error": true,
+      "expected_issue": "am engineer \u2192 am an engineer; article before singular count profession",
+      "variant": "conservative",
+      "prompt_sha256": "64451c8ad25ff64f01092815dfb2e438b8c434bc319e85162dcc69ffb25b7717",
+      "prompt_characters": 1455,
+      "review": null,
+      "result": {
+        "reply": "As an engineer, I focus on problem-solving and innovation in daily routines.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.76,
+      "run": 1
+    },
+    {
+      "id": "development-06",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I am engineer.",
+      "expected_error": true,
+      "expected_issue": "am engineer \u2192 am an engineer; article before singular count profession",
+      "variant": "baseline",
+      "prompt_sha256": "d2f9d8c05cfb099ad0ce03ce2f657d28eceeb341a1821fe9589212cac69d7697",
+      "prompt_characters": 3281,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a day you spent working on a complex project. You can begin: 'I spent the day...'",
+        "feedback": [
+          "Change 'I am engineer' to 'I am an engineer'. Use 'an' before a vowel sound."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.932,
+      "run": 1
+    },
+    {
+      "id": "development-07",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "I have been a teacher for six years.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "2faa156461656ddead776bc5b61e60dab779c98b50d6926a65a65603448597f2",
+      "prompt_characters": 3274,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you helped a student. You can begin: 'I helped...'",
+        "feedback": [
+          "Change 'have been' to 'have been teaching'. Use is with have in the present perfect tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 11.748,
+      "run": 1
+    },
+    {
+      "id": "development-07",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "I have been a teacher for six years.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "3758709f0fb299882fa41f52df4259b8e0075ed6c78e2358cb721f6c5c42bea1",
+      "prompt_characters": 1448,
+      "review": null,
+      "result": {
+        "reply": "Thank you for being a great teacher! You've made a difference in so many students' lives.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 5.297,
+      "run": 1
+    },
+    {
+      "id": "development-08",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "expected_error": true,
+      "expected_issue": "buy \u2192 bought; completed past event",
+      "variant": "conservative",
+      "prompt_sha256": "3758709f0fb299882fa41f52df4259b8e0075ed6c78e2358cb721f6c5c42bea1",
+      "prompt_characters": 1448,
+      "review": null,
+      "result": {
+        "reply": "I see you bought a postcard from the museum. Enjoy your souvenir!",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.174,
+      "run": 1
+    },
+    {
+      "id": "development-08",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "expected_error": true,
+      "expected_issue": "buy \u2192 bought; completed past event",
+      "variant": "baseline",
+      "prompt_sha256": "2faa156461656ddead776bc5b61e60dab779c98b50d6926a65a65603448597f2",
+      "prompt_characters": 3274,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a place you visited and what you liked best.",
+        "feedback": [
+          "Change 'buy' to 'bought'. Use 'bought' with 'we' in the past tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.135,
+      "run": 1
+    },
+    {
+      "id": "development-09",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "There is some rice left.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "c5fedd574eb7fff53c15bb78e90b910384cf46093c1a7bc20c65ed08978a48c1",
+      "prompt_characters": 3275,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a meal you'd like to try with the rice.",
+        "feedback": [
+          "Use 'with' instead of 'and' for better flow."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 10.027,
+      "run": 1
+    },
+    {
+      "id": "development-09",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "There is some rice left.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "2f14d6f71533bcc18bffecb7ef55a5ec60a4061fd1748d7d9009348cd2617d69",
+      "prompt_characters": 1449,
+      "review": null,
+      "result": {
+        "reply": "I'd like to order a chicken curry with rice, please.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 4.544,
+      "run": 1
+    },
+    {
+      "id": "development-10",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "expected_error": true,
+      "expected_issue": "more cheaper \u2192 cheaper; no double comparative",
+      "variant": "conservative",
+      "prompt_sha256": "2f14d6f71533bcc18bffecb7ef55a5ec60a4061fd1748d7d9009348cd2617d69",
+      "prompt_characters": 1449,
+      "review": null,
+      "result": {
+        "reply": "I'd enjoy a classic steak sandwich, it's a great choice for a quick meal. Let me know if you'd like any sides or drinks.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 3.341,
+      "run": 1
+    },
+    {
+      "id": "development-10",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "expected_error": true,
+      "expected_issue": "more cheaper \u2192 cheaper; no double comparative",
+      "variant": "baseline",
+      "prompt_sha256": "c5fedd574eb7fff53c15bb78e90b910384cf46093c1a7bc20c65ed08978a48c1",
+      "prompt_characters": 3275,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a meal you would enjoy and what makes it special to you.",
+        "feedback": [
+          "Change 'more cheaper' to 'more cheap'. Use 'more' with the comparative adjective 'cheap'."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.242,
+      "run": 1
+    },
+    {
+      "id": "development-11",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I would rather stay home tonight.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "f8aa7e7280103075ef6ffa6ee6f4ee9bf70a6a6c5a6d21ae1e290845bd1e59ec",
+      "prompt_characters": 3298,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you chose to stay home instead of going out. What made it enjoyable?",
+        "feedback": [
+          "Change 'I would rather' to 'I would rather stay'. Use would rather with stay in the base form."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 10.092,
+      "run": 1
+    },
+    {
+      "id": "development-11",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I would rather stay home tonight.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "7734ca1c8d05f909f00dcc0c3801dadb7f080da8ebfb32f9654a4e551f261aa1",
+      "prompt_characters": 1472,
+      "review": null,
+      "result": {
+        "reply": "I understand, staying home is a great choice. It allows everyone to relax and enjoy some quiet time.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 5.472,
+      "run": 1
+    },
+    {
+      "id": "development-12",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I have lived here since five years.",
+      "expected_error": true,
+      "expected_issue": "since \u2192 for; duration rather than starting point",
+      "variant": "conservative",
+      "prompt_sha256": "7734ca1c8d05f909f00dcc0c3801dadb7f080da8ebfb32f9654a4e551f261aa1",
+      "prompt_characters": 1472,
+      "review": null,
+      "result": {
+        "reply": "It's great to hear you've been living here for five years! You've definitely made a home here.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.695,
+      "run": 1
+    },
+    {
+      "id": "development-12",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I have lived here since five years.",
+      "expected_error": true,
+      "expected_issue": "since \u2192 for; duration rather than starting point",
+      "variant": "baseline",
+      "prompt_sha256": "f8aa7e7280103075ef6ffa6ee6f4ee9bf70a6a6c5a6d21ae1e290845bd1e59ec",
+      "prompt_characters": 3298,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a place you've lived in and what made it special to you.",
+        "feedback": [
+          "Change 'since five years' to 'for five years'. Use 'for' with years in the present tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.547,
+      "run": 1
+    },
+    {
+      "id": "development-13",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "I look forward to meeting you.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "b8fba59ef35217d9d60594a587111baa23509e3f6cbabf90bda04f5771f1db1f",
+      "prompt_characters": 3284,
+      "review": null,
+      "result": {
+        "reply": "What's a fun activity you do in your free time?",
+        "feedback": [
+          "Use 'do' instead of 'look forward to'. 'Look forward to' is a different phrase."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 11.026,
+      "run": 1
+    },
+    {
+      "id": "development-13",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "I look forward to meeting you.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "ed163d27eaf622d7464ef07af1f94ef7a0ebeb2d0b15b866d761fe5bd52bfd83",
+      "prompt_characters": 1458,
+      "review": null,
+      "result": {
+        "reply": "Great to hear that! Let me introduce myself. My name is Alex. In my free time, I like reading books.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 6.084,
+      "run": 1
+    },
+    {
+      "id": "development-14",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "He can speaks Spanish.",
+      "expected_error": true,
+      "expected_issue": "speaks \u2192 speak; base verb after modal",
+      "variant": "conservative",
+      "prompt_sha256": "ed163d27eaf622d7464ef07af1f94ef7a0ebeb2d0b15b866d761fe5bd52bfd83",
+      "prompt_characters": 1458,
+      "review": null,
+      "result": {
+        "reply": "He can speak Spanish.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.389,
+      "run": 1
+    },
+    {
+      "id": "development-14",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "He can speaks Spanish.",
+      "expected_error": true,
+      "expected_issue": "speaks \u2192 speak; base verb after modal",
+      "variant": "baseline",
+      "prompt_sha256": "b8fba59ef35217d9d60594a587111baa23509e3f6cbabf90bda04f5771f1db1f",
+      "prompt_characters": 3284,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you spoke Spanish and what made it fun.",
+        "feedback": [
+          "Change 'He can speaks' to 'He can speak'. Use 'speak' with 'he' in the present tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.775,
+      "run": 1
+    },
+    {
+      "id": "development-15",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "Neither option appeals to me.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "b84ba46605e1df17ad5cfe7a971038b57936b6c3e30b601ebf1a1d78f11ba2ab",
+      "prompt_characters": 3267,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time when you had to make a tough decision.",
+        "feedback": [
+          "Change 'Neither option appeals to me' to 'Neither option appeals to me.' Use 'neither' with 'option' in this context."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 12.469,
+      "run": 1
+    },
+    {
+      "id": "development-15",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "Neither option appeals to me.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "8c3f5569bccb01850336544dddd8fd985b634aa29ba8d7195ab57e41e29caa57",
+      "prompt_characters": 1441,
+      "review": null,
+      "result": {
+        "reply": "I see. Both options don't interest me.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 4.909,
+      "run": 1
+    },
+    {
+      "id": "development-16",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "I am interested on photography.",
+      "expected_error": true,
+      "expected_issue": "interested on \u2192 interested in; standard preposition",
+      "variant": "conservative",
+      "prompt_sha256": "8c3f5569bccb01850336544dddd8fd985b634aa29ba8d7195ab57e41e29caa57",
+      "prompt_characters": 1441,
+      "review": null,
+      "result": {
+        "reply": "That's great! I love photography too. I started when I was a kid because I wanted to capture beautiful moments.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 3.192,
+      "run": 1
+    },
+    {
+      "id": "development-16",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "I am interested on photography.",
+      "expected_error": true,
+      "expected_issue": "interested on \u2192 interested in; standard preposition",
+      "variant": "baseline",
+      "prompt_sha256": "b84ba46605e1df17ad5cfe7a971038b57936b6c3e30b601ebf1a1d78f11ba2ab",
+      "prompt_characters": 3267,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a photo you took that made you feel happy or proud.",
+        "feedback": [
+          "Change 'interested on' to 'interested in'. Use 'interested in' with a noun."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.754,
+      "run": 1
+    },
+    {
+      "id": "development-17",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "The soup tastes delicious.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "09230086e5db02ab152e11d826ffc32f52aaab72fdc606ce146e726c925502a6",
+      "prompt_characters": 3285,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time when the soup brought you joy or made you feel happy.",
+        "feedback": [
+          "Change 'the soup' to 'a soup' for correct grammar. Use 'a' before a noun that comes after a vowel."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 12.544,
+      "run": 1
+    },
+    {
+      "id": "development-17",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "The soup tastes delicious.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "931f25b266ffd552bc853141b1aaaa34c04da4c6b76d65ceb42cd34442b3f670",
+      "prompt_characters": 1459,
+      "review": null,
+      "result": {
+        "reply": "I love the way the soup brings out the flavors of the vegetables.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 5.644,
+      "run": 1
+    },
+    {
+      "id": "development-18",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "There are a bowl on the table.",
+      "expected_error": true,
+      "expected_issue": "are \u2192 is; singular existential subject",
+      "variant": "conservative",
+      "prompt_sha256": "931f25b266ffd552bc853141b1aaaa34c04da4c6b76d65ceb42cd34442b3f670",
+      "prompt_characters": 1459,
+      "review": null,
+      "result": {
+        "reply": "There is a bowl on the table.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.749,
+      "run": 1
+    },
+    {
+      "id": "development-18",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "There are a bowl on the table.",
+      "expected_error": true,
+      "expected_issue": "are \u2192 is; singular existential subject",
+      "variant": "baseline",
+      "prompt_sha256": "09230086e5db02ab152e11d826ffc32f52aaab72fdc606ce146e726c925502a6",
+      "prompt_characters": 3285,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a meal you enjoyed and what made it special to you.",
+        "feedback": [
+          "Change 'a bowl on the table' to 'a bowl on the table' (it's already correct)."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.343,
+      "run": 1
+    },
+    {
+      "id": "development-19",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I used to play chess after school.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you played chess and what made it fun.",
+        "feedback": [
+          "Change 'I used to' to 'I used to play'. Use 'play' with 'used to' in the past tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.9,
+      "run": 1
+    },
+    {
+      "id": "development-19",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I used to play chess after school.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "That's great! You used to play chess after school.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.077,
+      "run": 1
+    },
+    {
+      "id": "development-20",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I did not ordered dessert.",
+      "expected_error": true,
+      "expected_issue": "ordered \u2192 order; base verb after did",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "Oh, I'm sorry to hear that. Did you eat anything else today?",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 2.278,
+      "run": 1
+    },
+    {
+      "id": "development-20",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I did not ordered dessert.",
+      "expected_error": true,
+      "expected_issue": "ordered \u2192 order; base verb after did",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you didn't order dessert. You can begin: 'I didn't order dessert because...'",
+        "feedback": [
+          "Change 'I did not ordered' to 'I did not order'. Use 'order' with 'did not' in the past tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 5.665,
+      "run": 1
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "completed": 20,
+      "correct_inputs_with_feedback": 10,
+      "correct_inputs_completed": 10,
+      "incorrect_inputs_with_feedback": 10,
+      "incorrect_inputs_completed": 10,
+      "median_seconds_all_calls": 5.298500000000001,
+      "max_seconds": 14.856,
+      "retried_cases": 0
+    },
+    "conservative": {
+      "attempted": 20,
+      "completed": 20,
+      "correct_inputs_with_feedback": 0,
+      "correct_inputs_completed": 10,
+      "incorrect_inputs_with_feedback": 0,
+      "incorrect_inputs_completed": 10,
+      "median_seconds_all_calls": 3.2665,
+      "max_seconds": 6.084,
+      "retried_cases": 0
+    }
+  }
+}

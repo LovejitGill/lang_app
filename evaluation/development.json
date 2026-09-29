@@ -1,0 +1,166 @@
+{
+  "version": "1",
+  "review": "Assistant-authored and linguistically reviewed; learner/instructor review pending. Labels are never sent to the model.",
+  "cases": [
+    {
+      "id": "development-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I live near the station.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "She walk to work every morning.",
+      "expected_error": true,
+      "expected_issue": "walk \u2192 walks; third-person singular present"
+    },
+    {
+      "id": "development-03",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "Could we have separate bills, please?",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-04",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "I would like two sandwich, please.",
+      "expected_error": true,
+      "expected_issue": "sandwich \u2192 sandwiches; plural after two"
+    },
+    {
+      "id": "development-05",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "My sister and I cycle to work.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-06",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I am engineer.",
+      "expected_error": true,
+      "expected_issue": "am engineer \u2192 am an engineer; article before singular count profession"
+    },
+    {
+      "id": "development-07",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "I have been a teacher for six years.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-08",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "expected_error": true,
+      "expected_issue": "buy \u2192 bought; completed past event"
+    },
+    {
+      "id": "development-09",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "There is some rice left.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-10",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "expected_error": true,
+      "expected_issue": "more cheaper \u2192 cheaper; no double comparative"
+    },
+    {
+      "id": "development-11",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I would rather stay home tonight.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-12",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I have lived here since five years.",
+      "expected_error": true,
+      "expected_issue": "since \u2192 for; duration rather than starting point"
+    },
+    {
+      "id": "development-13",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "I look forward to meeting you.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-14",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "He can speaks Spanish.",
+      "expected_error": true,
+      "expected_issue": "speaks \u2192 speak; base verb after modal"
+    },
+    {
+      "id": "development-15",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "Neither option appeals to me.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-16",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "I am interested on photography.",
+      "expected_error": true,
+      "expected_issue": "interested on \u2192 interested in; standard preposition"
+    },
+    {
+      "id": "development-17",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "The soup tastes delicious.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-18",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "There are a bowl on the table.",
+      "expected_error": true,
+      "expected_issue": "are \u2192 is; singular existential subject"
+    },
+    {
+      "id": "development-19",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I used to play chess after school.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "development-20",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I did not ordered dessert.",
+      "expected_error": true,
+      "expected_issue": "ordered \u2192 order; base verb after did"
+    }
+  ]
+}

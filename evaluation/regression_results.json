@@ -1,0 +1,305 @@
+{
+  "started_utc": "2026-09-24T23:55:57.615050+00:00",
+  "split": "regression",
+  "dataset_sha256": "9edc0a2daa97f40eb3315627fd8f113d4eecbc738dad8f9ca7b1fad9cec9b2c5",
+  "model": {
+    "name": "qwen3:1.7b",
+    "model": "qwen3:1.7b",
+    "modified_at": "2026-09-22T19:32:46.067236479-04:00",
+    "size": 1359293444,
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 40960,
+      "embedding_length": 2048
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "settings": {
+    "think": false,
+    "temperature": 0.2,
+    "num_predict": 256,
+    "num_ctx": 4096,
+    "history": "none; independent cases",
+    "timing": "LLM/parser/retry only; no STT/UI",
+    "seed": "unset; variation possible",
+    "order": "variant order alternates by case"
+  },
+  "rows": [
+    {
+      "id": "regression-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Yesterday I go to the store.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 went; past tense",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a time you went to the store. You can begin: 'I went to\u2026'",
+        "feedback": [
+          "Change 'go' to 'went'. Use went with past tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 3.944,
+      "run": 1
+    },
+    {
+      "id": "regression-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Yesterday I go to the store.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 went; past tense",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "Yesterday I went to the store.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.514,
+      "run": 1
+    },
+    {
+      "id": "regression-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I enjoy hiking with my friends.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "That's great! Hiking is a fun way to explore nature.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.939,
+      "run": 1
+    },
+    {
+      "id": "regression-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I enjoy hiking with my friends.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a hike you enjoyed and what made it fun.",
+        "feedback": [
+          "Change 'hiking' to 'a hike'. Use a hike as a noun."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 3.598,
+      "run": 1
+    },
+    {
+      "id": "regression-03",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I usually hike on Saturdays.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a hike you enjoyed and what made it fun.",
+        "feedback": [
+          "Change 'hike' to 'hikes'. Use plural form for consistency."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 3.413,
+      "run": 1
+    },
+    {
+      "id": "regression-03",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I usually hike on Saturdays.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "That's great! Hiking on Saturdays is a nice routine. You can add something like 'sometimes' to make it more natural.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 3.044,
+      "run": 1
+    },
+    {
+      "id": "regression-04",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Could I have a cup of tea, please?",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "Sure, I'll get you a cup of tea.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.763,
+      "run": 1
+    },
+    {
+      "id": "regression-04",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Could I have a cup of tea, please?",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Of course. Tell me about a time you enjoyed a cup of tea.",
+        "feedback": [
+          "Change 'could' to 'can'. Use can to ask for something."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.254,
+      "run": 1
+    },
+    {
+      "id": "regression-05",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "My name is Maya.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about your morning, from waking up to starting your day. You can begin: 'First, I\u2026'",
+        "feedback": [
+          "Change 'My name is Maya' to 'Hello, Maya!' for a more natural start."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.588,
+      "run": 1
+    },
+    {
+      "id": "regression-05",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "My name is Maya.",
+      "expected_error": false,
+      "expected_issue": "No correction",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "Hello, Maya! How's your day going?",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.669,
+      "run": 1
+    },
+    {
+      "id": "regression-06",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "He go to school every day.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 goes; third-person singular",
+      "variant": "conservative",
+      "prompt_sha256": "d45c622eb0ab45a42bb17ac2180b09699776eddd31c5bdebe90f439f9dc0afb8",
+      "prompt_characters": 1439,
+      "review": null,
+      "result": {
+        "reply": "He goes to school every day.",
+        "feedback": []
+      },
+      "attempts": 1,
+      "seconds": 1.493,
+      "run": 1
+    },
+    {
+      "id": "regression-06",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "He go to school every day.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 goes; third-person singular",
+      "variant": "baseline",
+      "prompt_sha256": "0dd75c1e6f7ced32d763fc24b8601f13fe06de3e08cda6723c0dbc11798b2e9a",
+      "prompt_characters": 3265,
+      "review": null,
+      "result": {
+        "reply": "Tell me about a school day you find most interesting. You can begin: 'I like when...'",
+        "feedback": [
+          "Change 'He go' to 'He goes'. Use 'goes' with 'he' in the present tense."
+        ]
+      },
+      "attempts": 1,
+      "seconds": 4.744,
+      "run": 1
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "attempted": 6,
+      "completed": 6,
+      "correct_inputs_with_feedback": 4,
+      "correct_inputs_completed": 4,
+      "incorrect_inputs_with_feedback": 2,
+      "incorrect_inputs_completed": 2,
+      "median_seconds_all_calls": 4.099,
+      "max_seconds": 4.744,
+      "retried_cases": 0
+    },
+    "conservative": {
+      "attempted": 6,
+      "completed": 6,
+      "correct_inputs_with_feedback": 0,
+      "correct_inputs_completed": 4,
+      "incorrect_inputs_with_feedback": 0,
+      "incorrect_inputs_completed": 2,
+      "median_seconds_all_calls": 1.716,
+      "max_seconds": 3.044,
+      "retried_cases": 0
+    }
+  }
+}

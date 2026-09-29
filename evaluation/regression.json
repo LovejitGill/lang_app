@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "review": "Previously seen failures, not held out.",
+  "cases": [
+    {
+      "id": "regression-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Yesterday I go to the store.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 went; past tense"
+    },
+    {
+      "id": "regression-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I enjoy hiking with my friends.",
+      "expected_error": false,
+      "expected_issue": "No correction"
+    },
+    {
+      "id": "regression-03",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I usually hike on Saturdays.",
+      "expected_error": false,
+      "expected_issue": "No correction"
+    },
+    {
+      "id": "regression-04",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Could I have a cup of tea, please?",
+      "expected_error": false,
+      "expected_issue": "No correction"
+    },
+    {
+      "id": "regression-05",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "My name is Maya.",
+      "expected_error": false,
+      "expected_issue": "No correction"
+    },
+    {
+      "id": "regression-06",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "He go to school every day.",
+      "expected_error": true,
+      "expected_issue": "go \u2192 goes; third-person singular"
+    }
+  ]
+}

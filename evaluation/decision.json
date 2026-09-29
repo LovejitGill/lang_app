@@ -1,0 +1,10 @@
+{
+  "decided_utc": "2026-09-24T23:56:56.353033+00:00",
+  "selected_candidate": null,
+  "application_default": "baseline",
+  "reason": "Conservative eliminated false corrections but missed all ten target errors; conversation quality also regressed. Baseline remains unreliable; retaining it is not a quality endorsement.",
+  "baseline_useful_corrections": 6,
+  "conservative_useful_corrections": 0,
+  "heldout_status": "Not executed: no development-selected candidate. Do not claim held-out acceptance.",
+  "template_snapshot_sha256": "3eb6ee2ef0d13b8cceda25be9281114e14fc65c99f5407de5f9655082a970a48"
+}

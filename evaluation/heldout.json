@@ -1,0 +1,166 @@
+{
+  "version": "1",
+  "review": "Assistant-authored and linguistically reviewed; learner/instructor review pending. Labels are never sent to the model.",
+  "cases": [
+    {
+      "id": "heldout-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "We take the bus every morning.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "My parents lives in Bristol.",
+      "expected_error": true,
+      "expected_issue": "lives \u2192 live; plural subject"
+    },
+    {
+      "id": "heldout-03",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "May I have some bread with my meal?",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-04",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "I ordered three cup of coffee.",
+      "expected_error": true,
+      "expected_issue": "cup \u2192 cups; plural after three"
+    },
+    {
+      "id": "heldout-05",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I moved here last autumn.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-06",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I have an university degree.",
+      "expected_error": true,
+      "expected_issue": "an \u2192 a; university begins with consonant sound"
+    },
+    {
+      "id": "heldout-07",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "She has already finished her homework.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-08",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "Last night we eat at home.",
+      "expected_error": true,
+      "expected_issue": "eat \u2192 ate; completed past event"
+    },
+    {
+      "id": "heldout-09",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "If I had more time, I would travel.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-10",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "The red bag is expensiver than the blue one.",
+      "expected_error": true,
+      "expected_issue": "expensiver \u2192 more expensive; comparative formation"
+    },
+    {
+      "id": "heldout-11",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "My hobbies include painting and swimming.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-12",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I have known her since ten years.",
+      "expected_error": true,
+      "expected_issue": "since \u2192 for; duration"
+    },
+    {
+      "id": "heldout-13",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "Everyone in my family likes this dish.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-14",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "They must to leave now.",
+      "expected_error": true,
+      "expected_issue": "must to leave \u2192 must leave; bare infinitive after modal"
+    },
+    {
+      "id": "heldout-15",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "I am getting used to the early mornings.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-16",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "She is good in solving puzzles.",
+      "expected_error": true,
+      "expected_issue": "good in \u2192 good at; skill construction"
+    },
+    {
+      "id": "heldout-17",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "The coffee is too hot to drink.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-18",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "There is two menus on the counter.",
+      "expected_error": true,
+      "expected_issue": "is \u2192 are; plural existential subject"
+    },
+    {
+      "id": "heldout-19",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I have never been to Canada.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed."
+    },
+    {
+      "id": "heldout-20",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "Does he enjoys cooking?",
+      "expected_error": true,
+      "expected_issue": "enjoys \u2192 enjoy; base verb after does"
+    }
+  ]
+}
