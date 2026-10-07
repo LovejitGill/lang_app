@@ -1,0 +1,44 @@
+[
+  {
+    "id": "recall-and-topic",
+    "level": "beginner",
+    "turns": [
+      {
+        "text": "My brother works in a bank.",
+        "expectation": "Acknowledge the fact and invite relevant elaboration without inventing errors."
+      },
+      {
+        "text": "Where does my brother work?",
+        "expectation": "Answer that he works in a bank before any follow-up."
+      },
+      {
+        "text": "I want to talk about cooking instead.",
+        "expectation": "Switch to cooking and ask an open question."
+      },
+      {
+        "text": "Pasta.",
+        "expectation": "Accept a conversational fragment and invite details; do not automatically call it ungrammatical."
+      }
+    ]
+  },
+  {
+    "id": "level-beginner",
+    "level": "beginner",
+    "turns": [
+      {
+        "text": "I like visiting new places.",
+        "expectation": "Use simple vocabulary and ask an open, accessible question."
+      }
+    ]
+  },
+  {
+    "id": "level-advanced",
+    "level": "advanced",
+    "turns": [
+      {
+        "text": "I like visiting new places.",
+        "expectation": "Ask for an opinion, comparison, or explanation appropriate to an advanced learner."
+      }
+    ]
+  }
+]

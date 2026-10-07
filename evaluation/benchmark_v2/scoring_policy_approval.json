@@ -1,0 +1,8 @@
+{
+  "status": "approved",
+  "reviewer": "Project owner (chat confirmation)",
+  "reviewed_on": "2026-09-30",
+  "user_confirmation": "yes I agree",
+  "scope": "Approval of the useful-feedback scoring requirement only; individual assistant ratings remain pending human confirmation.",
+  "requirement": "A useful response must correctly fix the target error, avoid unnecessary edits, preserve meaning, and accurately explain the applicable grammar rule. A correct replacement without the applicable rule is insufficient."
+}

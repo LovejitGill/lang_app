@@ -1,0 +1,510 @@
+{
+  "status": "pending owner review; assistant notes are not approved scores",
+  "source_sha256": "4adc8b81788a7cbd99b0c7f4594aeef395928159d0d90a89bc96cc8d4d2d9588",
+  "rows": [
+    {
+      "case_id": "D01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Moves beyond the stated cheaper-than-driving reason to the role of the bus journey in the learner’s day. Review the accessibility of “fit into your day.”"
+    },
+    {
+      "case_id": "D09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Generation timed out; the previous authored colleague-focused fallback remains delivered."
+    },
+    {
+      "case_id": "D11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "D16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Acknowledges the expected result without inventing disappointment, then asks about its meaning for the learner."
+    },
+    {
+      "case_id": "C13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "C16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Explicitly acknowledges inability to eat dairy, then asks about ordering wording. This is an authored practice question, not an ingredient/safety claim. Review whether the practice framing feels conversational enough."
+    },
+    {
+      "case_id": "N08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "N09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Uses the upcoming college interview context, retains the son, and asks about the study subject rather than reasking the destination or implying the interview is complete."
+    },
+    {
+      "case_id": "X05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "X12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Earlier behavior retained; no new owner quality judgment assigned."
+    },
+    {
+      "case_id": "Y01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Acknowledges the learner’s dairy restriction and retains tomato soup; no dairy-free or safety claim about that soup. Ordering-wording style needs owner review."
+    },
+    {
+      "case_id": "Y02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps dairy permitted and dislike of spicy food distinct; does not invent an allergy. Review whether the ordering-wording question is natural."
+    },
+    {
+      "case_id": "Y03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Selector timed out; authored fallback retains the sister’s restriction and asks about the learner’s soup."
+    },
+    {
+      "case_id": "Y04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Selector timed out; authored fallback uses the current reassignment to the brother rather than the earlier learner-directed meal requirement."
+    },
+    {
+      "case_id": "Y05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps the future bus journey and asks about an unstated activity instead of the cost reason."
+    },
+    {
+      "case_id": "Y06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps the completed journey and asks about a future choice, not the supplied duration. This yes/no question can be natural but may not elicit an extended answer."
+    },
+    {
+      "case_id": "Y07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Does not reask the supplied reason or invent disappointment; asks about the result’s meaning."
+    },
+    {
+      "case_id": "Y08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps learner disappointment separate from the sister’s different feeling and expectation."
+    },
+    {
+      "case_id": "Y09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Uses upcoming interview context and asks about preparation without implying arrival or success."
+    },
+    {
+      "case_id": "Y10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps the completed interview and stated pleased feeling; answering every question is not presented as answering correctly or being accepted."
+    }
+  ]
+}

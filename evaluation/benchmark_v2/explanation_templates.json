@@ -1,0 +1,42 @@
+{
+  "status": "draft; not active in runner or app",
+  "instructions": "Human reviewer: approve rule meaning and applicability, then evaluate a separately named curated variant. Do not silently replace messages in recorded results.",
+  "rules": [
+    {
+      "rule_id": "MD_BASEFORM",
+      "explanation": "Use the base form of the verb after a modal such as can, should, or must.",
+      "reviewer": "",
+      "approved": false
+    },
+    {
+      "rule_id": "DID_BASEFORM",
+      "explanation": "After do, does, or did, use the base form of the main verb.",
+      "reviewer": "",
+      "approved": false
+    },
+    {
+      "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+      "explanation": "After do, does, or did, use the base form of the main verb.",
+      "reviewer": "",
+      "approved": false
+    },
+    {
+      "rule_id": "CD_NN",
+      "explanation": "Use a plural count noun when referring to more than one item.",
+      "reviewer": "",
+      "approved": false
+    },
+    {
+      "rule_id": "SINCE_FOR",
+      "explanation": "Use for with a duration and since with a starting point.",
+      "reviewer": "",
+      "approved": false
+    },
+    {
+      "rule_id": "MOST_COMPARATIVE",
+      "explanation": "Do not add more to a comparative adjective that already ends in -er.",
+      "reviewer": "",
+      "approved": false
+    }
+  ]
+}

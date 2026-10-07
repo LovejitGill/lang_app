@@ -1,0 +1,992 @@
+{
+  "variant": "provisional-short-rules-agreement-v1",
+  "source_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "dataset_sha256": "fc60b1261d36ec59719ec37d54cabd5865152d00d3c1ac6af6d39d24a9cb4f63",
+  "code_sha256": "1162c90eef08f14cfd3f9d2fcfb412d8baa4b8902d0a284f21bca76290f83838",
+  "templates": {
+    "singular_agreement": "For one person, use ‘{verb}’ in the present tense.",
+    "plural_agreement": "For more than one person, use ‘{verb}’ in the present tense.",
+    "there_singular": "Use ‘there is’ for one thing.",
+    "modal_base": "After words like ‘can’ or ‘should’, use the basic verb form.",
+    "do_base": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+    "number_plural": "Use a plural noun for more than one item.",
+    "duration_for": "Use ‘for’ to say how long something lasts.",
+    "single_comparative": "Use only ‘shorter’, without ‘more’, when comparing."
+  },
+  "template_review": "pending",
+  "limitations": "Development-informed rules, single saved run, finite vocabulary. Matching is not semantic proof. No human useful-feedback score or voice latency measured.",
+  "summary": {
+    "cases": 60,
+    "model_calls": 0,
+    "provisional_offers": 18,
+    "withheld_proposals": 13,
+    "no_proposal": 29,
+    "unavailable": 0,
+    "false_offers_on_correct_inputs": 0,
+    "error_reference_matches_offered": 18,
+    "error_denominator": 30,
+    "human_useful_feedback": null
+  },
+  "rows": [
+    {
+      "case_id": "development-01",
+      "original": "I live near the station.",
+      "proposed": "I live near the station.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-02",
+      "original": "She walk to work every morning.",
+      "proposed": "She walks to work every morning.",
+      "state": "provisional",
+      "rule": "singular_agreement",
+      "explanation": "For one person, use ‘walks’ in the present tense.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-03",
+      "original": "Could we have separate bills, please?",
+      "proposed": "Could we have separate bills, please?",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "state": "provisional",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-05",
+      "original": "My sister and I cycle to work.",
+      "proposed": "My sister and I cycle to work.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-06",
+      "original": "I am engineer.",
+      "proposed": "I am an engineer.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-07",
+      "original": "I have been a teacher for six years.",
+      "proposed": "I have been a teacher for six years.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-08",
+      "original": "We visited the museum yesterday and buy a postcard.",
+      "proposed": "We visited the museum yesterday and bought a postcard.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-09",
+      "original": "There is some rice left.",
+      "proposed": "There is some rice left.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "state": "provisional",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘cheaper’, without ‘more’, when comparing.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-11",
+      "original": "I would rather stay home tonight.",
+      "proposed": "I would rather stay home tonight.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "state": "provisional",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-13",
+      "original": "I look forward to meeting you.",
+      "proposed": "I look forward to meeting you.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "state": "provisional",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-15",
+      "original": "Neither option appeals to me.",
+      "proposed": "Neither option appeals to me.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-16",
+      "original": "I am interested on photography.",
+      "proposed": "I am interested in photography.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-17",
+      "original": "The soup tastes delicious.",
+      "proposed": "The soup tastes delicious.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-18",
+      "original": "There are a bowl on the table.",
+      "proposed": "There is a bowl on the table.",
+      "state": "provisional",
+      "rule": "there_singular",
+      "explanation": "Use ‘there is’ for one thing.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-19",
+      "original": "I used to play chess after school.",
+      "proposed": "I used to play chess after school.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "state": "provisional",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-01-error",
+      "original": "My aunt drive a bus.",
+      "proposed": "My aunt drives a bus.",
+      "state": "provisional",
+      "rule": "singular_agreement",
+      "explanation": "For one person, use ‘drives’ in the present tense.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-01-correct",
+      "original": "My aunt drives a bus.",
+      "proposed": "My aunt drives a bus.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-02-error",
+      "original": "The students needs more time.",
+      "proposed": "The students need more time.",
+      "state": "provisional",
+      "rule": "plural_agreement",
+      "explanation": "For more than one person, use ‘need’ in the present tense.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-02-correct",
+      "original": "The students need more time.",
+      "proposed": "The students need more time.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-03-error",
+      "original": "He is an chef.",
+      "proposed": "He is a chef.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-03-correct",
+      "original": "He is a chef.",
+      "proposed": "He is a chef.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-04-error",
+      "original": "We saw a elephant.",
+      "proposed": "We saw an elephant.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-04-correct",
+      "original": "We saw an elephant.",
+      "proposed": "We saw an elephant.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-05-error",
+      "original": "Last night I watch a film.",
+      "proposed": "Last night I watched a film.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-05-correct",
+      "original": "Last night I watched a film.",
+      "proposed": "Last night I watched a film.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-06-error",
+      "original": "Yesterday she bring her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-06-correct",
+      "original": "Yesterday she brought her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "state": "provisional",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-07-correct",
+      "original": "I packed four shirts.",
+      "proposed": "I packed four shirts.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-08-error",
+      "original": "We need three box.",
+      "proposed": "We need three boxes.",
+      "state": "provisional",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-08-correct",
+      "original": "We need three boxes.",
+      "proposed": "We need three boxes.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "state": "provisional",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-09-correct",
+      "original": "You should take a break.",
+      "proposed": "You should take a break.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "state": "provisional",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-10-correct",
+      "original": "They might arrive early.",
+      "proposed": "They might arrive early.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "state": "provisional",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-11-correct",
+      "original": "Does she like tea?",
+      "proposed": "Does she like tea?",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "state": "provisional",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-12-correct",
+      "original": "He did not write the note.",
+      "proposed": "He did not write the note.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "state": "provisional",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘shorter’, without ‘more’, when comparing.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-13-correct",
+      "original": "This route is shorter.",
+      "proposed": "This route is shorter.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "state": "provisional",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘colder’, without ‘more’, when comparing.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-14-correct",
+      "original": "Today is colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "state": "provisional",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "expected_error": true,
+      "offered_reference_match": true,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-15-correct",
+      "original": "She has worked here for two months.",
+      "proposed": "She has worked here for two months.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-16-error",
+      "original": "They depend of public transport.",
+      "proposed": "They depend on public transport.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-16-correct",
+      "original": "They depend on public transport.",
+      "proposed": "They depend on public transport.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-17-error",
+      "original": "I enjoy to swim.",
+      "proposed": "I enjoy swimming.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-17-correct",
+      "original": "I enjoy swimming.",
+      "proposed": "I enjoy swimming.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-18-error",
+      "original": "She decided studying medicine.",
+      "proposed": "She decided to study medicine.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-18-correct",
+      "original": "She decided to study medicine.",
+      "proposed": "She decided to study medicine.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-19-error",
+      "original": "Please give the key to I.",
+      "proposed": "Please give me the key to I.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-19-correct",
+      "original": "Please give the key to me.",
+      "proposed": "Please give me the key.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-20-error",
+      "original": "This is hers coat.",
+      "proposed": "This is her coat.",
+      "state": "withheld",
+      "rule": null,
+      "explanation": null,
+      "expected_error": true,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-development-20-correct",
+      "original": "This is her coat.",
+      "proposed": "This is her coat.",
+      "state": "no_proposal",
+      "rule": null,
+      "explanation": null,
+      "expected_error": false,
+      "offered_reference_match": false,
+      "human_review": {
+        "rule_applies": null,
+        "explanation_clear": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}

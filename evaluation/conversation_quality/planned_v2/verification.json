@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-06T23:21:59.792375+00:00",
+  "suite_command": "uv run --locked python -m pytest -q",
+  "suite_passed": 645,
+  "suite_seconds": 17.6,
+  "new_focused_passed": 146,
+  "ruff": "Passed targeted lint and formatting checks",
+  "source_and_data_hashes": "Verified current snapshots and prepared identities",
+  "previous_natural_v4": "Sources and raw result preserved",
+  "grammar": "Protected hashes and grammar-function AST verified",
+  "completed_nonempty_rows": 53,
+  "review": "All owner usefulness judgments pending",
+  "timing": "No inference overlapped automated tests",
+  "app_integrated": false,
+  "git_history_actions": false,
+  "raw_result_sha256": "aee0a4136274ba8aa3d6357bbf655395654f15646c1ec0e0ae441da73246b619"
+}

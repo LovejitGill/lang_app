@@ -184,7 +184,7 @@ Each additional language will be tested across transcription, conversation, spok
 - [x] Build the text-first Streamlit UI with settings, transcript, feedback, counter, and saved-session refresh recovery (Milestone 4).
 - [x] Add local recorded-turn transcription and editable transcript review (Milestone 5); personal microphone/voice validation remains a manual checkpoint.
 - [x] Complete the testing/error-handling/evaluation pass with known quality failures and measured timings (Milestone 6).
-- [ ] Create local `mvp-v1` commit/tag after freeze verification (Milestone 7; user-managed Git step).
+- [x] Local `mvp-v1` baseline tag exists (verified locally; GitHub publication is not established by this check).
 - [ ] Validate model memory usage and inference speed on the chosen runtime.
 - [ ] Validate the proposed Streamlit component and Pipecat audio connection, including UI reruns and session cleanup.
 - [ ] Implement microphone input, pause detection, and speech transcription.
@@ -209,6 +209,15 @@ The initial success criterion is completing a short spoken practice session in e
 - Handling of silence, unclear recordings, and unavailable compute resources.
 
 ### Milestone 6 evaluation (2026-09-22)
+
+**Grammar-only follow-up (2026-09-29):** Added isolated structured grammar
+analysis and exact-span/no-op validation, with raw rejected outputs retained.
+The current 1.7B model remained unreliable; a local Qwen3 4B comparison avoided
+false corrections on the held-out correct sentences but gave useful corrections
+on only 4/10 and 5/10 erroneous sentences in two runs. Neither configuration was
+adopted into the app. Conversation generation and editable transcript review
+remain unchanged. [Experiment, results, and verification](docs/grammar_experiment.md).
+The expanded regression suite has 131 tests.
 
 **Focused follow-up (2026-09-24):** Added balanced development/held-out datasets
 and an opt-in prompt comparator. On 20 development inputs, the baseline falsely
@@ -255,3 +264,125 @@ SpeakWell is an AI developer class project. The intended application will demons
 - [Pipecat SmallWebRTC](https://docs.pipecat.ai/api-reference/server/services/transport/small-webrtc)
 
 A license for SpeakWell’s own source code has not yet been selected. Third-party models and libraries remain subject to their respective licenses.
+
+### Optional benchmark workbench (2026-09-29)
+
+The [benchmark guide](docs/benchmarking.md) explains the local LanguageTool/Qwen
+comparison, review workflow, dialogue checks, speech metrics, and ERRANT export.
+Start with the [first label-review batch](evaluation/benchmark_v2/first_review_batch.md).
+The 100-case draft corpus is not independently reviewed; semantic accuracy is
+pending, and no experimental grammar candidate replaces the application default.
+
+### Corrected-sentence experiment (2026-09-30)
+
+The [experiment guide](docs/sentence_experiment.md) teaches full-sentence correction
+and Python-derived edit offsets. [Measured results](evaluation/sentence_experiment/results.md)
+show 29/30 erroneous inputs matching references, but an unnecessary change to valid
+English fails the selection gate. Explanation quality remains under review; this
+candidate is not integrated into the app.
+
+### Separate explanation review experiment (2026-09-30)
+
+The [second-pass experiment](docs/explanation_experiment.md) tested focused grammar
+justification on frozen corrections. [Results](evaluation/explanation_experiment/results.md)
+show that it supported both known bad proposals and added a median 12.5 seconds
+per reviewed change. It is not integrated into the app. Next proposed direction:
+reviewed explanation templates with explicit rule-applicability checks.
+
+Offline short-explanation experiment and verification steps:
+[rule explanation guide](docs/rule_explanations.md). Short wording is preferred,
+not a one-sentence requirement. This candidate is not active in the tutor.
+
+[Context-challenge verification](docs/rule_challenges.md) documents the latest
+offline rule checks and their coverage tradeoffs. The app does not use this candidate.
+
+[Frozen held-out validation](docs/rule_validation.md) is complete. The rule filter
+failed the coverage gate; the experimental candidate remains outside the app.
+
+[Broader grammar-rule detection](docs/broader_rules.md) is the active offline
+quality experiment. Targeted detection gaps now pass the combined-flow review
+below; broader English coverage remains unproven.
+
+[Detection-gap verification](docs/detection_gaps.md) covers the DID_PAST mapping
+and a conservative grammatical count rule. All three prior gaps are addressed in
+offline component tests; the live tutor remains unchanged.
+
+[Complete grammar-flow validation](docs/detection_flow_validation.md) has run on
+32 approved inputs. The project owner approved 16/16 useful corrections and
+16/16 acceptable-input preservation checks; all targeted quality gates passed.
+See the [final scorecard](evaluation/detection_flow_validation/results.md). The
+app remains unchanged. Next proposed improvement: show conversational replies
+and separately processed grammar feedback in an opt-in app integration, measuring
+their delays independently. Broader explanation refinement remains deferred.
+
+### Optional separate grammar feedback (2026-10-01)
+
+The app now offers **Separate grammar feedback (experimental)** in the sidebar.
+It shows and saves a conversation-only reply before running the reviewed grammar
+flow, then attaches feedback to that exact turn. Existing combined mode remains
+available. Read the [setup and verification guide](docs/separate_grammar_feedback.md)
+and [actual results](docs/separate_grammar_feedback_validation.md). Earlier notes
+about an unchanged app describe the evaluation checkpoints before this integration.
+
+341 tests passed. Four real local turns showed 1.36–2.33 s reply generation and
+6.27–8.19 s grammar processing; this does not validate two-second spoken dialogue.
+The next message waits for pending grammar work, and conversational follow-ups
+still need improvement. Next focus: evaluate grounded, open-ended conversation
+responses while preserving the reviewed grammar behavior.
+
+### Conversation quality and latency experiments (2026-10-05)
+
+The [learning and verification guide](docs/conversation_quality.md) covers the
+prompt comparisons, bounded question selection, contextual generation and explicit
+fallback paths. The [joint checkpoint](evaluation/conversation_quality/joint_results.md)
+reports actual warm/cold timings and quality failures; [all 32 current replies](evaluation/conversation_quality/contextual_v2/review.md)
+are available for review. The full suite passed 388 tests.
+
+The current contextual candidate returned complete text within 1.404 seconds in
+its warm run, but two direct language questions remained unanswered and other
+invitations need specificity review. This is not a two-second voice result.
+No candidate replaces the app's conversation model/prompt yet. The next focus
+remains useful conversational responses and latency together.
+
+### Natural follow-up revision (2026-10-06)
+
+The [new verification guide](docs/natural_conversation.md) explains topic-specific
+follow-ups and a separate, limited fast correction pass. [Actual results](evaluation/conversation_quality/natural_v4/results.md)
+and [all 41 delivered replies](evaluation/conversation_quality/natural_v4/review.md)
+retain model output, authored responses and rejected output separately.
+
+The latest warm run took at most 0.939 seconds for complete text, including two
+supported corrections displayed first; 9/41 replies were model-generated. All
+499 tests passed. Repeated questions, invented details, generic recall and direct
+tutoring-answer failures remain; this candidate is not enabled in the app.
+Next: resolve those conversation failures within the same time budget, review
+fresh multi-turn cases, then verify actual spoken latency before promotion.
+
+### Planned follow-ups and bounded local answers (2026-10-06)
+
+The [learning guide](docs/dialogue_planning.md) explains how recognized facts guide
+question selection, how learner-only recall handles supported changes, and how
+a small local catalog answers selected tutoring questions. [Before/after results](evaluation/conversation_quality/planned_v2/results.md)
+and [all 53 actual replies](evaluation/conversation_quality/planned_v2/review.md)
+separate generated prose from model-selected and authored responses.
+
+645 tests passed. All 53 warm text responses finished within 1.000 seconds in the
+latest run; four were generated prose, nine were model-selected authored questions.
+Quality review and broader dialogue/audio validation remain pending; this candidate
+is not active in Streamlit. Next focus remains generic responses, learner constraints
+and natural multi-turn progress within the original latency target.
+
+### Constraint-aware follow-ups — planned_v3 (2026-10-06)
+
+The [verification guide](docs/constraint_followups.md) covers explicit dietary
+acknowledgments, correct-person revisions, supplied reasons and interview timing.
+[Before/after results](evaluation/conversation_quality/planned_v3/results.md) and
+[all 63 responses](evaluation/conversation_quality/planned_v3/review.md) preserve
+actual output and response paths. 703 tests passed; the maximum warm complete-text
+delay was 1.407 seconds, with readiness measured separately. Spoken latency and
+human conversational-quality review remain pending; the app is unchanged.
+
+Next: review tone, then test fresh multi-turn dialogue as planned_v4. **GitHub
+checkpoint: yes for this tested experimental snapshot after reviewing accumulated
+changes**, following the [user-managed checkpoint steps](docs/github_checkpoints.md).
+This is not a stable app v3/v4 release. No commit, tag or push was performed.

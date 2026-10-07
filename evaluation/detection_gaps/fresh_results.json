@@ -1,0 +1,3017 @@
+{
+  "variant": "broader-rules-gap-fixes-v1",
+  "mode": "fresh",
+  "scope": "Authored/saved proposals; component validation, not end-to-end LLM results.",
+  "candidate_sha256": "7220908dd2ac2f41706ac9f0cc76a6bb056d8efd5f38e6326b596b7d44af9645",
+  "rule_sha256": "d98ad0ef406d3b677e6bd698df112b01dbf2179d2d74b6363a7fc83c8e22de37",
+  "rows": [
+    {
+      "id": "gap-fresh-01",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did Maria mailed the parcel?",
+      "proposed": "Did Maria mail the parcel?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999909,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "mail",
+                "shortDescription": "postal service"
+              }
+            ],
+            "offset": 10,
+            "length": 6,
+            "context": {
+              "text": "Did Maria mailed the parcel?",
+              "offset": 10,
+              "length": 6
+            },
+            "sentence": "Did Maria mailed the parcel?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘mail’, not ‘mailed’.",
+        "edit": {
+          "start": 10,
+          "end": 16,
+          "original": "mailed",
+          "replacement": "mail"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-02",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did they opened the gate?",
+      "proposed": "Did they open the gate?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999547,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "Possible grammatical error",
+            "replacements": [
+              {
+                "value": "open"
+              }
+            ],
+            "offset": 9,
+            "length": 6,
+            "context": {
+              "text": "Did they opened the gate?",
+              "offset": 9,
+              "length": 6
+            },
+            "sentence": "Did they opened the gate?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "2",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘open’, not ‘opened’.",
+        "edit": {
+          "start": 9,
+          "end": 15,
+          "original": "opened",
+          "replacement": "open"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-03",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did your assistant sent the invoice?",
+      "proposed": "Did your assistant send the invoice?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999989,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "send"
+              }
+            ],
+            "offset": 19,
+            "length": 4,
+            "context": {
+              "text": "Did your assistant sent the invoice?",
+              "offset": 19,
+              "length": 4
+            },
+            "sentence": "Did your assistant sent the invoice?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            36
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 36,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘send’, not ‘sent’.",
+        "edit": {
+          "start": 19,
+          "end": 23,
+          "original": "sent",
+          "replacement": "send"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-04",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We collected six pebble.",
+      "proposed": "We collected six pebbles.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99832535,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘pebble’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "pebbles"
+              }
+            ],
+            "offset": 17,
+            "length": 6,
+            "context": {
+              "text": "We collected six pebble.",
+              "offset": 17,
+              "length": 6
+            },
+            "sentence": "We collected six pebble.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Six’ means more than one, so use the plural ‘pebbles’.",
+        "edit": {
+          "start": 17,
+          "end": 23,
+          "original": "pebble",
+          "replacement": "pebbles"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-05",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I bought four onion.",
+      "proposed": "I bought four onions.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999953,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Four’ means more than one, so use the plural ‘onions’.",
+        "edit": {
+          "start": 14,
+          "end": 19,
+          "original": "onion",
+          "replacement": "onions"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-06",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "They found nine shell.",
+      "proposed": "They found nine shells.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999951,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Nine’ means more than one, so use the plural ‘shells’.",
+        "edit": {
+          "start": 16,
+          "end": 21,
+          "original": "shell",
+          "replacement": "shells"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-07",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We printed twelve label.",
+      "proposed": "We printed twelve labels.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9965463,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘label’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "labels"
+              }
+            ],
+            "offset": 18,
+            "length": 5,
+            "context": {
+              "text": "We printed twelve label.",
+              "offset": 18,
+              "length": 5
+            },
+            "sentence": "We printed twelve label.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Twelve’ means more than one, so use the plural ‘labels’.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "label",
+          "replacement": "labels"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-08",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I packed five knife.",
+      "proposed": "I packed five knives.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99105215,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘knife’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "knives"
+              }
+            ],
+            "offset": 14,
+            "length": 5,
+            "context": {
+              "text": "I packed five knife.",
+              "offset": 14,
+              "length": 5
+            },
+            "sentence": "I packed five knife.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Five’ means more than one, so use the plural ‘knives’.",
+        "edit": {
+          "start": 14,
+          "end": 19,
+          "original": "knife",
+          "replacement": "knives"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-09",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We saw three child.",
+      "proposed": "We saw three children.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999857,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘child’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "children"
+              }
+            ],
+            "offset": 13,
+            "length": 5,
+            "context": {
+              "text": "We saw three child.",
+              "offset": 13,
+              "length": 5
+            },
+            "sentence": "We saw three child.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            19
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 19,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Three’ means more than one, so use the plural ‘children’.",
+        "edit": {
+          "start": 13,
+          "end": 18,
+          "original": "child",
+          "replacement": "children"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-10",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I counted eleven leaf.",
+      "proposed": "I counted eleven leaves.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99634725,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘leaf’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "leaves"
+              }
+            ],
+            "offset": 17,
+            "length": 4,
+            "context": {
+              "text": "I counted eleven leaf.",
+              "offset": 17,
+              "length": 4
+            },
+            "sentence": "I counted eleven leaf.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Eleven’ means more than one, so use the plural ‘leaves’.",
+        "edit": {
+          "start": 17,
+          "end": 21,
+          "original": "leaf",
+          "replacement": "leaves"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-11",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "They purchased 24 candle.",
+      "proposed": "They purchased 24 candles.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999955,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘candle’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "candles"
+              }
+            ],
+            "offset": 18,
+            "length": 6,
+            "context": {
+              "text": "They purchased 24 candle.",
+              "offset": 18,
+              "length": 6
+            },
+            "sentence": "They purchased 24 candle.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘24’ means more than one, so use the plural ‘candles’.",
+        "edit": {
+          "start": 18,
+          "end": 24,
+          "original": "candle",
+          "replacement": "candles"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-12",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We collected four stamp.",
+      "proposed": "We collected four stamps.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999934,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘stamp’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "stamps"
+              }
+            ],
+            "offset": 18,
+            "length": 5,
+            "context": {
+              "text": "We collected four stamp.",
+              "offset": 18,
+              "length": 5
+            },
+            "sentence": "We collected four stamp.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Four’ means more than one, so use the plural ‘stamps’.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "stamp",
+          "replacement": "stamps"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-13",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "Did Maria mail the parcel?",
+      "proposed": "Did Maria mailed the parcel?",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999565,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-14",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "Did your assistant send the invoice?",
+      "proposed": "Did your assistant sent the invoice?",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999005,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            36
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 36,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-15",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought four onions.",
+      "proposed": "I bought four onion.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999987,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-16",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We saw three children.",
+      "proposed": "We saw three childs.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999955,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-17",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We watched five sheep.",
+      "proposed": "We watched five sheeps.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999975,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-18",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "They observed six deer.",
+      "proposed": "They observed six deers.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999924,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-19",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I caught four salmon.",
+      "proposed": "I caught four salmons.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99891907,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-20",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought two furniture.",
+      "proposed": "I bought two furnitures.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999945,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-21",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We bought three rice.",
+      "proposed": "We bought three rices.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999971,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-22",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought a five candle set.",
+      "proposed": "I bought a five candles set.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999955,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            27
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 27,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-23",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We ordered four onion rings.",
+      "proposed": "We ordered four onions rings.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999656,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-24",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We found one shell.",
+      "proposed": "We found one shells.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999959,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            19
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 19,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-25",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I saw 2.5 child.",
+      "proposed": "I saw 2.5 children.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.8862638,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            16
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 16,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-26",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "The title is “We found nine shell”.",
+      "proposed": "The title is “We found nine shells”.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999076,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            35
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 35,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-27",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We collected six pebble.",
+      "proposed": "They collected six pebbles.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99832535,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘pebble’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "pebbles"
+              }
+            ],
+            "offset": 17,
+            "length": 6,
+            "context": {
+              "text": "We collected six pebble.",
+              "offset": 17,
+              "length": 6
+            },
+            "sentence": "We collected six pebble.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    },
+    {
+      "id": "gap-fresh-28",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We ordered 2024 calendar.",
+      "proposed": "We ordered 2024 calendars.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending.",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.72149676,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": null,
+      "passed": true
+    }
+  ],
+  "protocol_sha256": "ceefa672bb78ffb302680f701199c5181659c04e1524f8a334a7e04215a6065a",
+  "cases_sha256": "3d127db100eb40e589723b93e57500448d4369f197e9f075526a8ffc3d7b5e97",
+  "custom_evidence": {
+    "raw": {
+      "software": {
+        "name": "LanguageTool",
+        "version": "6.6",
+        "buildDate": "2025-03-27 20:50:25 +0100",
+        "apiVersion": 1,
+        "premium": false,
+        "status": ""
+      },
+      "warnings": {
+        "incompleteResults": false
+      },
+      "language": {
+        "name": "English (US)",
+        "code": "en-US",
+        "detectedLanguage": {
+          "name": "English (US)",
+          "code": "en-US",
+          "confidence": 1.0,
+          "source": null
+        }
+      },
+      "matches": [
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "pebbles"
+            }
+          ],
+          "offset": 109,
+          "length": 6,
+          "context": {
+            "text": "...assistant sent the invoice? We collected six pebble. I bought four onion. They found nine shell....",
+            "offset": 48,
+            "length": 6
+          },
+          "sentence": "We collected six pebble.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "onions"
+            }
+          ],
+          "offset": 131,
+          "length": 5,
+          "context": {
+            "text": "...oice? We collected six pebble. I bought four onion. They found nine shell. We printed twelve la...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "I bought four onion.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "shells"
+            }
+          ],
+          "offset": 154,
+          "length": 5,
+          "context": {
+            "text": "...pebble. I bought four onion. They found nine shell. We printed twelve label. I packed five knif...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "They found nine shell.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "labels"
+            }
+          ],
+          "offset": 179,
+          "length": 5,
+          "context": {
+            "text": "...on. They found nine shell. We printed twelve label. I packed five knife. We saw three child. I ...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "We printed twelve label.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "knives"
+            }
+          ],
+          "offset": 200,
+          "length": 5,
+          "context": {
+            "text": "...hell. We printed twelve label. I packed five knife. We saw three child. I counted eleven leaf. ...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "I packed five knife.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "children"
+            }
+          ],
+          "offset": 220,
+          "length": 5,
+          "context": {
+            "text": "...lve label. I packed five knife. We saw three child. I counted eleven leaf. They purchased 24 ca...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "We saw three child.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "leaves"
+            }
+          ],
+          "offset": 244,
+          "length": 4,
+          "context": {
+            "text": "... knife. We saw three child. I counted eleven leaf. They purchased 24 candle. We collected four...",
+            "offset": 48,
+            "length": 4
+          },
+          "sentence": "I counted eleven leaf.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "candles"
+            }
+          ],
+          "offset": 268,
+          "length": 6,
+          "context": {
+            "text": "...ld. I counted eleven leaf. They purchased 24 candle. We collected four stamp. Did Maria mail the...",
+            "offset": 48,
+            "length": 6
+          },
+          "sentence": "They purchased 24 candle.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "stamps"
+            }
+          ],
+          "offset": 294,
+          "length": 5,
+          "context": {
+            "text": "... They purchased 24 candle. We collected four stamp. Did Maria mail the parcel? Did your assista...",
+            "offset": 48,
+            "length": 5
+          },
+          "sentence": "We collected four stamp.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        },
+        {
+          "message": "This number describes more than one item; use the plural noun.",
+          "shortMessage": "",
+          "replacements": [
+            {
+              "value": "pebbles"
+            }
+          ],
+          "offset": 672,
+          "length": 6,
+          "context": {
+            "text": "...e is “We found nine shell”. We collected six pebble. We ordered 2024 calendar.",
+            "offset": 48,
+            "length": 6
+          },
+          "sentence": "We collected six pebble.",
+          "type": {
+            "typeName": "Other"
+          },
+          "rule": {
+            "id": "SPEAKWELL_COUNT_HEAD",
+            "subId": "1",
+            "sourceFile": "en-speakwell.xml",
+            "description": "Counted noun at the end of a simple object phrase",
+            "issueType": "uncategorized",
+            "category": {
+              "id": "SPEAKWELL_GRAMMAR",
+              "name": "SpeakWell experimental grammar"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 2
+        }
+      ],
+      "sentenceRanges": [],
+      "extendedSentenceRanges": []
+    },
+    "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-e1mt1enm/inputs.txt...\n",
+    "per_input": [
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "pebbles"
+              }
+            ],
+            "offset": 17,
+            "length": 6,
+            "context": {
+              "text": "...assistant sent the invoice? We collected six pebble. I bought four onion. They found nine shell....",
+              "offset": 48,
+              "length": 6
+            },
+            "sentence": "We collected six pebble.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "onions"
+              }
+            ],
+            "offset": 14,
+            "length": 5,
+            "context": {
+              "text": "...oice? We collected six pebble. I bought four onion. They found nine shell. We printed twelve la...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "I bought four onion.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "shells"
+              }
+            ],
+            "offset": 16,
+            "length": 5,
+            "context": {
+              "text": "...pebble. I bought four onion. They found nine shell. We printed twelve label. I packed five knif...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "They found nine shell.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "labels"
+              }
+            ],
+            "offset": 18,
+            "length": 5,
+            "context": {
+              "text": "...on. They found nine shell. We printed twelve label. I packed five knife. We saw three child. I ...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "We printed twelve label.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "knives"
+              }
+            ],
+            "offset": 14,
+            "length": 5,
+            "context": {
+              "text": "...hell. We printed twelve label. I packed five knife. We saw three child. I counted eleven leaf. ...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "I packed five knife.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "children"
+              }
+            ],
+            "offset": 13,
+            "length": 5,
+            "context": {
+              "text": "...lve label. I packed five knife. We saw three child. I counted eleven leaf. They purchased 24 ca...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "We saw three child.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "leaves"
+              }
+            ],
+            "offset": 17,
+            "length": 4,
+            "context": {
+              "text": "... knife. We saw three child. I counted eleven leaf. They purchased 24 candle. We collected four...",
+              "offset": 48,
+              "length": 4
+            },
+            "sentence": "I counted eleven leaf.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "candles"
+              }
+            ],
+            "offset": 18,
+            "length": 6,
+            "context": {
+              "text": "...ld. I counted eleven leaf. They purchased 24 candle. We collected four stamp. Did Maria mail the...",
+              "offset": 48,
+              "length": 6
+            },
+            "sentence": "They purchased 24 candle.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "stamps"
+              }
+            ],
+            "offset": 18,
+            "length": 5,
+            "context": {
+              "text": "... They purchased 24 candle. We collected four stamp. Did Maria mail the parcel? Did your assista...",
+              "offset": 48,
+              "length": 5
+            },
+            "sentence": "We collected four stamp.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": []
+      },
+      {
+        "matches": [
+          {
+            "message": "This number describes more than one item; use the plural noun.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "pebbles"
+              }
+            ],
+            "offset": 17,
+            "length": 6,
+            "context": {
+              "text": "...e is “We found nine shell”. We collected six pebble. We ordered 2024 calendar.",
+              "offset": 48,
+              "length": 6
+            },
+            "sentence": "We collected six pebble.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SPEAKWELL_COUNT_HEAD",
+              "subId": "1",
+              "sourceFile": "en-speakwell.xml",
+              "description": "Counted noun at the end of a simple object phrase",
+              "issueType": "uncategorized",
+              "category": {
+                "id": "SPEAKWELL_GRAMMAR",
+                "name": "SpeakWell experimental grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 2
+          }
+        ]
+      },
+      {
+        "matches": []
+      }
+    ]
+  },
+  "summary": {
+    "cases": 28,
+    "component_checks": 28,
+    "component_passes": 28,
+    "unavailable": 0,
+    "llm_calls": 0,
+    "development_offers_on_errors": 0,
+    "development_offers_on_correct": 0
+  }
+}

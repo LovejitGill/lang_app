@@ -1,0 +1,129 @@
+{
+  "scope": "Four short-answer diagnostics, not an independent quality benchmark or a passed deadline run. No retries. Prepared prompt and settings recorded before inference.",
+  "prompt": "Answer this English question in 12–18 simple words. No introduction or follow-up. Do not invent personal facts.",
+  "settings": {
+    "num_ctx": 2048,
+    "num_predict": 48,
+    "temperature": 0,
+    "seed": 42
+  },
+  "cases": [
+    {
+      "id": "C10",
+      "text": "What is the difference between lend and borrow?",
+      "expectation": "Give a useful correct explanation and example; an unsupported-mode disclaimer fails usefulness.",
+      "history": [],
+      "level": "beginner",
+      "scenario": "daily activities"
+    },
+    {
+      "id": "C13",
+      "text": "Can you explain what your last question means?",
+      "expectation": "Explain or simplify the previous question. Asking what needs explaining alone is insufficient.",
+      "history": [
+        {
+          "learner_text": "I like playing games.",
+          "tutor_reply": "What do you find most rewarding about that?"
+        }
+      ],
+      "level": "beginner",
+      "scenario": "daily activities"
+    },
+    {
+      "id": "Q01",
+      "text": "What does routine mean?",
+      "history": []
+    },
+    {
+      "id": "Q02",
+      "text": "What is the difference between hear and listen?",
+      "history": []
+    }
+  ],
+  "rows": [
+    {
+      "id": "C10",
+      "seconds": 1.5542059870058438,
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-06T00:14:22.557346Z",
+        "message": {
+          "role": "assistant",
+          "content": "Lend means to give something to someone else, while borrow means to take something from someone else."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 1524162462,
+        "load_duration": 1708616,
+        "prompt_eval_count": 56,
+        "prompt_eval_cached_count": 3,
+        "prompt_eval_duration": 441652000,
+        "eval_count": 21,
+        "eval_duration": 1068094000
+      }
+    },
+    {
+      "id": "C13",
+      "seconds": 1.0017416839982616,
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-06T00:14:23.560383Z",
+        "message": {
+          "role": "assistant",
+          "content": "I am asking about what brings me joy in games."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 998694796,
+        "load_duration": 1944145,
+        "prompt_eval_count": 80,
+        "prompt_eval_cached_count": 34,
+        "prompt_eval_duration": 409519000,
+        "eval_count": 12,
+        "eval_duration": 582196000
+      }
+    },
+    {
+      "id": "Q01",
+      "seconds": 0.6486826059990562,
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-06T00:14:24.209637Z",
+        "message": {
+          "role": "assistant",
+          "content": "Routine is a regular pattern of actions or events."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 645797105,
+        "load_duration": 2786268,
+        "prompt_eval_count": 52,
+        "prompt_eval_cached_count": 35,
+        "prompt_eval_duration": 120280000,
+        "eval_count": 11,
+        "eval_duration": 516326000
+      }
+    },
+    {
+      "id": "Q02",
+      "seconds": 0.9953908709867392,
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-06T00:14:25.205998Z",
+        "message": {
+          "role": "assistant",
+          "content": "Hear is to notice sounds, while listen is to pay attention to speech."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 992614338,
+        "load_duration": 2206129,
+        "prompt_eval_count": 56,
+        "prompt_eval_cached_count": 35,
+        "prompt_eval_duration": 148183000,
+        "eval_count": 17,
+        "eval_duration": 839330000
+      }
+    }
+  ]
+}

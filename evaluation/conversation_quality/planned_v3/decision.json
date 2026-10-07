@@ -1,0 +1,14 @@
+{
+  "experiment": "planned_v3",
+  "status": "experimental_checkpoint_ready_for_owner_review",
+  "app_integrated": false,
+  "source_sha256": "4adc8b81788a7cbd99b0c7f4594aeef395928159d0d90a89bc96cc8d4d2d9588",
+  "human_quality_score": null,
+  "spoken_latency_verified": false,
+  "github_checkpoint_recommended": true,
+  "checkpoint_condition": "Review accumulated source, dependencies, documentation and synthetic evidence before user-managed commit/push.",
+  "stable_release_recommended": false,
+  "next_experiment": "planned_v4 after reviewing this checkpoint; continue conversation-quality/multi-turn validation",
+  "git_actions_performed": false,
+  "remote_publication_verified": false
+}

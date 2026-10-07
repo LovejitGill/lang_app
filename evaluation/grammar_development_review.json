@@ -1,0 +1,366 @@
+{
+  "reviewer": "Assistant qualitative review; independent learner/instructor review pending",
+  "raw_sha256": "ade8533d5189e22baefa66bd74958a07b2b7d1d2ab4ed969b2ca970f2eef6849",
+  "rows": [
+    {
+      "id": "development-01",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-01",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Invented near to away from reverses the location meaning."
+    },
+    {
+      "id": "development-02",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Correct third-person singular walks, with an appropriate explanation."
+    },
+    {
+      "id": "development-02",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    },
+    {
+      "id": "development-03",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-03",
+      "variant": "grammar_only",
+      "status": "rejected",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "rejected",
+      "notes": "Whole response rejected for identical separate/separate; second proposal also replaces valid politeness wording."
+    },
+    {
+      "id": "development-04",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Changing two to a changes quantity instead of fixing sandwich to sandwiches."
+    },
+    {
+      "id": "development-04",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    },
+    {
+      "id": "development-05",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-05",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Cycles is wrong with the compound subject; the explanation about they is wrong."
+    },
+    {
+      "id": "development-06",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Engineers after I am does not fix the missing article; the plural-subject explanation is wrong."
+    },
+    {
+      "id": "development-06",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    },
+    {
+      "id": "development-07",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-07",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "No error in a teacher; changing the article is unsupported."
+    },
+    {
+      "id": "development-08",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": true,
+      "explanation_accurate": false,
+      "meaning_preserved": true,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Bought is correct, but explanation is tautological rather than explaining the completed past event."
+    },
+    {
+      "id": "development-08",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    },
+    {
+      "id": "development-09",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-09",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Rice is uncountable here and takes is; are is incorrect."
+    },
+    {
+      "id": "development-10",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Changing cheaper to more expensive reverses meaning and leaves more more expensive."
+    },
+    {
+      "id": "development-10",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Incorrect target correction or misleading rule; see raw response."
+    },
+    {
+      "id": "development-11",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-11",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "The sentence already has stay home; proposed replacement duplicates home."
+    },
+    {
+      "id": "development-12",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Five takes plural years; correction and explanation are wrong and miss since to for."
+    },
+    {
+      "id": "development-12",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Incorrect target correction or misleading rule; see raw response."
+    },
+    {
+      "id": "development-13",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-13",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "I takes look, not looks; valid original phrase is incorrectly changed."
+    },
+    {
+      "id": "development-14",
+      "variant": "grammar_only",
+      "status": "rejected",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "rejected",
+      "notes": "Identical speaks/speaks rejected; the modal error is uncorrected."
+    },
+    {
+      "id": "development-14",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Incorrect target correction or misleading rule; see raw response."
+    },
+    {
+      "id": "development-15",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-15",
+      "variant": "grammar_only",
+      "status": "rejected",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "rejected",
+      "notes": "Lowercase neither does not exactly quote Neither; proposal also changes meaning and gives a wrong rule."
+    },
+    {
+      "id": "development-16",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Correct interested in collocation with an accurate explanation."
+    },
+    {
+      "id": "development-16",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    },
+    {
+      "id": "development-17",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-17",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Singular soup takes tastes, not taste."
+    },
+    {
+      "id": "development-18",
+      "variant": "grammar_only",
+      "status": "rejected",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "rejected",
+      "notes": "Identical a bowl/a bowl rejected; misses are to is."
+    },
+    {
+      "id": "development-18",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Incorrect target correction or misleading rule; see raw response."
+    },
+    {
+      "id": "development-19",
+      "variant": "baseline",
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Unnecessary correction to valid English."
+    },
+    {
+      "id": "development-19",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "useful_correction": false,
+      "judgment": "false_correction",
+      "notes": "Used to play is grammatical; was used to play is not the intended habitual construction."
+    },
+    {
+      "id": "development-20",
+      "variant": "grammar_only",
+      "status": "valid",
+      "replacement_correct": true,
+      "explanation_accurate": false,
+      "meaning_preserved": true,
+      "useful_correction": false,
+      "judgment": "partial_or_wrong",
+      "notes": "Order is the right replacement, but the reason is did not plus base verb, not singular I."
+    },
+    {
+      "id": "development-20",
+      "variant": "baseline",
+      "useful_correction": true,
+      "judgment": "useful",
+      "notes": "Assistant reviewed actual output. Correct replacement/explanation for target issue."
+    }
+  ]
+}

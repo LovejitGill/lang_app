@@ -1,0 +1,17 @@
+{
+  "status": "pending human review; no candidate selected",
+  "development_report_sha256": "15cbd474f084393e01010ebbe1b987d7e85a86e633d2227ea88cf3b46d2f8250",
+  "selected_engine": null,
+  "model_or_rule_configuration": null,
+  "reviewer": null,
+  "rationale": null,
+  "heldout_dataset_sha256_after_label_review": null,
+  "gates_per_run": {
+    "correct_inputs": 20,
+    "maximum_invented_corrections": 0,
+    "incorrect_inputs": 20,
+    "minimum_useful_explained_corrections": 18,
+    "runs": 2
+  },
+  "next_action": "Review development labels and blinded output; only then freeze a candidate. Do not run held-out evaluation to shop for a winner."
+}

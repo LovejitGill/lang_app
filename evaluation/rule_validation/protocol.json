@@ -1,0 +1,52 @@
+{
+  "name": "Frozen context-rule candidate held-out validation v1",
+  "created_on": "2026-09-30",
+  "status": "Awaiting user review of labels; no inference performed",
+  "candidate": "provisional-short-rules-context-v1",
+  "frozen_files_sha256": {
+    "rule_explanations.py": "d4410f650e8c6ade70299983b79532f344ada9c3ab2544bb3480c197a0937812",
+    "sentence_grammar.py": "2f8571b57f776cdfa0d7e036e444f301870097934f772fa19efa1f732718dc39",
+    "llm_client.py": "a09b9a5840c178969d2859dc5dc930f4e39ca59417054205c803df6c5275e712",
+    "errors.py": "543d9a189540634edaeb5af4b5abece04665fdcaed3273bd813c97520c074c1b",
+    "pyproject.toml": "6beb97f0ef518c35e50a65012806c42b2ee0ab8f57e5fa1a7a28fc81bb4ad5c1",
+    "uv.lock": "e6735988af88f36c149590abfd5ffca95e748814cca11a3f1b7eff7d02d71e06"
+  },
+  "dataset_source": "evaluation/benchmark_v2/heldout.json",
+  "dataset_source_sha256": "f2edd59958f442ecfd1856a9e96b07745fc23483f941968ef7de600ca057eafa",
+  "label_approval": "Record user approval in a separate review artifact tied to exact case text, references and labels. Pending labels block inference. Do not alter candidate based on these cases.",
+  "disclosure": "Criteria recorded after inspecting draft labels but before any held-out inference. Candidate code unchanged since development challenges. These synthetic pairs are correlated and not a population sample.",
+  "model": "qwen3:4b",
+  "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "settings": {
+    "think": false,
+    "temperature": 0.2,
+    "num_predict": 256,
+    "num_ctx": 4096,
+    "seed": "unset, as in development",
+    "retries": 0
+  },
+  "execution": [
+    "Verify frozen source, dependencies, model digest and reviewed labels before starting.",
+    "One attempt per case in existing order; send only input text through frozen check_sentence, then frozen explain_change.",
+    "Save raw model output, derived edits, rule decision, offered explanation, errors and per-stage elapsed time after each attempt.",
+    "Preserve interrupted/failed attempts; never silently regenerate them or choose the best repeat.",
+    "References and expected_error are scoring-only, never model input. Create a human output review after inference."
+  ],
+  "gates": {
+    "attempts_required": 40,
+    "erroneous_input_denominator": 20,
+    "correct_input_denominator": 20,
+    "minimum_human_useful_corrections": 12,
+    "maximum_offers_on_correct_inputs": 0,
+    "minimum_human_precision_on_offered_corrections": 0.8,
+    "maximum_unavailable_results": 0
+  },
+  "metrics": {
+    "useful": "Correct necessary correction, preserves meaning, no extra errors or changes, and accurate understandable explanation. Human review required; reference matching is diagnostic.",
+    "coverage": "All 20 erroneous inputs remain denominator, including no proposal, withheld, service/parse failures.",
+    "precision": "Human-correct offered corrections divided by all offered corrections; undefined for zero offers, never 100%.",
+    "baseline": "12/20 is a 60% minimum gate, slightly above the earlier development 17/30. This is not a same-input superiority comparison to that baseline.",
+    "timing": "Time generation, rule checks and total processing separately in the same run. Report median/p95/max, first call separately, failures separately. No claim of complete voice latency or meeting two seconds."
+  },
+  "decision": "Any gate failure blocks adoption. Even a pass only supports a limited follow-up pilot; it does not establish broad language support or the voice latency goal. Treat any subsequent tuning on these outputs as development and obtain new untouched cases for independent validation."
+}

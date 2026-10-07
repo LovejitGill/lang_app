@@ -1,0 +1,1107 @@
+{
+  "version": "2-draft",
+  "split": "development",
+  "source": "Original assistant-authored synthetic cases; historical development cases retained. All 60 development labels approved by project owner on 2026-09-30. Paired and templated cases are correlated, not a representative population sample.",
+  "cases": [
+    {
+      "id": "development-01",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I live near the station.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I live near the station."
+      ]
+    },
+    {
+      "id": "development-02",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "She walk to work every morning.",
+      "expected_error": true,
+      "expected_issue": "walk → walks; third-person singular present",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "She walks to work every morning."
+      ]
+    },
+    {
+      "id": "development-03",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "Could we have separate bills, please?",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "Could we have separate bills, please?"
+      ]
+    },
+    {
+      "id": "development-04",
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "text": "I would like two sandwich, please.",
+      "expected_error": true,
+      "expected_issue": "sandwich → sandwiches; plural after two",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I would like two sandwiches, please."
+      ]
+    },
+    {
+      "id": "development-05",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "My sister and I cycle to work.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "My sister and I cycle to work."
+      ]
+    },
+    {
+      "id": "development-06",
+      "level": "advanced",
+      "scenario": "daily activities",
+      "text": "I am engineer.",
+      "expected_error": true,
+      "expected_issue": "am engineer → am an engineer; article before singular count profession",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I am an engineer."
+      ]
+    },
+    {
+      "id": "development-07",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "I have been a teacher for six years.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I have been a teacher for six years."
+      ]
+    },
+    {
+      "id": "development-08",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "expected_error": true,
+      "expected_issue": "buy → bought; completed past event",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "We visited the museum yesterday and bought a postcard."
+      ]
+    },
+    {
+      "id": "development-09",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "There is some rice left.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "There is some rice left."
+      ]
+    },
+    {
+      "id": "development-10",
+      "level": "intermediate",
+      "scenario": "ordering food",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "expected_error": true,
+      "expected_issue": "more cheaper → cheaper; no double comparative",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted the proposed judgment and reference without changes: \"accept all in first 10\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "This restaurant is cheaper than the cafe."
+      ]
+    },
+    {
+      "id": "development-11",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I would rather stay home tonight.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I would rather stay home tonight."
+      ]
+    },
+    {
+      "id": "development-12",
+      "level": "advanced",
+      "scenario": "ordering food",
+      "text": "I have lived here since five years.",
+      "expected_error": true,
+      "expected_issue": "since → for; duration rather than starting point",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I have lived here for five years."
+      ]
+    },
+    {
+      "id": "development-13",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "I look forward to meeting you.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I look forward to meeting you."
+      ]
+    },
+    {
+      "id": "development-14",
+      "level": "beginner",
+      "scenario": "introductions",
+      "text": "He can speaks Spanish.",
+      "expected_error": true,
+      "expected_issue": "speaks → speak; base verb after modal",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "He can speak Spanish."
+      ]
+    },
+    {
+      "id": "development-15",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "Neither option appeals to me.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "Neither option appeals to me."
+      ]
+    },
+    {
+      "id": "development-16",
+      "level": "intermediate",
+      "scenario": "introductions",
+      "text": "I am interested on photography.",
+      "expected_error": true,
+      "expected_issue": "interested on → interested in; standard preposition",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I am interested in photography."
+      ]
+    },
+    {
+      "id": "development-17",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "The soup tastes delicious.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "The soup tastes delicious."
+      ]
+    },
+    {
+      "id": "development-18",
+      "level": "advanced",
+      "scenario": "introductions",
+      "text": "There are a bowl on the table.",
+      "expected_error": true,
+      "expected_issue": "are → is; singular existential subject",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "There is a bowl on the table."
+      ]
+    },
+    {
+      "id": "development-19",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I used to play chess after school.",
+      "expected_error": false,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "gold_error_count": 0,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I used to play chess after school."
+      ]
+    },
+    {
+      "id": "development-20",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "text": "I did not ordered dessert.",
+      "expected_error": true,
+      "expected_issue": "ordered → order; base verb after did",
+      "gold_error_count": 1,
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      },
+      "category": "historical-development",
+      "references": [
+        "I did not order dessert."
+      ]
+    },
+    {
+      "id": "v2-development-01-error",
+      "pair_id": "development-01",
+      "category": "agreement",
+      "text": "My aunt drive a bus.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a third-person singular present verb.",
+      "references": [
+        "My aunt drives a bus."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-01-correct",
+      "pair_id": "development-01",
+      "category": "agreement",
+      "text": "My aunt drives a bus.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "My aunt drives a bus."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-02-error",
+      "pair_id": "development-02",
+      "category": "agreement",
+      "text": "The students needs more time.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the plural present verb with students.",
+      "references": [
+        "The students need more time."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-02-correct",
+      "pair_id": "development-02",
+      "category": "agreement",
+      "text": "The students need more time.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "The students need more time."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-03-error",
+      "pair_id": "development-03",
+      "category": "article",
+      "text": "He is an chef.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a before the consonant sound in chef.",
+      "references": [
+        "He is a chef."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-03-correct",
+      "pair_id": "development-03",
+      "category": "article",
+      "text": "He is a chef.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "He is a chef."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-04-error",
+      "pair_id": "development-04",
+      "category": "article",
+      "text": "We saw a elephant.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use an before the vowel sound in elephant.",
+      "references": [
+        "We saw an elephant."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-04-correct",
+      "pair_id": "development-04",
+      "category": "article",
+      "text": "We saw an elephant.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "We saw an elephant."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-05-error",
+      "pair_id": "development-05",
+      "category": "past",
+      "text": "Last night I watch a film.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use past tense for the completed event.",
+      "references": [
+        "Last night I watched a film."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-05-correct",
+      "pair_id": "development-05",
+      "category": "past",
+      "text": "Last night I watched a film.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Last night I watched a film."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-06-error",
+      "pair_id": "development-06",
+      "category": "past",
+      "text": "Yesterday she bring her lunch.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Brought is the past form of bring.",
+      "references": [
+        "Yesterday she brought her lunch."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-06-correct",
+      "pair_id": "development-06",
+      "category": "past",
+      "text": "Yesterday she brought her lunch.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Yesterday she brought her lunch."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-07-error",
+      "pair_id": "development-07",
+      "category": "plural",
+      "text": "I packed four shirt.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a plural count noun after four.",
+      "references": [
+        "I packed four shirts."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-07-correct",
+      "pair_id": "development-07",
+      "category": "plural",
+      "text": "I packed four shirts.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "I packed four shirts."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-08-error",
+      "pair_id": "development-08",
+      "category": "plural",
+      "text": "We need three box.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the plural boxes after three.",
+      "references": [
+        "We need three boxes."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-08-correct",
+      "pair_id": "development-08",
+      "category": "plural",
+      "text": "We need three boxes.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "We need three boxes."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-09-error",
+      "pair_id": "development-09",
+      "category": "modal",
+      "text": "You should takes a break.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after should.",
+      "references": [
+        "You should take a break."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-09-correct",
+      "pair_id": "development-09",
+      "category": "modal",
+      "text": "You should take a break.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "You should take a break."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-10-error",
+      "pair_id": "development-10",
+      "category": "modal",
+      "text": "They might arrives early.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after might.",
+      "references": [
+        "They might arrive early."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-10-correct",
+      "pair_id": "development-10",
+      "category": "modal",
+      "text": "They might arrive early.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "They might arrive early."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-11-error",
+      "pair_id": "development-11",
+      "category": "question",
+      "text": "Does she likes tea?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after does.",
+      "references": [
+        "Does she like tea?"
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-11-correct",
+      "pair_id": "development-11",
+      "category": "question",
+      "text": "Does she like tea?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Does she like tea?"
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-12-error",
+      "pair_id": "development-12",
+      "category": "negative",
+      "text": "He did not wrote the note.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after did.",
+      "references": [
+        "He did not write the note."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-12-correct",
+      "pair_id": "development-12",
+      "category": "negative",
+      "text": "He did not write the note.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "He did not write the note."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-13-error",
+      "pair_id": "development-13",
+      "category": "comparison",
+      "text": "This route is more shorter.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Do not combine more with the comparative shorter.",
+      "references": [
+        "This route is shorter."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-13-correct",
+      "pair_id": "development-13",
+      "category": "comparison",
+      "text": "This route is shorter.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "This route is shorter."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-14-error",
+      "pair_id": "development-14",
+      "category": "comparison",
+      "text": "Today is more colder than Monday.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Do not combine more with colder.",
+      "references": [
+        "Today is colder than Monday."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-14-correct",
+      "pair_id": "development-14",
+      "category": "comparison",
+      "text": "Today is colder than Monday.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Today is colder than Monday."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-15-error",
+      "pair_id": "development-15",
+      "category": "duration",
+      "text": "She has worked here since two months.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use for with a duration.",
+      "references": [
+        "She has worked here for two months."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-15-correct",
+      "pair_id": "development-15",
+      "category": "duration",
+      "text": "She has worked here for two months.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She has worked here for two months."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-16-error",
+      "pair_id": "development-16",
+      "category": "preposition",
+      "text": "They depend of public transport.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "The expression is depend on.",
+      "references": [
+        "They depend on public transport."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-16-correct",
+      "pair_id": "development-16",
+      "category": "preposition",
+      "text": "They depend on public transport.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "They depend on public transport."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-17-error",
+      "pair_id": "development-17",
+      "category": "verb-pattern",
+      "text": "I enjoy to swim.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a gerund after enjoy.",
+      "references": [
+        "I enjoy swimming."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-17-correct",
+      "pair_id": "development-17",
+      "category": "verb-pattern",
+      "text": "I enjoy swimming.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "I enjoy swimming."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-18-error",
+      "pair_id": "development-18",
+      "category": "verb-pattern",
+      "text": "She decided studying medicine.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the to-infinitive after decided.",
+      "references": [
+        "She decided to study medicine."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-18-correct",
+      "pair_id": "development-18",
+      "category": "verb-pattern",
+      "text": "She decided to study medicine.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She decided to study medicine."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-19-error",
+      "pair_id": "development-19",
+      "category": "pronoun",
+      "text": "Please give the key to I.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use an object pronoun after to.",
+      "references": [
+        "Please give the key to me."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-19-correct",
+      "pair_id": "development-19",
+      "category": "pronoun",
+      "text": "Please give the key to me.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Please give the key to me."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-20-error",
+      "pair_id": "development-20",
+      "category": "possessive",
+      "text": "This is hers coat.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use her before the noun; hers stands alone.",
+      "references": [
+        "This is her coat."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    },
+    {
+      "id": "v2-development-20-correct",
+      "pair_id": "development-20",
+      "category": "possessive",
+      "text": "This is her coat.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "This is her coat."
+      ],
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner (user approval in chat)",
+        "rationale": "User accepted all remaining development judgments and references without changes: \"accept all remaining\". No additional rationale supplied.",
+        "reviewed_on": "2026-09-30"
+      }
+    }
+  ]
+}

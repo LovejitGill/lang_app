@@ -1,0 +1,137 @@
+{
+  "status": "no_candidate_selected",
+  "active_app_profile": {
+    "model": "qwen3:1.7b",
+    "variant": "baseline-v1"
+  },
+  "human_review_pending": true,
+  "reason": "Each candidate retains material grounding, topic, instruction-following or useful-follow-up failures. The development selection criteria have not been established as satisfied. No candidate is promoted merely for better question wording or valid JSON.",
+  "profiles": [
+    {
+      "profile": "baseline_1_7b",
+      "model": "qwen3:1.7b",
+      "variant": "baseline-v1",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 1.2825209579968941,
+        "p95_seconds_nearest_rank": 6.080456087991479,
+        "maximum_seconds": 6.080456087991479
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "grounded_1_7b",
+      "model": "qwen3:1.7b",
+      "variant": "grounded-v2",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 1.473423740004364,
+        "p95_seconds_nearest_rank": 4.954909538006177,
+        "maximum_seconds": 4.954909538006177
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "focused_1_7b",
+      "model": "qwen3:1.7b",
+      "variant": "focused-v3",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 1.5886284360021818,
+        "p95_seconds_nearest_rank": 4.244320956000593,
+        "maximum_seconds": 4.244320956000593
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "structured_1_7b",
+      "model": "qwen3:1.7b",
+      "variant": "structured-v4",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 2.1254030175041407,
+        "p95_seconds_nearest_rank": 4.712457482004538,
+        "maximum_seconds": 4.712457482004538
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "structured_4b",
+      "model": "qwen3:4b",
+      "variant": "structured-v4",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 5.967686585499905,
+        "p95_seconds_nearest_rank": 18.77073636899877,
+        "maximum_seconds": 18.77073636899877
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "compact_1_7b",
+      "model": "qwen3:1.7b",
+      "variant": "compact-v5",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 1.261868201501784,
+        "p95_seconds_nearest_rank": 3.3241315810009837,
+        "maximum_seconds": 3.3241315810009837
+      },
+      "human_useful": null
+    },
+    {
+      "profile": "compact_4b",
+      "model": "qwen3:4b",
+      "variant": "compact-v5",
+      "denominator": 16,
+      "attempts_started": 16,
+      "valid": 16,
+      "unavailable": 0,
+      "timing": {
+        "attempts": 16,
+        "failures": 0,
+        "median_seconds": 3.8063523989985697,
+        "p95_seconds_nearest_rank": 10.82767012900149,
+        "maximum_seconds": 10.82767012900149
+      },
+      "human_useful": null
+    }
+  ],
+  "next": "Continue conversational quality plus latency: review current replies, address direct answers/clarification using grounded question intent and local references, then challenge new dialogues before app integration. Do not substitute fallback speed for usefulness.",
+  "owner_direction": {
+    "date": "2026-10-05",
+    "text": "Find a way to satisfy both requirements",
+    "interpretation": "Preserve useful, grounded conversation and <=2-second response delay as joint targets."
+  },
+  "joint_experiment_status": "No candidate promoted; text timing improved, direct-answer/specificity gaps and voice latency remain."
+}

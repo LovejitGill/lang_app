@@ -1,0 +1,308 @@
+{
+  "status": "Assistant observations only; candidate human review pending.",
+  "source_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "rows": [
+    {
+      "display_row": 4,
+      "case_id": "development-04",
+      "input": "I would like two sandwich, please.",
+      "actual_result": {
+        "corrected_text": "I would like two sandwiches, please.",
+        "explanation": "Add an 's' to 'sandwich' to make it plural, and add a comma before the conjunction 'please' for proper punctuation.",
+        "corrections": [
+          {
+            "start": 17,
+            "end": 25,
+            "original": "sandwich",
+            "replacement": "sandwiches",
+            "explanation": "Add an 's' to 'sandwich' to make it plural, and add a comma before the conjunction 'please' for proper punctuation.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct sentence, but explanation says add s rather than es, calls please a conjunction, and claims a comma change even though the comma was already present.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 6,
+      "case_id": "development-06",
+      "input": "I am engineer.",
+      "actual_result": {
+        "corrected_text": "I am an engineer.",
+        "explanation": "Add the definite article 'an' before the noun 'engineer' to form a correct adjective phrase.",
+        "corrections": [
+          {
+            "start": 5,
+            "end": 5,
+            "original": "",
+            "replacement": "an ",
+            "explanation": "Add the definite article 'an' before the noun 'engineer' to form a correct adjective phrase.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct article insertion; explanation incorrectly calls an definite and the phrase adjectival.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 16,
+      "case_id": "development-16",
+      "input": "I am interested on photography.",
+      "actual_result": {
+        "corrected_text": "I am interested in photography.",
+        "explanation": "Use 'in' with the preposition for interests.",
+        "corrections": [
+          {
+            "start": 16,
+            "end": 18,
+            "original": "on",
+            "replacement": "in",
+            "explanation": "Use 'in' with the preposition for interests.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct preposition; explanation remains vague, similar to the previously accepted borderline baseline case. New output still needs its own judgment.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 20,
+      "case_id": "development-20",
+      "input": "I did not ordered dessert.",
+      "actual_result": {
+        "corrected_text": "I did not order dessert.",
+        "explanation": "Use past tense 'ordered' instead of past participle 'ordered' (incorrectly used as past tense).",
+        "corrections": [
+          {
+            "start": 10,
+            "end": 17,
+            "original": "ordered",
+            "replacement": "order",
+            "explanation": "Use past tense 'ordered' instead of past participle 'ordered' (incorrectly used as past tense).",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct base-form replacement, but explanation contradictorily recommends ordered and confuses past tense with past participle.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 25,
+      "case_id": "v2-development-03-error",
+      "input": "He is an chef.",
+      "actual_result": {
+        "corrected_text": "He is a chef.",
+        "explanation": "Use article 'a' before the singular noun 'chef'.",
+        "corrections": [
+          {
+            "start": 6,
+            "end": 8,
+            "original": "an",
+            "replacement": "a",
+            "explanation": "Use article 'a' before the singular noun 'chef'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct article; explanation mentions singular noun but omits the consonant-sound distinction that chooses a over an.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 33,
+      "case_id": "v2-development-07-error",
+      "input": "I packed four shirt.",
+      "actual_result": {
+        "corrected_text": "I packed four shirts.",
+        "explanation": "Plural form of shirt is shirts.",
+        "corrections": [
+          {
+            "start": 14,
+            "end": 19,
+            "original": "shirt",
+            "replacement": "shirts",
+            "explanation": "Plural form of shirt is shirts.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct plural; explanation only identifies the form, without linking it to four. Adequacy needs review.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 35,
+      "case_id": "v2-development-08-error",
+      "input": "We need three box.",
+      "actual_result": {
+        "corrected_text": "We need three boxes.",
+        "explanation": "Use plural noun 'boxes' for countable object 'box'.",
+        "corrections": [
+          {
+            "start": 14,
+            "end": 17,
+            "original": "box",
+            "replacement": "boxes",
+            "explanation": "Use plural noun 'boxes' for countable object 'box'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct plural; explanation mentions countability without linking plural to three. Adequacy needs review.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 41,
+      "case_id": "v2-development-11-error",
+      "input": "Does she likes tea?",
+      "actual_result": {
+        "corrected_text": "Does she like tea?",
+        "explanation": "Use like with the third person singular subject she.",
+        "corrections": [
+          {
+            "start": 9,
+            "end": 14,
+            "original": "likes",
+            "replacement": "like",
+            "explanation": "Use like with the third person singular subject she.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct replacement, but explanation appeals to she rather than the base form after does.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 43,
+      "case_id": "v2-development-12-error",
+      "input": "He did not wrote the note.",
+      "actual_result": {
+        "corrected_text": "He did not write the note.",
+        "explanation": "Use write instead of wrote for the simple past tense.",
+        "corrections": [
+          {
+            "start": 11,
+            "end": 16,
+            "original": "wrote",
+            "replacement": "write",
+            "explanation": "Use write instead of wrote for the simple past tense.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct replacement, but write is not the simple-past form; the relevant rule is the base form after did.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 45,
+      "case_id": "v2-development-13-error",
+      "input": "This route is more shorter.",
+      "actual_result": {
+        "corrected_text": "This route is shorter.",
+        "explanation": "Remove the unnecessary adjective 'more' as 'shorter' already implies comparison.",
+        "corrections": [
+          {
+            "start": 14,
+            "end": 19,
+            "original": "more ",
+            "replacement": "",
+            "explanation": "Remove the unnecessary adjective 'more' as 'shorter' already implies comparison.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct comparative correction, but more modifies the adjective here; calling it an adjective is inaccurate terminology.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 51,
+      "case_id": "v2-development-16-error",
+      "input": "They depend of public transport.",
+      "actual_result": {
+        "corrected_text": "They depend on public transport.",
+        "explanation": "Use 'on' instead of 'of' with the preposition for public transport.",
+        "corrections": [
+          {
+            "start": 12,
+            "end": 14,
+            "original": "of",
+            "replacement": "on",
+            "explanation": "Use 'on' instead of 'of' with the preposition for public transport.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct preposition; explanation refers to public transport rather than the construction depend on.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 57,
+      "case_id": "v2-development-19-error",
+      "input": "Please give the key to I.",
+      "actual_result": {
+        "corrected_text": "Please give me the key to I.",
+        "explanation": "Add 'me' to indicate the indirect object of the verb 'give'.",
+        "corrections": [
+          {
+            "start": 11,
+            "end": 11,
+            "original": "",
+            "replacement": " me",
+            "explanation": "Add 'me' to indicate the indirect object of the verb 'give'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Incorrect full sentence: adds me but retains to I. Exact offset reconstruction cannot establish semantic accuracy.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 58,
+      "case_id": "v2-development-19-correct",
+      "input": "Please give the key to me.",
+      "actual_result": {
+        "corrected_text": "Please give me the key.",
+        "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+        "corrections": [
+          {
+            "start": 12,
+            "end": 12,
+            "original": "",
+            "replacement": "me ",
+            "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+            "explanation_scope": "whole response"
+          },
+          {
+            "start": 19,
+            "end": 25,
+            "original": " to me",
+            "replacement": "",
+            "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Unnecessary rewrite of approved correct English; explanation falsely calls the original word order incorrect and contradicts its own proposed ordering. This fails the frozen unchanged-correct-input criterion.",
+      "human_review": "pending"
+    },
+    {
+      "display_row": 59,
+      "case_id": "v2-development-20-error",
+      "input": "This is hers coat.",
+      "actual_result": {
+        "corrected_text": "This is her coat.",
+        "explanation": "Use her instead of hers for the possessive pronoun.",
+        "corrections": [
+          {
+            "start": 8,
+            "end": 12,
+            "original": "hers",
+            "replacement": "her",
+            "explanation": "Use her instead of hers for the possessive pronoun.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "assistant_observation": "Correct replacement; explanation does not state that her precedes the noun and hers stands alone. Terminology and adequacy need review.",
+      "human_review": "pending"
+    }
+  ]
+}

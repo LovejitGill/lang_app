@@ -1,0 +1,1036 @@
+{
+  "variant": "languagetool-backed-explanations-v1",
+  "detector_sha256": "81576ff6a80d786acf5b7ef02ca99645309f44c24706f620e61810cb6dc896f4",
+  "sources_sha256": {
+    "evaluation/sentence_experiment/development_results.json": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+    "evaluation/benchmark_v2/final_development_report.json": "587b52ee92cbfd8b2c60b566bc653433c4f52615640c8e970760937d8d53d1ed"
+  },
+  "summary": {
+    "cases": 60,
+    "error_denominator": 30,
+    "offered_on_errors": 20,
+    "offered_on_correct": 0
+  },
+  "rows": [
+    {
+      "case_id": "development-01",
+      "original": "I live near the station.",
+      "proposed": "I live near the station.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-02",
+      "original": "She walk to work every morning.",
+      "proposed": "She walks to work every morning.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "With ‘she’, use ‘walks’ in the present tense.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "walk",
+          "replacement": "walks"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-03",
+      "original": "Could we have separate bills, please?",
+      "proposed": "Could we have separate bills, please?",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "Use a plural noun for more than one item.",
+        "edit": {
+          "start": 17,
+          "end": 25,
+          "original": "sandwich",
+          "replacement": "sandwiches"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-05",
+      "original": "My sister and I cycle to work.",
+      "proposed": "My sister and I cycle to work.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-06",
+      "original": "I am engineer.",
+      "proposed": "I am an engineer.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-07",
+      "original": "I have been a teacher for six years.",
+      "proposed": "I have been a teacher for six years.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-08",
+      "original": "We visited the museum yesterday and buy a postcard.",
+      "proposed": "We visited the museum yesterday and bought a postcard.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-09",
+      "original": "There is some rice left.",
+      "proposed": "There is some rice left.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘cheaper’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 19,
+          "end": 31,
+          "original": "more cheaper",
+          "replacement": "cheaper"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-11",
+      "original": "I would rather stay home tonight.",
+      "proposed": "I would rather stay home tonight.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-13",
+      "original": "I look forward to meeting you.",
+      "proposed": "I look forward to meeting you.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 7,
+          "end": 13,
+          "original": "speaks",
+          "replacement": "speak"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-15",
+      "original": "Neither option appeals to me.",
+      "proposed": "Neither option appeals to me.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-16",
+      "original": "I am interested on photography.",
+      "proposed": "I am interested in photography.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-17",
+      "original": "The soup tastes delicious.",
+      "proposed": "The soup tastes delicious.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-18",
+      "original": "There are a bowl on the table.",
+      "proposed": "There is a bowl on the table.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "Use ‘there is’ for one thing.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-19",
+      "original": "I used to play chess after school.",
+      "proposed": "I used to play chess after school.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "DID_BASEFORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 17,
+          "original": "ordered",
+          "replacement": "order"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-01-error",
+      "original": "My aunt drive a bus.",
+      "proposed": "My aunt drives a bus.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-01-correct",
+      "original": "My aunt drives a bus.",
+      "proposed": "My aunt drives a bus.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-02-error",
+      "original": "The students needs more time.",
+      "proposed": "The students need more time.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "Use the basic verb form with a plural subject.",
+        "edit": {
+          "start": 13,
+          "end": 18,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-02-correct",
+      "original": "The students need more time.",
+      "proposed": "The students need more time.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-03-error",
+      "original": "He is an chef.",
+      "proposed": "He is a chef.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘a’ before a consonant sound.",
+        "edit": {
+          "start": 6,
+          "end": 8,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-03-correct",
+      "original": "He is a chef.",
+      "proposed": "He is a chef.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-04-error",
+      "original": "We saw a elephant.",
+      "proposed": "We saw an elephant.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘an’ before a vowel sound.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-04-correct",
+      "original": "We saw an elephant.",
+      "proposed": "We saw an elephant.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-05-error",
+      "original": "Last night I watch a film.",
+      "proposed": "Last night I watched a film.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-05-correct",
+      "original": "Last night I watched a film.",
+      "proposed": "Last night I watched a film.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-06-error",
+      "original": "Yesterday she bring her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-06-correct",
+      "original": "Yesterday she brought her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "Use a plural noun for more than one item.",
+        "edit": {
+          "start": 14,
+          "end": 19,
+          "original": "shirt",
+          "replacement": "shirts"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-07-correct",
+      "original": "I packed four shirts.",
+      "proposed": "I packed four shirts.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-08-error",
+      "original": "We need three box.",
+      "proposed": "We need three boxes.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-08-correct",
+      "original": "We need three boxes.",
+      "proposed": "We need three boxes.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "takes",
+          "replacement": "take"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-09-correct",
+      "original": "You should take a break.",
+      "proposed": "You should take a break.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 18,
+          "original": "arrives",
+          "replacement": "arrive"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-10-correct",
+      "original": "They might arrive early.",
+      "proposed": "They might arrive early.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "DOES_X_HAS",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 9,
+          "end": 14,
+          "original": "likes",
+          "replacement": "like"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-11-correct",
+      "original": "Does she like tea?",
+      "proposed": "Does she like tea?",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "wrote",
+          "replacement": "write"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-12-correct",
+      "original": "He did not write the note.",
+      "proposed": "He did not write the note.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘shorter’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 14,
+          "end": 26,
+          "original": "more shorter",
+          "replacement": "shorter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-13-correct",
+      "original": "This route is shorter.",
+      "proposed": "This route is shorter.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘colder’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 9,
+          "end": 20,
+          "original": "more colder",
+          "replacement": "colder"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-14-correct",
+      "original": "Today is colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-15-correct",
+      "original": "She has worked here for two months.",
+      "proposed": "She has worked here for two months.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-16-error",
+      "original": "They depend of public transport.",
+      "proposed": "They depend on public transport.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "Use ‘depend on’ when something relies on something else.",
+        "edit": {
+          "start": 5,
+          "end": 14,
+          "original": "depend of",
+          "replacement": "depend on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-16-correct",
+      "original": "They depend on public transport.",
+      "proposed": "They depend on public transport.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-17-error",
+      "original": "I enjoy to swim.",
+      "proposed": "I enjoy swimming.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 15,
+          "original": "enjoy to swim",
+          "replacement": "enjoy swimming"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-17-correct",
+      "original": "I enjoy swimming.",
+      "proposed": "I enjoy swimming.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-18-error",
+      "original": "She decided studying medicine.",
+      "proposed": "She decided to study medicine.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-18-correct",
+      "original": "She decided to study medicine.",
+      "proposed": "She decided to study medicine.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-19-error",
+      "original": "Please give the key to I.",
+      "proposed": "Please give me the key to I.",
+      "expected_error": true,
+      "reference_match": false,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-19-correct",
+      "original": "Please give the key to me.",
+      "proposed": "Please give me the key.",
+      "expected_error": false,
+      "reference_match": false,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-20-error",
+      "original": "This is hers coat.",
+      "proposed": "This is her coat.",
+      "expected_error": true,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_useful": null
+    },
+    {
+      "case_id": "v2-development-20-correct",
+      "original": "This is her coat.",
+      "proposed": "This is her coat.",
+      "expected_error": false,
+      "reference_match": true,
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_useful": null
+    }
+  ]
+}

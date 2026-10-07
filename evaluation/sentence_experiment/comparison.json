@@ -1,0 +1,1645 @@
+{
+  "candidate_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "baseline_sha256": "587b52ee92cbfd8b2c60b566bc653433c4f52615640c8e970760937d8d53d1ed",
+  "baseline_review_sha256": "99a43549d0fa4919a5ce8016b811806c6a94f478a1a0ec3760180c6dba2cae05",
+  "status": "Mechanical comparison only; candidate semantic reviews pending.",
+  "rows": [
+    {
+      "row": 1,
+      "case_id": "development-01",
+      "input": "I live near the station.",
+      "expected_error": false,
+      "reference": [
+        "I live near the station."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I live near the station.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 2,
+      "case_id": "development-02",
+      "input": "She walk to work every morning.",
+      "expected_error": true,
+      "reference": [
+        "She walks to work every morning."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "walk",
+          "replacement": "walks",
+          "explanation": "Subject 'She' requires third person singular verb form."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "She walks to work every morning.",
+      "candidate_explanation": "Use present simple third person singular for the verb after a subject that is a singular pronoun (she).",
+      "candidate_edits": [
+        {
+          "start": 4,
+          "end": 8,
+          "original": "walk",
+          "replacement": "walks",
+          "explanation": "Use present simple third person singular for the verb after a subject that is a singular pronoun (she).",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 3,
+      "case_id": "development-03",
+      "input": "Could we have separate bills, please?",
+      "expected_error": false,
+      "reference": [
+        "Could we have separate bills, please?"
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Could we have separate bills, please?",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 4,
+      "case_id": "development-04",
+      "input": "I would like two sandwich, please.",
+      "expected_error": true,
+      "reference": [
+        "I would like two sandwiches, please."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "sandwich",
+          "replacement": "sandwiches",
+          "explanation": "Plural form needed for 'two'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I would like two sandwiches, please.",
+      "candidate_explanation": "Add an 's' to 'sandwich' to make it plural, and add a comma before the conjunction 'please' for proper punctuation.",
+      "candidate_edits": [
+        {
+          "start": 17,
+          "end": 25,
+          "original": "sandwich",
+          "replacement": "sandwiches",
+          "explanation": "Add an 's' to 'sandwich' to make it plural, and add a comma before the conjunction 'please' for proper punctuation.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 5,
+      "case_id": "development-05",
+      "input": "My sister and I cycle to work.",
+      "expected_error": false,
+      "reference": [
+        "My sister and I cycle to work."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "My sister and I cycle to work.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 6,
+      "case_id": "development-06",
+      "input": "I am engineer.",
+      "expected_error": true,
+      "reference": [
+        "I am an engineer."
+      ],
+      "baseline_outcome": "missed",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I am an engineer.",
+      "candidate_explanation": "Add the definite article 'an' before the noun 'engineer' to form a correct adjective phrase.",
+      "candidate_edits": [
+        {
+          "start": 5,
+          "end": 5,
+          "original": "",
+          "replacement": "an ",
+          "explanation": "Add the definite article 'an' before the noun 'engineer' to form a correct adjective phrase.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 7,
+      "case_id": "development-07",
+      "input": "I have been a teacher for six years.",
+      "expected_error": false,
+      "reference": [
+        "I have been a teacher for six years."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I have been a teacher for six years.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 8,
+      "case_id": "development-08",
+      "input": "We visited the museum yesterday and buy a postcard.",
+      "expected_error": true,
+      "reference": [
+        "We visited the museum yesterday and bought a postcard."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "buy",
+          "replacement": "bought",
+          "explanation": "The past tense of 'buy' is 'bought' for completed actions in the past."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "We visited the museum yesterday and bought a postcard.",
+      "candidate_explanation": "Corrected the past tense verb 'buy' to 'bought' for consistency with the past tense context.",
+      "candidate_edits": [
+        {
+          "start": 36,
+          "end": 39,
+          "original": "buy",
+          "replacement": "bought",
+          "explanation": "Corrected the past tense verb 'buy' to 'bought' for consistency with the past tense context.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 9,
+      "case_id": "development-09",
+      "input": "There is some rice left.",
+      "expected_error": false,
+      "reference": [
+        "There is some rice left."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "There is some rice left.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 10,
+      "case_id": "development-10",
+      "input": "This restaurant is more cheaper than the cafe.",
+      "expected_error": true,
+      "reference": [
+        "This restaurant is cheaper than the cafe."
+      ],
+      "baseline_outcome": "incorrect_edit",
+      "baseline_edits": [
+        {
+          "original": "is",
+          "replacement": "cheaper",
+          "explanation": "The phrase 'more cheaper' is incorrect; 'cheaper' is already comparative form, so use 'cheaper' directly without 'more'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "This restaurant is cheaper than the cafe.",
+      "candidate_explanation": "Use cheaper instead of more cheaper to avoid double comparison.",
+      "candidate_edits": [
+        {
+          "start": 18,
+          "end": 23,
+          "original": " more",
+          "replacement": "",
+          "explanation": "Use cheaper instead of more cheaper to avoid double comparison.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 11,
+      "case_id": "development-11",
+      "input": "I would rather stay home tonight.",
+      "expected_error": false,
+      "reference": [
+        "I would rather stay home tonight."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I would rather stay home tonight.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 12,
+      "case_id": "development-12",
+      "input": "I have lived here since five years.",
+      "expected_error": true,
+      "reference": [
+        "I have lived here for five years."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time, not 'since'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I have lived here for five years.",
+      "candidate_explanation": "Use 'for' with a duration of time like 'five years'.",
+      "candidate_edits": [
+        {
+          "start": 18,
+          "end": 23,
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time like 'five years'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 13,
+      "case_id": "development-13",
+      "input": "I look forward to meeting you.",
+      "expected_error": false,
+      "reference": [
+        "I look forward to meeting you."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I look forward to meeting you.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 14,
+      "case_id": "development-14",
+      "input": "He can speaks Spanish.",
+      "expected_error": true,
+      "reference": [
+        "He can speak Spanish."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "speaks",
+          "replacement": "speak",
+          "explanation": "The verb 'speak' is used in the base form after 'can' for ability."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "He can speak Spanish.",
+      "candidate_explanation": "Use 'speak' (base verb) after 'can' for the correct verb form.",
+      "candidate_edits": [
+        {
+          "start": 7,
+          "end": 13,
+          "original": "speaks",
+          "replacement": "speak",
+          "explanation": "Use 'speak' (base verb) after 'can' for the correct verb form.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 15,
+      "case_id": "development-15",
+      "input": "Neither option appeals to me.",
+      "expected_error": false,
+      "reference": [
+        "Neither option appeals to me."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Neither option appeals to me.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 16,
+      "case_id": "development-16",
+      "input": "I am interested on photography.",
+      "expected_error": true,
+      "reference": [
+        "I am interested in photography."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "on",
+          "replacement": "in",
+          "explanation": "Use 'in' with the preposition for interests like photography."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I am interested in photography.",
+      "candidate_explanation": "Use 'in' with the preposition for interests.",
+      "candidate_edits": [
+        {
+          "start": 16,
+          "end": 18,
+          "original": "on",
+          "replacement": "in",
+          "explanation": "Use 'in' with the preposition for interests.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 17,
+      "case_id": "development-17",
+      "input": "The soup tastes delicious.",
+      "expected_error": false,
+      "reference": [
+        "The soup tastes delicious."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "The soup tastes delicious.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 18,
+      "case_id": "development-18",
+      "input": "There are a bowl on the table.",
+      "expected_error": true,
+      "reference": [
+        "There is a bowl on the table."
+      ],
+      "baseline_outcome": "rejected",
+      "baseline_edits": [],
+      "baseline_status": "rejected",
+      "candidate_status": "valid",
+      "candidate_sentence": "There is a bowl on the table.",
+      "candidate_explanation": "Use 'is' with singular subject 'a bowl'.",
+      "candidate_edits": [
+        {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is",
+          "explanation": "Use 'is' with singular subject 'a bowl'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 19,
+      "case_id": "development-19",
+      "input": "I used to play chess after school.",
+      "expected_error": false,
+      "reference": [
+        "I used to play chess after school."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I used to play chess after school.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 20,
+      "case_id": "development-20",
+      "input": "I did not ordered dessert.",
+      "expected_error": true,
+      "reference": [
+        "I did not order dessert."
+      ],
+      "baseline_outcome": "correct_edit_explanation_fails",
+      "baseline_edits": [
+        {
+          "original": "ordered",
+          "replacement": "order",
+          "explanation": "Use past tense for completed action: 'did not order'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I did not order dessert.",
+      "candidate_explanation": "Use past tense 'ordered' instead of past participle 'ordered' (incorrectly used as past tense).",
+      "candidate_edits": [
+        {
+          "start": 10,
+          "end": 17,
+          "original": "ordered",
+          "replacement": "order",
+          "explanation": "Use past tense 'ordered' instead of past participle 'ordered' (incorrectly used as past tense).",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 21,
+      "case_id": "v2-development-01-error",
+      "input": "My aunt drive a bus.",
+      "expected_error": true,
+      "reference": [
+        "My aunt drives a bus."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "drive",
+          "replacement": "drives",
+          "explanation": "Use third person singular verb form for the subject aunt."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "My aunt drives a bus.",
+      "candidate_explanation": "Use third person singular verb form drives for the subject aunt.",
+      "candidate_edits": [
+        {
+          "start": 8,
+          "end": 13,
+          "original": "drive",
+          "replacement": "drives",
+          "explanation": "Use third person singular verb form drives for the subject aunt.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 22,
+      "case_id": "v2-development-01-correct",
+      "input": "My aunt drives a bus.",
+      "expected_error": false,
+      "reference": [
+        "My aunt drives a bus."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "My aunt drives a bus.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 23,
+      "case_id": "v2-development-02-error",
+      "input": "The students needs more time.",
+      "expected_error": true,
+      "reference": [
+        "The students need more time."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "needs",
+          "replacement": "need",
+          "explanation": "The plural subject 'students' requires the plural verb form 'need'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "The students need more time.",
+      "candidate_explanation": "Use plural verb 'need' with plural subject 'students'.",
+      "candidate_edits": [
+        {
+          "start": 13,
+          "end": 18,
+          "original": "needs",
+          "replacement": "need",
+          "explanation": "Use plural verb 'need' with plural subject 'students'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 24,
+      "case_id": "v2-development-02-correct",
+      "input": "The students need more time.",
+      "expected_error": false,
+      "reference": [
+        "The students need more time."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "The students need more time.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 25,
+      "case_id": "v2-development-03-error",
+      "input": "He is an chef.",
+      "expected_error": true,
+      "reference": [
+        "He is a chef."
+      ],
+      "baseline_outcome": "rejected",
+      "baseline_edits": [],
+      "baseline_status": "rejected",
+      "candidate_status": "valid",
+      "candidate_sentence": "He is a chef.",
+      "candidate_explanation": "Use article 'a' before the singular noun 'chef'.",
+      "candidate_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "original": "an",
+          "replacement": "a",
+          "explanation": "Use article 'a' before the singular noun 'chef'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 26,
+      "case_id": "v2-development-03-correct",
+      "input": "He is a chef.",
+      "expected_error": false,
+      "reference": [
+        "He is a chef."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "He is a chef.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 27,
+      "case_id": "v2-development-04-error",
+      "input": "We saw a elephant.",
+      "expected_error": true,
+      "reference": [
+        "We saw an elephant."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "a",
+          "replacement": "an",
+          "explanation": "Use 'an' before words starting with a vowel sound."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "We saw an elephant.",
+      "candidate_explanation": "Use an before vowel sounds like elephant.",
+      "candidate_edits": [
+        {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an",
+          "explanation": "Use an before vowel sounds like elephant.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 28,
+      "case_id": "v2-development-04-correct",
+      "input": "We saw an elephant.",
+      "expected_error": false,
+      "reference": [
+        "We saw an elephant."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "We saw an elephant.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 29,
+      "case_id": "v2-development-05-error",
+      "input": "Last night I watch a film.",
+      "expected_error": true,
+      "reference": [
+        "Last night I watched a film."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "watch",
+          "replacement": "watched",
+          "explanation": "The past tense of watch is watched, and the sentence describes a completed action in the past."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Last night I watched a film.",
+      "candidate_explanation": "Use past tense verb watched for the past event.",
+      "candidate_edits": [
+        {
+          "start": 13,
+          "end": 18,
+          "original": "watch",
+          "replacement": "watched",
+          "explanation": "Use past tense verb watched for the past event.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 30,
+      "case_id": "v2-development-05-correct",
+      "input": "Last night I watched a film.",
+      "expected_error": false,
+      "reference": [
+        "Last night I watched a film."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Last night I watched a film.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 31,
+      "case_id": "v2-development-06-error",
+      "input": "Yesterday she bring her lunch.",
+      "expected_error": true,
+      "reference": [
+        "Yesterday she brought her lunch."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "bring",
+          "replacement": "brought",
+          "explanation": "The past tense of 'bring' is 'brought' for a completed action in the past."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Yesterday she brought her lunch.",
+      "candidate_explanation": "Use past tense (brought) for the verb after 'yesterday'.",
+      "candidate_edits": [
+        {
+          "start": 14,
+          "end": 19,
+          "original": "bring",
+          "replacement": "brought",
+          "explanation": "Use past tense (brought) for the verb after 'yesterday'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 32,
+      "case_id": "v2-development-06-correct",
+      "input": "Yesterday she brought her lunch.",
+      "expected_error": false,
+      "reference": [
+        "Yesterday she brought her lunch."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Yesterday she brought her lunch.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 33,
+      "case_id": "v2-development-07-error",
+      "input": "I packed four shirt.",
+      "expected_error": true,
+      "reference": [
+        "I packed four shirts."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "shirt",
+          "replacement": "shirts",
+          "explanation": "Plural form needed for countable noun 'shirt' when referring to multiple items."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I packed four shirts.",
+      "candidate_explanation": "Plural form of shirt is shirts.",
+      "candidate_edits": [
+        {
+          "start": 14,
+          "end": 19,
+          "original": "shirt",
+          "replacement": "shirts",
+          "explanation": "Plural form of shirt is shirts.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 34,
+      "case_id": "v2-development-07-correct",
+      "input": "I packed four shirts.",
+      "expected_error": false,
+      "reference": [
+        "I packed four shirts."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I packed four shirts.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 35,
+      "case_id": "v2-development-08-error",
+      "input": "We need three box.",
+      "expected_error": true,
+      "reference": [
+        "We need three boxes."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "box",
+          "replacement": "boxes",
+          "explanation": "The plural form is required for 'three'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "We need three boxes.",
+      "candidate_explanation": "Use plural noun 'boxes' for countable object 'box'.",
+      "candidate_edits": [
+        {
+          "start": 14,
+          "end": 17,
+          "original": "box",
+          "replacement": "boxes",
+          "explanation": "Use plural noun 'boxes' for countable object 'box'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 36,
+      "case_id": "v2-development-08-correct",
+      "input": "We need three boxes.",
+      "expected_error": false,
+      "reference": [
+        "We need three boxes."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "We need three boxes.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 37,
+      "case_id": "v2-development-09-error",
+      "input": "You should takes a break.",
+      "expected_error": true,
+      "reference": [
+        "You should take a break."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "takes",
+          "replacement": "take",
+          "explanation": "Use base verb form after 'should'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "You should take a break.",
+      "candidate_explanation": "Use take with the infinitive after 'should'.",
+      "candidate_edits": [
+        {
+          "start": 11,
+          "end": 16,
+          "original": "takes",
+          "replacement": "take",
+          "explanation": "Use take with the infinitive after 'should'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 38,
+      "case_id": "v2-development-09-correct",
+      "input": "You should take a break.",
+      "expected_error": false,
+      "reference": [
+        "You should take a break."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "You should take a break.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 39,
+      "case_id": "v2-development-10-error",
+      "input": "They might arrives early.",
+      "expected_error": true,
+      "reference": [
+        "They might arrive early."
+      ],
+      "baseline_outcome": "correct_edit_explanation_fails",
+      "baseline_edits": [
+        {
+          "original": "arrives",
+          "replacement": "arrive",
+          "explanation": "The verb 'arrive' is used in the present simple tense for 'they', which is plural."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "They might arrive early.",
+      "candidate_explanation": "Use arrive (base form) with modal verb might.",
+      "candidate_edits": [
+        {
+          "start": 11,
+          "end": 18,
+          "original": "arrives",
+          "replacement": "arrive",
+          "explanation": "Use arrive (base form) with modal verb might.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 40,
+      "case_id": "v2-development-10-correct",
+      "input": "They might arrive early.",
+      "expected_error": false,
+      "reference": [
+        "They might arrive early."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "They might arrive early.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 41,
+      "case_id": "v2-development-11-error",
+      "input": "Does she likes tea?",
+      "expected_error": true,
+      "reference": [
+        "Does she like tea?"
+      ],
+      "baseline_outcome": "correct_edit_explanation_fails",
+      "baseline_edits": [
+        {
+          "original": "likes",
+          "replacement": "like",
+          "explanation": "The subject 'she' is singular, so the verb must be in third person singular form: 'likes' should be 'likes' (wait, no—this is a mistake). Wait, no, let's think: 'She' is singular, so the verb should be third person singular. The verb 'like'"
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Does she like tea?",
+      "candidate_explanation": "Use like with the third person singular subject she.",
+      "candidate_edits": [
+        {
+          "start": 9,
+          "end": 14,
+          "original": "likes",
+          "replacement": "like",
+          "explanation": "Use like with the third person singular subject she.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 42,
+      "case_id": "v2-development-11-correct",
+      "input": "Does she like tea?",
+      "expected_error": false,
+      "reference": [
+        "Does she like tea?"
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Does she like tea?",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 43,
+      "case_id": "v2-development-12-error",
+      "input": "He did not wrote the note.",
+      "expected_error": true,
+      "reference": [
+        "He did not write the note."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "wrote",
+          "replacement": "write",
+          "explanation": "Use base verb form after did not."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "He did not write the note.",
+      "candidate_explanation": "Use write instead of wrote for the simple past tense.",
+      "candidate_edits": [
+        {
+          "start": 11,
+          "end": 16,
+          "original": "wrote",
+          "replacement": "write",
+          "explanation": "Use write instead of wrote for the simple past tense.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 44,
+      "case_id": "v2-development-12-correct",
+      "input": "He did not write the note.",
+      "expected_error": false,
+      "reference": [
+        "He did not write the note."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "He did not write the note.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 45,
+      "case_id": "v2-development-13-error",
+      "input": "This route is more shorter.",
+      "expected_error": true,
+      "reference": [
+        "This route is shorter."
+      ],
+      "baseline_outcome": "incorrect_edit",
+      "baseline_edits": [
+        {
+          "original": "is",
+          "replacement": "the",
+          "explanation": "Use 'the' for the specific route being referred to."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "This route is shorter.",
+      "candidate_explanation": "Remove the unnecessary adjective 'more' as 'shorter' already implies comparison.",
+      "candidate_edits": [
+        {
+          "start": 14,
+          "end": 19,
+          "original": "more ",
+          "replacement": "",
+          "explanation": "Remove the unnecessary adjective 'more' as 'shorter' already implies comparison.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 46,
+      "case_id": "v2-development-13-correct",
+      "input": "This route is shorter.",
+      "expected_error": false,
+      "reference": [
+        "This route is shorter."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "This route is shorter.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 47,
+      "case_id": "v2-development-14-error",
+      "input": "Today is more colder than Monday.",
+      "expected_error": true,
+      "reference": [
+        "Today is colder than Monday."
+      ],
+      "baseline_outcome": "incorrect_edit",
+      "baseline_edits": [
+        {
+          "original": "is",
+          "replacement": "cold",
+          "explanation": "The phrase 'more colder' is incorrect; 'colder' is already comparative form, so 'more' is redundant. Use 'cold' for the base form to compare temperatures."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Today is colder than Monday.",
+      "candidate_explanation": "Remove extra 'more' for correct comparative structure.",
+      "candidate_edits": [
+        {
+          "start": 8,
+          "end": 13,
+          "original": " more",
+          "replacement": "",
+          "explanation": "Remove extra 'more' for correct comparative structure.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 48,
+      "case_id": "v2-development-14-correct",
+      "input": "Today is colder than Monday.",
+      "expected_error": false,
+      "reference": [
+        "Today is colder than Monday."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Today is colder than Monday.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 49,
+      "case_id": "v2-development-15-error",
+      "input": "She has worked here since two months.",
+      "expected_error": true,
+      "reference": [
+        "She has worked here for two months."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with durations of time like 'two months'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "She has worked here for two months.",
+      "candidate_explanation": "Use 'for' with a duration of time in the present perfect tense.",
+      "candidate_edits": [
+        {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time in the present perfect tense.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 50,
+      "case_id": "v2-development-15-correct",
+      "input": "She has worked here for two months.",
+      "expected_error": false,
+      "reference": [
+        "She has worked here for two months."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "She has worked here for two months.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 51,
+      "case_id": "v2-development-16-error",
+      "input": "They depend of public transport.",
+      "expected_error": true,
+      "reference": [
+        "They depend on public transport."
+      ],
+      "baseline_outcome": "useful",
+      "baseline_edits": [
+        {
+          "original": "of",
+          "replacement": "on",
+          "explanation": "Use 'on' with public transport for dependency."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "They depend on public transport.",
+      "candidate_explanation": "Use 'on' instead of 'of' with the preposition for public transport.",
+      "candidate_edits": [
+        {
+          "start": 12,
+          "end": 14,
+          "original": "of",
+          "replacement": "on",
+          "explanation": "Use 'on' instead of 'of' with the preposition for public transport.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 52,
+      "case_id": "v2-development-16-correct",
+      "input": "They depend on public transport.",
+      "expected_error": false,
+      "reference": [
+        "They depend on public transport."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "They depend on public transport.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 53,
+      "case_id": "v2-development-17-error",
+      "input": "I enjoy to swim.",
+      "expected_error": true,
+      "reference": [
+        "I enjoy swimming."
+      ],
+      "baseline_outcome": "incorrect_edit",
+      "baseline_edits": [
+        {
+          "original": "to",
+          "replacement": "swimming",
+          "explanation": "Use the gerund form after 'enjoy'."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I enjoy swimming.",
+      "candidate_explanation": "Use the gerund form after 'enjoy'.",
+      "candidate_edits": [
+        {
+          "start": 8,
+          "end": 15,
+          "original": "to swim",
+          "replacement": "swimming",
+          "explanation": "Use the gerund form after 'enjoy'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 54,
+      "case_id": "v2-development-17-correct",
+      "input": "I enjoy swimming.",
+      "expected_error": false,
+      "reference": [
+        "I enjoy swimming."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "I enjoy swimming.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 55,
+      "case_id": "v2-development-18-error",
+      "input": "She decided studying medicine.",
+      "expected_error": true,
+      "reference": [
+        "She decided to study medicine."
+      ],
+      "baseline_outcome": "rejected",
+      "baseline_edits": [],
+      "baseline_status": "rejected",
+      "candidate_status": "valid",
+      "candidate_sentence": "She decided to study medicine.",
+      "candidate_explanation": "Add 'to' after the verb 'decided' for the infinitive form.",
+      "candidate_edits": [
+        {
+          "start": 12,
+          "end": 20,
+          "original": "studying",
+          "replacement": "to study",
+          "explanation": "Add 'to' after the verb 'decided' for the infinitive form.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 56,
+      "case_id": "v2-development-18-correct",
+      "input": "She decided to study medicine.",
+      "expected_error": false,
+      "reference": [
+        "She decided to study medicine."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "She decided to study medicine.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 57,
+      "case_id": "v2-development-19-error",
+      "input": "Please give the key to I.",
+      "expected_error": true,
+      "reference": [
+        "Please give the key to me."
+      ],
+      "baseline_outcome": "rejected",
+      "baseline_edits": [],
+      "baseline_status": "rejected",
+      "candidate_status": "valid",
+      "candidate_sentence": "Please give me the key to I.",
+      "candidate_explanation": "Add 'me' to indicate the indirect object of the verb 'give'.",
+      "candidate_edits": [
+        {
+          "start": 11,
+          "end": 11,
+          "original": "",
+          "replacement": " me",
+          "explanation": "Add 'me' to indicate the indirect object of the verb 'give'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": false,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 58,
+      "case_id": "v2-development-19-correct",
+      "input": "Please give the key to me.",
+      "expected_error": false,
+      "reference": [
+        "Please give the key to me."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "Please give me the key.",
+      "candidate_explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+      "candidate_edits": [
+        {
+          "start": 12,
+          "end": 12,
+          "original": "",
+          "replacement": "me ",
+          "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+          "explanation_scope": "whole response"
+        },
+        {
+          "start": 19,
+          "end": 25,
+          "original": " to me",
+          "replacement": "",
+          "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": false,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 59,
+      "case_id": "v2-development-20-error",
+      "input": "This is hers coat.",
+      "expected_error": true,
+      "reference": [
+        "This is her coat."
+      ],
+      "baseline_outcome": "incorrect_edit",
+      "baseline_edits": [
+        {
+          "original": "is",
+          "replacement": "her",
+          "explanation": "The possessive pronoun 'her' should be used here to indicate ownership."
+        }
+      ],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "This is her coat.",
+      "candidate_explanation": "Use her instead of hers for the possessive pronoun.",
+      "candidate_edits": [
+        {
+          "start": 8,
+          "end": 12,
+          "original": "hers",
+          "replacement": "her",
+          "explanation": "Use her instead of hers for the possessive pronoun.",
+          "explanation_scope": "whole response"
+        }
+      ],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    },
+    {
+      "row": 60,
+      "case_id": "v2-development-20-correct",
+      "input": "This is her coat.",
+      "expected_error": false,
+      "reference": [
+        "This is her coat."
+      ],
+      "baseline_outcome": "correct_abstention",
+      "baseline_edits": [],
+      "baseline_status": "valid",
+      "candidate_status": "valid",
+      "candidate_sentence": "This is her coat.",
+      "candidate_explanation": "",
+      "candidate_edits": [],
+      "candidate_raw_on_failure": null,
+      "candidate_validation_error": null,
+      "candidate_reference_match": true,
+      "candidate_review": "pending"
+    }
+  ]
+}

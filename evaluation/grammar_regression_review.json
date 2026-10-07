@@ -1,0 +1,42 @@
+{
+  "reviewer": "Assistant qualitative review; independent human review pending",
+  "raw_sha256": "31ed4048e1db0f235adb49c9f3a3e07cdb1d1ab539609b0c20a4841dc9fc3648",
+  "rows": [
+    {
+      "id": "regression-01",
+      "appropriate_abstention": false,
+      "replacement_correct": true,
+      "explanation_review": "Past-tense edit correct; explanation is weak/tautological, independently review before treating it as fully useful."
+    },
+    {
+      "id": "regression-02",
+      "appropriate_abstention": true,
+      "replacement_correct": null,
+      "explanation_review": "No correction needed or given."
+    },
+    {
+      "id": "regression-03",
+      "appropriate_abstention": true,
+      "replacement_correct": null,
+      "explanation_review": "No correction needed or given."
+    },
+    {
+      "id": "regression-04",
+      "appropriate_abstention": true,
+      "replacement_correct": null,
+      "explanation_review": "No correction needed or given."
+    },
+    {
+      "id": "regression-05",
+      "appropriate_abstention": true,
+      "replacement_correct": null,
+      "explanation_review": "No correction needed or given."
+    },
+    {
+      "id": "regression-06",
+      "appropriate_abstention": false,
+      "replacement_correct": true,
+      "explanation_review": "Accurate third-person singular explanation."
+    }
+  ]
+}

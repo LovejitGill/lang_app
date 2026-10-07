@@ -1,0 +1,257 @@
+{
+  "scope": "Fresh after candidate freeze. Some negative controls are deliberate scope abstentions, not claims that every replacement is ungrammatical.",
+  "cases": [
+    {
+      "id": "gap-fresh-01",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did Maria mailed the parcel?",
+      "proposed": "Did Maria mail the parcel?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-02",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did they opened the gate?",
+      "proposed": "Did they open the gate?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-03",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "Did your assistant sent the invoice?",
+      "proposed": "Did your assistant send the invoice?",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-04",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We collected six pebble.",
+      "proposed": "We collected six pebbles.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-05",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I bought four onion.",
+      "proposed": "I bought four onions.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-06",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "They found nine shell.",
+      "proposed": "They found nine shells.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-07",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We printed twelve label.",
+      "proposed": "We printed twelve labels.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-08",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I packed five knife.",
+      "proposed": "I packed five knives.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-09",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We saw three child.",
+      "proposed": "We saw three children.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-10",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "I counted eleven leaf.",
+      "proposed": "I counted eleven leaves.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-11",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "They purchased 24 candle.",
+      "proposed": "They purchased 24 candles.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-12",
+      "cohort": "fresh_component",
+      "kind": "positive",
+      "original": "We collected four stamp.",
+      "proposed": "We collected four stamps.",
+      "expected_state": "provisional",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-13",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "Did Maria mail the parcel?",
+      "proposed": "Did Maria mailed the parcel?",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-14",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "Did your assistant send the invoice?",
+      "proposed": "Did your assistant sent the invoice?",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-15",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought four onions.",
+      "proposed": "I bought four onion.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-16",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We saw three children.",
+      "proposed": "We saw three childs.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-17",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We watched five sheep.",
+      "proposed": "We watched five sheeps.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-18",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "They observed six deer.",
+      "proposed": "They observed six deers.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-19",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I caught four salmon.",
+      "proposed": "I caught four salmons.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-20",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought two furniture.",
+      "proposed": "I bought two furnitures.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-21",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We bought three rice.",
+      "proposed": "We bought three rices.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-22",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I bought a five candle set.",
+      "proposed": "I bought a five candles set.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-23",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We ordered four onion rings.",
+      "proposed": "We ordered four onions rings.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-24",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We found one shell.",
+      "proposed": "We found one shells.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-25",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "I saw 2.5 child.",
+      "proposed": "I saw 2.5 children.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-26",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "The title is “We found nine shell”.",
+      "proposed": "The title is “We found nine shells”.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-27",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We collected six pebble.",
+      "proposed": "They collected six pebbles.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    },
+    {
+      "id": "gap-fresh-28",
+      "cohort": "fresh_component",
+      "kind": "negative",
+      "original": "We ordered 2024 calendar.",
+      "proposed": "We ordered 2024 calendars.",
+      "expected_state": "withheld",
+      "label_review": "Assistant-authored engineering expectation; human review pending."
+    }
+  ]
+}

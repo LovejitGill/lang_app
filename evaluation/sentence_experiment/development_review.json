@@ -1,0 +1,1217 @@
+{
+  "report_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "instructions": "Human review required. TP/FP count proposed edits; FN counts missed gold errors. Do not count alternative valid wording as an error. Service/rejected rows remain failures.",
+  "rows": [
+    {
+      "blind_id": "096f6ff1f0d44683b6356388e3fe209f",
+      "text": "I would rather stay home tonight.",
+      "references": [
+        "I would rather stay home tonight."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "0f484b4d15564eee88178ea71d443aec",
+      "text": "We saw an elephant.",
+      "references": [
+        "We saw an elephant."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "11a874dc99e5416eabce4c2140eb1913",
+      "text": "Today is colder than Monday.",
+      "references": [
+        "Today is colder than Monday."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "199f6e9a77104c08a84337e6645ac651",
+      "text": "She has worked here since two months.",
+      "references": [
+        "She has worked here for two months."
+      ],
+      "expected_issue": "Use for with a duration.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time in the present perfect tense."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "1b09c53ddddc4d8b878d33e6d905fe34",
+      "text": "Neither option appeals to me.",
+      "references": [
+        "Neither option appeals to me."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "1c979fa7005f4fc8a8052dd24600229b",
+      "text": "They depend on public transport.",
+      "references": [
+        "They depend on public transport."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "1e7d7143a7d545fab3571df1247a0239",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "references": [
+        "This restaurant is cheaper than the cafe."
+      ],
+      "expected_issue": "more cheaper → cheaper; no double comparative",
+      "status": "valid",
+      "edits": [
+        {
+          "original": " more",
+          "replacement": "",
+          "explanation": "Use cheaper instead of more cheaper to avoid double comparison."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "1f01742ae01a4f4facd61717058fbd63",
+      "text": "He did not write the note.",
+      "references": [
+        "He did not write the note."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "2312606889cb425aa53af00ac54983fb",
+      "text": "We need three boxes.",
+      "references": [
+        "We need three boxes."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "23665829e7044aa2aa171c4741b6e997",
+      "text": "I look forward to meeting you.",
+      "references": [
+        "I look forward to meeting you."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "26f15bdcd5f34b8696fb4199ee7836be",
+      "text": "We saw a elephant.",
+      "references": [
+        "We saw an elephant."
+      ],
+      "expected_issue": "Use an before the vowel sound in elephant.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "a",
+          "replacement": "an",
+          "explanation": "Use an before vowel sounds like elephant."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "27ca61fb4ec3410aae8ea09e90d02dad",
+      "text": "Does she likes tea?",
+      "references": [
+        "Does she like tea?"
+      ],
+      "expected_issue": "Use the base verb after does.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "likes",
+          "replacement": "like",
+          "explanation": "Use like with the third person singular subject she."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "2fd58e9e75fe48bbabef99fe4ef63c5d",
+      "text": "They might arrive early.",
+      "references": [
+        "They might arrive early."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "3054540506e548c4bdf0488eb865bf8e",
+      "text": "This is her coat.",
+      "references": [
+        "This is her coat."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "36b219af875041e1a1e5f5f464ffe1a4",
+      "text": "This is hers coat.",
+      "references": [
+        "This is her coat."
+      ],
+      "expected_issue": "Use her before the noun; hers stands alone.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "hers",
+          "replacement": "her",
+          "explanation": "Use her instead of hers for the possessive pronoun."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "3e4c685da57641c9a7474c45d4519fad",
+      "text": "He is an chef.",
+      "references": [
+        "He is a chef."
+      ],
+      "expected_issue": "Use a before the consonant sound in chef.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "an",
+          "replacement": "a",
+          "explanation": "Use article 'a' before the singular noun 'chef'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "4052121f74e44f609281daf73db82690",
+      "text": "We need three box.",
+      "references": [
+        "We need three boxes."
+      ],
+      "expected_issue": "Use the plural boxes after three.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "box",
+          "replacement": "boxes",
+          "explanation": "Use plural noun 'boxes' for countable object 'box'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "405d868626104347ae8a4cf122eae77b",
+      "text": "I have lived here since five years.",
+      "references": [
+        "I have lived here for five years."
+      ],
+      "expected_issue": "since → for; duration rather than starting point",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time like 'five years'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "40b9814b05c141379b1cc1578b909e67",
+      "text": "I used to play chess after school.",
+      "references": [
+        "I used to play chess after school."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "4ba7e0b3228247d797e608b10d1ce0ac",
+      "text": "He is a chef.",
+      "references": [
+        "He is a chef."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "534bf536f9a942f6bbb8b7c41eb8090b",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "references": [
+        "We visited the museum yesterday and bought a postcard."
+      ],
+      "expected_issue": "buy → bought; completed past event",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "buy",
+          "replacement": "bought",
+          "explanation": "Corrected the past tense verb 'buy' to 'bought' for consistency with the past tense context."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "53bb09d220bf4440b2cd67693437609b",
+      "text": "Please give the key to I.",
+      "references": [
+        "Please give the key to me."
+      ],
+      "expected_issue": "Use an object pronoun after to.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "",
+          "replacement": " me",
+          "explanation": "Add 'me' to indicate the indirect object of the verb 'give'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "5a6292d382a94bd5af2cdb25f2e51fce",
+      "text": "I enjoy swimming.",
+      "references": [
+        "I enjoy swimming."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "5f5f88fd19ed4343a642a7f5c2489c03",
+      "text": "Does she like tea?",
+      "references": [
+        "Does she like tea?"
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "6232e5f5ef56493db832c9efa94845d8",
+      "text": "I packed four shirt.",
+      "references": [
+        "I packed four shirts."
+      ],
+      "expected_issue": "Use a plural count noun after four.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "shirt",
+          "replacement": "shirts",
+          "explanation": "Plural form of shirt is shirts."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "6331558784ed426e85a0bd633336ff05",
+      "text": "They depend of public transport.",
+      "references": [
+        "They depend on public transport."
+      ],
+      "expected_issue": "The expression is depend on.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "of",
+          "replacement": "on",
+          "explanation": "Use 'on' instead of 'of' with the preposition for public transport."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "6c810dafcd4d47e58311a6baaffbb1fa",
+      "text": "There are a bowl on the table.",
+      "references": [
+        "There is a bowl on the table."
+      ],
+      "expected_issue": "are → is; singular existential subject",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "are",
+          "replacement": "is",
+          "explanation": "Use 'is' with singular subject 'a bowl'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "6c87c70e2cd34b378a6bfb61568e6c01",
+      "text": "Yesterday she brought her lunch.",
+      "references": [
+        "Yesterday she brought her lunch."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "6db2539dbcca419197ceb5d409b4a799",
+      "text": "The students need more time.",
+      "references": [
+        "The students need more time."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "7223f2826cc346979e0a264343b448f8",
+      "text": "The soup tastes delicious.",
+      "references": [
+        "The soup tastes delicious."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "733b462474154d49a17c1092a99ba322",
+      "text": "My aunt drive a bus.",
+      "references": [
+        "My aunt drives a bus."
+      ],
+      "expected_issue": "Use a third-person singular present verb.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "drive",
+          "replacement": "drives",
+          "explanation": "Use third person singular verb form drives for the subject aunt."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "78c871885f6b471ca4b5ed5c9e11142f",
+      "text": "She decided studying medicine.",
+      "references": [
+        "She decided to study medicine."
+      ],
+      "expected_issue": "Use the to-infinitive after decided.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "studying",
+          "replacement": "to study",
+          "explanation": "Add 'to' after the verb 'decided' for the infinitive form."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "7bcb05269b264bc59bf674c033a45da6",
+      "text": "There is some rice left.",
+      "references": [
+        "There is some rice left."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "810ce5700cec4bcca60a8465949d5385",
+      "text": "I would like two sandwich, please.",
+      "references": [
+        "I would like two sandwiches, please."
+      ],
+      "expected_issue": "sandwich → sandwiches; plural after two",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "sandwich",
+          "replacement": "sandwiches",
+          "explanation": "Add an 's' to 'sandwich' to make it plural, and add a comma before the conjunction 'please' for proper punctuation."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "86e28d50a177402fa0e2b5adc560398a",
+      "text": "She has worked here for two months.",
+      "references": [
+        "She has worked here for two months."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "97051faa830f4439a723a51555c1c79d",
+      "text": "You should take a break.",
+      "references": [
+        "You should take a break."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "9cf7af48d6214d93934ea595da09d60e",
+      "text": "My sister and I cycle to work.",
+      "references": [
+        "My sister and I cycle to work."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "9f273e98791945cbbecba0983fb97ec4",
+      "text": "Yesterday she bring her lunch.",
+      "references": [
+        "Yesterday she brought her lunch."
+      ],
+      "expected_issue": "Brought is the past form of bring.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "bring",
+          "replacement": "brought",
+          "explanation": "Use past tense (brought) for the verb after 'yesterday'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "a46da993e4fe43699b53e5c868174f97",
+      "text": "I am interested on photography.",
+      "references": [
+        "I am interested in photography."
+      ],
+      "expected_issue": "interested on → interested in; standard preposition",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "on",
+          "replacement": "in",
+          "explanation": "Use 'in' with the preposition for interests."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "a617e2e12232404290db3d4fae159d91",
+      "text": "She decided to study medicine.",
+      "references": [
+        "She decided to study medicine."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "a70ff14879314af6a5ef3c3882473d04",
+      "text": "This route is shorter.",
+      "references": [
+        "This route is shorter."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "ac48e91c2864432aa4566074ec622858",
+      "text": "They might arrives early.",
+      "references": [
+        "They might arrive early."
+      ],
+      "expected_issue": "Use the base verb after might.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "arrives",
+          "replacement": "arrive",
+          "explanation": "Use arrive (base form) with modal verb might."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "af27be73dfcf4c34b32729777aea68a3",
+      "text": "Last night I watch a film.",
+      "references": [
+        "Last night I watched a film."
+      ],
+      "expected_issue": "Use past tense for the completed event.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "watch",
+          "replacement": "watched",
+          "explanation": "Use past tense verb watched for the past event."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "bb062f9de6b54200b43524f67a835386",
+      "text": "I packed four shirts.",
+      "references": [
+        "I packed four shirts."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "be254a91bc124f909437f79023282c5b",
+      "text": "I have been a teacher for six years.",
+      "references": [
+        "I have been a teacher for six years."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "beb47c6aa6fe408cac027e06e0a16396",
+      "text": "He did not wrote the note.",
+      "references": [
+        "He did not write the note."
+      ],
+      "expected_issue": "Use the base verb after did.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "wrote",
+          "replacement": "write",
+          "explanation": "Use write instead of wrote for the simple past tense."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "c1ad74d674b044fabc80dec3448f7495",
+      "text": "My aunt drives a bus.",
+      "references": [
+        "My aunt drives a bus."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "c2da4f8b6745460da8fef3c66e94e9ba",
+      "text": "I enjoy to swim.",
+      "references": [
+        "I enjoy swimming."
+      ],
+      "expected_issue": "Use a gerund after enjoy.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "to swim",
+          "replacement": "swimming",
+          "explanation": "Use the gerund form after 'enjoy'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "cf4dcbbbc3b149c39b3ece2e11f8b41b",
+      "text": "The students needs more time.",
+      "references": [
+        "The students need more time."
+      ],
+      "expected_issue": "Use the plural present verb with students.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "needs",
+          "replacement": "need",
+          "explanation": "Use plural verb 'need' with plural subject 'students'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "d4c15ec82c1348faae412c0b5ca939ee",
+      "text": "Could we have separate bills, please?",
+      "references": [
+        "Could we have separate bills, please?"
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "d76a2702b50c4c458b66e703634327e5",
+      "text": "This route is more shorter.",
+      "references": [
+        "This route is shorter."
+      ],
+      "expected_issue": "Do not combine more with the comparative shorter.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "more ",
+          "replacement": "",
+          "explanation": "Remove the unnecessary adjective 'more' as 'shorter' already implies comparison."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "da69c5c215d64256a9de7de697004451",
+      "text": "She walk to work every morning.",
+      "references": [
+        "She walks to work every morning."
+      ],
+      "expected_issue": "walk → walks; third-person singular present",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "walk",
+          "replacement": "walks",
+          "explanation": "Use present simple third person singular for the verb after a subject that is a singular pronoun (she)."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "dc05f1f93ab244899449e50fbcb9525c",
+      "text": "Please give the key to me.",
+      "references": [
+        "Please give the key to me."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "",
+          "replacement": "me ",
+          "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'."
+        },
+        {
+          "original": " to me",
+          "replacement": "",
+          "explanation": "The word order in the phrase 'give the key to me' is incorrect. In English, the indirect object (me) should come after the direct object (the key) when using 'give'. The correct structure is 'give me the key'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "e8ba51d0470c449ab5e1739ac8c69da0",
+      "text": "He can speaks Spanish.",
+      "references": [
+        "He can speak Spanish."
+      ],
+      "expected_issue": "speaks → speak; base verb after modal",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "speaks",
+          "replacement": "speak",
+          "explanation": "Use 'speak' (base verb) after 'can' for the correct verb form."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "ebf617c21a654e2b917681410ba40a9a",
+      "text": "I did not ordered dessert.",
+      "references": [
+        "I did not order dessert."
+      ],
+      "expected_issue": "ordered → order; base verb after did",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "ordered",
+          "replacement": "order",
+          "explanation": "Use past tense 'ordered' instead of past participle 'ordered' (incorrectly used as past tense)."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "ec4f2ee4a79c479088f17865e21d6a0c",
+      "text": "You should takes a break.",
+      "references": [
+        "You should take a break."
+      ],
+      "expected_issue": "Use the base verb after should.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "takes",
+          "replacement": "take",
+          "explanation": "Use take with the infinitive after 'should'."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "ecab320584c14567b9fd05193037bbd6",
+      "text": "Today is more colder than Monday.",
+      "references": [
+        "Today is colder than Monday."
+      ],
+      "expected_issue": "Do not combine more with colder.",
+      "status": "valid",
+      "edits": [
+        {
+          "original": " more",
+          "replacement": "",
+          "explanation": "Remove extra 'more' for correct comparative structure."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "edd41fec0ec94c61bee9a6e3611be034",
+      "text": "Last night I watched a film.",
+      "references": [
+        "Last night I watched a film."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "ef961bbf11204e5baca789f7adb05cd5",
+      "text": "I live near the station.",
+      "references": [
+        "I live near the station."
+      ],
+      "expected_issue": "Acceptable English; no correction needed.",
+      "status": "valid",
+      "edits": [],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    },
+    {
+      "blind_id": "f855a3a0fc5b4a169529f8038064b2d6",
+      "text": "I am engineer.",
+      "references": [
+        "I am an engineer."
+      ],
+      "expected_issue": "am engineer → am an engineer; article before singular count profession",
+      "status": "valid",
+      "edits": [
+        {
+          "original": "",
+          "replacement": "an ",
+          "explanation": "Add the definite article 'an' before the noun 'engineer' to form a correct adjective phrase."
+        }
+      ],
+      "reviewer": "",
+      "rationale": "",
+      "true_positive": null,
+      "false_positive": null,
+      "false_negative": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null
+    }
+  ]
+}

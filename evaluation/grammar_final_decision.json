@@ -1,0 +1,28 @@
+{
+  "decided_utc": "2026-09-29T23:53:12.658903+00:00",
+  "decision": "Do not integrate either grammar configuration into the app yet.",
+  "development": "4B had zero false corrections and six useful corrections; 1.7B retained major errors despite mechanical validation.",
+  "heldout": [
+    {
+      "run": 1,
+      "correct_inputs_appropriately_unchanged": 10,
+      "useful_corrections": 4,
+      "incorrect_inputs": 10,
+      "rejected_responses": 1,
+      "gate_pass": false,
+      "median_seconds": 1.329
+    },
+    {
+      "run": 2,
+      "correct_inputs_appropriately_unchanged": 10,
+      "useful_corrections": 5,
+      "incorrect_inputs": 10,
+      "rejected_responses": 1,
+      "gate_pass": false,
+      "median_seconds": 1.3165
+    }
+  ],
+  "application_default": "Unchanged combined qwen3:1.7b tutor; known quality failures remain.",
+  "next_experiment": "After independent review, compare a bounded new approach on development cases. If held-out outputs influence tuning, retire/version the held-out set before final validation.",
+  "scope": "No streaming, background feedback, automatic correction, or UI model change implemented."
+}

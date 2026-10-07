@@ -1,0 +1,149 @@
+{
+  "reviewed_on": "2026-09-30",
+  "user_confirmation": "I agree but 16 is barely a pass",
+  "prior_draft_sha256": "4af367cfb80f1077cdf4156f37a645eeff0d86c99a0c7a43feed41903a969002",
+  "report_sha256": "15cbd474f084393e01010ebbe1b987d7e85a86e633d2227ea88cf3b46d2f8250",
+  "scope": "Nine flagged groups, covering 14 engine responses. Not blanket approval of other responses.",
+  "confirmed_judgments": [
+    {
+      "display_row": 4,
+      "engine": "languagetool",
+      "response_id": "216a46741bb548688793da0e1bda0f16",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 8,
+      "engine": "qwen",
+      "response_id": "7362e7a3663c444ab41fcdfcf3241302",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "useful",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 10,
+      "engine": "languagetool",
+      "response_id": "adc27b9e446646a793137e99f782b63e",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_plus_unnecessary_edit",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 16,
+      "engine": "qwen",
+      "response_id": "6a62ce505e3d4c8dba857628a1351096",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "useful",
+      "borderline_pass": true,
+      "note": "User agreed with the displayed flagged judgment. Row 16 is barely a pass; retain pass credit and prioritize a clearer explanation of interested in."
+    },
+    {
+      "display_row": 18,
+      "engine": "languagetool",
+      "response_id": "48525cb6543d4d5eb85c45f234a0060a",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 20,
+      "engine": "qwen",
+      "response_id": "8f98ad2b49e340e69309f39cc09e959c",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 23,
+      "engine": "languagetool",
+      "response_id": "10021ae985804d97af14b9b5687953f5",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 33,
+      "engine": "languagetool",
+      "response_id": "85370249a3ef413397bcfb91822eb9f6",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 35,
+      "engine": "qwen",
+      "response_id": "11743060b9c048a69d078c5cc93002df",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "useful",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 39,
+      "engine": "languagetool",
+      "response_id": "3250240a606a455db29f1642026f1ebc",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 39,
+      "engine": "qwen",
+      "response_id": "f124e59d8fc24389a4a129fb0862ba29",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 41,
+      "engine": "qwen",
+      "response_id": "3043f0ef5adf41c5954bf2711688207c",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "correct_edit_explanation_fails",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 51,
+      "engine": "qwen",
+      "response_id": "8bb6b70be4704b1eb326f3034c1c776a",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "useful",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    },
+    {
+      "display_row": 53,
+      "engine": "qwen",
+      "response_id": "757bc532bc4e4b249e23c326b5aaad07",
+      "reviewer": "Project owner (chat confirmation)",
+      "reviewed_on": "2026-09-30",
+      "decision": "incorrect_edit",
+      "borderline_pass": false,
+      "note": "User agreed with the displayed flagged judgment."
+    }
+  ]
+}

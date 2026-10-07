@@ -1,0 +1,97 @@
+{
+  "timestamp_utc": "2026-09-29T23:47:31.309584+00:00",
+  "model": "qwen3:1.7b",
+  "timing_scope": "Text Send through rendered reply; includes LLM and SQLite, excludes recording/STT/human review/TTS",
+  "context": "Five sequential beginner/daily-activities turns; model loading state uncontrolled",
+  "saved_turns": 5,
+  "rerun_no_duplicate": true,
+  "median_seconds": 3.87,
+  "max_seconds": 4.018,
+  "cases": [
+    {
+      "case": "past_tense",
+      "input": "Yesterday I go to the store.",
+      "expected": "Correct go to went; explain past tense.",
+      "seconds": 3.228,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "Yesterday I go to the store.",
+        "tutor_reply": "Tell me about a time you went to the store. You can begin: 'I went to\u2026'",
+        "feedback": [
+          "Change 'go' to 'went'. Use went with past tense."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "correct_sentence",
+      "input": "I enjoy hiking with my friends.",
+      "expected": "No correction needed.",
+      "seconds": 4.018,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "I enjoy hiking with my friends.",
+        "tutor_reply": "Tell me about a hike you enjoyed with your friends. You can begin: 'I went to\u2026'",
+        "feedback": [
+          "Change 'hiking' to 'a hike'. Use 'a' before nouns when talking about specific experiences."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "agreement",
+      "input": "My brother work in a bank.",
+      "expected": "Correct work to works; explain he/my brother agreement.",
+      "seconds": 3.2,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "My brother work in a bank.",
+        "tutor_reply": "Tell me about a typical day for him at the bank.",
+        "feedback": [
+          "Change 'work' to 'works'. Use 'works' with 'he' in the present tense."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "correct_routine",
+      "input": "I usually hike on Saturdays.",
+      "expected": "No correction needed; plural Saturdays is valid.",
+      "seconds": 3.87,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "I usually hike on Saturdays.",
+        "tutor_reply": "Tell me about a hike you enjoyed with your friends. You can begin: 'I went to\u2026'",
+        "feedback": [
+          "Change 'hike' to 'hikes'. Use 'hikes' with 'my' in the present tense."
+        ],
+        "saved": true
+      }
+    },
+    {
+      "case": "recall",
+      "input": "Where does my brother work?",
+      "expected": "Recall the bank; no grammar correction needed.",
+      "seconds": 3.892,
+      "errors": [],
+      "feedback_rating": null,
+      "review_notes": "TODO: review output manually",
+      "result": {
+        "learner_text": "Where does my brother work?",
+        "tutor_reply": "Tell me about a time when your brother helped you with something important.",
+        "feedback": [
+          "Change 'Where does my brother work?' to 'Where does your brother work?' Use 'work' with 'your' in the present tense."
+        ],
+        "saved": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "reviewer": "Assistant qualitative review; independent learner/instructor review pending",
+  "rows": [
+    {
+      "case": "past_tense",
+      "reply_grammar_correct": true,
+      "answers_direct_question": null,
+      "uses_context_correctly": true,
+      "invites_elaboration": true,
+      "repeats_previous_followup": false,
+      "feedback_rating": 3,
+      "notes": "Open invitation present; review feedback separately."
+    },
+    {
+      "case": "correct_sentence",
+      "reply_grammar_correct": true,
+      "answers_direct_question": null,
+      "uses_context_correctly": true,
+      "invites_elaboration": true,
+      "repeats_previous_followup": false,
+      "feedback_rating": 1,
+      "notes": "Open invitation present; review feedback separately."
+    },
+    {
+      "case": "agreement",
+      "reply_grammar_correct": true,
+      "answers_direct_question": null,
+      "uses_context_correctly": true,
+      "invites_elaboration": true,
+      "repeats_previous_followup": false,
+      "feedback_rating": 3,
+      "notes": "Open invitation present; review feedback separately."
+    },
+    {
+      "case": "correct_routine",
+      "reply_grammar_correct": true,
+      "answers_direct_question": null,
+      "uses_context_correctly": true,
+      "invites_elaboration": true,
+      "repeats_previous_followup": true,
+      "feedback_rating": 1,
+      "notes": "Repeats the earlier hike follow-up instead of developing the new detail."
+    },
+    {
+      "case": "recall",
+      "reply_grammar_correct": true,
+      "answers_direct_question": false,
+      "uses_context_correctly": false,
+      "invites_elaboration": true,
+      "repeats_previous_followup": false,
+      "feedback_rating": 1,
+      "notes": "Failed recall: did not answer bank despite available prior context."
+    }
+  ]
+}

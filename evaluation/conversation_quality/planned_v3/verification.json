@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-06T23:43:58.236990+00:00",
+  "suite_command": "uv run --locked python -m pytest -q",
+  "suite_passed": 703,
+  "suite_seconds": 18.4,
+  "new_tests_this_iteration": 58,
+  "focused_route_tests_passed": 96,
+  "ruff": "Targeted lint and formatting passed before frozen inference",
+  "source_and_data_hashes": "Verified current sources/snapshots/model, old frozen planned_v2 sources and raw run, unchanged prior 53 cases",
+  "grammar": "Protected source hashes and grammar-function AST verified",
+  "completed_nonempty_rows": 63,
+  "human_review": "Pending, no semantic score",
+  "performance_scope": "Prewarmed complete text; tests idle during inference; readiness separate",
+  "app_integrated": false,
+  "git_history_actions": false,
+  "remote_publication_verified": false,
+  "github_checkpoint_recommended": "Yes, experimental snapshot after owner review; stable release not recommended",
+  "raw_result_sha256": "4adc8b81788a7cbd99b0c7f4594aeef395928159d0d90a89bc96cc8d4d2d9588"
+}

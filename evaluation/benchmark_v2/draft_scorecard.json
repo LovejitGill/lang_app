@@ -1,0 +1,4232 @@
+{
+  "status": "REVIEW COMPLETE — see final_development_scores.json for authoritative scores",
+  "created_on": "2026-09-30",
+  "source_sha256": {
+    "evaluation/benchmark_v2/development_results.json": "15cbd474f084393e01010ebbe1b987d7e85a86e633d2227ea88cf3b46d2f8250",
+    "evaluation/benchmark_v2/development_review.json": "57c934c834078534a635d20da6077445296274a224de706ffea89adcb6e50e68",
+    "evaluation/benchmark_v2/development.json": "fc60b1261d36ec59719ec37d54cabd5865152d00d3c1ac6af6d39d24a9cb4f63",
+    "evaluation/benchmark_v2/heldout.json": "f2edd59958f442ecfd1856a9e96b07745fc23483f941968ef7de600ca057eafa",
+    "evaluation/benchmark_v2/user_feedback_2026-09-30.json": "44ae461437227785a1e2cbf0aefa6fb35f0fa3498fa98a8f4c451497ab3cecd5"
+  },
+  "label_reconciliation": "All input text, references, expected issues and error counts match historical report exactly. Only label approvals/source metadata changed. Raw results and original worksheet are unchanged.",
+  "grading_policy": "Count edits in the full sentence. Useful feedback requires a correct complete correction, no unnecessary edits, preserved meaning and an accurate explanation stating the applicable rule. Generic suggestions without the applicable rule fail explanation adequacy. The project owner approved this threshold on 2026-09-30. Wording preferences alone do not fail accuracy.",
+  "provisional_metrics": {
+    "languagetool": {
+      "attempts": 60,
+      "failures": 0,
+      "median_seconds": 0.03245,
+      "p95_seconds_nearest_rank": 0.0599,
+      "maximum_seconds": 4.4212,
+      "pending_reviews": 0,
+      "semantic_metrics": {
+        "tp": 21,
+        "fp": 2,
+        "fn": 9,
+        "precision": 0.9130434782608695,
+        "recall": 0.7,
+        "f0_5": 0.860655737704918,
+        "false_correction_rate": 0.0,
+        "useful_feedback_rate": 0.5,
+        "correct_inputs": 30,
+        "incorrect_inputs": 30
+      },
+      "label_status": "reviewed",
+      "per_run": {
+        "1": {
+          "attempts": 60,
+          "failures": 0,
+          "median_seconds": 0.03245,
+          "p95_seconds_nearest_rank": 0.0599,
+          "maximum_seconds": 4.4212,
+          "pending_reviews": 0,
+          "semantic_metrics": {
+            "tp": 21,
+            "fp": 2,
+            "fn": 9,
+            "precision": 0.9130434782608695,
+            "recall": 0.7,
+            "f0_5": 0.860655737704918,
+            "false_correction_rate": 0.0,
+            "useful_feedback_rate": 0.5,
+            "correct_inputs": 30,
+            "incorrect_inputs": 30
+          },
+          "label_status": "reviewed"
+        }
+      }
+    },
+    "qwen": {
+      "attempts": 60,
+      "failures": 4,
+      "median_seconds": 2.75195,
+      "p95_seconds_nearest_rank": 7.3238,
+      "maximum_seconds": 12.6218,
+      "pending_reviews": 0,
+      "semantic_metrics": {
+        "tp": 20,
+        "fp": 5,
+        "fn": 10,
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f0_5": 0.7692307692307693,
+        "false_correction_rate": 0.0,
+        "useful_feedback_rate": 0.5666666666666667,
+        "correct_inputs": 30,
+        "incorrect_inputs": 30
+      },
+      "label_status": "reviewed",
+      "per_run": {
+        "1": {
+          "attempts": 60,
+          "failures": 4,
+          "median_seconds": 2.75195,
+          "p95_seconds_nearest_rank": 7.3238,
+          "maximum_seconds": 12.6218,
+          "pending_reviews": 0,
+          "semantic_metrics": {
+            "tp": 20,
+            "fp": 5,
+            "fn": 10,
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f0_5": 0.7692307692307693,
+            "false_correction_rate": 0.0,
+            "useful_feedback_rate": 0.5666666666666667,
+            "correct_inputs": 30,
+            "incorrect_inputs": 30
+          },
+          "label_status": "reviewed"
+        }
+      }
+    }
+  },
+  "proposed_judgments": [
+    {
+      "display_row": 1,
+      "case_id": "development-01",
+      "engine": "languagetool",
+      "response_id": "8658751b0b1e416eb3eecdd6d018342c",
+      "text": "I live near the station.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I live near the station.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8658751b0b1e416eb3eecdd6d018342c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 1,
+      "case_id": "development-01",
+      "engine": "qwen",
+      "response_id": "789acb24690140418b47319e4ffce5c4",
+      "text": "I live near the station.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I live near the station.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "789acb24690140418b47319e4ffce5c4",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 2,
+      "case_id": "development-02",
+      "engine": "qwen",
+      "response_id": "b1c2cae4ef3944329aa914535e9bab37",
+      "text": "She walk to work every morning.",
+      "actual_edits": [
+        {
+          "original": "walk",
+          "replacement": "walks",
+          "explanation": "Subject 'She' requires third person singular verb form."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She walks to work every morning.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "b1c2cae4ef3944329aa914535e9bab37",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 2,
+      "case_id": "development-02",
+      "engine": "languagetool",
+      "response_id": "1ece0fef6ca14d3eaac27a8981f842e5",
+      "text": "She walk to work every morning.",
+      "actual_edits": [
+        {
+          "original": "walk",
+          "replacement": "walks",
+          "explanation": "The pronoun ‘She’ is usually used with a third-person or a past tense verb.",
+          "start": 4,
+          "end": 8,
+          "rule_id": "HE_VERB_AGR",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She walks to work every morning.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1ece0fef6ca14d3eaac27a8981f842e5",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 3,
+      "case_id": "development-03",
+      "engine": "languagetool",
+      "response_id": "7c864bc2edba4b369cf361eace43ddfc",
+      "text": "Could we have separate bills, please?",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Could we have separate bills, please?",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "7c864bc2edba4b369cf361eace43ddfc",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 3,
+      "case_id": "development-03",
+      "engine": "qwen",
+      "response_id": "d58a40aac80a47d6b82786e3f5cde6ae",
+      "text": "Could we have separate bills, please?",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Could we have separate bills, please?",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d58a40aac80a47d6b82786e3f5cde6ae",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 4,
+      "case_id": "development-04",
+      "engine": "qwen",
+      "response_id": "9da273c3535e4ade9f1504db953bb57a",
+      "text": "I would like two sandwich, please.",
+      "actual_edits": [
+        {
+          "original": "sandwich",
+          "replacement": "sandwiches",
+          "explanation": "Plural form needed for 'two'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I would like two sandwiches, please.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "9da273c3535e4ade9f1504db953bb57a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 4,
+      "case_id": "development-04",
+      "engine": "languagetool",
+      "response_id": "216a46741bb548688793da0e1bda0f16",
+      "text": "I would like two sandwich, please.",
+      "actual_edits": [
+        {
+          "original": "sandwich",
+          "replacement": "sandwiches",
+          "explanation": "Possible agreement error. The noun ‘sandwich’ seems to be countable.",
+          "start": 17,
+          "end": 25,
+          "rule_id": "CD_NN",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I would like two sandwiches, please.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "insufficient",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "216a46741bb548688793da0e1bda0f16",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Countability is mentioned, but the explanation does not state that two requires a plural noun.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 5,
+      "case_id": "development-05",
+      "engine": "languagetool",
+      "response_id": "7c46c1b1e66044bd9785eeb6c83a11a2",
+      "text": "My sister and I cycle to work.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My sister and I cycle to work.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "7c46c1b1e66044bd9785eeb6c83a11a2",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 5,
+      "case_id": "development-05",
+      "engine": "qwen",
+      "response_id": "44b0b9bbd77747e0bdff963b1871206d",
+      "text": "My sister and I cycle to work.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My sister and I cycle to work.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "44b0b9bbd77747e0bdff963b1871206d",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 6,
+      "case_id": "development-06",
+      "engine": "qwen",
+      "response_id": "6e08b437647649a8b4deb202b6d00705",
+      "text": "I am engineer.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I am engineer.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "6e08b437647649a8b4deb202b6d00705",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Both engines missed the article. Desired sentence: I am an engineer.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 6,
+      "case_id": "development-06",
+      "engine": "languagetool",
+      "response_id": "d8341c7cdbc54de3bf3fc6623d66e739",
+      "text": "I am engineer.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I am engineer.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d8341c7cdbc54de3bf3fc6623d66e739",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Both engines missed the article. Desired sentence: I am an engineer.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 7,
+      "case_id": "development-07",
+      "engine": "languagetool",
+      "response_id": "5c08333f14bf409389f3590188a9ba49",
+      "text": "I have been a teacher for six years.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I have been a teacher for six years.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "5c08333f14bf409389f3590188a9ba49",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 7,
+      "case_id": "development-07",
+      "engine": "qwen",
+      "response_id": "31afb2bf77da4617884937ef5a63fd37",
+      "text": "I have been a teacher for six years.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I have been a teacher for six years.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "31afb2bf77da4617884937ef5a63fd37",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 8,
+      "case_id": "development-08",
+      "engine": "qwen",
+      "response_id": "7362e7a3663c444ab41fcdfcf3241302",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "actual_edits": [
+        {
+          "original": "buy",
+          "replacement": "bought",
+          "explanation": "The past tense of 'buy' is 'bought' for completed actions in the past."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We visited the museum yesterday and bought a postcard.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "7362e7a3663c444ab41fcdfcf3241302",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule. User-requested clearer wording is recorded separately; the original is not factually incorrect.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 8,
+      "case_id": "development-08",
+      "engine": "languagetool",
+      "response_id": "ce5d2024ab0f47c98d7df3623dd0ed5b",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We visited the museum yesterday and buy a postcard.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ce5d2024ab0f47c98d7df3623dd0ed5b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 9,
+      "case_id": "development-09",
+      "engine": "languagetool",
+      "response_id": "29e7ed289e8043be8252b3f7957b2ff6",
+      "text": "There is some rice left.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "There is some rice left.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "29e7ed289e8043be8252b3f7957b2ff6",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 9,
+      "case_id": "development-09",
+      "engine": "qwen",
+      "response_id": "02936675428a4a94b39f1cfde0e4b852",
+      "text": "There is some rice left.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "There is some rice left.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "02936675428a4a94b39f1cfde0e4b852",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 10,
+      "case_id": "development-10",
+      "engine": "qwen",
+      "response_id": "4686cf771b7846d1b4a1725d7d1d348e",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "actual_edits": [
+        {
+          "original": "is",
+          "replacement": "cheaper",
+          "explanation": "The phrase 'more cheaper' is incorrect; 'cheaper' is already comparative form, so use 'cheaper' directly without 'more'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This restaurant cheaper more cheaper than the cafe.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "rule_correct_but_edit_wrong",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "4686cf771b7846d1b4a1725d7d1d348e",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference. The explanation identifies the rule, but the selected edit span is wrong.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": true,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 10,
+      "case_id": "development-10",
+      "engine": "languagetool",
+      "response_id": "adc27b9e446646a793137e99f782b63e",
+      "text": "This restaurant is more cheaper than the cafe.",
+      "actual_edits": [
+        {
+          "original": "more cheaper",
+          "replacement": "cheaper",
+          "explanation": "Use only “cheaper” (without ‘more’) when you use the comparative.",
+          "start": 19,
+          "end": 31,
+          "rule_id": "MOST_COMPARATIVE",
+          "explanation_source": "LanguageTool; human review pending"
+        },
+        {
+          "original": "cafe",
+          "replacement": "café",
+          "explanation": "‘Cafe’ is a foreign word which originally has a diacritic.",
+          "start": 41,
+          "end": 45,
+          "rule_id": "CAFE_DIACRITIC",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This restaurant is cheaper than the café.",
+      "proposed_outcome": "correct_edit_plus_unnecessary_edit",
+      "explanation_assessment": "mixed",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "adc27b9e446646a793137e99f782b63e",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Comparative correction is right, but cafe -> café is an unnecessary orthographic preference for this grammar-only task.",
+        "true_positive": 1,
+        "false_positive": 1,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_plus_unnecessary_edit",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 11,
+      "case_id": "development-11",
+      "engine": "languagetool",
+      "response_id": "a8bb8ff8db6e4ec1977e0d2f7ffa084b",
+      "text": "I would rather stay home tonight.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I would rather stay home tonight.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "a8bb8ff8db6e4ec1977e0d2f7ffa084b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 11,
+      "case_id": "development-11",
+      "engine": "qwen",
+      "response_id": "1c9b44cf3fed4d66b49db624b3da1b45",
+      "text": "I would rather stay home tonight.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I would rather stay home tonight.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1c9b44cf3fed4d66b49db624b3da1b45",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 12,
+      "case_id": "development-12",
+      "engine": "qwen",
+      "response_id": "61bf803730aa4896ab40611bb9fb1ae5",
+      "text": "I have lived here since five years.",
+      "actual_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with a duration of time, not 'since'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I have lived here for five years.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "61bf803730aa4896ab40611bb9fb1ae5",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 12,
+      "case_id": "development-12",
+      "engine": "languagetool",
+      "response_id": "cf95cf9de26b4dd693305ef133cd0a01",
+      "text": "I have lived here since five years.",
+      "actual_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Did you mean “for”? (‘since’ refers to a point in time, whereas ‘for’ refers to a period)",
+          "start": 18,
+          "end": 23,
+          "rule_id": "SINCE_FOR",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I have lived here for five years.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "cf95cf9de26b4dd693305ef133cd0a01",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 13,
+      "case_id": "development-13",
+      "engine": "languagetool",
+      "response_id": "47936c36301a4022836f41af68ff13a8",
+      "text": "I look forward to meeting you.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I look forward to meeting you.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "47936c36301a4022836f41af68ff13a8",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 13,
+      "case_id": "development-13",
+      "engine": "qwen",
+      "response_id": "7a9e3ff62ac0420e8cc07822920887f0",
+      "text": "I look forward to meeting you.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I look forward to meeting you.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "7a9e3ff62ac0420e8cc07822920887f0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 14,
+      "case_id": "development-14",
+      "engine": "qwen",
+      "response_id": "2298038f66fe4a2bb0186f82be8a0cf9",
+      "text": "He can speaks Spanish.",
+      "actual_edits": [
+        {
+          "original": "speaks",
+          "replacement": "speak",
+          "explanation": "The verb 'speak' is used in the base form after 'can' for ability."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He can speak Spanish.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "2298038f66fe4a2bb0186f82be8a0cf9",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 14,
+      "case_id": "development-14",
+      "engine": "languagetool",
+      "response_id": "9d7263e3787248b286a6900fe3313a34",
+      "text": "He can speaks Spanish.",
+      "actual_edits": [
+        {
+          "original": "speaks",
+          "replacement": "speak",
+          "explanation": "The modal verb ‘can’ requires the verb’s base form.",
+          "start": 7,
+          "end": 13,
+          "rule_id": "MD_BASEFORM",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He can speak Spanish.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "9d7263e3787248b286a6900fe3313a34",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 15,
+      "case_id": "development-15",
+      "engine": "languagetool",
+      "response_id": "332b1472e2c94cac91dd63e1d0d8fccf",
+      "text": "Neither option appeals to me.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Neither option appeals to me.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "332b1472e2c94cac91dd63e1d0d8fccf",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 15,
+      "case_id": "development-15",
+      "engine": "qwen",
+      "response_id": "3239950d48034ae4a5f3705e7b78cbea",
+      "text": "Neither option appeals to me.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Neither option appeals to me.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "3239950d48034ae4a5f3705e7b78cbea",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 16,
+      "case_id": "development-16",
+      "engine": "qwen",
+      "response_id": "6a62ce505e3d4c8dba857628a1351096",
+      "text": "I am interested on photography.",
+      "actual_edits": [
+        {
+          "original": "on",
+          "replacement": "in",
+          "explanation": "Use 'in' with the preposition for interests like photography."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I am interested in photography.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "6a62ce505e3d4c8dba857628a1351096",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule. The wording is awkward/context-bound; adequacy is a judgment for human confirmation.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "borderline_pass": true,
+        "note": "User agreed with the displayed flagged judgment. Row 16 is barely a pass; retain pass credit and prioritize a clearer explanation of interested in."
+      }
+    },
+    {
+      "display_row": 16,
+      "case_id": "development-16",
+      "engine": "languagetool",
+      "response_id": "cf85886e3d244b9ab84d25c5de7b54c4",
+      "text": "I am interested on photography.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I am interested on photography.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "cf85886e3d244b9ab84d25c5de7b54c4",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 17,
+      "case_id": "development-17",
+      "engine": "languagetool",
+      "response_id": "5e151df001f6447a8472cf3b77d4180d",
+      "text": "The soup tastes delicious.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The soup tastes delicious.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "5e151df001f6447a8472cf3b77d4180d",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 17,
+      "case_id": "development-17",
+      "engine": "qwen",
+      "response_id": "1bad39bf42d3468192e3726cff41958b",
+      "text": "The soup tastes delicious.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The soup tastes delicious.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1bad39bf42d3468192e3726cff41958b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 18,
+      "case_id": "development-18",
+      "engine": "qwen",
+      "response_id": "a1c182a045434491b7d2c689ee72821c",
+      "text": "There are a bowl on the table.",
+      "actual_edits": [],
+      "raw_rejected_response": "{\"corrections\":[{\"original\":\"a\",\"replacement\":\"a\",\"explanation\":\"This is not an error.\"}]}",
+      "resulting_sentence": null,
+      "proposed_outcome": "rejected",
+      "explanation_assessment": "unusable",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "a1c182a045434491b7d2c689ee72821c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The entire no-op response was rejected. Count the target error as missed, not as clean input.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "rejected",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Qwen proposed a -> a; the desired correction is are -> is.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 18,
+      "case_id": "development-18",
+      "engine": "languagetool",
+      "response_id": "48525cb6543d4d5eb85c45f234a0060a",
+      "text": "There are a bowl on the table.",
+      "actual_edits": [
+        {
+          "original": "are",
+          "replacement": "is",
+          "explanation": "Possible agreement error. Did you mean “is”?",
+          "start": 6,
+          "end": 9,
+          "rule_id": "THERE_VBP_NN",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "There is a bowl on the table.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "insufficient",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "48525cb6543d4d5eb85c45f234a0060a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Names agreement but does not explain that a bowl is singular.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 19,
+      "case_id": "development-19",
+      "engine": "languagetool",
+      "response_id": "4f331d83e82b403fbf564ab50b5066da",
+      "text": "I used to play chess after school.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I used to play chess after school.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "4f331d83e82b403fbf564ab50b5066da",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 19,
+      "case_id": "development-19",
+      "engine": "qwen",
+      "response_id": "5a491609b9764a1ca2ff7db0e741b98a",
+      "text": "I used to play chess after school.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I used to play chess after school.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "5a491609b9764a1ca2ff7db0e741b98a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 20,
+      "case_id": "development-20",
+      "engine": "qwen",
+      "response_id": "8f98ad2b49e340e69309f39cc09e959c",
+      "text": "I did not ordered dessert.",
+      "actual_edits": [
+        {
+          "original": "ordered",
+          "replacement": "order",
+          "explanation": "Use past tense for completed action: 'did not order'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I did not order dessert.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8f98ad2b49e340e69309f39cc09e959c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit requires a base-form main verb after did, not a past-tense main verb.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 20,
+      "case_id": "development-20",
+      "engine": "languagetool",
+      "response_id": "87c6cc6a370947bca2624e2c332d8991",
+      "text": "I did not ordered dessert.",
+      "actual_edits": [
+        {
+          "original": "ordered",
+          "replacement": "order",
+          "explanation": "The auxiliary verb ‘do’ requires the base form of the verb.",
+          "start": 10,
+          "end": 17,
+          "rule_id": "DID_BASEFORM",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I did not order dessert.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "87c6cc6a370947bca2624e2c332d8991",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 21,
+      "case_id": "v2-development-01-error",
+      "engine": "languagetool",
+      "response_id": "ab5f4bd634124ef7bad109e9ddcf7ef0",
+      "text": "My aunt drive a bus.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My aunt drive a bus.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ab5f4bd634124ef7bad109e9ddcf7ef0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 21,
+      "case_id": "v2-development-01-error",
+      "engine": "qwen",
+      "response_id": "925c71d530764f9eb493c5e4a5a44887",
+      "text": "My aunt drive a bus.",
+      "actual_edits": [
+        {
+          "original": "drive",
+          "replacement": "drives",
+          "explanation": "Use third person singular verb form for the subject aunt."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My aunt drives a bus.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "925c71d530764f9eb493c5e4a5a44887",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 22,
+      "case_id": "v2-development-01-correct",
+      "engine": "qwen",
+      "response_id": "4b88d8f9baef4304bf66a384e5808f8b",
+      "text": "My aunt drives a bus.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My aunt drives a bus.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "4b88d8f9baef4304bf66a384e5808f8b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 22,
+      "case_id": "v2-development-01-correct",
+      "engine": "languagetool",
+      "response_id": "dc11c0846928467398af061fae1764c9",
+      "text": "My aunt drives a bus.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "My aunt drives a bus.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "dc11c0846928467398af061fae1764c9",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 23,
+      "case_id": "v2-development-02-error",
+      "engine": "languagetool",
+      "response_id": "10021ae985804d97af14b9b5687953f5",
+      "text": "The students needs more time.",
+      "actual_edits": [
+        {
+          "original": "needs",
+          "replacement": "need",
+          "explanation": "You should probably use “need”.",
+          "start": 13,
+          "end": 18,
+          "rule_id": "AGREEMENT_SENT_START",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The students need more time.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "insufficient",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "10021ae985804d97af14b9b5687953f5",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Suggests need without providing a grammar rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 23,
+      "case_id": "v2-development-02-error",
+      "engine": "qwen",
+      "response_id": "10f10633fa14425bb4c555a6fd7c679c",
+      "text": "The students needs more time.",
+      "actual_edits": [
+        {
+          "original": "needs",
+          "replacement": "need",
+          "explanation": "The plural subject 'students' requires the plural verb form 'need'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The students need more time.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "10f10633fa14425bb4c555a6fd7c679c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 24,
+      "case_id": "v2-development-02-correct",
+      "engine": "qwen",
+      "response_id": "3f7ce00be40b405c8aa3529e226d7afd",
+      "text": "The students need more time.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The students need more time.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "3f7ce00be40b405c8aa3529e226d7afd",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 24,
+      "case_id": "v2-development-02-correct",
+      "engine": "languagetool",
+      "response_id": "c81a4b95a69a4ee5ae198da963337392",
+      "text": "The students need more time.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "The students need more time.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "c81a4b95a69a4ee5ae198da963337392",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 25,
+      "case_id": "v2-development-03-error",
+      "engine": "languagetool",
+      "response_id": "c3d0fe61f52b4b3a944d9d7e6077b70d",
+      "text": "He is an chef.",
+      "actual_edits": [
+        {
+          "original": "an",
+          "replacement": "a",
+          "explanation": "Use “a” instead of ‘an’ if the following word doesn’t start with a vowel sound, e.g. ‘a sentence’, ‘a university’.",
+          "start": 6,
+          "end": 8,
+          "rule_id": "EN_A_VS_AN",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He is a chef.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "c3d0fe61f52b4b3a944d9d7e6077b70d",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 25,
+      "case_id": "v2-development-03-error",
+      "engine": "qwen",
+      "response_id": "f538a2834d964269a473040c3099572c",
+      "text": "He is an chef.",
+      "actual_edits": [],
+      "raw_rejected_response": "{\"corrections\": [{\"original\": \"chef\", \"replacement\": \"chef\", \"explanation\": \"The word 'chef' is a noun, but in this context it should be 'chefs' to be plural.\"}]}",
+      "resulting_sentence": null,
+      "proposed_outcome": "rejected",
+      "explanation_assessment": "unusable",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f538a2834d964269a473040c3099572c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The entire no-op response was rejected. Count the target error as missed, not as clean input.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "rejected",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Qwen actually proposed chef -> chef, which was rejected. User identifies an -> a as the needed correction; that is a valid desired edit, not the rejected proposal.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 26,
+      "case_id": "v2-development-03-correct",
+      "engine": "qwen",
+      "response_id": "0faa9b3111cc458484344414d8bf4503",
+      "text": "He is a chef.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He is a chef.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "0faa9b3111cc458484344414d8bf4503",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 26,
+      "case_id": "v2-development-03-correct",
+      "engine": "languagetool",
+      "response_id": "ded69cf48f604251b9f96d679645072b",
+      "text": "He is a chef.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He is a chef.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ded69cf48f604251b9f96d679645072b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 27,
+      "case_id": "v2-development-04-error",
+      "engine": "languagetool",
+      "response_id": "3e8dd7020a6f4fe097448c7404ae2220",
+      "text": "We saw a elephant.",
+      "actual_edits": [
+        {
+          "original": "a",
+          "replacement": "an",
+          "explanation": "Use “an” instead of ‘a’ if the following word starts with a vowel sound, e.g. ‘an article’, ‘an hour’.",
+          "start": 7,
+          "end": 8,
+          "rule_id": "EN_A_VS_AN",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We saw an elephant.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "3e8dd7020a6f4fe097448c7404ae2220",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 27,
+      "case_id": "v2-development-04-error",
+      "engine": "qwen",
+      "response_id": "16516a508f8446b08869f8c7650b69c0",
+      "text": "We saw a elephant.",
+      "actual_edits": [
+        {
+          "original": "a",
+          "replacement": "an",
+          "explanation": "Use 'an' before words starting with a vowel sound."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We saw an elephant.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "16516a508f8446b08869f8c7650b69c0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 28,
+      "case_id": "v2-development-04-correct",
+      "engine": "qwen",
+      "response_id": "ed24db31db6c492b997a415561a21ac7",
+      "text": "We saw an elephant.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We saw an elephant.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ed24db31db6c492b997a415561a21ac7",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 28,
+      "case_id": "v2-development-04-correct",
+      "engine": "languagetool",
+      "response_id": "2c6454a89c2d46e596ce3624b1360556",
+      "text": "We saw an elephant.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We saw an elephant.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "2c6454a89c2d46e596ce3624b1360556",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 29,
+      "case_id": "v2-development-05-error",
+      "engine": "languagetool",
+      "response_id": "1b476daa6ba642d698f25fbd1c7b9bf9",
+      "text": "Last night I watch a film.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Last night I watch a film.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1b476daa6ba642d698f25fbd1c7b9bf9",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 29,
+      "case_id": "v2-development-05-error",
+      "engine": "qwen",
+      "response_id": "7256a4dbd6644525b6351ed159a5127f",
+      "text": "Last night I watch a film.",
+      "actual_edits": [
+        {
+          "original": "watch",
+          "replacement": "watched",
+          "explanation": "The past tense of watch is watched, and the sentence describes a completed action in the past."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Last night I watched a film.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "7256a4dbd6644525b6351ed159a5127f",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 30,
+      "case_id": "v2-development-05-correct",
+      "engine": "qwen",
+      "response_id": "d7f1919c1f8c4074abe87ab580d76cad",
+      "text": "Last night I watched a film.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Last night I watched a film.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d7f1919c1f8c4074abe87ab580d76cad",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 30,
+      "case_id": "v2-development-05-correct",
+      "engine": "languagetool",
+      "response_id": "da4b920fb1b14fddbde022698e460620",
+      "text": "Last night I watched a film.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Last night I watched a film.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "da4b920fb1b14fddbde022698e460620",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 31,
+      "case_id": "v2-development-06-error",
+      "engine": "languagetool",
+      "response_id": "1134214c73ac46fc995ec6be27396aaf",
+      "text": "Yesterday she bring her lunch.",
+      "actual_edits": [
+        {
+          "original": "bring",
+          "replacement": "brings",
+          "explanation": "The pronoun ‘she’ is usually used with a third-person or a past tense verb.",
+          "start": 14,
+          "end": 19,
+          "rule_id": "HE_VERB_AGR",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Yesterday she brings her lunch.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1134214c73ac46fc995ec6be27396aaf",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 31,
+      "case_id": "v2-development-06-error",
+      "engine": "qwen",
+      "response_id": "903cedaf550a48ac979c829db9899b1f",
+      "text": "Yesterday she bring her lunch.",
+      "actual_edits": [
+        {
+          "original": "bring",
+          "replacement": "brought",
+          "explanation": "The past tense of 'bring' is 'brought' for a completed action in the past."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Yesterday she brought her lunch.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "903cedaf550a48ac979c829db9899b1f",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 32,
+      "case_id": "v2-development-06-correct",
+      "engine": "qwen",
+      "response_id": "bdf957c6c68a4bbf920c4479460451b0",
+      "text": "Yesterday she brought her lunch.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Yesterday she brought her lunch.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "bdf957c6c68a4bbf920c4479460451b0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 32,
+      "case_id": "v2-development-06-correct",
+      "engine": "languagetool",
+      "response_id": "fab81f57fe6441c7af6f31d7ff60c266",
+      "text": "Yesterday she brought her lunch.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Yesterday she brought her lunch.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "fab81f57fe6441c7af6f31d7ff60c266",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 33,
+      "case_id": "v2-development-07-error",
+      "engine": "languagetool",
+      "response_id": "85370249a3ef413397bcfb91822eb9f6",
+      "text": "I packed four shirt.",
+      "actual_edits": [
+        {
+          "original": "shirt",
+          "replacement": "shirts",
+          "explanation": "Possible agreement error. The noun ‘shirt’ seems to be countable.",
+          "start": 14,
+          "end": 19,
+          "rule_id": "CD_NN",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I packed four shirts.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "insufficient",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "85370249a3ef413397bcfb91822eb9f6",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Countability is mentioned, but the explanation does not state that four requires a plural noun.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 33,
+      "case_id": "v2-development-07-error",
+      "engine": "qwen",
+      "response_id": "93d06c8f0afa463ea2f4c71a34684007",
+      "text": "I packed four shirt.",
+      "actual_edits": [
+        {
+          "original": "shirt",
+          "replacement": "shirts",
+          "explanation": "Plural form needed for countable noun 'shirt' when referring to multiple items."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I packed four shirts.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "93d06c8f0afa463ea2f4c71a34684007",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 34,
+      "case_id": "v2-development-07-correct",
+      "engine": "qwen",
+      "response_id": "10cab8e87e1947e68decc37f600f37cb",
+      "text": "I packed four shirts.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I packed four shirts.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "10cab8e87e1947e68decc37f600f37cb",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 34,
+      "case_id": "v2-development-07-correct",
+      "engine": "languagetool",
+      "response_id": "e456390e0c704197b60be815f02daee3",
+      "text": "I packed four shirts.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I packed four shirts.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "e456390e0c704197b60be815f02daee3",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 35,
+      "case_id": "v2-development-08-error",
+      "engine": "languagetool",
+      "response_id": "526dc812ef8d451dafa83c3661bc8a35",
+      "text": "We need three box.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We need three box.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "526dc812ef8d451dafa83c3661bc8a35",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 35,
+      "case_id": "v2-development-08-error",
+      "engine": "qwen",
+      "response_id": "11743060b9c048a69d078c5cc93002df",
+      "text": "We need three box.",
+      "actual_edits": [
+        {
+          "original": "box",
+          "replacement": "boxes",
+          "explanation": "The plural form is required for 'three'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We need three boxes.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "11743060b9c048a69d078c5cc93002df",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule. User-requested clearer wording is recorded separately; the original is not factually incorrect.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 36,
+      "case_id": "v2-development-08-correct",
+      "engine": "qwen",
+      "response_id": "c08835fd2de74cbbbfbca6f16cc7db36",
+      "text": "We need three boxes.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We need three boxes.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "c08835fd2de74cbbbfbca6f16cc7db36",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 36,
+      "case_id": "v2-development-08-correct",
+      "engine": "languagetool",
+      "response_id": "da73831b79464200885dbbcac9fa5846",
+      "text": "We need three boxes.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "We need three boxes.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "da73831b79464200885dbbcac9fa5846",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 37,
+      "case_id": "v2-development-09-error",
+      "engine": "languagetool",
+      "response_id": "32d66e2e2e0e4939834db34f46b5da9a",
+      "text": "You should takes a break.",
+      "actual_edits": [
+        {
+          "original": "takes",
+          "replacement": "take",
+          "explanation": "The modal verb ‘should’ requires the verb’s base form.",
+          "start": 11,
+          "end": 16,
+          "rule_id": "MD_BASEFORM",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "You should take a break.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "32d66e2e2e0e4939834db34f46b5da9a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 37,
+      "case_id": "v2-development-09-error",
+      "engine": "qwen",
+      "response_id": "9f4623ba8e47421d872cf54a8803ab04",
+      "text": "You should takes a break.",
+      "actual_edits": [
+        {
+          "original": "takes",
+          "replacement": "take",
+          "explanation": "Use base verb form after 'should'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "You should take a break.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "9f4623ba8e47421d872cf54a8803ab04",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 38,
+      "case_id": "v2-development-09-correct",
+      "engine": "qwen",
+      "response_id": "58f4191a598f4afbb4add8029bece245",
+      "text": "You should take a break.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "You should take a break.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "58f4191a598f4afbb4add8029bece245",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 38,
+      "case_id": "v2-development-09-correct",
+      "engine": "languagetool",
+      "response_id": "eeffe8e1745c4304a2b84b625d0922c4",
+      "text": "You should take a break.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "You should take a break.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "eeffe8e1745c4304a2b84b625d0922c4",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 39,
+      "case_id": "v2-development-10-error",
+      "engine": "languagetool",
+      "response_id": "3250240a606a455db29f1642026f1ebc",
+      "text": "They might arrives early.",
+      "actual_edits": [
+        {
+          "original": "arrives",
+          "replacement": "arrive",
+          "explanation": "The pronoun ‘They’ must be used with a non-third-person form of a verb.",
+          "start": 11,
+          "end": 18,
+          "rule_id": "NON3PRS_VERB",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They might arrive early.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "3250240a606a455db29f1642026f1ebc",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The applicable rule is the base verb after might; they is itself a third-person plural pronoun.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 39,
+      "case_id": "v2-development-10-error",
+      "engine": "qwen",
+      "response_id": "f124e59d8fc24389a4a129fb0862ba29",
+      "text": "They might arrives early.",
+      "actual_edits": [
+        {
+          "original": "arrives",
+          "replacement": "arrive",
+          "explanation": "The verb 'arrive' is used in the present simple tense for 'they', which is plural."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They might arrive early.",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f124e59d8fc24389a4a129fb0862ba29",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Arrive follows modal might; the explanation incorrectly describes a present-simple agreement rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 40,
+      "case_id": "v2-development-10-correct",
+      "engine": "qwen",
+      "response_id": "cc638819904d4d36b3e8934f141b93a0",
+      "text": "They might arrive early.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They might arrive early.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "cc638819904d4d36b3e8934f141b93a0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 40,
+      "case_id": "v2-development-10-correct",
+      "engine": "languagetool",
+      "response_id": "8c63a11028324881b423fe7a3ac9bc68",
+      "text": "They might arrive early.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They might arrive early.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8c63a11028324881b423fe7a3ac9bc68",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 41,
+      "case_id": "v2-development-11-error",
+      "engine": "languagetool",
+      "response_id": "fc26c134f0b74aff9aa70bae831ac469",
+      "text": "Does she likes tea?",
+      "actual_edits": [
+        {
+          "original": "likes",
+          "replacement": "like",
+          "explanation": "Did you mean “like”? As ‘do’ is already inflected, the verb cannot also be inflected.",
+          "start": 9,
+          "end": 14,
+          "rule_id": "DOES_X_HAS",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Does she like tea?",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "fc26c134f0b74aff9aa70bae831ac469",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 41,
+      "case_id": "v2-development-11-error",
+      "engine": "qwen",
+      "response_id": "3043f0ef5adf41c5954bf2711688207c",
+      "text": "Does she likes tea?",
+      "actual_edits": [
+        {
+          "original": "likes",
+          "replacement": "like",
+          "explanation": "The subject 'she' is singular, so the verb must be in third person singular form: 'likes' should be 'likes' (wait, no—this is a mistake). Wait, no, let's think: 'She' is singular, so the verb should be third person singular. The verb 'like'"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Does she like tea?",
+      "proposed_outcome": "correct_edit_explanation_fails",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "3043f0ef5adf41c5954bf2711688207c",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Contradictory and unfinished explanation, despite a correct replacement.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_edit_explanation_fails",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 42,
+      "case_id": "v2-development-11-correct",
+      "engine": "qwen",
+      "response_id": "f9e2f0f6d6f74cfda21fc2857820bbf4",
+      "text": "Does she like tea?",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Does she like tea?",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f9e2f0f6d6f74cfda21fc2857820bbf4",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 42,
+      "case_id": "v2-development-11-correct",
+      "engine": "languagetool",
+      "response_id": "f8c5953f22714382a59eafa670c7f6c1",
+      "text": "Does she like tea?",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Does she like tea?",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f8c5953f22714382a59eafa670c7f6c1",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 43,
+      "case_id": "v2-development-12-error",
+      "engine": "languagetool",
+      "response_id": "ffa8bd8f672c4b1b8891cb9188d766e0",
+      "text": "He did not wrote the note.",
+      "actual_edits": [
+        {
+          "original": "wrote",
+          "replacement": "write",
+          "explanation": "After the auxiliary verb ‘do’, use the base form of a verb. Did you mean “write”?",
+          "start": 11,
+          "end": 16,
+          "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He did not write the note.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ffa8bd8f672c4b1b8891cb9188d766e0",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 43,
+      "case_id": "v2-development-12-error",
+      "engine": "qwen",
+      "response_id": "8f2552490d314d5e864c2f058654286e",
+      "text": "He did not wrote the note.",
+      "actual_edits": [
+        {
+          "original": "wrote",
+          "replacement": "write",
+          "explanation": "Use base verb form after did not."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He did not write the note.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8f2552490d314d5e864c2f058654286e",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 44,
+      "case_id": "v2-development-12-correct",
+      "engine": "qwen",
+      "response_id": "bdb65668a2b148de9cb5e82a3b52a5b2",
+      "text": "He did not write the note.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He did not write the note.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "bdb65668a2b148de9cb5e82a3b52a5b2",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 44,
+      "case_id": "v2-development-12-correct",
+      "engine": "languagetool",
+      "response_id": "64b26c005da44d29b40598d190c9f2bc",
+      "text": "He did not write the note.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "He did not write the note.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "64b26c005da44d29b40598d190c9f2bc",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 45,
+      "case_id": "v2-development-13-error",
+      "engine": "languagetool",
+      "response_id": "355580bbbeb04ab58167df23c6103fe8",
+      "text": "This route is more shorter.",
+      "actual_edits": [
+        {
+          "original": "more shorter",
+          "replacement": "shorter",
+          "explanation": "Use only “shorter” (without ‘more’) when you use the comparative.",
+          "start": 14,
+          "end": 26,
+          "rule_id": "MOST_COMPARATIVE",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This route is shorter.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "355580bbbeb04ab58167df23c6103fe8",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 45,
+      "case_id": "v2-development-13-error",
+      "engine": "qwen",
+      "response_id": "b3678ce02df24c90b02a4b4c65e5d0a1",
+      "text": "This route is more shorter.",
+      "actual_edits": [
+        {
+          "original": "is",
+          "replacement": "the",
+          "explanation": "Use 'the' for the specific route being referred to."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This route the more shorter.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "b3678ce02df24c90b02a4b4c65e5d0a1",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Qwen proposed is -> the; replace more shorter with shorter instead.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 46,
+      "case_id": "v2-development-13-correct",
+      "engine": "qwen",
+      "response_id": "dca300d4d3ba4a4681692f3b6c089f21",
+      "text": "This route is shorter.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This route is shorter.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "dca300d4d3ba4a4681692f3b6c089f21",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 46,
+      "case_id": "v2-development-13-correct",
+      "engine": "languagetool",
+      "response_id": "8a6416ca238e42d68ec6ef7eb5745eda",
+      "text": "This route is shorter.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This route is shorter.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8a6416ca238e42d68ec6ef7eb5745eda",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 47,
+      "case_id": "v2-development-14-error",
+      "engine": "languagetool",
+      "response_id": "f25ffedc52664e60bd7996765b10957f",
+      "text": "Today is more colder than Monday.",
+      "actual_edits": [
+        {
+          "original": "more colder",
+          "replacement": "colder",
+          "explanation": "Use only “colder” (without ‘more’) when you use the comparative.",
+          "start": 9,
+          "end": 20,
+          "rule_id": "MOST_COMPARATIVE",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Today is colder than Monday.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f25ffedc52664e60bd7996765b10957f",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 47,
+      "case_id": "v2-development-14-error",
+      "engine": "qwen",
+      "response_id": "460c246986cc432286dc8fbdd3bbe4ef",
+      "text": "Today is more colder than Monday.",
+      "actual_edits": [
+        {
+          "original": "is",
+          "replacement": "cold",
+          "explanation": "The phrase 'more colder' is incorrect; 'colder' is already comparative form, so 'more' is redundant. Use 'cold' for the base form to compare temperatures."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Today cold more colder than Monday.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "460c246986cc432286dc8fbdd3bbe4ef",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 48,
+      "case_id": "v2-development-14-correct",
+      "engine": "qwen",
+      "response_id": "cb75ffab861e477cb4666b3de9957011",
+      "text": "Today is colder than Monday.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Today is colder than Monday.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "cb75ffab861e477cb4666b3de9957011",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 48,
+      "case_id": "v2-development-14-correct",
+      "engine": "languagetool",
+      "response_id": "c1115422e8c243359288e71f02c35750",
+      "text": "Today is colder than Monday.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Today is colder than Monday.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "c1115422e8c243359288e71f02c35750",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 49,
+      "case_id": "v2-development-15-error",
+      "engine": "languagetool",
+      "response_id": "0d7311997880411e82df5f46cec8c091",
+      "text": "She has worked here since two months.",
+      "actual_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Did you mean “for”? (‘since’ refers to a point in time, whereas ‘for’ refers to a period)",
+          "start": 20,
+          "end": 25,
+          "rule_id": "SINCE_FOR",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She has worked here for two months.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "0d7311997880411e82df5f46cec8c091",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 49,
+      "case_id": "v2-development-15-error",
+      "engine": "qwen",
+      "response_id": "68ad1644bf9f4736ab08720517ee2d63",
+      "text": "She has worked here since two months.",
+      "actual_edits": [
+        {
+          "original": "since",
+          "replacement": "for",
+          "explanation": "Use 'for' with durations of time like 'two months'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She has worked here for two months.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "68ad1644bf9f4736ab08720517ee2d63",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 50,
+      "case_id": "v2-development-15-correct",
+      "engine": "qwen",
+      "response_id": "ba271c636fd44c82ac9cbd3b9142eff4",
+      "text": "She has worked here for two months.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She has worked here for two months.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ba271c636fd44c82ac9cbd3b9142eff4",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 50,
+      "case_id": "v2-development-15-correct",
+      "engine": "languagetool",
+      "response_id": "e2d84f5d7586474984457cd50484c603",
+      "text": "She has worked here for two months.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She has worked here for two months.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "e2d84f5d7586474984457cd50484c603",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 51,
+      "case_id": "v2-development-16-error",
+      "engine": "languagetool",
+      "response_id": "f67ed859ff6143ad95eaadd2ad60fc03",
+      "text": "They depend of public transport.",
+      "actual_edits": [
+        {
+          "original": "depend of",
+          "replacement": "depend on",
+          "explanation": "The verb ‘to depend’ requires the preposition ‘(up)on’.",
+          "start": 5,
+          "end": 14,
+          "rule_id": "DEPEND_ON",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They depend on public transport.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "f67ed859ff6143ad95eaadd2ad60fc03",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 51,
+      "case_id": "v2-development-16-error",
+      "engine": "qwen",
+      "response_id": "8bb6b70be4704b1eb326f3034c1c776a",
+      "text": "They depend of public transport.",
+      "actual_edits": [
+        {
+          "original": "of",
+          "replacement": "on",
+          "explanation": "Use 'on' with public transport for dependency."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They depend on public transport.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8bb6b70be4704b1eb326f3034c1c776a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule. The wording is awkward/context-bound; adequacy is a judgment for human confirmation.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 52,
+      "case_id": "v2-development-16-correct",
+      "engine": "qwen",
+      "response_id": "a44db65bebb54b0fadad54a88cb338f6",
+      "text": "They depend on public transport.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They depend on public transport.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "a44db65bebb54b0fadad54a88cb338f6",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 52,
+      "case_id": "v2-development-16-correct",
+      "engine": "languagetool",
+      "response_id": "2052e9b61d7b49b5be72ee270e91d21b",
+      "text": "They depend on public transport.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "They depend on public transport.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "2052e9b61d7b49b5be72ee270e91d21b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 53,
+      "case_id": "v2-development-17-error",
+      "engine": "languagetool",
+      "response_id": "91d78321c3604711adca81b621e50944",
+      "text": "I enjoy to swim.",
+      "actual_edits": [
+        {
+          "original": "enjoy to swim",
+          "replacement": "enjoy swimming",
+          "explanation": "The verb ‘enjoy’ is used with the gerund form.",
+          "start": 2,
+          "end": 15,
+          "rule_id": "ADMIT_ENJOY_VB",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I enjoy swimming.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "91d78321c3604711adca81b621e50944",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 53,
+      "case_id": "v2-development-17-error",
+      "engine": "qwen",
+      "response_id": "757bc532bc4e4b249e23c326b5aaad07",
+      "text": "I enjoy to swim.",
+      "actual_edits": [
+        {
+          "original": "to",
+          "replacement": "swimming",
+          "explanation": "Use the gerund form after 'enjoy'."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I enjoy swimming swim.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "rule_correct_but_edit_wrong",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "757bc532bc4e4b249e23c326b5aaad07",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference. The explanation identifies the rule, but the selected edit span is wrong.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": true,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "borderline_pass": false,
+        "note": "User agreed with the displayed flagged judgment."
+      }
+    },
+    {
+      "display_row": 54,
+      "case_id": "v2-development-17-correct",
+      "engine": "qwen",
+      "response_id": "4432639641bb473f9afaf86006f11e5b",
+      "text": "I enjoy swimming.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I enjoy swimming.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "4432639641bb473f9afaf86006f11e5b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 54,
+      "case_id": "v2-development-17-correct",
+      "engine": "languagetool",
+      "response_id": "1ea1a107b91e44f3a21aea8d57388649",
+      "text": "I enjoy swimming.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "I enjoy swimming.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "1ea1a107b91e44f3a21aea8d57388649",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 55,
+      "case_id": "v2-development-18-error",
+      "engine": "languagetool",
+      "response_id": "ba27a562223c420396e76656ded03224",
+      "text": "She decided studying medicine.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She decided studying medicine.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "ba27a562223c420396e76656ded03224",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "LanguageTool returned no correction; Qwen returned rejected decided -> decided. Desired correction: studying -> to study.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 55,
+      "case_id": "v2-development-18-error",
+      "engine": "qwen",
+      "response_id": "93dc54b010e847349726bcd105a71bd5",
+      "text": "She decided studying medicine.",
+      "actual_edits": [],
+      "raw_rejected_response": "{\"corrections\": [{\"original\": \"decided\", \"replacement\": \"decided\", \"explanation\": \"No error found.\"}]}",
+      "resulting_sentence": null,
+      "proposed_outcome": "rejected",
+      "explanation_assessment": "unusable",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "93dc54b010e847349726bcd105a71bd5",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The entire no-op response was rejected. Count the target error as missed, not as clean input.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "rejected",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "LanguageTool returned no correction; Qwen returned rejected decided -> decided. Desired correction: studying -> to study.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 56,
+      "case_id": "v2-development-18-correct",
+      "engine": "qwen",
+      "response_id": "d18accea067444f1b74fcdcd4dbfe565",
+      "text": "She decided to study medicine.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She decided to study medicine.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d18accea067444f1b74fcdcd4dbfe565",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 56,
+      "case_id": "v2-development-18-correct",
+      "engine": "languagetool",
+      "response_id": "e25b808cff1f4b029fc4b506cd320583",
+      "text": "She decided to study medicine.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "She decided to study medicine.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "e25b808cff1f4b029fc4b506cd320583",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 57,
+      "case_id": "v2-development-19-error",
+      "engine": "languagetool",
+      "response_id": "d65f9f40f29945aeb3e01a97888db5e9",
+      "text": "Please give the key to I.",
+      "actual_edits": [
+        {
+          "original": "to I",
+          "replacement": "to me",
+          "explanation": "The object form of the pronoun may be required here. Did you mean “to me”, “to her”, “to him”, “to us”, or “to them”?",
+          "start": 20,
+          "end": 24,
+          "rule_id": "OBJECTIVE_CASE",
+          "explanation_source": "LanguageTool; human review pending"
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Please give the key to me.",
+      "proposed_outcome": "useful",
+      "explanation_assessment": "adequate",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d65f9f40f29945aeb3e01a97888db5e9",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The edit fixes the approved target error and the explanation conveys the applicable rule.",
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "useful",
+        "section": "B",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 57,
+      "case_id": "v2-development-19-error",
+      "engine": "qwen",
+      "response_id": "9b9d857c39e34219b3e3bc0e8b61355e",
+      "text": "Please give the key to I.",
+      "actual_edits": [],
+      "raw_rejected_response": "{\"corrections\": [{\"original\": \"key\", \"replacement\": \"key\", \"explanation\": \"No error found in the phrase.\"}]}",
+      "resulting_sentence": null,
+      "proposed_outcome": "rejected",
+      "explanation_assessment": "unusable",
+      "user_observation_present": true,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "9b9d857c39e34219b3e3bc0e8b61355e",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "The entire no-op response was rejected. Count the target error as missed, not as clean input.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (earlier chat feedback)",
+        "reviewed_on": "2026-09-30",
+        "decision": "rejected",
+        "source": "user_feedback_2026-09-30.json",
+        "note": "Qwen returned rejected key -> key. Desired correction: I -> me.",
+        "scope": "Earlier explicit identification of a missed or wrong correction; numeric edit counts follow the approved scoring rule."
+      }
+    },
+    {
+      "display_row": 58,
+      "case_id": "v2-development-19-correct",
+      "engine": "qwen",
+      "response_id": "d208a8bd066b41ed97f951f5e5b6caa5",
+      "text": "Please give the key to me.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Please give the key to me.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "d208a8bd066b41ed97f951f5e5b6caa5",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 58,
+      "case_id": "v2-development-19-correct",
+      "engine": "languagetool",
+      "response_id": "07f8af3a1f6d46b4b951a96e91b35a3a",
+      "text": "Please give the key to me.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "Please give the key to me.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "07f8af3a1f6d46b4b951a96e91b35a3a",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 59,
+      "case_id": "v2-development-20-error",
+      "engine": "languagetool",
+      "response_id": "625ae537df6e4a16888b066f7a975043",
+      "text": "This is hers coat.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This is hers coat.",
+      "proposed_outcome": "missed",
+      "explanation_assessment": "missing",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "625ae537df6e4a16888b066f7a975043",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction was offered for the approved target error.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "missed",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 59,
+      "case_id": "v2-development-20-error",
+      "engine": "qwen",
+      "response_id": "8fd7fcedc38a4e06bc510e3c2287c38b",
+      "text": "This is hers coat.",
+      "actual_edits": [
+        {
+          "original": "is",
+          "replacement": "her",
+          "explanation": "The possessive pronoun 'her' should be used here to indicate ownership."
+        }
+      ],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This her hers coat.",
+      "proposed_outcome": "incorrect_edit",
+      "explanation_assessment": "incorrect",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "8fd7fcedc38a4e06bc510e3c2287c38b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "Assistant checked the full resulting sentence: this proposal fails the target correction; the difference is not merely an alternative valid reference.",
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 1,
+        "explanation_accurate": false,
+        "meaning_preserved": false
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "incorrect_edit",
+        "section": "C",
+        "note": "User confirmed section C: Failures are comfirmed."
+      }
+    },
+    {
+      "display_row": 60,
+      "case_id": "v2-development-20-correct",
+      "engine": "qwen",
+      "response_id": "cb9b7d70e3ff4f4d8d7ef62f03ce5344",
+      "text": "This is her coat.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This is her coat.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "cb9b7d70e3ff4f4d8d7ef62f03ce5344",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    },
+    {
+      "display_row": 60,
+      "case_id": "v2-development-20-correct",
+      "engine": "languagetool",
+      "response_id": "2f4ef6bd431b41608a832fed5db07e5b",
+      "text": "This is her coat.",
+      "actual_edits": [],
+      "raw_rejected_response": null,
+      "resulting_sentence": "This is her coat.",
+      "proposed_outcome": "correct_abstention",
+      "explanation_assessment": "not_applicable",
+      "user_observation_present": false,
+      "human_confirmation": "approved",
+      "proposed_rating": {
+        "blind_id": "2f4ef6bd431b41608a832fed5db07e5b",
+        "reviewer": "Assistant draft; not human approved",
+        "rationale": "No correction is needed; no unnecessary edit was proposed.",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "explanation_accurate": true,
+        "meaning_preserved": true
+      },
+      "human_review": {
+        "reviewer": "Project owner (chat confirmation)",
+        "reviewed_on": "2026-09-30",
+        "decision": "correct_abstention",
+        "section": "A",
+        "note": "User explicitly approved sections A and B. Section C remains pending."
+      }
+    }
+  ],
+  "candidate_decision": "No candidate selected; no held-out inference or application changes.",
+  "grading_policy_approval": {
+    "status": "approved",
+    "reviewer": "Project owner (chat confirmation)",
+    "reviewed_on": "2026-09-30",
+    "user_confirmation": "yes I agree",
+    "scope": "Approval of the useful-feedback scoring requirement only; individual assistant ratings remain pending human confirmation.",
+    "requirement": "A useful response must correctly fix the target error, avoid unnecessary edits, preserve meaning, and accurately explain the applicable grammar rule. A correct replacement without the applicable rule is insufficient."
+  },
+  "human_review_progress": {
+    "confirmed_responses": 120,
+    "remaining_assistant_proposals": 0,
+    "scope": "All development response judgments approved by project owner through recorded chat decisions."
+  },
+  "final_artifacts": [
+    "final_development_report.json",
+    "final_development_review.json",
+    "final_development_scores.json",
+    "final_scorecard.md"
+  ]
+}

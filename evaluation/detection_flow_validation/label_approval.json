@@ -1,0 +1,9 @@
+{
+  "reviewed_on": "2026-10-01",
+  "reviewer": "Project owner",
+  "label_confirmation": "The reference corrections and acceptable inputs are good",
+  "execution_authorization": "run it",
+  "scope": "All 32 input labels, not unseen model outputs or live app integration.",
+  "pending_sha256": "c9c079ea39f1f911ff6e5f38d9b11221d92bc853f0294446eccd2b9f6397bbee",
+  "approved_sha256": "eb37503df0480584038558b360e2e0aefeb0c4c7667c42ed3d76f72dea0b83b5"
+}

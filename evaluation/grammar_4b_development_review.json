@@ -1,0 +1,206 @@
+{
+  "reviewer": "Assistant qualitative review; independent learner/instructor review pending",
+  "raw_sha256": "d5982bcb6d916401f3962490c3ae60208bba6c506a5dea34272c43777745bef9",
+  "rows": [
+    {
+      "id": "development-01",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-02",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    },
+    {
+      "id": "development-03",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-04",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    },
+    {
+      "id": "development-05",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-06",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "notes": "Missed missing article before engineer; empty corrections."
+    },
+    {
+      "id": "development-07",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-08",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    },
+    {
+      "id": "development-09",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-10",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": true,
+      "meaning_preserved": false,
+      "notes": "Correct explanation about double comparative, but original is and replacement cheaper do not fix more cheaper; reconstruction is incorrect."
+    },
+    {
+      "id": "development-11",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-12",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "notes": "Replacing since with five years ago yields I have lived here five years ago five years; wrong span/replacement and explanation."
+    },
+    {
+      "id": "development-13",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-14",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    },
+    {
+      "id": "development-15",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-16",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    },
+    {
+      "id": "development-17",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-18",
+      "status": "rejected",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "meaning_preserved": false,
+      "notes": "Identical a/a response rejected; misses are to is."
+    },
+    {
+      "id": "development-19",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "meaning_preserved": null,
+      "notes": "Correctly leaves acceptable input unchanged."
+    },
+    {
+      "id": "development-20",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "meaning_preserved": true,
+      "notes": "Appropriate minimal correction and accurate brief explanation."
+    }
+  ]
+}

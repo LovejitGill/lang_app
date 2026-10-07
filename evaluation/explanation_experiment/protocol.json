@@ -1,0 +1,49 @@
+{
+  "frozen_on": "2026-09-30",
+  "name": "Separate explanation and justification review v1",
+  "model": "qwen3:4b",
+  "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "source_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "prompt_sha256": "f62004a0cea762944ddaa75ee55b5cf7bb6fa4a81ea18928b4b28276c65ac98a",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "decision": {
+        "type": "string",
+        "enum": [
+          "supported",
+          "unsupported"
+        ]
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      }
+    },
+    "required": [
+      "decision",
+      "explanation"
+    ],
+    "additionalProperties": false
+  },
+  "settings": {
+    "think": false,
+    "temperature": 0.2,
+    "num_predict": 256,
+    "num_ctx": 4096,
+    "seed": "unset",
+    "retries": 0
+  },
+  "scope": "Replay all 60 frozen development results. Review only changed valid proposals (31 expected); retain unchanged rows and upstream failures in all-attempt accounting. No stage-one regeneration, old explanations, labels or reference corrections in review prompts. No held-out inference or live app integration.",
+  "single_experiment": "Add a focused review pass producing supported/unsupported and a fresh explanation. This tests explanation generation and abstention together; improvement cannot be attributed to explanation wording alone. Same model can repeat its own errors.",
+  "delivery_simulation": "Offer the frozen correction only for mechanically valid supported output. Unsupported is withheld with reason retained; it is not a claim of correct original grammar. Rejected/service failures are unavailable. Any genuine error withheld or skipped is a miss.",
+  "selection_gates": [
+    "No offered change to any of the 30 acceptable inputs, and no unavailable results.",
+    "More than 17/30 useful explained corrections after human review; accepted-edit precision at least 80%, without hiding misses.",
+    "Compare explanations on identical supported edits before/after; review changed decision coverage separately.",
+    "Do not adopt from one development run. Repeat promising fixed settings then validate under established held-out gates."
+  ],
+  "timing": "Measure review pass separately. Any sum with old generation timings is an estimate across separate runs, not measured end-to-end response latency. Record call median/p95/max, failure counts and skipped count.",
+  "review_requirements": "Model support is not semantic proof. Review actual explanations using approved useful-feedback rubric; do not swap preferred human wording into measured output."
+}

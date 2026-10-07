@@ -1,0 +1,16 @@
+{
+  "frozen_on": "2026-10-01",
+  "candidate": "languagetool-backed-explanations-v1",
+  "detector_sha256": "81576ff6a80d786acf5b7ef02ca99645309f44c24706f620e61810cb6dc896f4",
+  "runner_sha256": "0bdc2f66632af39060e9f2cd69d9b4114dae5b310481d46df89c967dc405c5ec",
+  "languagetool_version": "6.6",
+  "lt_grammar_sha256": "2928644e655a7eaf45764d43180cee5a963104e69cf795a1ff7fdb96bc673de9",
+  "lt_server_sha256": "f5279d946d901c90c0bb09cddaa6fdea8b26db9c548145d09041e8d1ac2d2b45",
+  "scope": "Reuse saved 60-case development proposals, then freshly authored component pairs (original/proposed) after this freeze. No old held-out outputs or new LLM generation. Component tests are not end-to-end validation.",
+  "gates": [
+    "No offers on unnecessary-change negative controls.",
+    "At least 80% of fresh positive component cases recognized.",
+    "All new explanation assignments require human review before useful-feedback claims."
+  ],
+  "next": "Keep this improvement active until broad rule detection and short explanation quality have been validated. Failures stay visible; do not tune the frozen candidate on fresh checks."
+}

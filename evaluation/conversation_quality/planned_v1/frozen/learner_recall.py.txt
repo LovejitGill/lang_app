@@ -1,0 +1,95 @@
+"""Bounded learner-only name/hobby recall; quote evidence, never infer facts.
+
+Only explicit personal statements in the last four turns are supported. Quoted,
+hypothetical and role-play rows are skipped; this is not general conversation memory.
+"""
+
+import re
+
+UNSAFE = re.compile(
+    r'["“”]|(?<!\w)\'[^\']+\'(?!\w)|[?]|\b(?:pretend|imagine|suppose|if|'
+    r"said|says|story|character|role[ -]?play|act as|assume|let's say|"
+    r"hypothetical|example|would|could|might)\b",
+    re.IGNORECASE,
+)
+NAME = re.compile(r"(?:My name is|Please call me) ([\w'’ -]{1,50})[.!]?", re.IGNORECASE)
+HOBBY = re.compile(
+    r"(?:Now )?I (?:(don't|don’t|do not) )?enjoy ([\w'’ -]{1,60}?)( anymore)?[.!]?",
+    re.IGNORECASE,
+)
+UNCHOSEN = re.compile(
+    r"I (?:haven't|haven’t|have not) chosen (?:a |my )?hobby[.!]?", re.IGNORECASE
+)
+
+
+def recall(text, history=()):
+    """Return prefix/topic/changed/missing, or None for an unsupported request.
+
+    missing lists requested fields without evidence. A negative or unchosen
+    hobby is evidence, but provides no positive topic for follow-up selection.
+    """
+    if not isinstance(text, str) or not (
+        "?" in text or re.search(r"\b(?:tell|remind) me\b", text, re.IGNORECASE)
+    ):
+        return None
+    name = bool(re.search(r"\bmy name\b", text, re.IGNORECASE))
+    hobby = bool(
+        re.search(
+            r"\b(?:my hobby|my name and (?:my )?hobby|(?:what|which) hobby (?:do|did) I|"
+            r"hobby did I|what do I enjoy)\b",
+            text,
+            re.IGNORECASE,
+        )
+    )
+    if not (name or hobby):
+        return None
+    found, topic, changed = {}, None, False
+    for row in history[-4:]:
+        source = row.get("learner_text", "").strip()
+        if not source or len(source) > 240 or UNSAFE.search(source):
+            continue
+        # Each quote is an exact substring; splitting does not rewrite learner facts.
+        clauses = re.split(
+            r"(?<=[.!])\s+|;\s*| and (?=I (?:enjoy|don't enjoy|don’t enjoy|do not enjoy))",
+            source,
+            flags=re.IGNORECASE,
+        )
+        row_hobbies = []
+        for clause in clauses:
+            m = NAME.fullmatch(clause)
+            if m and not re.match(r"(?:not|no)\b", m[1], re.IGNORECASE):
+                found["name"] = [clause]
+            m = HOBBY.fullmatch(clause)
+            # Complex clauses need broader parsing; do not treat them as one hobby.
+            if m and re.search(
+                r"\b(?:I|he|she|they|enjoys|but|because)\b", m[2], re.IGNORECASE
+            ):
+                m = None
+            if m:
+                new_topic = None if m[1] else m[2]
+                changed = (
+                    changed or bool(m[1]) or (topic is not None and new_topic != topic)
+                )
+                topic = new_topic
+                row_hobbies.append(clause)
+            elif UNCHOSEN.fullmatch(clause):
+                changed = changed or topic is not None
+                topic = None
+                row_hobbies.append(clause)
+        if row_hobbies:
+            found["hobby"] = row_hobbies
+    requested = [field for field, ask in (("name", name), ("hobby", hobby)) if ask]
+    missing = [field for field in requested if field not in found]
+    quotes = list(dict.fromkeys(q for field in requested for q in found.get(field, [])))
+    prefix = "You said: " + " ".join(f"‘{q}’" for q in quotes) if quotes else ""
+    if missing:
+        absent = " and ".join(missing)
+        prefix += (
+            " " if prefix else ""
+        ) + f"I don't have your {absent} in our recent conversation."
+    return {
+        "prefix": prefix,
+        "topic": topic if hobby else None,
+        "changed": changed if hobby else False,
+        "missing": missing,
+    }

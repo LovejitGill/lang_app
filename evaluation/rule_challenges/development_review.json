@@ -1,0 +1,292 @@
+{
+  "source": "development_results.json",
+  "source_sha256": "312446f83321774099d0f83c92957f24acad0126496b960625ede15f80eb1f3d",
+  "prior_review": "evaluation/rule_explanation_experiment/agreement_review_approved.json",
+  "prior_review_sha256": "d3e0147af70c370c173755fa1019ab88cde159a2ab5f9fa38888fb256847e2de",
+  "approval_scope": "Existing user judgments carried forward only for identical original/proposed/rule/explanation. Challenge expectations are not user-approved judgments.",
+  "summary": {
+    "confirmed_useful": 18,
+    "error_denominator": 30,
+    "useful_feedback_rate": 0.6,
+    "uncovered_errors": 12,
+    "false_offers_on_correct_inputs": 0,
+    "correct_input_denominator": 30
+  },
+  "decision": "Development and engineering regression checks passed. Independent validation remains before integration.",
+  "rows": [
+    {
+      "case_id": "development-02",
+      "original": "She walk to work every morning.",
+      "proposed": "She walks to work every morning.",
+      "rule": "singular_agreement",
+      "explanation": "For one person, use ‘walks’ in the present tense.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved the four displayed agreement corrections and explanations with: APPROVE",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘cheaper’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-18",
+      "original": "There are a bowl on the table.",
+      "proposed": "There is a bowl on the table.",
+      "rule": "there_singular",
+      "explanation": "Use ‘there is’ for one thing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved the four displayed agreement corrections and explanations with: APPROVE",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-01-error",
+      "original": "My aunt drive a bus.",
+      "proposed": "My aunt drives a bus.",
+      "rule": "singular_agreement",
+      "explanation": "For one person, use ‘drives’ in the present tense.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved the four displayed agreement corrections and explanations with: APPROVE",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-02-error",
+      "original": "The students needs more time.",
+      "proposed": "The students need more time.",
+      "rule": "plural_agreement",
+      "explanation": "For more than one person, use ‘need’ in the present tense.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved the four displayed agreement corrections and explanations with: APPROVE",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-08-error",
+      "original": "We need three box.",
+      "proposed": "We need three boxes.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘shorter’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘colder’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    },
+    {
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      },
+      "review_status": "carried_forward_exact_match"
+    }
+  ]
+}

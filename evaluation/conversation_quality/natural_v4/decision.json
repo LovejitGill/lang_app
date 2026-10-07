@@ -1,0 +1,11 @@
+{
+  "status": "not_selected",
+  "reason": "Remaining factual, repetition and direct-answer failures; human review and audio timing pending.",
+  "source_sha256": "07cf84b8c04f9daebb7ee1d9fd95d1cd9e86c9eca2580e2a52f086ad9ff87d0e",
+  "app_integrated": false,
+  "quality_pass_rate": null,
+  "within_two_seconds_text": 41,
+  "text_denominator": 41,
+  "voice_latency_verified": false,
+  "next_improvement": "Resolve the remaining conversation failures without relaxing latency, review fresh multi-turn cases, then consider integration."
+}

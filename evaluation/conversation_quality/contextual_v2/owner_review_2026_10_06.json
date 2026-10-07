@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-06",
+  "status": "partial_owner_review_revisions_requested",
+  "scope": "Nine named cases plus the exact uncle/work example mapped to C09. No blanket approval, no new candidate selection, and no full benchmark score.",
+  "source_sha256": {
+    "warm_results.json": "c7baa98936c1193bc034707ab3ee00a96c593cd375c719c1d188e50a8d7d3b76",
+    "review_draft.json": "d21da161e52b611e224a39576a04681daef1943cf9201aeaf8e798a0f00cdfac"
+  },
+  "source_preservation": "Original warm results, source dataset, draft review, and previous selection are unchanged by this review.",
+  "reference_status": "All proposed revised replies and new counterexamples are assistant-authored proposals, not model outputs or owner-approved text.",
+  "named_case_ids": [
+    "D02",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "C01",
+    "C04",
+    "C11",
+    "C15"
+  ],
+  "example_mapped_case_ids": [
+    "C09"
+  ],
+  "unreviewed_case_ids": [
+    "D01",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "C02",
+    "C03",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "C12",
+    "C13",
+    "C14",
+    "C16"
+  ],
+  "general_rule_coverage_note": "General wording instructions also apply to unreviewed cases but do not constitute individual quality approvals or rejections.",
+  "rows": [
+    {
+      "case_id": "D02",
+      "feedback_mapping": "explicit_case_id",
+      "input": "Did you visited the castle?",
+      "history": [],
+      "original_delivered_reply": "I'm an AI, so I don't have real-world experiences. Describe a place you would like to visit and why.",
+      "original_path": "deterministic",
+      "owner_feedback_verbatim": "D02 response can be improved by stating something like I'm an AI, I can't visit castles. What castle would want to visit ? Should also start with a correction since it should be visit, not visited.",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Keep the castle topic when explaining the lack of physical experiences.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "I'm an AI, so I can't visit castles. Which castle would you like to visit?"
+      },
+      "grammar_presentation_request": {
+        "owner_requested_edit": {
+          "original": "visited",
+          "replacement": "visit"
+        },
+        "owner_requested_order": "Start with the correction.",
+        "assistant_assessment": "This is a necessary correction: did takes the base verb visit.",
+        "assistant_proposed_verified_correction_display": "“Did you visit the castle?” Use “visit” after “did.”",
+        "status": "requested_presentation_change_not_verified_runtime_behavior"
+      }
+    },
+    {
+      "case_id": "D09",
+      "feedback_mapping": "explicit_case_id",
+      "input": "I cooked rice with my sister.",
+      "history": [],
+      "original_delivered_reply": "Tell me what you did with your sister.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "D09 response not sufficient, should either as how the rice tasted or even ask what type or rice. Convo should flow almost as a true human to human convo",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Ask about the cooking result or rice itself, rather than repeating a broad activity question.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "How did the rice you cooked with your sister turn out?"
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "D10",
+      "feedback_mapping": "explicit_case_id",
+      "input": "Working from home helps me focus, but I miss talking to colleagues.",
+      "history": [],
+      "original_delivered_reply": "Tell me about the benefits and difficulties of working from home, with an example.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "D10 stop ending questions with \"with an example/ with a few details\" or any other variation of the same.",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Remove automatic example/details tails and follow the stated benefit/trade-off.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "What do you miss most about talking with your colleagues?"
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "D11",
+      "feedback_mapping": "explicit_case_id",
+      "input": "I would like vegetable soup, and I prefer food that is not spicy.",
+      "history": [],
+      "original_delivered_reply": "Describe what your ideal meal would be like.",
+      "original_path": "local_fallback",
+      "owner_feedback_verbatim": "D11 response should ask about the soup or at least ask in a way that acknowledges the statement for example: \"what about other food, what would be your Ideal meal?\"",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Retain the soup context and respect the non-spicy preference; do not invent a menu or promise food preparation.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "What would you like to have with your vegetable soup?"
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "D12",
+      "feedback_mapping": "explicit_case_id",
+      "input": "She go to work by train.",
+      "history": [],
+      "original_delivered_reply": "Tell me more about them and what happens.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "D12 No correction for go to goes* and and show resonse was generic, could've asked how long does it take her",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Preserve she/her and connect the follow-up to her commute.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "How long does her train journey to work take?"
+      },
+      "grammar_presentation_request": {
+        "owner_requested_edit": {
+          "original": "go",
+          "replacement": "goes"
+        },
+        "owner_requested_order": "A correction is requested; a specific order was not separately stated for this case.",
+        "assistant_assessment": "This is a necessary correction for third-person singular present she.",
+        "assistant_proposed_verified_correction_display": "“She goes to work by train.” Use “goes” with “she” in the present tense.",
+        "status": "requested_presentation_change_not_verified_runtime_behavior"
+      }
+    },
+    {
+      "case_id": "C01",
+      "feedback_mapping": "explicit_case_id",
+      "input": "My name is Luis and I enjoy sketching.",
+      "history": [],
+      "original_delivered_reply": "Tell me what interests you about sketching, with an example.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "C01 great response, just exclude the with an example portion",
+      "conversation_review": "conditional_approval_with_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "The owner accepts the question direction conditionally on removing the example tail.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "Tell me what interests you about sketching."
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "C04",
+      "feedback_mapping": "explicit_case_id",
+      "input": "My friend said \"goodbye\" and left.",
+      "history": [],
+      "original_delivered_reply": "Tell me more about them and what happens.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "C04  response sounds somewhat generic",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Treat goodbye as reported speech in a completed event, not a command to end this conversation.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "What happened before your friend said goodbye?"
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "C11",
+      "feedback_mapping": "explicit_case_id",
+      "input": "My brother is upset because he missed his train.",
+      "history": [],
+      "original_delivered_reply": "Tell me more about them and what happens.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "C11 generic response that doesn't even make sense",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Acknowledge the stated upset and ask about the specific event without inventing what happened afterward.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "That sounds frustrating for him. What did your brother do after he missed the train?"
+      },
+      "grammar_presentation_request": null
+    },
+    {
+      "case_id": "C15",
+      "feedback_mapping": "explicit_case_id",
+      "input": "I take a short walk because it helps me relax.",
+      "history": [],
+      "original_delivered_reply": "Tell me what that walk feels like, with a few details.",
+      "original_path": "model_generated",
+      "owner_feedback_verbatim": "C15 response didn't have correction for take -> took. weird what to phrase response, can moreso ask how did the walk feel.",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "Revise the unnatural tail, but retain habitual present unless a completed-past meaning is established.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "What is it about a short walk that helps you relax?"
+      },
+      "grammar_presentation_request": {
+        "owner_requested_edit": {
+          "original": "take",
+          "replacement": "took"
+        },
+        "assistant_assessment": "The recorded sentence is grammatical habitual present. No necessary take→took correction is established.",
+        "conditional_alternative": "If the intended meaning is one completed walk, “I took a short walk because it helps me relax” is possible. That changes the temporal meaning rather than correcting the recorded habitual-present sentence.",
+        "status": "owner_request_recorded_assistant_disagrees_with_necessary_correction",
+        "adopt_as_reference_correction": false
+      }
+    },
+    {
+      "case_id": "C09",
+      "feedback_mapping": "exact_input_example_not_named_id",
+      "input": "Where does my uncle work?",
+      "history": [],
+      "original_delivered_reply": "I don't have that information in our recent conversation. Tell me more about that person or place, with a few details.",
+      "original_path": "deterministic",
+      "owner_feedback_verbatim": "also various responses state some variation of \"I don't have that information in our recent conversation. Tell me more about that person or place, with a few details.\"\nresponse should always tie back to the statement. for example: if a learner states \"Where does my uncle work?\" tutor should respond with a statement/question that mentions either the uncle or work or both.",
+      "conversation_review": "needs_revision",
+      "human_useful": null,
+      "binary_score_note": "No new binary benchmark score inferred from this qualitative review.",
+      "assistant_assessment": "The owner supplied this input as an example without naming C09; it matches C09 exactly. Preserve the uncle/work relation while admitting uncertainty.",
+      "assistant_proposed_reference": {
+        "status": "unapproved_assistant_authored_reference_not_model_output",
+        "conversation_reply": "I don't know where your uncle works. What do you know about his job?"
+      },
+      "grammar_presentation_request": null
+    }
+  ],
+  "general_acceptance_rules": [
+    {
+      "id": "R01",
+      "origin": "owner_feedback",
+      "rule": "Tie every reply to the learner statement or available history. For unknown facts, retain the requested person, place, or relationship."
+    },
+    {
+      "id": "R02",
+      "origin": "owner_feedback",
+      "rule": "Remove automatic endings such as “with an example” and “with a few details,” including equivalent variants."
+    },
+    {
+      "id": "R03",
+      "origin": "assistant_operationalization_of_owner_feedback",
+      "rule": "Connect the follow-up to the event or relationship, not merely one shared noun: cooking result, commute duration, or what happened after a missed train."
+    },
+    {
+      "id": "R04",
+      "origin": "assistant_proposal",
+      "rule": "Preserve person, tense, negation, topic changes, and stated preferences. A question must not assume a future event already occurred."
+    },
+    {
+      "id": "R05",
+      "origin": "assistant_proposal",
+      "rule": "Prefer one natural, specific question. A useful specific question may permit a short answer; do not add unnatural tails merely to demand a longer answer."
+    },
+    {
+      "id": "R06",
+      "origin": "assistant_proposal",
+      "rule": "Keep conversational quality, grammar correctness, and correction presentation as distinct review dimensions. Show only a verified correction; do not invent an error to satisfy a display request."
+    },
+    {
+      "id": "R07",
+      "origin": "assistant_proposal",
+      "rule": "Answer direct questions when supported. Unknown personal facts and language questions require different handling; an irrelevant follow-up is not an answer."
+    },
+    {
+      "id": "R08",
+      "origin": "existing_requirement_retained",
+      "rule": "Evaluate quality and response time together. Existing warm text measurements exclude DB, UI, STT, TTS, and readiness setup and cannot establish a two-second spoken response."
+    }
+  ],
+  "new_counterexample_proposals": {
+    "status": "assistant_proposals_not_run_not_owner_approved",
+    "cases": [
+      {
+        "proposal_id": "N01",
+        "input": "I will cook rice with my sister tomorrow.",
+        "expectation": "Discuss the plan; do not ask how the rice tasted already."
+      },
+      {
+        "proposal_id": "N02",
+        "input": "I cooked pasta with my brother.",
+        "expectation": "Transfer cooking follow-ups to other foods and people without assuming success."
+      },
+      {
+        "proposal_id": "N03",
+        "input": "She doesn’t go to work by train.",
+        "expectation": "Do not change go to goes after does not; do not assume she commutes by train."
+      },
+      {
+        "proposal_id": "N04",
+        "input": "Did you go to the museum?",
+        "expectation": "Give an honest AI boundary tied to the museum topic; do not invent a grammar error."
+      },
+      {
+        "proposal_id": "N05",
+        "input": "Yesterday I take a short walk.",
+        "expectation": "The explicit past-time cue supports take→took, unlike habitual-present C15."
+      },
+      {
+        "proposal_id": "N06",
+        "input": "My sister is relieved because she caught her bus.",
+        "expectation": "Preserve the positive outcome and emotion; do not apply missed-train frustration."
+      },
+      {
+        "proposal_id": "N07",
+        "input": "I’d like soup, but I can’t eat dairy.",
+        "expectation": "Retain the food constraint without claiming menu availability or promising to prepare food."
+      },
+      {
+        "proposal_id": "N08",
+        "input": "Where does my uncle work?",
+        "history": [
+          {
+            "learner_text": "My uncle works at a library.",
+            "tutor_reply": "Tell me about his work."
+          }
+        ],
+        "expectation": "Use the learner-provided library fact instead of the unknown-fact fallback."
+      },
+      {
+        "proposal_id": "N09",
+        "input": "Where does my uncle work?",
+        "history": [
+          {
+            "learner_text": "My uncle used to work at a library, but he changed jobs.",
+            "tutor_reply": "Tell me about his work."
+          }
+        ],
+        "expectation": "Do not report the library as his current workplace; acknowledge that the current job is unknown."
+      }
+    ]
+  },
+  "next_improvement": "Implement general context-specific follow-ups and evaluate them against current cases plus varied counterexamples under the same latency budget. Preserve correction ordering as an explicit presentation requirement and resolve it without silently accepting the C15 tense change."
+}

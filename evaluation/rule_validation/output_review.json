@@ -1,0 +1,1027 @@
+{
+  "source": "heldout_results.json",
+  "source_sha256": "6f025bc2e649df117b8bfe16e17470a0ba7b91e55b333ee1354229cc44397918",
+  "status": "Model output judgments pending; input labels already approved.",
+  "rows": [
+    {
+      "case_id": "v2-heldout-01-error",
+      "original": "Each visitor receive a badge.",
+      "proposed": {
+        "corrected_text": "Each visitor receives a badge.",
+        "explanation": "Use plural verb 'receives' for singular subject 'each visitor'.",
+        "corrections": [
+          {
+            "start": 13,
+            "end": 20,
+            "original": "receive",
+            "replacement": "receives",
+            "explanation": "Use plural verb 'receives' for singular subject 'each visitor'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-01-correct",
+      "original": "Each visitor receives a badge.",
+      "proposed": {
+        "corrected_text": "Each visitor receives a badge.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-02-error",
+      "original": "My neighbors has a dog.",
+      "proposed": {
+        "corrected_text": "My neighbors have a dog.",
+        "explanation": "Use have with the plural subject neighbors.",
+        "corrections": [
+          {
+            "start": 13,
+            "end": 16,
+            "original": "has",
+            "replacement": "have",
+            "explanation": "Use have with the plural subject neighbors.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-02-correct",
+      "original": "My neighbors have a dog.",
+      "proposed": {
+        "corrected_text": "My neighbors have a dog.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-03-error",
+      "original": "It was an useful lesson.",
+      "proposed": {
+        "corrected_text": "It was a useful lesson.",
+        "explanation": "Use article 'a' before the adjective 'useful'.",
+        "corrections": [
+          {
+            "start": 7,
+            "end": 9,
+            "original": "an",
+            "replacement": "a",
+            "explanation": "Use article 'a' before the adjective 'useful'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-03-correct",
+      "original": "It was a useful lesson.",
+      "proposed": {
+        "corrected_text": "It was a useful lesson.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-04-error",
+      "original": "She waited for a hour.",
+      "proposed": {
+        "corrected_text": "She waited for an hour.",
+        "explanation": "Use 'an' before 'hour' because 'hour' starts with a vowel sound.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 16,
+            "original": "a",
+            "replacement": "an",
+            "explanation": "Use 'an' before 'hour' because 'hour' starts with a vowel sound.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-04-correct",
+      "original": "She waited for an hour.",
+      "proposed": {
+        "corrected_text": "She waited for an hour.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-05-error",
+      "original": "We meet him last Friday.",
+      "proposed": {
+        "corrected_text": "We met him last Friday.",
+        "explanation": "Use past tense met for the past event.",
+        "corrections": [
+          {
+            "start": 3,
+            "end": 7,
+            "original": "meet",
+            "replacement": "met",
+            "explanation": "Use past tense met for the past event.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-05-correct",
+      "original": "We met him last Friday.",
+      "proposed": {
+        "corrected_text": "We met him last Friday.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-06-error",
+      "original": "Last summer he teach English.",
+      "proposed": {
+        "corrected_text": "Last summer he taught English.",
+        "explanation": "Use past tense for the verb 'teach' when referring to a completed action in the past.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 20,
+            "original": "teach",
+            "replacement": "taught",
+            "explanation": "Use past tense for the verb 'teach' when referring to a completed action in the past.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-06-correct",
+      "original": "Last summer he taught English.",
+      "proposed": {
+        "corrected_text": "Last summer he taught English.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-07-error",
+      "original": "There are six chair upstairs.",
+      "proposed": {
+        "corrected_text": "There are six chairs upstairs.",
+        "explanation": "Plural form of chair is chairs.",
+        "corrections": [
+          {
+            "start": 14,
+            "end": 19,
+            "original": "chair",
+            "replacement": "chairs",
+            "explanation": "Plural form of chair is chairs.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-07-correct",
+      "original": "There are six chairs upstairs.",
+      "proposed": {
+        "corrected_text": "There are six chairs upstairs.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-08-error",
+      "original": "She bought two ticket online.",
+      "proposed": {
+        "corrected_text": "She bought two tickets online.",
+        "explanation": "Use plural form 'tickets' for the countable noun 'ticket' when referring to more than one.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 21,
+            "original": "ticket",
+            "replacement": "tickets",
+            "explanation": "Use plural form 'tickets' for the countable noun 'ticket' when referring to more than one.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-08-correct",
+      "original": "She bought two tickets online.",
+      "proposed": {
+        "corrected_text": "She bought two tickets online.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-09-error",
+      "original": "We must finishes before noon.",
+      "proposed": {
+        "corrected_text": "We must finish before noon.",
+        "explanation": "Use singular verb 'finish' with plural subject 'we'.",
+        "corrections": [
+          {
+            "start": 8,
+            "end": 16,
+            "original": "finishes",
+            "replacement": "finish",
+            "explanation": "Use singular verb 'finish' with plural subject 'we'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-09-correct",
+      "original": "We must finish before noon.",
+      "proposed": {
+        "corrected_text": "We must finish before noon.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-10-error",
+      "original": "She could sings very well.",
+      "proposed": {
+        "corrected_text": "She could sing very well.",
+        "explanation": "Use sing (base form) after could for past ability.",
+        "corrections": [
+          {
+            "start": 10,
+            "end": 15,
+            "original": "sings",
+            "replacement": "sing",
+            "explanation": "Use sing (base form) after could for past ability.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-10-correct",
+      "original": "She could sing very well.",
+      "proposed": {
+        "corrected_text": "She could sing very well.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-11-error",
+      "original": "Did they left already?",
+      "proposed": {
+        "corrected_text": "Did they leave already?",
+        "explanation": "Use past simple tense 'leave' instead of 'left' for the question structure.",
+        "corrections": [
+          {
+            "start": 9,
+            "end": 13,
+            "original": "left",
+            "replacement": "leave",
+            "explanation": "Use past simple tense 'leave' instead of 'left' for the question structure.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-11-correct",
+      "original": "Did they leave already?",
+      "proposed": {
+        "corrected_text": "Did they leave already?",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-12-error",
+      "original": "She does not eats meat.",
+      "proposed": {
+        "corrected_text": "She does not eat meat.",
+        "explanation": "Use 'eat' (base form) after 'does not' for the third person singular.",
+        "corrections": [
+          {
+            "start": 13,
+            "end": 17,
+            "original": "eats",
+            "replacement": "eat",
+            "explanation": "Use 'eat' (base form) after 'does not' for the third person singular.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "provisional",
+        "rule": "do_base",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form."
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-12-correct",
+      "original": "She does not eat meat.",
+      "proposed": {
+        "corrected_text": "She does not eat meat.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-13-error",
+      "original": "My bag is more heavier than yours.",
+      "proposed": {
+        "corrected_text": "My bag is heavier than yours.",
+        "explanation": "Remove the redundant adjective 'more' as 'heavier' already implies comparison.",
+        "corrections": [
+          {
+            "start": 9,
+            "end": 14,
+            "original": " more",
+            "replacement": "",
+            "explanation": "Remove the redundant adjective 'more' as 'heavier' already implies comparison.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-13-correct",
+      "original": "My bag is heavier than yours.",
+      "proposed": {
+        "corrected_text": "My bag is heavier than yours.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-14-error",
+      "original": "The second task was more easier.",
+      "proposed": {
+        "corrected_text": "The second task was easier.",
+        "explanation": "Use 'easier' instead of 'more easier' to avoid double comparison.",
+        "corrections": [
+          {
+            "start": 20,
+            "end": 25,
+            "original": "more ",
+            "replacement": "",
+            "explanation": "Use 'easier' instead of 'more easier' to avoid double comparison.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-14-correct",
+      "original": "The second task was easier.",
+      "proposed": {
+        "corrected_text": "The second task was easier.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-15-error",
+      "original": "We have waited since twenty minutes.",
+      "proposed": {
+        "corrected_text": "We have waited for twenty minutes.",
+        "explanation": "Add 'for' before the time duration and use the correct time expression format.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 20,
+            "original": "since",
+            "replacement": "for",
+            "explanation": "Add 'for' before the time duration and use the correct time expression format.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-15-correct",
+      "original": "We have waited for twenty minutes.",
+      "proposed": {
+        "corrected_text": "We have waited for twenty minutes.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-16-error",
+      "original": "She is afraid from spiders.",
+      "proposed": {
+        "corrected_text": "She is afraid of spiders.",
+        "explanation": "Use 'of' instead of 'from' with the preposition for fear.",
+        "corrections": [
+          {
+            "start": 14,
+            "end": 18,
+            "original": "from",
+            "replacement": "of",
+            "explanation": "Use 'of' instead of 'from' with the preposition for fear.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-16-correct",
+      "original": "She is afraid of spiders.",
+      "proposed": {
+        "corrected_text": "She is afraid of spiders.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-17-error",
+      "original": "They avoided to argue.",
+      "proposed": {
+        "corrected_text": "They avoided arguing.",
+        "explanation": "Use the gerund form after the verb 'avoid'.",
+        "corrections": [
+          {
+            "start": 13,
+            "end": 21,
+            "original": "to argue",
+            "replacement": "arguing",
+            "explanation": "Use the gerund form after the verb 'avoid'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-17-correct",
+      "original": "They avoided arguing.",
+      "proposed": {
+        "corrected_text": "They avoided arguing.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-18-error",
+      "original": "He hopes finding a job.",
+      "proposed": {
+        "corrected_text": "He hopes to find a job.",
+        "explanation": "Add 'to' after the verb 'hopes' to form the infinitive phrase.",
+        "corrections": [
+          {
+            "start": 9,
+            "end": 16,
+            "original": "finding",
+            "replacement": "to find",
+            "explanation": "Add 'to' after the verb 'hopes' to form the infinitive phrase.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-18-correct",
+      "original": "He hopes to find a job.",
+      "proposed": {
+        "corrected_text": "He hopes to find a job.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-19-error",
+      "original": "The invitation is for she.",
+      "proposed": {
+        "corrected_text": "The invitation is for her.",
+        "explanation": "Use her instead of she for the correct pronoun case.",
+        "corrections": [
+          {
+            "start": 22,
+            "end": 25,
+            "original": "she",
+            "replacement": "her",
+            "explanation": "Use her instead of she for the correct pronoun case.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-19-correct",
+      "original": "The invitation is for her.",
+      "proposed": {
+        "corrected_text": "The invitation is for her.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-20-error",
+      "original": "That is mine bicycle.",
+      "proposed": {
+        "corrected_text": "That is my bicycle.",
+        "explanation": "Use my before the noun to show possession.",
+        "corrections": [
+          {
+            "start": 8,
+            "end": 12,
+            "original": "mine",
+            "replacement": "my",
+            "explanation": "Use my before the noun to show possession.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "rule_decision": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "v2-heldout-20-correct",
+      "original": "That is my bicycle.",
+      "proposed": {
+        "corrected_text": "That is my bicycle.",
+        "explanation": "",
+        "corrections": []
+      },
+      "rule_decision": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "meaning_preserved": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}

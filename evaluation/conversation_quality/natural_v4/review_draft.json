@@ -1,0 +1,375 @@
+{
+  "status": "pending owner review; assistant notes are not approved judgments",
+  "source_sha256": "07cf84b8c04f9daebb7ee1d9fd95d1cd9e86c9eca2580e2a52f086ad9ff87d0e",
+  "rows": [
+    {
+      "case_id": "D01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: the generated question presupposes an unstated bag. Fast grammar does not cover the bottle/bottles error."
+    },
+    {
+      "case_id": "D02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "The supported visited → visit edit appears first; authored reply retains castle and AI identity."
+    },
+    {
+      "case_id": "D03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Recall is grounded in the supplied history, but the authored follow-up remains generic."
+    },
+    {
+      "case_id": "D05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "The generated yes/no rice question was rejected; the authored fallback asks about the result."
+    },
+    {
+      "case_id": "D10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "The fallback follows the stated loss of contact with colleagues, without padding."
+    },
+    {
+      "case_id": "D11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "The generated vegetables question was rejected; the authored fallback retains vegetable soup."
+    },
+    {
+      "case_id": "D12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "The supported go → goes edit appears first; fallback asks about her journey duration."
+    },
+    {
+      "case_id": "D13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "D15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: the question presumes finishing the assignment despite the learner saying they could not finish and felt disappointed."
+    },
+    {
+      "case_id": "D16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserves the direction of the owner-approved question and removes the example tail. This run is not separately approved."
+    },
+    {
+      "case_id": "C02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Authored control respects the request to keep practicing instead of inventing a feeling of being stuck."
+    },
+    {
+      "case_id": "C04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Fallback asks about the circumstances before the friend left."
+    },
+    {
+      "case_id": "C05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Recall is grounded, but the authored follow-up remains generic."
+    },
+    {
+      "case_id": "C06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Names the unknown hobby explicitly instead of saying that information is missing."
+    },
+    {
+      "case_id": "C07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Unknown fact reply names both uncle and work without inventing a workplace."
+    },
+    {
+      "case_id": "C10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: does not answer the ordinary English lend/borrow question."
+    },
+    {
+      "case_id": "C11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Fallback retains brother and missed train instead of asking an unrelated question."
+    },
+    {
+      "case_id": "C12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: does not clarify the earlier tutor question."
+    },
+    {
+      "case_id": "C14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "C15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "No correction is necessary: take describes a habit, with no past cue. Fallback develops the stated reason for walking."
+    },
+    {
+      "case_id": "C16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "N01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: the generated question repeats the learner’s already stated future cooking plan."
+    },
+    {
+      "case_id": "N02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Human review pending; no semantic score assigned."
+    },
+    {
+      "case_id": "N03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserves the negated train commute; no unsupported go → goes offer."
+    },
+    {
+      "case_id": "N04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Already-correct Did you go is left unchanged; reply acknowledges AI physical limits and the museum topic."
+    },
+    {
+      "case_id": "N05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Coverage gap: Yesterday makes take → took necessary, but the fast adapter does not cover this rule. Review concern: unmentioned scenery/fresh air."
+    },
+    {
+      "case_id": "N06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Observed failure: reasks a feeling already supplied as relieved."
+    },
+    {
+      "case_id": "N07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Question stays on soup but does not explicitly acknowledge the dairy restriction; review usefulness."
+    },
+    {
+      "case_id": "N08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Uses the stated library workplace. Human review should decide whether asking kind of work usefully develops it."
+    },
+    {
+      "case_id": "N09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Does not reuse an old workplace after the learner says the uncle changed jobs."
+    }
+  ]
+}

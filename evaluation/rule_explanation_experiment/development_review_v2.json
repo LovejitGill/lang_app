@@ -1,0 +1,217 @@
+{
+  "source": "development_results_v2.json",
+  "source_sha256": "d16b30e77945536f1e78bded34595b689dde9623e8c232f52169a3c0c3663d1a",
+  "reviewed_on": "2026-09-30",
+  "reviewer": "Project owner",
+  "approval_quote": "approve the 14",
+  "scope": "The 14 corrections and explanations displayed in results.md; not blanket approval of all future rule matches or app integration.",
+  "rows": [
+    {
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘cheaper’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-08-error",
+      "original": "We need three box.",
+      "proposed": "We need three boxes.",
+      "rule": "number_plural",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "rule": "modal_base",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "rule": "do_base",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘shorter’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "rule": "single_comparative",
+      "explanation": "Use only ‘colder’, without ‘more’, when comparing.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    },
+    {
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "rule": "duration_for",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "rule_applies": true,
+        "explanation_clear": true,
+        "useful_feedback": true,
+        "reviewer": "Project owner",
+        "rationale": "User approved all 14 displayed corrections and explanations."
+      }
+    }
+  ],
+  "scores": {
+    "approved_offers": 14,
+    "reviewed_offers": 14,
+    "useful_feedback_count": 14,
+    "error_denominator": 30,
+    "useful_feedback_rate": 0.4666666666666667,
+    "uncovered_error_cases": 16,
+    "false_offers_on_correct_inputs": 0,
+    "correct_input_denominator": 30
+  },
+  "decision": "Not selected for app integration: 14/30 useful feedback is below the prior 17/30 baseline."
+}

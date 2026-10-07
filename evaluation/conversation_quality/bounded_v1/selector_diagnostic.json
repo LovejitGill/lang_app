@@ -1,0 +1,31 @@
+{
+  "seconds": 3.3916011019900907,
+  "plan": {
+    "text": "I cooked rice with my sister.",
+    "prefix": "",
+    "options": [
+      "Walk me through what you did, from the start.",
+      "Describe one part of that experience in more detail."
+    ],
+    "support": "guided_practice"
+  },
+  "choice": 0,
+  "raw": {
+    "model": "qwen3:1.7b",
+    "created_at": "2026-10-06T00:05:16.135974Z",
+    "message": {
+      "role": "assistant",
+      "content": "0"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3358014811,
+    "load_duration": 2563741553,
+    "prompt_eval_count": 114,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 740538000,
+    "eval_count": 2,
+    "eval_duration": 50351000
+  },
+  "purpose": "Diagnostic with a 30-second transport timeout after the 0.9-second selection budget expired on all warm requests; not counted as a successful deadline attempt."
+}

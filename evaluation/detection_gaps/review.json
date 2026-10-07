@@ -1,0 +1,219 @@
+{
+  "status": "New rule applications pending human review; these are component proposals, not new LLM outputs.",
+  "sources_sha256": {
+    "regression_results.json": "df254fdd4b4890debc8061eed0458546d5cfa78111b6e0cea4187f6603368839",
+    "fresh_results.json": "0a95441d88f00e2d41e5ff3749abe88cf0aa960d197c7853472b84622ed69501"
+  },
+  "rows": [
+    {
+      "group": "three_original_gaps",
+      "id": "fresh-04",
+      "original": "Did you visited the castle?",
+      "proposed": "Did you visit the castle?",
+      "rule_id": "DID_PAST",
+      "evidence_source": "builtin",
+      "explanation": "‘Did’ already marks the past, so use ‘visit’, not ‘visited’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "three_original_gaps",
+      "id": "fresh-06",
+      "original": "I packed seven bottle.",
+      "proposed": "I packed seven bottles.",
+      "rule_id": "SPEAKWELL_COUNT_HEAD",
+      "evidence_source": "supplemental",
+      "explanation": "‘Seven’ means more than one, so use the plural ‘bottles’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "three_original_gaps",
+      "id": "fresh-07",
+      "original": "We found eight coin.",
+      "proposed": "We found eight coins.",
+      "rule_id": "SPEAKWELL_COUNT_HEAD",
+      "evidence_source": "supplemental",
+      "explanation": "‘Eight’ means more than one, so use the plural ‘coins’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-01",
+      "original": "Did Maria mailed the parcel?",
+      "proposed": "Did Maria mail the parcel?",
+      "rule_id": "DID_PAST",
+      "evidence_source": "builtin",
+      "explanation": "‘Did’ already marks the past, so use ‘mail’, not ‘mailed’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-02",
+      "original": "Did they opened the gate?",
+      "proposed": "Did they open the gate?",
+      "rule_id": "DID_PAST",
+      "evidence_source": "builtin",
+      "explanation": "‘Did’ already marks the past, so use ‘open’, not ‘opened’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-03",
+      "original": "Did your assistant sent the invoice?",
+      "proposed": "Did your assistant send the invoice?",
+      "rule_id": "DID_PAST",
+      "evidence_source": "builtin",
+      "explanation": "‘Did’ already marks the past, so use ‘send’, not ‘sent’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-04",
+      "original": "We collected six pebble.",
+      "proposed": "We collected six pebbles.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Six’ means more than one, so use the plural ‘pebbles’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-05",
+      "original": "I bought four onion.",
+      "proposed": "I bought four onions.",
+      "rule_id": "SPEAKWELL_COUNT_HEAD",
+      "evidence_source": "supplemental",
+      "explanation": "‘Four’ means more than one, so use the plural ‘onions’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-06",
+      "original": "They found nine shell.",
+      "proposed": "They found nine shells.",
+      "rule_id": "SPEAKWELL_COUNT_HEAD",
+      "evidence_source": "supplemental",
+      "explanation": "‘Nine’ means more than one, so use the plural ‘shells’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-07",
+      "original": "We printed twelve label.",
+      "proposed": "We printed twelve labels.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Twelve’ means more than one, so use the plural ‘labels’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-08",
+      "original": "I packed five knife.",
+      "proposed": "I packed five knives.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Five’ means more than one, so use the plural ‘knives’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-09",
+      "original": "We saw three child.",
+      "proposed": "We saw three children.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Three’ means more than one, so use the plural ‘children’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-10",
+      "original": "I counted eleven leaf.",
+      "proposed": "I counted eleven leaves.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Eleven’ means more than one, so use the plural ‘leaves’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-11",
+      "original": "They purchased 24 candle.",
+      "proposed": "They purchased 24 candles.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘24’ means more than one, so use the plural ‘candles’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "group": "fresh_positive",
+      "id": "gap-fresh-12",
+      "original": "We collected four stamp.",
+      "proposed": "We collected four stamps.",
+      "rule_id": "CD_NN",
+      "evidence_source": "builtin",
+      "explanation": "‘Four’ means more than one, so use the plural ‘stamps’.",
+      "human_review": {
+        "necessary_correct_edit": null,
+        "rule_applies": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}

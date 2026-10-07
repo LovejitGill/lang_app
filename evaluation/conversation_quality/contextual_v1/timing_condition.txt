@@ -1,0 +1,1 @@
+The full regression test suite overlapped part of this run, so CPU load was not controlled. Preserve the timing and outputs as observed; do not use this run as a clean causal latency comparison. Candidate v1 also failed to reject a copied first-person assertion in D10; this is a semantic quality failure despite successful format/lexical checks.

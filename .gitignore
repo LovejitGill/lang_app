@@ -1,3 +1,6 @@
+# Local assistant instructions (keep the file on this computer)
+/AGENTS.md
+
 # Local environments, installers, model weights, and caches
 .venv/
 .cache/
@@ -7,18 +10,37 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
 .DS_Store
+
+# Generated Python packaging and test coverage output
+/build/
+/dist/
+*.egg-info/
+.coverage
+.coverage.*
+/htmlcov/
+/coverage.xml
 
 # Private runtime data and configuration
 .env
 .env.*
 !.env.example
+/.streamlit/secrets.toml
 data/
 *.sqlite
 *.sqlite3
 *.sqlite-wal
 *.sqlite-shm
+*.sqlite-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
 *.db
+*.db-wal
+*.db-shm
+*.db-journal
 *.wav
 *.mp3
 *.m4a

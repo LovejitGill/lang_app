@@ -1,0 +1,27 @@
+{
+  "status": "not selected for further validation or app integration",
+  "reason": "The second pass supported every proposal, including the unnecessary edit to approved correct input 58. This violates the frozen zero-change-on-correct-input gate. It also supported the still-incorrect proposal on 57.",
+  "source_sha256": "781076cb3e3926c4fde8938cd09670d0af103fa65b1e75225fed040939bac89c",
+  "protocol_sha256": "eb8d46c063a7eff1c8ce5573deb17e528bf51e7d96a2e3a1b5825712fa1d115c",
+  "diagnostics": {
+    "attempts": 60,
+    "second_pass_calls": 31,
+    "skipped_no_proposal": 29,
+    "supported_proposals": 31,
+    "withheld_proposals": 0,
+    "unavailable": 0,
+    "correct_inputs_with_offered_change": 1,
+    "erroneous_inputs_with_matching_offered_correction": 29,
+    "review_call_timing": {
+      "attempts": 31,
+      "failures": 0,
+      "median_seconds": 12.4997,
+      "p95_seconds_nearest_rank": 15.1118,
+      "maximum_seconds": 23.7719
+    },
+    "warning": "Support is the same model self-review, not validation of grammar. Withheld genuine errors are misses. Exact matches are not useful-feedback scores. Source and review timings were measured in separate runs."
+  },
+  "useful_feedback_score": null,
+  "review_status": "New explanations have not completed human semantic review; no aggregate accuracy improvement claimed. Known failed selection gate is sufficient to reject this configuration.",
+  "next_experiment_recommendation": "Use a small human-reviewed rule-explanation catalogue and explicit checks of which rule applies. Measure rule assignment/coverage separately; unknown changes must stay uncertain. This is proposed, not implemented or guaranteed to fix false corrections."
+}

@@ -1,0 +1,22 @@
+{
+  "frozen_on": "2026-10-01",
+  "variant": "broader-rules-gap-fixes-v1",
+  "files_sha256": {
+    "grammar_gap_detector.py": "7220908dd2ac2f41706ac9f0cc76a6bb056d8efd5f38e6326b596b7d44af9645",
+    "grammar_gap_eval.py": "94c3fdcf9cdbe9f1d75629ca043f80b919ed12205e2ae13cc78b91f6a783cb4c",
+    "grammar_rule_detector.py": "81576ff6a80d786acf5b7ef02ca99645309f44c24706f620e61810cb6dc896f4",
+    "grammar_explanation_reasons.py": "9dc2da3aa79133ca9ce78357cd8b3851156299f96a207f8612b5f3febdc21494",
+    "rules/en-speakwell.xml": "d98ad0ef406d3b677e6bd698df112b01dbf2179d2d74b6363a7fc83c8e22de37",
+    ".tools/benchmark/LanguageTool-6.6/languagetool-commandline.jar": "7e652a409245a7c9ffce517c891cb6cc27eee00abbb32a3427995abd6f9096ac",
+    ".tools/benchmark/LanguageTool-6.6/libs/english-pos-dict.jar": "2a3e96b49854e5275f8eb7a1bb5b3b85b82f687fed272f3043882ccc0b1634b1",
+    ".tools/benchmark/LanguageTool-6.6/org/languagetool/rules/en/grammar.xml": "2928644e655a7eaf45764d43180cee5a963104e69cf795a1ff7fdb96bc673de9"
+  },
+  "scope": "Three existing component gaps; no explanation-style changes, LLM calls or app integration. Freeze before new component cases.",
+  "gates": [
+    "All three known gaps resolved on archived component cases.",
+    "No regressions on prior 28 component checks.",
+    "Fresh component corrections: at least 80% recognized; zero offered unwanted changes.",
+    "New rule applications need human review; component checks do not establish end-to-end model quality."
+  ],
+  "next": "After observing fresh outcomes, preserve candidate and failures. Do not call cases independent if they guide further edits."
+}

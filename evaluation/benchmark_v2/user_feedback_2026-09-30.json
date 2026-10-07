@@ -1,0 +1,184 @@
+{
+  "reviewed_on": "2026-09-30",
+  "reviewer": "Project owner (chat feedback)",
+  "review_mode": "Engine identities were visible during this review; not blinded.",
+  "report_sha256": "15cbd474f084393e01010ebbe1b987d7e85a86e633d2227ea88cf3b46d2f8250",
+  "scope": "Targeted observations on nine inputs. Unmentioned outputs are not approved. Full metric judgments remain pending. Original output preserved.",
+  "findings": [
+    {
+      "display_row": 6,
+      "case_id": "development-06",
+      "text": "I am engineer.",
+      "engines": [
+        "languagetool",
+        "qwen"
+      ],
+      "finding": "missed_error",
+      "desired_edit": {
+        "original": "am engineer",
+        "replacement": "am an engineer"
+      },
+      "preferred_explanation": null,
+      "note": "Both engines missed the article. Desired sentence: I am an engineer.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "6e08b437647649a8b4deb202b6d00705",
+        "d8341c7cdbc54de3bf3fc6623d66e739"
+      ]
+    },
+    {
+      "display_row": 8,
+      "case_id": "development-08",
+      "text": "We visited the museum yesterday and buy a postcard.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "explanation_wording",
+      "desired_edit": {
+        "original": "buy",
+        "replacement": "bought"
+      },
+      "preferred_explanation": "The past tense of 'buy' is 'bought' for actions completed in the past.",
+      "note": "User prefers actions completed rather than completed actions. The two phrases express the same rule; this wording preference alone is not a factual-error rating.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "7362e7a3663c444ab41fcdfcf3241302"
+      ]
+    },
+    {
+      "display_row": 18,
+      "case_id": "development-18",
+      "text": "There are a bowl on the table.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "rejected_noop_and_missed_error",
+      "desired_edit": {
+        "original": "are",
+        "replacement": "is"
+      },
+      "preferred_explanation": null,
+      "note": "Qwen proposed a -> a; the desired correction is are -> is.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "a1c182a045434491b7d2c689ee72821c"
+      ]
+    },
+    {
+      "display_row": 25,
+      "case_id": "v2-development-03-error",
+      "text": "He is an chef.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "rejected_noop_and_missed_error",
+      "desired_edit": {
+        "original": "an",
+        "replacement": "a"
+      },
+      "preferred_explanation": null,
+      "note": "Qwen actually proposed chef -> chef, which was rejected. User identifies an -> a as the needed correction; that is a valid desired edit, not the rejected proposal.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "f538a2834d964269a473040c3099572c"
+      ]
+    },
+    {
+      "display_row": 35,
+      "case_id": "v2-development-08-error",
+      "text": "We need three box.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "explanation_wording",
+      "desired_edit": {
+        "original": "box",
+        "replacement": "boxes"
+      },
+      "preferred_explanation": "Use the plural form of a countable noun when referring to more than one item.",
+      "note": "User requests a general explanation about more than one item. Scope the explanation to countable nouns; this does not establish that the original explanation is false.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "11743060b9c048a69d078c5cc93002df"
+      ]
+    },
+    {
+      "display_row": 45,
+      "case_id": "v2-development-13-error",
+      "text": "This route is more shorter.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "incorrect_edit",
+      "desired_edit": {
+        "original": "more shorter",
+        "replacement": "shorter"
+      },
+      "preferred_explanation": "Use only ‘shorter’ (without ‘more’) when you use the comparative.",
+      "note": "Qwen proposed is -> the; replace more shorter with shorter instead.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "b3678ce02df24c90b02a4b4c65e5d0a1"
+      ]
+    },
+    {
+      "display_row": 53,
+      "case_id": "v2-development-17-error",
+      "text": "I enjoy to swim.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "incorrect_span",
+      "desired_edit": {
+        "original": "to swim",
+        "replacement": "swimming"
+      },
+      "preferred_explanation": null,
+      "note": "User wording was interpreted as to swim -> swimming, yielding I enjoy swimming. Qwen proposed only to -> swimming. Interpretation disclosed to user; not treated as a new explicit span approval.",
+      "interpretation_pending_confirmation": true,
+      "response_ids": [
+        "757bc532bc4e4b249e23c326b5aaad07"
+      ]
+    },
+    {
+      "display_row": 55,
+      "case_id": "v2-development-18-error",
+      "text": "She decided studying medicine.",
+      "engines": [
+        "languagetool",
+        "qwen"
+      ],
+      "finding": "missed_error",
+      "desired_edit": {
+        "original": "studying",
+        "replacement": "to study"
+      },
+      "preferred_explanation": null,
+      "note": "LanguageTool returned no correction; Qwen returned rejected decided -> decided. Desired correction: studying -> to study.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "ba27a562223c420396e76656ded03224",
+        "93dc54b010e847349726bcd105a71bd5"
+      ]
+    },
+    {
+      "display_row": 57,
+      "case_id": "v2-development-19-error",
+      "text": "Please give the key to I.",
+      "engines": [
+        "qwen"
+      ],
+      "finding": "rejected_noop_and_missed_error",
+      "desired_edit": {
+        "original": "I",
+        "replacement": "me"
+      },
+      "preferred_explanation": null,
+      "note": "Qwen returned rejected key -> key. Desired correction: I -> me.",
+      "interpretation_pending_confirmation": false,
+      "response_ids": [
+        "9b9d857c39e34219b3e3bc0e8b61355e"
+      ]
+    }
+  ]
+}

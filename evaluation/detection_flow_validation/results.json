@@ -1,0 +1,6001 @@
+{
+  "created_utc": "2026-10-02T00:41:27.938635+00:00",
+  "protocol_sha256": "dd37a64eb92ea03f8f697252462e5ab9462bd88a1650e46b17f41b9b61d24aa8",
+  "runner_sha256": "dbf482bf354bee9480cc6cf8e5bef15e6cd8d9d03b4bac42b243a1ac4cb0363c",
+  "approved_labels_sha256": "eb37503df0480584038558b360e2e0aefeb0c4c7667c42ed3d76f72dea0b83b5",
+  "protocol": {
+    "created_on": "2026-10-01",
+    "status": "Fresh labels pending review; no inference performed.",
+    "scope": "Targeted end-to-end validation of the approved did-question and counted-noun gap fixes; not a broad English quality score.",
+    "preparation_sha256": "f4df0b941943d7e3c90176408697489c292423b0b2961d695e9aed24a8240a32",
+    "candidate_files_sha256": {
+      "grammar_gap_detector.py": "7220908dd2ac2f41706ac9f0cc76a6bb056d8efd5f38e6326b596b7d44af9645",
+      "grammar_gap_eval.py": "94c3fdcf9cdbe9f1d75629ca043f80b919ed12205e2ae13cc78b91f6a783cb4c",
+      "grammar_rule_detector.py": "81576ff6a80d786acf5b7ef02ca99645309f44c24706f620e61810cb6dc896f4",
+      "grammar_explanation_reasons.py": "9dc2da3aa79133ca9ce78357cd8b3851156299f96a207f8612b5f3febdc21494",
+      "rules/en-speakwell.xml": "d98ad0ef406d3b677e6bd698df112b01dbf2179d2d74b6363a7fc83c8e22de37",
+      ".tools/benchmark/LanguageTool-6.6/languagetool-commandline.jar": "7e652a409245a7c9ffce517c891cb6cc27eee00abbb32a3427995abd6f9096ac",
+      ".tools/benchmark/LanguageTool-6.6/libs/english-pos-dict.jar": "2a3e96b49854e5275f8eb7a1bb5b3b85b82f687fed272f3043882ccc0b1634b1",
+      ".tools/benchmark/LanguageTool-6.6/org/languagetool/rules/en/grammar.xml": "2928644e655a7eaf45764d43180cee5a963104e69cf795a1ff7fdb96bc673de9",
+      "sentence_grammar.py": "2f8571b57f776cdfa0d7e036e444f301870097934f772fa19efa1f732718dc39",
+      "llm_client.py": "a09b9a5840c178969d2859dc5dc930f4e39ca59417054205c803df6c5275e712",
+      "errors.py": "543d9a189540634edaeb5af4b5abece04665fdcaed3273bd813c97520c074c1b",
+      "pyproject.toml": "6beb97f0ef518c35e50a65012806c42b2ee0ab8f57e5fa1a7a28fc81bb4ad5c1",
+      "uv.lock": "e6735988af88f36c149590abfd5ffca95e748814cca11a3f1b7eff7d02d71e06"
+    },
+    "pending_labels_sha256": "c9c079ea39f1f911ff6e5f38d9b11221d92bc853f0294446eccd2b9f6397bbee",
+    "model": "qwen3:4b",
+    "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "settings": {
+      "think": false,
+      "temperature": 0.2,
+      "num_predict": 256,
+      "num_ctx": 4096,
+      "seed": "unset, as in development",
+      "retries": 0
+    },
+    "gates": {
+      "minimum_human_useful_error_cases": 13,
+      "error_denominator": 16,
+      "maximum_offers_on_correct_inputs": 0,
+      "maximum_unavailable": 0
+    },
+    "sequence": [
+      "flow-error-01",
+      "flow-correct-01",
+      "flow-error-02",
+      "flow-correct-02",
+      "flow-error-03",
+      "flow-correct-03",
+      "flow-error-04",
+      "flow-correct-04",
+      "flow-error-05",
+      "flow-correct-05",
+      "flow-error-06",
+      "flow-correct-06",
+      "flow-error-07",
+      "flow-correct-07",
+      "flow-error-08",
+      "flow-correct-08",
+      "flow-error-09",
+      "flow-correct-09",
+      "flow-error-10",
+      "flow-correct-10",
+      "flow-error-11",
+      "flow-correct-11",
+      "flow-error-12",
+      "flow-correct-12",
+      "flow-error-13",
+      "flow-correct-13",
+      "flow-error-14",
+      "flow-correct-14",
+      "flow-error-15",
+      "flow-correct-15",
+      "flow-error-16",
+      "flow-correct-16"
+    ],
+    "label_approval": "Record approval separately and tie it to this exact draft hash before inference. Changes to label content require an explicit versioned amendment.",
+    "execution": [
+      "Verify code, XML, model and approved label identities before one attempt per input.",
+      "Use existing frozen Qwen3 4B sentence generation, then built-in and supplemental rule evidence plus the existing reason layer.",
+      "Send only original learner text to generation; references are for scoring only.",
+      "Retain raw outputs, withheld proposals and failures; do not substitute an authored correction for model output.",
+      "Review actual delivered edits and reasons. Record separate generation and checker time; batch averages are not conversational latency."
+    ],
+    "human_output_review": "Required even after reference matching. Label approval is not approval of model output.",
+    "limitations": "Targeted 8 did errors + 8 count errors and 16 acceptable inputs; no broad-English superiority claim. Labels authored by the same assistant; exact-match novelty is not statistical independence.",
+    "next": "Await user label review, then run a single attempt per input through actual sentence generation and both checker sources; do not tune during evaluation."
+  },
+  "dataset": {
+    "version": "targeted-flow-v1-draft",
+    "split": "heldout",
+    "source": "New assistant-authored sentences after candidate freeze; pending project-owner label review. Eight correct inputs pair with references; eight are counterexamples. This is targeted validation, not a representative population sample.",
+    "cases": [
+      {
+        "id": "flow-error-01",
+        "display_id": "E1",
+        "text": "Did your manager approved the schedule?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did your manager approve the schedule?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-01",
+        "display_id": "C1",
+        "text": "Did your manager approve the schedule?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did your manager approve the schedule?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-02",
+        "display_id": "E2",
+        "text": "Did Elena borrowed your umbrella?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did Elena borrow your umbrella?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-02",
+        "display_id": "C2",
+        "text": "Did Elena borrow your umbrella?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did Elena borrow your umbrella?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-03",
+        "display_id": "E3",
+        "text": "Did the courier delivered the package?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did the courier deliver the package?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-03",
+        "display_id": "C3",
+        "text": "Did you forget the password?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did you forget the password?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-04",
+        "display_id": "E4",
+        "text": "Did our neighbors moved last month?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did our neighbors move last month?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-04",
+        "display_id": "C4",
+        "text": "Did they choose a different route?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did they choose a different route?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-05",
+        "display_id": "E5",
+        "text": "Did you forgot the password?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did you forget the password?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-05",
+        "display_id": "C5",
+        "text": "I bought six oranges.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "I bought six oranges."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-06",
+        "display_id": "E6",
+        "text": "Did the mechanic fixed the engine?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did the mechanic fix the engine?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-06",
+        "display_id": "C6",
+        "text": "We packed nine towels.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "We packed nine towels."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-07",
+        "display_id": "E7",
+        "text": "Did they chose a different route?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did they choose a different route?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-07",
+        "display_id": "C7",
+        "text": "I counted seven cherries.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "I counted seven cherries."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-08",
+        "display_id": "E8",
+        "text": "Did your brother broke the glass?",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "Did your brother break the glass?"
+        ],
+        "category": "did_questions",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-08",
+        "display_id": "C8",
+        "text": "We washed five dishes.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "We washed five dishes."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-09",
+        "display_id": "E9",
+        "text": "I bought six orange.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "I bought six oranges."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-09",
+        "display_id": "C9",
+        "text": "Did the person called Alex leave early?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did the person called Alex leave early?"
+        ],
+        "category": "past_participle_modifier",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-10",
+        "display_id": "E10",
+        "text": "We packed nine towel.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "We packed nine towels."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-10",
+        "display_id": "C10",
+        "text": "Did you see the damaged window?",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "Did you see the damaged window?"
+        ],
+        "category": "adjective_after_did",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-11",
+        "display_id": "E11",
+        "text": "They found four feather.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "They found four feathers."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-11",
+        "display_id": "C11",
+        "text": "I bought four coffee mugs.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "I bought four coffee mugs."
+        ],
+        "category": "noun_modifier",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-12",
+        "display_id": "E12",
+        "text": "I collected twelve button.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "I collected twelve buttons."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-12",
+        "display_id": "C12",
+        "text": "We watched seven sheep.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "We watched seven sheep."
+        ],
+        "category": "unchanged_plural",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-13",
+        "display_id": "E13",
+        "text": "We ordered eight cup.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "We ordered eight cups."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-13",
+        "display_id": "C13",
+        "text": "They photographed three deer.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "They photographed three deer."
+        ],
+        "category": "unchanged_plural",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-14",
+        "display_id": "E14",
+        "text": "They planted fifteen seed.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "They planted fifteen seeds."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-14",
+        "display_id": "C14",
+        "text": "I bought a six-cup tray.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "I bought a six-cup tray."
+        ],
+        "category": "compound_modifier",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-15",
+        "display_id": "E15",
+        "text": "I counted seven cherry.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "I counted seven cherries."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-15",
+        "display_id": "C15",
+        "text": "We need more equipment.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "We need more equipment."
+        ],
+        "category": "mass_noun",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-error-16",
+        "display_id": "E16",
+        "text": "We washed five dish.",
+        "expected_error": true,
+        "gold_error_count": 1,
+        "references": [
+          "We washed five dishes."
+        ],
+        "category": "counted_nouns",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      },
+      {
+        "id": "flow-correct-16",
+        "display_id": "C16",
+        "text": "I paid five dollars.",
+        "expected_error": false,
+        "gold_error_count": 0,
+        "references": [
+          "I paid five dollars."
+        ],
+        "category": "correct_plural",
+        "label_review": {
+          "status": "approved",
+          "reviewer": "Project owner",
+          "reviewed_on": "2026-10-01",
+          "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+        }
+      }
+    ]
+  },
+  "model_identity": {
+    "name": "qwen3:4b",
+    "model": "qwen3:4b",
+    "modified_at": "2026-09-29T19:47:09.485159791-04:00",
+    "size": 2497293931,
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama_version": {
+    "version": "0.34.3"
+  },
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "python": "3.12.13",
+  "timing_scope": "Sequential generation + builtin HTTP + one custom Java process per input + decision and checkpoint overhead. Not audio/voice latency.",
+  "rows": [
+    {
+      "case_id": "flow-error-01",
+      "display_id": "E1",
+      "original": "Did your manager approved the schedule?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\n  \"corrected_text\": \"Did your manager approve the schedule?\",\n  \"explanation\": \"Use singular verb 'approve' with singular subject 'manager'.\"\n}",
+        "result": {
+          "corrected_text": "Did your manager approve the schedule?",
+          "explanation": "Use singular verb 'approve' with singular subject 'manager'.",
+          "corrections": [
+            {
+              "start": 17,
+              "end": 25,
+              "original": "approved",
+              "replacement": "approve",
+              "explanation": "Use singular verb 'approve' with singular subject 'manager'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 17,
+            "end": 25,
+            "original": "approved",
+            "replacement": "approve",
+            "explanation": "Use singular verb 'approve' with singular subject 'manager'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999918,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "approve"
+              }
+            ],
+            "offset": 17,
+            "length": 8,
+            "context": {
+              "text": "Did your manager approved the schedule?",
+              "offset": 17,
+              "length": 8
+            },
+            "sentence": "Did your manager approved the schedule?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            39
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 39,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-7lkme92i/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘approve’, not ‘approved’.",
+        "edit": {
+          "start": 17,
+          "end": 25,
+          "original": "approved",
+          "replacement": "approve"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 15.00365956099995,
+        "builtin": 0.06837072400958277,
+        "supplemental": 3.637229967993335,
+        "decision": 0.005212272997596301
+      },
+      "total_seconds": 18.722283502007485,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-01",
+      "display_id": "C1",
+      "original": "Did your manager approve the schedule?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did your manager approve the schedule?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did your manager approve the schedule?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999938,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            38
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 38,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-k6j60qoo/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.7356049490044825,
+        "builtin": 0.02586658499785699,
+        "supplemental": 3.6259766519942787,
+        "decision": 2.2456006263382733e-05
+      },
+      "total_seconds": 6.394803642993793,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-02",
+      "display_id": "E2",
+      "original": "Did Elena borrowed your umbrella?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did Elena borrow your umbrella?\", \"explanation\": \"Use borrow for the past tense of borrow, not borrowed.\"}",
+        "result": {
+          "corrected_text": "Did Elena borrow your umbrella?",
+          "explanation": "Use borrow for the past tense of borrow, not borrowed.",
+          "corrections": [
+            {
+              "start": 10,
+              "end": 18,
+              "original": "borrowed",
+              "replacement": "borrow",
+              "explanation": "Use borrow for the past tense of borrow, not borrowed.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 10,
+            "end": 18,
+            "original": "borrowed",
+            "replacement": "borrow",
+            "explanation": "Use borrow for the past tense of borrow, not borrowed.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "Breton",
+            "code": "br-FR",
+            "confidence": 0.99975485,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "borrow",
+                "shortDescription": "get temporarily"
+              }
+            ],
+            "offset": 10,
+            "length": 8,
+            "context": {
+              "text": "Did Elena borrowed your umbrella?",
+              "offset": 10,
+              "length": 8
+            },
+            "sentence": "Did Elena borrowed your umbrella?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            33
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 33,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-8vu3czqm/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘borrow’, not ‘borrowed’.",
+        "edit": {
+          "start": 10,
+          "end": 18,
+          "original": "borrowed",
+          "replacement": "borrow"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.098665671001072,
+        "builtin": 0.02599260200804565,
+        "supplemental": 3.909768664991134,
+        "decision": 0.00026788399554789066
+      },
+      "total_seconds": 8.04401143999712,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-02",
+      "display_id": "C2",
+      "original": "Did Elena borrow your umbrella?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did Elena borrow your umbrella?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did Elena borrow your umbrella?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "Breton",
+            "code": "br-FR",
+            "confidence": 0.9005,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            31
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 31,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-eed2u4v2/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.734242949009058,
+        "builtin": 0.02958088699961081,
+        "supplemental": 4.737869175005471,
+        "decision": 1.8966005882248282e-05
+      },
+      "total_seconds": 7.518857938994188,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-03",
+      "display_id": "E3",
+      "original": "Did the courier delivered the package?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\n  \"corrected_text\": \"Did the courier deliver the package?\",\n  \"explanation\": \"Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.\"\n}",
+        "result": {
+          "corrected_text": "Did the courier deliver the package?",
+          "explanation": "Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.",
+          "corrections": [
+            {
+              "start": 16,
+              "end": 25,
+              "original": "delivered",
+              "replacement": "deliver",
+              "explanation": "Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 16,
+            "end": 25,
+            "original": "delivered",
+            "replacement": "deliver",
+            "explanation": "Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999975,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "deliver"
+              }
+            ],
+            "offset": 16,
+            "length": 9,
+            "context": {
+              "text": "Did the courier delivered the package?",
+              "offset": 16,
+              "length": 9
+            },
+            "sentence": "Did the courier delivered the package?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            38
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 38,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-lni1mk81/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘deliver’, not ‘delivered’.",
+        "edit": {
+          "start": 16,
+          "end": 25,
+          "original": "delivered",
+          "replacement": "deliver"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 6.566094897993025,
+        "builtin": 0.028821273997891694,
+        "supplemental": 3.7927644480078015,
+        "decision": 0.0002687130036065355
+      },
+      "total_seconds": 10.400412333998247,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-03",
+      "display_id": "C3",
+      "original": "Did you forget the password?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did you forget the password?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did you forget the password?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999963,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-ftcg6tqe/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.7703082719963277,
+        "builtin": 0.02248867899470497,
+        "supplemental": 4.536541812994983,
+        "decision": 1.7568992916494608e-05
+      },
+      "total_seconds": 7.341039844992338,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-04",
+      "display_id": "E4",
+      "original": "Did our neighbors moved last month?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did our neighbors move last month?\", \"explanation\": \"Use singular verb 'move' for the plural subject 'neighbors'.\"}",
+        "result": {
+          "corrected_text": "Did our neighbors move last month?",
+          "explanation": "Use singular verb 'move' for the plural subject 'neighbors'.",
+          "corrections": [
+            {
+              "start": 18,
+              "end": 23,
+              "original": "moved",
+              "replacement": "move",
+              "explanation": "Use singular verb 'move' for the plural subject 'neighbors'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 18,
+            "end": 23,
+            "original": "moved",
+            "replacement": "move",
+            "explanation": "Use singular verb 'move' for the plural subject 'neighbors'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999535,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "With an adjective like ‘moved’, you should use ‘be’ as the auxiliary verb.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "Was"
+              },
+              {
+                "value": "Were"
+              }
+            ],
+            "offset": 0,
+            "length": 3,
+            "context": {
+              "text": "Did our neighbors moved last month?",
+              "offset": 0,
+              "length": 3
+            },
+            "sentence": "Did our neighbors moved last month?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DO_YOU_FASCINATED",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Do (Are) you interested in music",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          },
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "move"
+              }
+            ],
+            "offset": 18,
+            "length": 5,
+            "context": {
+              "text": "Did our neighbors moved last month?",
+              "offset": 18,
+              "length": 5
+            },
+            "sentence": "Did our neighbors moved last month?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            35
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 35,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-to7s4_ma/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘move’, not ‘moved’.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "moved",
+          "replacement": "move"
+        },
+        "match_index": 1,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.71716634099721,
+        "builtin": 0.022868739994009957,
+        "supplemental": 3.6031102140113944,
+        "decision": 0.0002472240012139082
+      },
+      "total_seconds": 8.354634035000345,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-04",
+      "display_id": "C4",
+      "original": "Did they choose a different route?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did they choose a different route?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did they choose a different route?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999944,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            34
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 34,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-76wl9l09/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.7221308360021794,
+        "builtin": 0.023591648001456633,
+        "supplemental": 3.570669444001396,
+        "decision": 1.7436002963222563e-05
+      },
+      "total_seconds": 6.329242627994972,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-05",
+      "display_id": "E5",
+      "original": "Did you forgot the password?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\n  \"corrected_text\": \"Did you forget the password?\",\n  \"explanation\": \"Use forget with the past tense verb for the question structure.\"\n}",
+        "result": {
+          "corrected_text": "Did you forget the password?",
+          "explanation": "Use forget with the past tense verb for the question structure.",
+          "corrections": [
+            {
+              "start": 8,
+              "end": 14,
+              "original": "forgot",
+              "replacement": "forget",
+              "explanation": "Use forget with the past tense verb for the question structure.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 8,
+            "end": 14,
+            "original": "forgot",
+            "replacement": "forget",
+            "explanation": "Use forget with the past tense verb for the question structure.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999959,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "Possible grammatical error",
+            "replacements": [
+              {
+                "value": "forget"
+              }
+            ],
+            "offset": 8,
+            "length": 6,
+            "context": {
+              "text": "Did you forgot the password?",
+              "offset": 8,
+              "length": 6
+            },
+            "sentence": "Did you forgot the password?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "2",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-u776daax/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘forget’, not ‘forgot’.",
+        "edit": {
+          "start": 8,
+          "end": 14,
+          "original": "forgot",
+          "replacement": "forget"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.50759013100469,
+        "builtin": 0.022997063002549112,
+        "supplemental": 3.5146570159995463,
+        "decision": 0.0001965830015251413
+      },
+      "total_seconds": 8.063452578004217,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-05",
+      "display_id": "C5",
+      "original": "I bought six oranges.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I bought six oranges.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "I bought six oranges.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999946,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-1mlsfonq/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.490510193994851,
+        "builtin": 0.02121189099852927,
+        "supplemental": 3.590259281991166,
+        "decision": 2.095499075949192e-05
+      },
+      "total_seconds": 6.117936922993977,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-06",
+      "display_id": "E6",
+      "original": "Did the mechanic fixed the engine?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\n  \"corrected_text\": \"Did the mechanic fix the engine?\",\n  \"explanation\": \"Use past tense verb 'fix' instead of 'fixed' for the question.\"\n}",
+        "result": {
+          "corrected_text": "Did the mechanic fix the engine?",
+          "explanation": "Use past tense verb 'fix' instead of 'fixed' for the question.",
+          "corrections": [
+            {
+              "start": 17,
+              "end": 22,
+              "original": "fixed",
+              "replacement": "fix",
+              "explanation": "Use past tense verb 'fix' instead of 'fixed' for the question.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 17,
+            "end": 22,
+            "original": "fixed",
+            "replacement": "fix",
+            "explanation": "Use past tense verb 'fix' instead of 'fixed' for the question.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999955,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "fix"
+              }
+            ],
+            "offset": 17,
+            "length": 5,
+            "context": {
+              "text": "Did the mechanic fixed the engine?",
+              "offset": 17,
+              "length": 5
+            },
+            "sentence": "Did the mechanic fixed the engine?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            34
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 34,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-rtlf0_61/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘fix’, not ‘fixed’.",
+        "edit": {
+          "start": 17,
+          "end": 22,
+          "original": "fixed",
+          "replacement": "fix"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 5.306187922004028,
+        "builtin": 0.022918046000995673,
+        "supplemental": 3.563225543999579,
+        "decision": 0.00023877101193647832
+      },
+      "total_seconds": 8.909044358006213,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-06",
+      "display_id": "C6",
+      "original": "We packed nine towels.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We packed nine towels.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "We packed nine towels.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999408,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-1li9tbb_/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.4967951300059212,
+        "builtin": 0.02023135099443607,
+        "supplemental": 3.6688199309865013,
+        "decision": 2.2222011466510594e-05
+      },
+      "total_seconds": 6.201770623010816,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-07",
+      "display_id": "E7",
+      "original": "Did they chose a different route?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\n  \"corrected_text\": \"Did they choose a different route?\",\n  \"explanation\": \"Use choose for the past tense of the verb 'choose' in the question.\"\n}",
+        "result": {
+          "corrected_text": "Did they choose a different route?",
+          "explanation": "Use choose for the past tense of the verb 'choose' in the question.",
+          "corrections": [
+            {
+              "start": 9,
+              "end": 14,
+              "original": "chose",
+              "replacement": "choose",
+              "explanation": "Use choose for the past tense of the verb 'choose' in the question.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 9,
+            "end": 14,
+            "original": "chose",
+            "replacement": "choose",
+            "explanation": "Use choose for the past tense of the verb 'choose' in the question.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999913,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "Possible grammatical error",
+            "replacements": [
+              {
+                "value": "choose"
+              }
+            ],
+            "offset": 9,
+            "length": 5,
+            "context": {
+              "text": "Did they chose a different route?",
+              "offset": 9,
+              "length": 5
+            },
+            "sentence": "Did they chose a different route?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "2",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            33
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 33,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-q0fmol5n/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘choose’, not ‘chose’.",
+        "edit": {
+          "start": 9,
+          "end": 14,
+          "original": "chose",
+          "replacement": "choose"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 5.4044052730023395,
+        "builtin": 0.02514185500331223,
+        "supplemental": 3.7501916389883263,
+        "decision": 0.00022314400121103972
+      },
+      "total_seconds": 9.197705231999862,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-07",
+      "display_id": "C7",
+      "original": "I counted seven cherries.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I counted seven cherries.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "I counted seven cherries.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999967,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-jlf_yrmo/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.8035900789982406,
+        "builtin": 0.018379843997536227,
+        "supplemental": 3.7660924939991673,
+        "decision": 1.9529994460754097e-05
+      },
+      "total_seconds": 6.658518873999128,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-08",
+      "display_id": "E8",
+      "original": "Did your brother broke the glass?",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did your brother break the glass?\", \"explanation\": \"Use past tense verb 'break' instead of 'broke' for the correct past tense form.\"}",
+        "result": {
+          "corrected_text": "Did your brother break the glass?",
+          "explanation": "Use past tense verb 'break' instead of 'broke' for the correct past tense form.",
+          "corrections": [
+            {
+              "start": 17,
+              "end": 22,
+              "original": "broke",
+              "replacement": "break",
+              "explanation": "Use past tense verb 'break' instead of 'broke' for the correct past tense form.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 17,
+            "end": 22,
+            "original": "broke",
+            "replacement": "break",
+            "explanation": "Use past tense verb 'break' instead of 'broke' for the correct past tense form.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999975,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "break",
+                "shortDescription": "interruption, pause"
+              }
+            ],
+            "offset": 17,
+            "length": 5,
+            "context": {
+              "text": "Did your brother broke the glass?",
+              "offset": 17,
+              "length": 5
+            },
+            "sentence": "Did your brother broke the glass?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            33
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 33,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-u93bdyxl/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘break’, not ‘broke’.",
+        "edit": {
+          "start": 17,
+          "end": 22,
+          "original": "broke",
+          "replacement": "break"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 5.449129194006673,
+        "builtin": 0.024983700990560465,
+        "supplemental": 3.6145561159937643,
+        "decision": 0.0002225150092272088
+      },
+      "total_seconds": 9.10799050499918,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-08",
+      "display_id": "C8",
+      "original": "We washed five dishes.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We washed five dishes.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "We washed five dishes.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999977,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-0l8a0y1h/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.474335514998529,
+        "builtin": 0.020774047006852925,
+        "supplemental": 3.451165051999851,
+        "decision": 2.0924999262206256e-05
+      },
+      "total_seconds": 5.9650301600049715,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-09",
+      "display_id": "E9",
+      "original": "I bought six orange.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I bought six oranges.\", \"explanation\": \"Plural form of orange is oranges.\"}",
+        "result": {
+          "corrected_text": "I bought six oranges.",
+          "explanation": "Plural form of orange is oranges.",
+          "corrections": [
+            {
+              "start": 13,
+              "end": 19,
+              "original": "orange",
+              "replacement": "oranges",
+              "explanation": "Plural form of orange is oranges.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 13,
+            "end": 19,
+            "original": "orange",
+            "replacement": "oranges",
+            "explanation": "Plural form of orange is oranges.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999979,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "oranges"
+                }
+              ],
+              "offset": 13,
+              "length": 6,
+              "context": {
+                "text": "I bought six orange.",
+                "offset": 13,
+                "length": 6
+              },
+              "sentence": "I bought six orange.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-2l5derns/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "oranges"
+                  }
+                ],
+                "offset": 13,
+                "length": 6,
+                "context": {
+                  "text": "I bought six orange.",
+                  "offset": 13,
+                  "length": 6
+                },
+                "sentence": "I bought six orange.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Six’ means more than one, so use the plural ‘oranges’.",
+        "edit": {
+          "start": 13,
+          "end": 19,
+          "original": "orange",
+          "replacement": "oranges"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "seconds": {
+        "generation": 3.524932276995969,
+        "builtin": 0.018600709008751437,
+        "supplemental": 3.5875153000088176,
+        "decision": 0.0006723260012222454
+      },
+      "total_seconds": 7.150637459999416,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-09",
+      "display_id": "C9",
+      "original": "Did the person called Alex leave early?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did the person called Alex leave early?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did the person called Alex leave early?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999922,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            39
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 39,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-y4q32hea/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 3.0321317270136205,
+        "builtin": 0.02628042400465347,
+        "supplemental": 3.5254295639897464,
+        "decision": 1.970298762898892e-05
+      },
+      "total_seconds": 6.6074604539899155,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-10",
+      "display_id": "E10",
+      "original": "We packed nine towel.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We packed nine towels.\", \"explanation\": \"Plural form of 'towel' is 'towels'.\"}",
+        "result": {
+          "corrected_text": "We packed nine towels.",
+          "explanation": "Plural form of 'towel' is 'towels'.",
+          "corrections": [
+            {
+              "start": 15,
+              "end": 20,
+              "original": "towel",
+              "replacement": "towels",
+              "explanation": "Plural form of 'towel' is 'towels'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 15,
+            "end": 20,
+            "original": "towel",
+            "replacement": "towels",
+            "explanation": "Plural form of 'towel' is 'towels'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.999681,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘towel’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "towels"
+              }
+            ],
+            "offset": 15,
+            "length": 5,
+            "context": {
+              "text": "We packed nine towel.",
+              "offset": 15,
+              "length": 5
+            },
+            "sentence": "We packed nine towel.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "towels"
+                }
+              ],
+              "offset": 15,
+              "length": 5,
+              "context": {
+                "text": "We packed nine towel.",
+                "offset": 15,
+                "length": 5
+              },
+              "sentence": "We packed nine towel.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-iw3kiw0v/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "towels"
+                  }
+                ],
+                "offset": 15,
+                "length": 5,
+                "context": {
+                  "text": "We packed nine towel.",
+                  "offset": 15,
+                  "length": 5
+                },
+                "sentence": "We packed nine towel.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Nine’ means more than one, so use the plural ‘towels’.",
+        "edit": {
+          "start": 15,
+          "end": 20,
+          "original": "towel",
+          "replacement": "towels"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.419656037003733,
+        "builtin": 0.022482325992314145,
+        "supplemental": 3.6014570700062905,
+        "decision": 9.583099745213985e-05
+      },
+      "total_seconds": 8.07167335000122,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-10",
+      "display_id": "C10",
+      "original": "Did you see the damaged window?",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"Did you see the damaged window?\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "Did you see the damaged window?",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999912,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            31
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 31,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-bwbf5ki3/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.858545957991737,
+        "builtin": 0.021389872999861836,
+        "supplemental": 3.6664254930074094,
+        "decision": 2.0794992451556027e-05
+      },
+      "total_seconds": 6.568282667998574,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-11",
+      "display_id": "E11",
+      "original": "They found four feather.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"They found four feathers.\", \"explanation\": \"Plural form of 'feather' is 'feathers'.\"}",
+        "result": {
+          "corrected_text": "They found four feathers.",
+          "explanation": "Plural form of 'feather' is 'feathers'.",
+          "corrections": [
+            {
+              "start": 16,
+              "end": 23,
+              "original": "feather",
+              "replacement": "feathers",
+              "explanation": "Plural form of 'feather' is 'feathers'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 16,
+            "end": 23,
+            "original": "feather",
+            "replacement": "feathers",
+            "explanation": "Plural form of 'feather' is 'feathers'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999994,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘feather’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "feathers"
+              }
+            ],
+            "offset": 16,
+            "length": 7,
+            "context": {
+              "text": "They found four feather.",
+              "offset": 16,
+              "length": 7
+            },
+            "sentence": "They found four feather.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "feathers"
+                }
+              ],
+              "offset": 16,
+              "length": 7,
+              "context": {
+                "text": "They found four feather.",
+                "offset": 16,
+                "length": 7
+              },
+              "sentence": "They found four feather.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-zs9_pkfp/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "feathers"
+                  }
+                ],
+                "offset": 16,
+                "length": 7,
+                "context": {
+                  "text": "They found four feather.",
+                  "offset": 16,
+                  "length": 7
+                },
+                "sentence": "They found four feather.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Four’ means more than one, so use the plural ‘feathers’.",
+        "edit": {
+          "start": 16,
+          "end": 23,
+          "original": "feather",
+          "replacement": "feathers"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.269580272986786,
+        "builtin": 0.022360180999385193,
+        "supplemental": 3.5698097230051644,
+        "decision": 9.671600128058344e-05
+      },
+      "total_seconds": 7.8838984629983315,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-11",
+      "display_id": "C11",
+      "original": "I bought four coffee mugs.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I bought four coffee mugs.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "I bought four coffee mugs.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999154,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-zf62e63z/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.8611407069984125,
+        "builtin": 0.01992175800842233,
+        "supplemental": 3.5014866830024403,
+        "decision": 2.161800512112677e-05
+      },
+      "total_seconds": 6.404616856991197,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-12",
+      "display_id": "E12",
+      "original": "I collected twelve button.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I collected twelve buttons.\", \"explanation\": \"Plural form of 'button' is 'buttons'.\"}",
+        "result": {
+          "corrected_text": "I collected twelve buttons.",
+          "explanation": "Plural form of 'button' is 'buttons'.",
+          "corrections": [
+            {
+              "start": 19,
+              "end": 25,
+              "original": "button",
+              "replacement": "buttons",
+              "explanation": "Plural form of 'button' is 'buttons'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 19,
+            "end": 25,
+            "original": "button",
+            "replacement": "buttons",
+            "explanation": "Plural form of 'button' is 'buttons'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999952,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘button’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "buttons"
+              }
+            ],
+            "offset": 19,
+            "length": 6,
+            "context": {
+              "text": "I collected twelve button.",
+              "offset": 19,
+              "length": 6
+            },
+            "sentence": "I collected twelve button.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "buttons"
+                }
+              ],
+              "offset": 19,
+              "length": 6,
+              "context": {
+                "text": "I collected twelve button.",
+                "offset": 19,
+                "length": 6
+              },
+              "sentence": "I collected twelve button.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-zcgb07wt/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "buttons"
+                  }
+                ],
+                "offset": 19,
+                "length": 6,
+                "context": {
+                  "text": "I collected twelve button.",
+                  "offset": 19,
+                  "length": 6
+                },
+                "sentence": "I collected twelve button.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Twelve’ means more than one, so use the plural ‘buttons’.",
+        "edit": {
+          "start": 19,
+          "end": 25,
+          "original": "button",
+          "replacement": "buttons"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.075558188997093,
+        "builtin": 0.022197408994543366,
+        "supplemental": 3.5679542520083487,
+        "decision": 0.0001088860008167103
+      },
+      "total_seconds": 7.693192603997886,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-12",
+      "display_id": "C12",
+      "original": "We watched seven sheep.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We watched seven sheep.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "We watched seven sheep.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9962032,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-5qf82xay/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.4688054120051675,
+        "builtin": 0.021449477004352957,
+        "supplemental": 3.5774817899946356,
+        "decision": 1.676499960012734e-05
+      },
+      "total_seconds": 6.104538753002998,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-13",
+      "display_id": "E13",
+      "original": "We ordered eight cup.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We ordered eight cups.\", \"explanation\": \"Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.\"}",
+        "result": {
+          "corrected_text": "We ordered eight cups.",
+          "explanation": "Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.",
+          "corrections": [
+            {
+              "start": 17,
+              "end": 20,
+              "original": "cup",
+              "replacement": "cups",
+              "explanation": "Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 17,
+            "end": 20,
+            "original": "cup",
+            "replacement": "cups",
+            "explanation": "Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9989401,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘cup’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "cups"
+              }
+            ],
+            "offset": 17,
+            "length": 3,
+            "context": {
+              "text": "We ordered eight cup.",
+              "offset": 17,
+              "length": 3
+            },
+            "sentence": "We ordered eight cup.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            21
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 21,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "cups"
+                }
+              ],
+              "offset": 17,
+              "length": 3,
+              "context": {
+                "text": "We ordered eight cup.",
+                "offset": 17,
+                "length": 3
+              },
+              "sentence": "We ordered eight cup.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-6fek5k67/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "cups"
+                  }
+                ],
+                "offset": 17,
+                "length": 3,
+                "context": {
+                  "text": "We ordered eight cup.",
+                  "offset": 17,
+                  "length": 3
+                },
+                "sentence": "We ordered eight cup.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Eight’ means more than one, so use the plural ‘cups’.",
+        "edit": {
+          "start": 17,
+          "end": 20,
+          "original": "cup",
+          "replacement": "cups"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 5.223003113002051,
+        "builtin": 0.03801049498724751,
+        "supplemental": 4.242050122004002,
+        "decision": 7.028300024103373e-05
+      },
+      "total_seconds": 9.534611725001014,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-13",
+      "display_id": "C13",
+      "original": "They photographed three deer.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"They photographed three deer.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "They photographed three deer.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999915,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            29
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 29,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-xl3z6oo6/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.5104013240052154,
+        "builtin": 0.019187418001820333,
+        "supplemental": 3.677855793997878,
+        "decision": 1.827199594117701e-05
+      },
+      "total_seconds": 6.234820993995527,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-14",
+      "display_id": "E14",
+      "original": "They planted fifteen seed.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"They planted fifteen seeds.\", \"explanation\": \"Plural form of 'seed' is 'seeds'.\"}",
+        "result": {
+          "corrected_text": "They planted fifteen seeds.",
+          "explanation": "Plural form of 'seed' is 'seeds'.",
+          "corrections": [
+            {
+              "start": 21,
+              "end": 25,
+              "original": "seed",
+              "replacement": "seeds",
+              "explanation": "Plural form of 'seed' is 'seeds'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 21,
+            "end": 25,
+            "original": "seed",
+            "replacement": "seeds",
+            "explanation": "Plural form of 'seed' is 'seeds'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999803,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "seeds",
+                  "shortDescription": "embryonic plants"
+                }
+              ],
+              "offset": 21,
+              "length": 4,
+              "context": {
+                "text": "They planted fifteen seed.",
+                "offset": 21,
+                "length": 4
+              },
+              "sentence": "They planted fifteen seed.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-uep0yjig/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "seeds",
+                    "shortDescription": "embryonic plants"
+                  }
+                ],
+                "offset": 21,
+                "length": 4,
+                "context": {
+                  "text": "They planted fifteen seed.",
+                  "offset": 21,
+                  "length": 4
+                },
+                "sentence": "They planted fifteen seed.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Fifteen’ means more than one, so use the plural ‘seeds’.",
+        "edit": {
+          "start": 21,
+          "end": 25,
+          "original": "seed",
+          "replacement": "seeds"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "seconds": {
+        "generation": 4.18311278600595,
+        "builtin": 0.023055726996972226,
+        "supplemental": 3.5778379710100126,
+        "decision": 0.00019162999524269253
+      },
+      "total_seconds": 7.815033330000006,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-14",
+      "display_id": "C14",
+      "original": "I bought a six-cup tray.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I bought a six-cup tray.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "I bought a six-cup tray.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999404,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-6ootwabj/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 3.0082980379957007,
+        "builtin": 0.02093294898804743,
+        "supplemental": 3.6196977729996433,
+        "decision": 1.935800537467003e-05
+      },
+      "total_seconds": 6.678626782988431,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-15",
+      "display_id": "E15",
+      "original": "I counted seven cherry.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I counted seven cherries.\", \"explanation\": \"Pluralize 'cherry' to 'cherries' for countable nouns.\"}",
+        "result": {
+          "corrected_text": "I counted seven cherries.",
+          "explanation": "Pluralize 'cherry' to 'cherries' for countable nouns.",
+          "corrections": [
+            {
+              "start": 16,
+              "end": 22,
+              "original": "cherry",
+              "replacement": "cherries",
+              "explanation": "Pluralize 'cherry' to 'cherries' for countable nouns.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 16,
+            "end": 22,
+            "original": "cherry",
+            "replacement": "cherries",
+            "explanation": "Pluralize 'cherry' to 'cherries' for countable nouns.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999946,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "cherries"
+                }
+              ],
+              "offset": 16,
+              "length": 6,
+              "context": {
+                "text": "I counted seven cherry.",
+                "offset": 16,
+                "length": 6
+              },
+              "sentence": "I counted seven cherry.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-9mr_entr/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "cherries"
+                  }
+                ],
+                "offset": 16,
+                "length": 6,
+                "context": {
+                  "text": "I counted seven cherry.",
+                  "offset": 16,
+                  "length": 6
+                },
+                "sentence": "I counted seven cherry.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Seven’ means more than one, so use the plural ‘cherries’.",
+        "edit": {
+          "start": 16,
+          "end": 22,
+          "original": "cherry",
+          "replacement": "cherries"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "seconds": {
+        "generation": 5.048420477993204,
+        "builtin": 0.02686651200929191,
+        "supplemental": 4.048593411993352,
+        "decision": 0.0001924279931699857
+      },
+      "total_seconds": 9.165973866998684,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-15",
+      "display_id": "C15",
+      "original": "We need more equipment.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We need more equipment.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "We need more equipment.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "French",
+            "code": "fr",
+            "confidence": 0.7055734,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-bz3aj6gv/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.4701748410006985,
+        "builtin": 0.021585302994935773,
+        "supplemental": 3.9248265380010707,
+        "decision": 1.7924001440405846e-05
+      },
+      "total_seconds": 6.50439667799219,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-error-16",
+      "display_id": "E16",
+      "original": "We washed five dish.",
+      "expected_error": true,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"We washed five dishes.\", \"explanation\": \"Plural form of 'dish' is 'dishes'.\"}",
+        "result": {
+          "corrected_text": "We washed five dishes.",
+          "explanation": "Plural form of 'dish' is 'dishes'.",
+          "corrections": [
+            {
+              "start": 15,
+              "end": 19,
+              "original": "dish",
+              "replacement": "dishes",
+              "explanation": "Plural form of 'dish' is 'dishes'.",
+              "explanation_scope": "whole response"
+            }
+          ]
+        },
+        "edits": [
+          {
+            "start": 15,
+            "end": 19,
+            "original": "dish",
+            "replacement": "dishes",
+            "explanation": "Plural form of 'dish' is 'dishes'.",
+            "explanation_scope": "whole response"
+          }
+        ],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.999998,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. The noun ‘dish’ seems to be countable.",
+            "shortMessage": "Grammatical problem",
+            "replacements": [
+              {
+                "value": "dishes"
+              }
+            ],
+            "offset": 15,
+            "length": 4,
+            "context": {
+              "text": "We washed five dish.",
+              "offset": 15,
+              "length": 4
+            },
+            "sentence": "We washed five dish.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CD_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: numeral + singular countable noun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [
+            {
+              "message": "This number describes more than one item; use the plural noun.",
+              "shortMessage": "",
+              "replacements": [
+                {
+                  "value": "dishes"
+                }
+              ],
+              "offset": 15,
+              "length": 4,
+              "context": {
+                "text": "We washed five dish.",
+                "offset": 15,
+                "length": 4
+              },
+              "sentence": "We washed five dish.",
+              "type": {
+                "typeName": "Other"
+              },
+              "rule": {
+                "id": "SPEAKWELL_COUNT_HEAD",
+                "subId": "1",
+                "sourceFile": "en-speakwell.xml",
+                "description": "Counted noun at the end of a simple object phrase",
+                "issueType": "uncategorized",
+                "category": {
+                  "id": "SPEAKWELL_GRAMMAR",
+                  "name": "SpeakWell experimental grammar"
+                }
+              },
+              "ignoreForIncompleteSentence": false,
+              "contextForSureMatch": 2
+            }
+          ],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-2ix0wlle/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": [
+              {
+                "message": "This number describes more than one item; use the plural noun.",
+                "shortMessage": "",
+                "replacements": [
+                  {
+                    "value": "dishes"
+                  }
+                ],
+                "offset": 15,
+                "length": 4,
+                "context": {
+                  "text": "We washed five dish.",
+                  "offset": 15,
+                  "length": 4
+                },
+                "sentence": "We washed five dish.",
+                "type": {
+                  "typeName": "Other"
+                },
+                "rule": {
+                  "id": "SPEAKWELL_COUNT_HEAD",
+                  "subId": "1",
+                  "sourceFile": "en-speakwell.xml",
+                  "description": "Counted noun at the end of a simple object phrase",
+                  "issueType": "uncategorized",
+                  "category": {
+                    "id": "SPEAKWELL_GRAMMAR",
+                    "name": "SpeakWell experimental grammar"
+                  }
+                },
+                "ignoreForIncompleteSentence": false,
+                "contextForSureMatch": 2
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Five’ means more than one, so use the plural ‘dishes’.",
+        "edit": {
+          "start": 15,
+          "end": 19,
+          "original": "dish",
+          "replacement": "dishes"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 4.109251735004364,
+        "builtin": 0.021102914994116873,
+        "supplemental": 3.7068990740081063,
+        "decision": 9.874999523162842e-05
+      },
+      "total_seconds": 7.870942665002076,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "case_id": "flow-correct-16",
+      "display_id": "C16",
+      "original": "I paid five dollars.",
+      "expected_error": false,
+      "attempt_state": "complete",
+      "generation": {
+        "status": "valid",
+        "raw": "{\"corrected_text\": \"I paid five dollars.\", \"explanation\": \"\"}",
+        "result": {
+          "corrected_text": "I paid five dollars.",
+          "explanation": "",
+          "corrections": []
+        },
+        "edits": [],
+        "validation_error": null
+      },
+      "builtin": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "Italian",
+            "code": "it",
+            "confidence": 0.39119786,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "supplemental": {
+        "raw": {
+          "software": {
+            "name": "LanguageTool",
+            "version": "6.6",
+            "buildDate": "2025-03-27 20:50:25 +0100",
+            "apiVersion": 1,
+            "premium": false,
+            "status": ""
+          },
+          "warnings": {
+            "incompleteResults": false
+          },
+          "language": {
+            "name": "English (US)",
+            "code": "en-US",
+            "detectedLanguage": {
+              "name": "English (US)",
+              "code": "en-US",
+              "confidence": 1.0,
+              "source": null
+            }
+          },
+          "matches": [],
+          "sentenceRanges": [],
+          "extendedSentenceRanges": []
+        },
+        "stderr": "Expected text language: English (US) (no spell checking active)\nWorking on /var/folders/m8/f6hf4y3x17l6cr59y6fvkgnh0000gn/T/speakwell-count-hgv9vuie/inputs.txt...\n",
+        "per_input": [
+          {
+            "matches": []
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "seconds": {
+        "generation": 2.491193313006079,
+        "builtin": 0.018537968004238792,
+        "supplemental": 3.6874356570042437,
+        "decision": 1.9073006114922464e-05
+      },
+      "total_seconds": 6.2312216089922,
+      "reference_match": true,
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    }
+  ],
+  "summary": {
+    "attempts_started": 32,
+    "completed": 32,
+    "offered_on_errors": 16,
+    "error_denominator": 16,
+    "offered_reference_matches": 16,
+    "offered_on_correct": 0,
+    "correct_denominator": 16,
+    "withheld_errors": 0,
+    "unchanged_errors": 0,
+    "unavailable": 0,
+    "human_useful_feedback": null,
+    "human_useful_upper_bound": 16,
+    "coverage_gate_impossible": false,
+    "stage_timings": {
+      "generation": {
+        "attempts": 32,
+        "failures": 0,
+        "median_seconds": 3.2785320020047948,
+        "p95_seconds_nearest_rank": 6.566094897993025,
+        "maximum_seconds": 15.00365956099995
+      },
+      "builtin": {
+        "attempts": 32,
+        "failures": 0,
+        "median_seconds": 0.022485502493509557,
+        "p95_seconds_nearest_rank": 0.03801049498724751,
+        "maximum_seconds": 0.06837072400958277
+      },
+      "supplemental": {
+        "attempts": 32,
+        "failures": 0,
+        "median_seconds": 3.622837212496961,
+        "p95_seconds_nearest_rank": 4.536541812994983,
+        "maximum_seconds": 4.737869175005471
+      },
+      "decision": {
+        "attempts": 32,
+        "failures": 0,
+        "median_seconds": 4.636950325220823e-05,
+        "p95_seconds_nearest_rank": 0.0006723260012222454,
+        "maximum_seconds": 0.005212272997596301
+      }
+    },
+    "total_timing": {
+      "attempts": 32,
+      "failures": 0,
+      "median_seconds": 7.429948891993263,
+      "p95_seconds_nearest_rank": 10.400412333998247,
+      "maximum_seconds": 18.722283502007485
+    },
+    "total_excluding_first": {
+      "attempts": 31,
+      "failures": 0,
+      "median_seconds": 7.341039844992338,
+      "p95_seconds_nearest_rank": 9.534611725001014,
+      "maximum_seconds": 10.400412333998247
+    },
+    "first_attempt_seconds": 18.722283502007485
+  }
+}

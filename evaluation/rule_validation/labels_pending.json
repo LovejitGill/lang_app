@@ -1,0 +1,687 @@
+{
+  "version": "2-draft",
+  "split": "heldout",
+  "source": "Original assistant-authored synthetic cases; historical development cases retained. Human review pending. Paired and templated cases are correlated, not a representative population sample.",
+  "cases": [
+    {
+      "id": "v2-heldout-01-error",
+      "pair_id": "heldout-01",
+      "category": "agreement",
+      "text": "Each visitor receive a badge.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Each visitor takes a singular present verb.",
+      "references": [
+        "Each visitor receives a badge."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-01-correct",
+      "pair_id": "heldout-01",
+      "category": "agreement",
+      "text": "Each visitor receives a badge.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Each visitor receives a badge."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-02-error",
+      "pair_id": "heldout-02",
+      "category": "agreement",
+      "text": "My neighbors has a dog.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use have with a plural subject.",
+      "references": [
+        "My neighbors have a dog."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-02-correct",
+      "pair_id": "heldout-02",
+      "category": "agreement",
+      "text": "My neighbors have a dog.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "My neighbors have a dog."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-03-error",
+      "pair_id": "heldout-03",
+      "category": "article",
+      "text": "It was an useful lesson.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Useful begins with a consonant sound, so use a.",
+      "references": [
+        "It was a useful lesson."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-03-correct",
+      "pair_id": "heldout-03",
+      "category": "article",
+      "text": "It was a useful lesson.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "It was a useful lesson."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-04-error",
+      "pair_id": "heldout-04",
+      "category": "article",
+      "text": "She waited for a hour.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Hour begins with a vowel sound, so use an.",
+      "references": [
+        "She waited for an hour."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-04-correct",
+      "pair_id": "heldout-04",
+      "category": "article",
+      "text": "She waited for an hour.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She waited for an hour."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-05-error",
+      "pair_id": "heldout-05",
+      "category": "past",
+      "text": "We meet him last Friday.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use met for the completed past event.",
+      "references": [
+        "We met him last Friday."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-05-correct",
+      "pair_id": "heldout-05",
+      "category": "past",
+      "text": "We met him last Friday.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "We met him last Friday."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-06-error",
+      "pair_id": "heldout-06",
+      "category": "past",
+      "text": "Last summer he teach English.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Taught is the past form of teach.",
+      "references": [
+        "Last summer he taught English."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-06-correct",
+      "pair_id": "heldout-06",
+      "category": "past",
+      "text": "Last summer he taught English.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Last summer he taught English."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-07-error",
+      "pair_id": "heldout-07",
+      "category": "plural",
+      "text": "There are six chair upstairs.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a plural count noun after six.",
+      "references": [
+        "There are six chairs upstairs."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-07-correct",
+      "pair_id": "heldout-07",
+      "category": "plural",
+      "text": "There are six chairs upstairs.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "There are six chairs upstairs."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-08-error",
+      "pair_id": "heldout-08",
+      "category": "plural",
+      "text": "She bought two ticket online.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a plural count noun after two.",
+      "references": [
+        "She bought two tickets online."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-08-correct",
+      "pair_id": "heldout-08",
+      "category": "plural",
+      "text": "She bought two tickets online.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She bought two tickets online."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-09-error",
+      "pair_id": "heldout-09",
+      "category": "modal",
+      "text": "We must finishes before noon.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after must.",
+      "references": [
+        "We must finish before noon."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-09-correct",
+      "pair_id": "heldout-09",
+      "category": "modal",
+      "text": "We must finish before noon.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "We must finish before noon."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-10-error",
+      "pair_id": "heldout-10",
+      "category": "modal",
+      "text": "She could sings very well.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after could.",
+      "references": [
+        "She could sing very well."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-10-correct",
+      "pair_id": "heldout-10",
+      "category": "modal",
+      "text": "She could sing very well.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She could sing very well."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-11-error",
+      "pair_id": "heldout-11",
+      "category": "question",
+      "text": "Did they left already?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after did.",
+      "references": [
+        "Did they leave already?"
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-11-correct",
+      "pair_id": "heldout-11",
+      "category": "question",
+      "text": "Did they leave already?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "Did they leave already?"
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-12-error",
+      "pair_id": "heldout-12",
+      "category": "negative",
+      "text": "She does not eats meat.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the base verb after does.",
+      "references": [
+        "She does not eat meat."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-12-correct",
+      "pair_id": "heldout-12",
+      "category": "negative",
+      "text": "She does not eat meat.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She does not eat meat."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-13-error",
+      "pair_id": "heldout-13",
+      "category": "comparison",
+      "text": "My bag is more heavier than yours.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Do not combine more with heavier.",
+      "references": [
+        "My bag is heavier than yours."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-13-correct",
+      "pair_id": "heldout-13",
+      "category": "comparison",
+      "text": "My bag is heavier than yours.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "My bag is heavier than yours."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-14-error",
+      "pair_id": "heldout-14",
+      "category": "comparison",
+      "text": "The second task was more easier.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Do not combine more with easier.",
+      "references": [
+        "The second task was easier."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-14-correct",
+      "pair_id": "heldout-14",
+      "category": "comparison",
+      "text": "The second task was easier.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "The second task was easier."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-15-error",
+      "pair_id": "heldout-15",
+      "category": "duration",
+      "text": "We have waited since twenty minutes.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use for with a duration.",
+      "references": [
+        "We have waited for twenty minutes."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-15-correct",
+      "pair_id": "heldout-15",
+      "category": "duration",
+      "text": "We have waited for twenty minutes.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "We have waited for twenty minutes."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-16-error",
+      "pair_id": "heldout-16",
+      "category": "preposition",
+      "text": "She is afraid from spiders.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "The expression is afraid of.",
+      "references": [
+        "She is afraid of spiders."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-16-correct",
+      "pair_id": "heldout-16",
+      "category": "preposition",
+      "text": "She is afraid of spiders.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "She is afraid of spiders."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-17-error",
+      "pair_id": "heldout-17",
+      "category": "verb-pattern",
+      "text": "They avoided to argue.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use a gerund after avoided.",
+      "references": [
+        "They avoided arguing."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-17-correct",
+      "pair_id": "heldout-17",
+      "category": "verb-pattern",
+      "text": "They avoided arguing.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "They avoided arguing."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-18-error",
+      "pair_id": "heldout-18",
+      "category": "verb-pattern",
+      "text": "He hopes finding a job.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use the to-infinitive after hopes.",
+      "references": [
+        "He hopes to find a job."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-18-correct",
+      "pair_id": "heldout-18",
+      "category": "verb-pattern",
+      "text": "He hopes to find a job.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "He hopes to find a job."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-19-error",
+      "pair_id": "heldout-19",
+      "category": "pronoun",
+      "text": "The invitation is for she.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use an object pronoun after for.",
+      "references": [
+        "The invitation is for her."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-19-correct",
+      "pair_id": "heldout-19",
+      "category": "pronoun",
+      "text": "The invitation is for her.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "The invitation is for her."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-20-error",
+      "pair_id": "heldout-20",
+      "category": "possessive",
+      "text": "That is mine bicycle.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "expected_issue": "Use my before the noun; mine stands alone.",
+      "references": [
+        "That is my bicycle."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    },
+    {
+      "id": "v2-heldout-20-correct",
+      "pair_id": "heldout-20",
+      "category": "possessive",
+      "text": "That is my bicycle.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "expected_issue": "Acceptable English; no correction needed.",
+      "references": [
+        "That is my bicycle."
+      ],
+      "label_review": {
+        "status": "pending",
+        "reviewer": "",
+        "rationale": ""
+      }
+    }
+  ]
+}

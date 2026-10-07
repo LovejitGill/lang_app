@@ -1,0 +1,2396 @@
+{
+  "variant": "languagetool-backed-explanations-v1",
+  "protocol_sha256": "82799ce9ffdc06aa196d1141dc1a3616b114cbaa6aaf39593cb514f4349a82ff",
+  "cases_sha256": "62c3815ae4e11810f9f936dc86e718cc7fc15efbae3bcb37f8b92783b56b3c88",
+  "scope": "Fresh component checks with authored proposals; no LLM, not end-to-end held-out validation.",
+  "rows": [
+    {
+      "id": "fresh-01",
+      "kind": "positive",
+      "original": "We should explores the cave.",
+      "proposed": "We should explore the cave.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999857,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The pronoun ‘We’ must be used with a non-third-person form of a verb.",
+            "shortMessage": "Grammatical problem: agreement error",
+            "replacements": [
+              {
+                "value": "explore"
+              }
+            ],
+            "offset": 10,
+            "length": 8,
+            "context": {
+              "text": "We should explores the cave.",
+              "offset": 10,
+              "length": 8
+            },
+            "sentence": "We should explores the cave.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "NON3PRS_VERB",
+              "subId": "3",
+              "sourceFile": "grammar.xml",
+              "description": "Agreement error: Third-person verb with a non-third-person pronoun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 6
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 18,
+          "original": "explores",
+          "replacement": "explore"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 5.824853236001218
+    },
+    {
+      "id": "fresh-02",
+      "kind": "positive",
+      "original": "He can repairs the bicycle.",
+      "proposed": "He can repair the bicycle.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999374,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The modal verb ‘can’ requires the verb’s base form.",
+            "shortMessage": "Grammatical problem: use the base form",
+            "replacements": [
+              {
+                "value": "repair"
+              }
+            ],
+            "offset": 7,
+            "length": 7,
+            "context": {
+              "text": "He can repairs the bicycle.",
+              "offset": 7,
+              "length": 7
+            },
+            "sentence": "He can repairs the bicycle.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "MD_BASEFORM",
+              "subId": "3",
+              "sourceFile": "grammar.xml",
+              "description": "Non-infinitive verb after modal verbs",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            27
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 27,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 7,
+          "end": 14,
+          "original": "repairs",
+          "replacement": "repair"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.079676785004267
+    },
+    {
+      "id": "fresh-03",
+      "kind": "positive",
+      "original": "She might dances tonight.",
+      "proposed": "She might dance tonight.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999887,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The modal verb ‘might’ requires the verb’s base form.",
+            "shortMessage": "Grammatical problem: use the base form",
+            "replacements": [
+              {
+                "value": "dance"
+              }
+            ],
+            "offset": 10,
+            "length": 6,
+            "context": {
+              "text": "She might dances tonight.",
+              "offset": 10,
+              "length": 6
+            },
+            "sentence": "She might dances tonight.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "MD_BASEFORM",
+              "subId": "3",
+              "sourceFile": "grammar.xml",
+              "description": "Non-infinitive verb after modal verbs",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 16,
+          "original": "dances",
+          "replacement": "dance"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.06625703600002453
+    },
+    {
+      "id": "fresh-04",
+      "kind": "positive",
+      "original": "Did you visited the castle?",
+      "proposed": "Did you visit the castle?",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999255,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The past tense is already inflected in the auxiliary verb “did”, so the infinitive (base) form of the verb should be used here.",
+            "shortMessage": "Possible grammatical error",
+            "replacements": [
+              {
+                "value": "visit"
+              }
+            ],
+            "offset": 8,
+            "length": 7,
+            "context": {
+              "text": "Did you visited the castle?",
+              "offset": 8,
+              "length": 7
+            },
+            "sentence": "Did you visited the castle?",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DID_PAST",
+              "subId": "2",
+              "sourceFile": "grammar.xml",
+              "description": "'did' with past tense verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-forms-of-do/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            27
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 27,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": false,
+      "seconds": 0.06376882699987618
+    },
+    {
+      "id": "fresh-05",
+      "kind": "positive",
+      "original": "He does not calls often.",
+      "proposed": "He does not call often.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9998807,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "After the auxiliary verb ‘do’, use the base form of a verb. Did you mean “call”?",
+            "shortMessage": "Possible grammar error",
+            "replacements": [
+              {
+                "value": "call"
+              }
+            ],
+            "offset": 12,
+            "length": 5,
+            "context": {
+              "text": "He does not calls often.",
+              "offset": 12,
+              "length": 5
+            },
+            "sentence": "He does not calls often.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "After auxiliary 'do', use the base form of a verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://grammar.collinsdictionary.com/easy-learning/how-do-you-use-the-verb-do-in-english"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "calls",
+          "replacement": "call"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.059666040004231036
+    },
+    {
+      "id": "fresh-06",
+      "kind": "positive",
+      "original": "I packed seven bottle.",
+      "proposed": "I packed seven bottles.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9909666,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            22
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 22,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": false,
+      "seconds": 0.04237101699982304
+    },
+    {
+      "id": "fresh-07",
+      "kind": "positive",
+      "original": "We found eight coin.",
+      "proposed": "We found eight coins.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999905,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": false,
+      "seconds": 0.04391872300038813
+    },
+    {
+      "id": "fresh-08",
+      "kind": "positive",
+      "original": "This lamp is more brighter.",
+      "proposed": "This lamp is brighter.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999929,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Use only “brighter” (without ‘more’) when you use the comparative.",
+            "shortMessage": "Grammatical problem: unnecessary ‘more’",
+            "replacements": [
+              {
+                "value": "brighter"
+              }
+            ],
+            "offset": 13,
+            "length": 13,
+            "context": {
+              "text": "This lamp is more brighter.",
+              "offset": 13,
+              "length": 13
+            },
+            "sentence": "This lamp is more brighter.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "MOST_COMPARATIVE",
+              "subId": "2",
+              "sourceFile": "grammar.xml",
+              "description": "No 'more' or 'most' before comparatives",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 5
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            27
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 27,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘brighter’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 13,
+          "end": 26,
+          "original": "more brighter",
+          "replacement": "brighter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.0540614400015329
+    },
+    {
+      "id": "fresh-09",
+      "kind": "positive",
+      "original": "She is a honest person.",
+      "proposed": "She is an honest person.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999998,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Use “an” instead of ‘a’ if the following word starts with a vowel sound, e.g. ‘an article’, ‘an hour’.",
+            "shortMessage": "Wrong article",
+            "replacements": [
+              {
+                "value": "an"
+              }
+            ],
+            "offset": 7,
+            "length": 1,
+            "context": {
+              "text": "She is a honest person.",
+              "offset": 7,
+              "length": 1
+            },
+            "sentence": "She is a honest person.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "EN_A_VS_AN",
+              "description": "Use of 'a' vs. 'an'",
+              "issueType": "misspelling",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/indefinite-articles/"
+                }
+              ],
+              "category": {
+                "id": "MISC",
+                "name": "Miscellaneous"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘an’ before a vowel sound.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04444988299655961
+    },
+    {
+      "id": "fresh-10",
+      "kind": "positive",
+      "original": "He wears an uniform.",
+      "proposed": "He wears a uniform.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999344,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Use “a” instead of ‘an’ if the following word doesn’t start with a vowel sound, e.g. ‘a sentence’, ‘a university’.",
+            "shortMessage": "Wrong article",
+            "replacements": [
+              {
+                "value": "a"
+              }
+            ],
+            "offset": 9,
+            "length": 2,
+            "context": {
+              "text": "He wears an uniform.",
+              "offset": 9,
+              "length": 2
+            },
+            "sentence": "He wears an uniform.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "EN_A_VS_AN",
+              "description": "Use of 'a' vs. 'an'",
+              "issueType": "misspelling",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/indefinite-articles/"
+                }
+              ],
+              "category": {
+                "id": "MISC",
+                "name": "Miscellaneous"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘a’ before a consonant sound.",
+        "edit": {
+          "start": 9,
+          "end": 11,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04616360900399741
+    },
+    {
+      "id": "fresh-11",
+      "kind": "positive",
+      "original": "I enjoy to sketch.",
+      "proposed": "I enjoy sketching.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "Swedish",
+            "code": "sv",
+            "confidence": 0.75765043,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The verb ‘enjoy’ is used with the gerund form.",
+            "shortMessage": "Grammatical problem: use ‘ing’",
+            "replacements": [
+              {
+                "value": "enjoy sketching"
+              }
+            ],
+            "offset": 2,
+            "length": 15,
+            "context": {
+              "text": "I enjoy to sketch.",
+              "offset": 2,
+              "length": 15
+            },
+            "sentence": "I enjoy to sketch.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "ADMIT_ENJOY_VB",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "'admit', 'appreciate', 'avoid', 'enjoy' etc. with a base form of a verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://www.ef.com/english-resources/english-grammar/gerund-equals-infinitive/"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 8
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            18
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 18,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 17,
+          "original": "enjoy to sketch",
+          "replacement": "enjoy sketching"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04384451100486331
+    },
+    {
+      "id": "fresh-12",
+      "kind": "positive",
+      "original": "The kittens needs water.",
+      "proposed": "The kittens need water.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.8268746,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "You should probably use “need”.",
+            "shortMessage": "Possible agreement error",
+            "replacements": [
+              {
+                "value": "need",
+                "shortDescription": "require"
+              }
+            ],
+            "offset": 12,
+            "length": 5,
+            "context": {
+              "text": "The kittens needs water.",
+              "offset": 12,
+              "length": 5
+            },
+            "sentence": "The kittens needs water.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "AGREEMENT_SENT_START",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Possible agreement error: plural noun + singular verb",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-subject-verb-agreement/#4-collective-nouns-can-be-singular-or-plural"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 8
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "Use the basic verb form with a plural subject.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.0471401370014064
+    },
+    {
+      "id": "fresh-13",
+      "kind": "positive",
+      "original": "She bake bread.",
+      "proposed": "She bakes bread.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9968953,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The pronoun ‘She’ is usually used with a third-person or a past tense verb.",
+            "shortMessage": "Agreement error",
+            "replacements": [
+              {
+                "value": "bakes"
+              },
+              {
+                "value": "baked"
+              }
+            ],
+            "offset": 4,
+            "length": 4,
+            "context": {
+              "text": "She bake bread.",
+              "offset": 4,
+              "length": 4
+            },
+            "sentence": "She bake bread.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "HE_VERB_AGR",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "Agreement error: Non-third person/past tense verb with 'he/she/it' or a pronoun",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://languagetool.org/insights/post/grammar-subject-verb-agreement/#1-singular-subjects-must-go-with-singular-verbs-and-plural-subjects-with-plural-verbs"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            15
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 15,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "With ‘she’, use ‘bakes’ in the present tense.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "bake",
+          "replacement": "bakes"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04894164299912518
+    },
+    {
+      "id": "fresh-14",
+      "kind": "positive",
+      "original": "We have worked here since six weeks.",
+      "proposed": "We have worked here for six weeks.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9994058,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Did you mean “for”? (‘since’ refers to a point in time, whereas ‘for’ refers to a period)",
+            "shortMessage": "Commonly confused word",
+            "replacements": [
+              {
+                "value": "for",
+                "shortDescription": "preposition as in 'something for you'"
+              }
+            ],
+            "offset": 20,
+            "length": 5,
+            "context": {
+              "text": "We have worked here since six weeks.",
+              "offset": 20,
+              "length": 5
+            },
+            "sentence": "We have worked here since six weeks.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "SINCE_FOR",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "since (for) + 'period of time'",
+              "issueType": "misspelling",
+              "urls": [
+                {
+                  "value": "http://www.grammarbank.com/since-for-usage.html"
+                }
+              ],
+              "category": {
+                "id": "CONFUSED_WORDS",
+                "name": "Commonly Confused Words"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 4
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            36
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 36,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04948333500215085
+    },
+    {
+      "id": "fresh-15",
+      "kind": "positive",
+      "original": "It depends of the weather.",
+      "proposed": "It depends on the weather.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999386,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The verb ‘to depend’ requires the preposition ‘(up)on’.",
+            "shortMessage": "Missing preposition",
+            "replacements": [
+              {
+                "value": "depends on"
+              }
+            ],
+            "offset": 3,
+            "length": 10,
+            "context": {
+              "text": "It depends of the weather.",
+              "offset": 3,
+              "length": 10
+            },
+            "sentence": "It depends of the weather.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "DEPEND_ON",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "depend on",
+              "issueType": "grammar",
+              "urls": [
+                {
+                  "value": "https://www.merriam-webster.com/dictionary/depend"
+                }
+              ],
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "Use ‘depend on’ when something relies on something else.",
+        "edit": {
+          "start": 3,
+          "end": 13,
+          "original": "depends of",
+          "replacement": "depends on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.043272195995086804
+    },
+    {
+      "id": "fresh-16",
+      "kind": "positive",
+      "original": "There are a lamp near the window.",
+      "proposed": "There is a lamp near the window.",
+      "expected_state": "provisional",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999982,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "Possible agreement error. Did you mean “is”?",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "is"
+              }
+            ],
+            "offset": 6,
+            "length": 3,
+            "context": {
+              "text": "There are a lamp near the window.",
+              "offset": 6,
+              "length": 3
+            },
+            "sentence": "There are a lamp near the window.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "THERE_VBP_NN",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "There are (is) a ...",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 9
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            33
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 33,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "Use ‘there is’ for one thing.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "passed": true,
+      "seconds": 0.04394604599656304
+    },
+    {
+      "id": "fresh-17",
+      "kind": "negative",
+      "original": "He can repair the bicycle.",
+      "proposed": "He can repairs the bicycle.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999493,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.1321716730017215
+    },
+    {
+      "id": "fresh-18",
+      "kind": "negative",
+      "original": "Did you visit the castle?",
+      "proposed": "Did you visited the castle?",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999992,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            25
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 25,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.049767691001761705
+    },
+    {
+      "id": "fresh-19",
+      "kind": "negative",
+      "original": "I packed seven bottles.",
+      "proposed": "I packed seven bottle.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99848187,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            23
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 23,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.07678136700269533
+    },
+    {
+      "id": "fresh-20",
+      "kind": "negative",
+      "original": "He wears a uniform.",
+      "proposed": "He wears an uniform.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999999,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            19
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 19,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.040104106003127526
+    },
+    {
+      "id": "fresh-21",
+      "kind": "negative",
+      "original": "She is an honest person.",
+      "proposed": "She is a honest person.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999937,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 24,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.037469595998118166
+    },
+    {
+      "id": "fresh-22",
+      "kind": "negative",
+      "original": "The can holds paint.",
+      "proposed": "The can hold paint.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999903,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.038687236003170256
+    },
+    {
+      "id": "fresh-23",
+      "kind": "negative",
+      "original": "I ask that she bake bread.",
+      "proposed": "I ask that she bakes bread.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999916,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.03916913899593055
+    },
+    {
+      "id": "fresh-24",
+      "kind": "negative",
+      "original": "She baked bread yesterday.",
+      "proposed": "She bakes bread yesterday.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999973,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            26
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 26,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.03652056199643994
+    },
+    {
+      "id": "fresh-25",
+      "kind": "negative",
+      "original": "We have worked here since six weeks ago.",
+      "proposed": "We have worked here for six weeks ago.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999932,
+            "source": "+fallback"
+          }
+        },
+        "matches": [],
+        "sentenceRanges": [
+          [
+            0,
+            40
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 40,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.04349840199574828
+    },
+    {
+      "id": "fresh-26",
+      "kind": "negative",
+      "original": "The quote is “He can repairs the bicycle”.",
+      "proposed": "The quote is “He can repair the bicycle”.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999933,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The modal verb ‘can’ requires the verb’s base form.",
+            "shortMessage": "Grammatical problem: use the base form",
+            "replacements": [
+              {
+                "value": "repair"
+              }
+            ],
+            "offset": 21,
+            "length": 7,
+            "context": {
+              "text": "The quote is “He can repairs the bicycle”.",
+              "offset": 21,
+              "length": 7
+            },
+            "sentence": "The quote is “He can repairs the bicycle”.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "MD_BASEFORM",
+              "subId": "3",
+              "sourceFile": "grammar.xml",
+              "description": "Non-infinitive verb after modal verbs",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            42
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 42,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "passed": true,
+      "seconds": 0.047347364998131525
+    },
+    {
+      "id": "fresh-27",
+      "kind": "negative",
+      "original": "We should explores the cave.",
+      "proposed": "We should explore the forest.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.99999857,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "The pronoun ‘We’ must be used with a non-third-person form of a verb.",
+            "shortMessage": "Grammatical problem: agreement error",
+            "replacements": [
+              {
+                "value": "explore"
+              }
+            ],
+            "offset": 10,
+            "length": 8,
+            "context": {
+              "text": "We should explores the cave.",
+              "offset": 10,
+              "length": 8
+            },
+            "sentence": "We should explores the cave.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "NON3PRS_VERB",
+              "subId": "3",
+              "sourceFile": "grammar.xml",
+              "description": "Agreement error: Third-person verb with a non-third-person pronoun",
+              "issueType": "grammar",
+              "category": {
+                "id": "GRAMMAR",
+                "name": "Grammar"
+              }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": 6
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            28
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 28,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.03313280000293162
+    },
+    {
+      "id": "fresh-28",
+      "kind": "negative",
+      "original": "The cafe serves tea.",
+      "proposed": "The café serves tea.",
+      "expected_state": "withheld",
+      "review_status": "assistant-authored expectation; user review pending",
+      "raw": {
+        "software": {
+          "name": "LanguageTool",
+          "version": "6.6",
+          "buildDate": "2025-03-27 20:50:25 +0100",
+          "apiVersion": 1,
+          "premium": false,
+          "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+          "status": ""
+        },
+        "warnings": {
+          "incompleteResults": false
+        },
+        "language": {
+          "name": "English (US)",
+          "code": "en-US",
+          "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.999999,
+            "source": "+fallback"
+          }
+        },
+        "matches": [
+          {
+            "message": "‘Cafe’ is a foreign word which originally has a diacritic.",
+            "shortMessage": "",
+            "replacements": [
+              {
+                "value": "café"
+              }
+            ],
+            "offset": 4,
+            "length": 4,
+            "context": {
+              "text": "The cafe serves tea.",
+              "offset": 4,
+              "length": 4
+            },
+            "sentence": "The cafe serves tea.",
+            "type": {
+              "typeName": "Other"
+            },
+            "rule": {
+              "id": "CAFE_DIACRITIC",
+              "subId": "1",
+              "sourceFile": "grammar.xml",
+              "description": "cafe (café)",
+              "issueType": "typographical",
+              "category": {
+                "id": "TYPOGRAPHY",
+                "name": "Typography"
+              }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+          }
+        ],
+        "sentenceRanges": [
+          [
+            0,
+            20
+          ]
+        ],
+        "extendedSentenceRanges": [
+          {
+            "from": 0,
+            "to": 20,
+            "detectedLanguages": [
+              {
+                "language": "en",
+                "rate": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "passed": true,
+      "seconds": 0.03222219800227322
+    }
+  ],
+  "summary": {
+    "cases": 28,
+    "passed": 25,
+    "unavailable": 0,
+    "llm_calls": 0
+  }
+}

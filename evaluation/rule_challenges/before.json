@@ -1,0 +1,350 @@
+{
+  "variant": "provisional-short-rules-agreement-v1",
+  "cases_sha256": "571511826d5dab84fc4212e2e629e9193465363e9202b4efd93fb242bfc352b6",
+  "code_sha256": "54c6bb1ef86a978d83961d47ec84f32536d8c8495a3626cc3035edbe244278dc",
+  "limitations": "Assistant-authored policy/grammar challenge expectations. State checks do not establish explanation quality, independent generalization, or end-to-end performance.",
+  "summary": {
+    "cases": 24,
+    "passed": 18,
+    "failed": 6,
+    "model_calls": 0
+  },
+  "rows": [
+    {
+      "id": "challenge-01",
+      "kind": "positive",
+      "original": "She work nearby.",
+      "proposed": "She works nearby.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "singular_agreement",
+        "explanation": "For one person, use ‘works’ in the present tense."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-02",
+      "kind": "positive",
+      "original": "The teachers likes coffee.",
+      "proposed": "The teachers like coffee.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "plural_agreement",
+        "explanation": "For more than one person, use ‘like’ in the present tense."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-03",
+      "kind": "positive",
+      "original": "There are a book under the chair.",
+      "proposed": "There is a book under the chair.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "there_singular",
+        "explanation": "Use ‘there is’ for one thing."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-04",
+      "kind": "positive",
+      "original": "We might eats outside.",
+      "proposed": "We might eat outside.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "modal_base",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-05",
+      "kind": "positive",
+      "original": "Did he ordered tea?",
+      "proposed": "Did he order tea?",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "do_base",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-06",
+      "kind": "positive",
+      "original": "I ordered five sandwich.",
+      "proposed": "I ordered five sandwiches.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "number_plural",
+        "explanation": "Use a plural noun for more than one item."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-07",
+      "kind": "positive",
+      "original": "They have worked since seven weeks.",
+      "proposed": "They have worked for seven weeks.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "duration_for",
+        "explanation": "Use ‘for’ to say how long something lasts."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-08",
+      "kind": "positive",
+      "original": "The bicycle is more faster.",
+      "proposed": "The bicycle is faster.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately.",
+      "actual": {
+        "state": "provisional",
+        "rule": "single_comparative",
+        "explanation": "Use only ‘faster’, without ‘more’, when comparing."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-09",
+      "kind": "boundary",
+      "original": "The note says “He can speaks French”.",
+      "proposed": "The note says “He can speak French”.",
+      "expected_state": "withheld",
+      "rationale": "Preserve quoted examples; do not silently edit quoted language.",
+      "actual": {
+        "state": "provisional",
+        "rule": "modal_base",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-10",
+      "kind": "positive",
+      "original": "The title is more shorter than expected.",
+      "proposed": "The title is shorter than expected.",
+      "expected_state": "provisional",
+      "rationale": "Positive control outside the original examples.",
+      "actual": {
+        "state": "provisional",
+        "rule": "single_comparative",
+        "explanation": "Use only ‘shorter’, without ‘more’, when comparing."
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-11",
+      "kind": "boundary",
+      "original": "I have lived here since five years ago.",
+      "proposed": "I have lived here for five years ago.",
+      "expected_state": "withheld",
+      "rationale": "Since can introduce a starting point expressed with ago.",
+      "actual": {
+        "state": "provisional",
+        "rule": "duration_for",
+        "explanation": "Use ‘for’ to say how long something lasts."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-12",
+      "kind": "boundary",
+      "original": "I paid for 2.5 book.",
+      "proposed": "I paid for 2.5 books.",
+      "expected_state": "withheld",
+      "rationale": "Fractional numbers are outside the declared integer rule, even when an edit may be useful.",
+      "actual": {
+        "state": "provisional",
+        "rule": "number_plural",
+        "explanation": "Use a plural noun for more than one item."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-13",
+      "kind": "boundary",
+      "original": "I ordered twenty-two box.",
+      "proposed": "I ordered twenty-two boxes.",
+      "expected_state": "withheld",
+      "rationale": "Compound numbers are outside the supported integer vocabulary.",
+      "actual": {
+        "state": "provisional",
+        "rule": "number_plural",
+        "explanation": "Use a plural noun for more than one item."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-14",
+      "kind": "boundary",
+      "original": "They likes tea.",
+      "proposed": "They like tea.",
+      "expected_state": "withheld",
+      "rationale": "Singular they uses like too, but the explanation must not assume multiple people.",
+      "actual": {
+        "state": "provisional",
+        "rule": "plural_agreement",
+        "explanation": "For more than one person, use ‘like’ in the present tense."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-15",
+      "kind": "boundary",
+      "original": "She walk home yesterday evening.",
+      "proposed": "She walks home yesterday evening.",
+      "expected_state": "withheld",
+      "rationale": "Present-tense change does not repair explicit past context.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-16",
+      "kind": "boundary",
+      "original": "I suggest that she work here.",
+      "proposed": "I suggest that she works here.",
+      "expected_state": "withheld",
+      "rationale": "Subjunctive work is acceptable.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-17",
+      "kind": "boundary",
+      "original": "There are a chair and two tables.",
+      "proposed": "There is a chair and two tables.",
+      "expected_state": "withheld",
+      "rationale": "Do not treat a coordinated list as a single thing.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-18",
+      "kind": "boundary",
+      "original": "My brother and sister work nearby.",
+      "proposed": "My brother and sister works nearby.",
+      "expected_state": "withheld",
+      "rationale": "Compound subject is plural.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-19",
+      "kind": "boundary",
+      "original": "I ordered three box sets.",
+      "proposed": "I ordered three boxes sets.",
+      "expected_state": "withheld",
+      "rationale": "Box modifies sets; it does not need a plural ending.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-20",
+      "kind": "boundary",
+      "original": "She can takes a break and he need rest.",
+      "proposed": "She can take a break and he need rest.",
+      "expected_state": "withheld",
+      "rationale": "This bounded candidate must not offer a whole corrected sentence with an unreviewed second clause.",
+      "actual": {
+        "state": "provisional",
+        "rule": "modal_base",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form."
+      },
+      "passed": false
+    },
+    {
+      "id": "challenge-21",
+      "kind": "scope",
+      "original": "My cousin swim daily.",
+      "proposed": "My cousin swims daily.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-22",
+      "kind": "scope",
+      "original": "She read novels.",
+      "proposed": "She reads novels.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-23",
+      "kind": "scope",
+      "original": "He can speaks French.",
+      "proposed": "He can speak Spanish.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal.",
+      "actual": {
+        "state": "withheld",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    },
+    {
+      "id": "challenge-24",
+      "kind": "scope",
+      "original": "I eat rice.",
+      "proposed": "I eat rice.",
+      "expected_state": "no_proposal",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal.",
+      "actual": {
+        "state": "no_proposal",
+        "rule": null,
+        "explanation": null
+      },
+      "passed": true
+    }
+  ]
+}

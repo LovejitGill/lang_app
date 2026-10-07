@@ -1,0 +1,504 @@
+{
+  "status": "Pending review of new rule-to-explanation assignments; no blanket approval inherited.",
+  "source_sha256": {
+    "development_results.json": "86c656a01764ba0c3f3320fa692c7850471f7e619c10a1078bc2741571708d6a",
+    "fresh_results.json": "3dca587eb54d51670418444c24da24b779e1a19347acef78df544ca48fe7c0ca"
+  },
+  "rows": [
+    {
+      "cohort": "development",
+      "case_id": "development-02",
+      "original": "She walk to work every morning.",
+      "proposed": "She walks to work every morning.",
+      "rule_id": "HE_VERB_AGR",
+      "explanation": "With ‘she’, use ‘walks’ in the present tense.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "rule_id": "CD_NN",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "rule_id": "MOST_COMPARATIVE",
+      "explanation": "Use ‘cheaper’ without ‘more’ when comparing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "rule_id": "SINCE_FOR",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "rule_id": "MD_BASEFORM",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-18",
+      "original": "There are a bowl on the table.",
+      "proposed": "There is a bowl on the table.",
+      "rule_id": "THERE_VBP_NN",
+      "explanation": "Use ‘there is’ for one thing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "rule_id": "DID_BASEFORM",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-02-error",
+      "original": "The students needs more time.",
+      "proposed": "The students need more time.",
+      "rule_id": "AGREEMENT_SENT_START",
+      "explanation": "Use the basic verb form with a plural subject.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-03-error",
+      "original": "He is an chef.",
+      "proposed": "He is a chef.",
+      "rule_id": "EN_A_VS_AN",
+      "explanation": "Use ‘a’ before a consonant sound.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-04-error",
+      "original": "We saw a elephant.",
+      "proposed": "We saw an elephant.",
+      "rule_id": "EN_A_VS_AN",
+      "explanation": "Use ‘an’ before a vowel sound.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "rule_id": "CD_NN",
+      "explanation": "Use a plural noun for more than one item.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "rule_id": "MD_BASEFORM",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "rule_id": "NON3PRS_VERB",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "rule_id": "DOES_X_HAS",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "rule_id": "MOST_COMPARATIVE",
+      "explanation": "Use ‘shorter’ without ‘more’ when comparing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "rule_id": "MOST_COMPARATIVE",
+      "explanation": "Use ‘colder’ without ‘more’ when comparing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "rule_id": "SINCE_FOR",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-16-error",
+      "original": "They depend of public transport.",
+      "proposed": "They depend on public transport.",
+      "rule_id": "DEPEND_ON",
+      "explanation": "Use ‘depend on’ when something relies on something else.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-17-error",
+      "original": "I enjoy to swim.",
+      "proposed": "I enjoy swimming.",
+      "rule_id": "ADMIT_ENJOY_VB",
+      "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-01",
+      "original": "We should explores the cave.",
+      "proposed": "We should explore the cave.",
+      "rule_id": "NON3PRS_VERB",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-02",
+      "original": "He can repairs the bicycle.",
+      "proposed": "He can repair the bicycle.",
+      "rule_id": "MD_BASEFORM",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-03",
+      "original": "She might dances tonight.",
+      "proposed": "She might dance tonight.",
+      "rule_id": "MD_BASEFORM",
+      "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-05",
+      "original": "He does not calls often.",
+      "proposed": "He does not call often.",
+      "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+      "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-08",
+      "original": "This lamp is more brighter.",
+      "proposed": "This lamp is brighter.",
+      "rule_id": "MOST_COMPARATIVE",
+      "explanation": "Use ‘brighter’ without ‘more’ when comparing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-09",
+      "original": "She is a honest person.",
+      "proposed": "She is an honest person.",
+      "rule_id": "EN_A_VS_AN",
+      "explanation": "Use ‘an’ before a vowel sound.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-10",
+      "original": "He wears an uniform.",
+      "proposed": "He wears a uniform.",
+      "rule_id": "EN_A_VS_AN",
+      "explanation": "Use ‘a’ before a consonant sound.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-11",
+      "original": "I enjoy to sketch.",
+      "proposed": "I enjoy sketching.",
+      "rule_id": "ADMIT_ENJOY_VB",
+      "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-12",
+      "original": "The kittens needs water.",
+      "proposed": "The kittens need water.",
+      "rule_id": "AGREEMENT_SENT_START",
+      "explanation": "Use the basic verb form with a plural subject.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-13",
+      "original": "She bake bread.",
+      "proposed": "She bakes bread.",
+      "rule_id": "HE_VERB_AGR",
+      "explanation": "With ‘she’, use ‘bakes’ in the present tense.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-14",
+      "original": "We have worked here since six weeks.",
+      "proposed": "We have worked here for six weeks.",
+      "rule_id": "SINCE_FOR",
+      "explanation": "Use ‘for’ to say how long something lasts.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-15",
+      "original": "It depends of the weather.",
+      "proposed": "It depends on the weather.",
+      "rule_id": "DEPEND_ON",
+      "explanation": "Use ‘depend on’ when something relies on something else.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh-component",
+      "case_id": "fresh-16",
+      "original": "There are a lamp near the window.",
+      "proposed": "There is a lamp near the window.",
+      "rule_id": "THERE_VBP_NN",
+      "explanation": "Use ‘there is’ for one thing.",
+      "human_review": {
+        "correct_necessary_edit": null,
+        "explanation_accurate": null,
+        "explanation_clear": null,
+        "useful": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}

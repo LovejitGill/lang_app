@@ -1,0 +1,33 @@
+{
+  "status": "Prepared; fresh labels and runner not yet created; no inference performed.",
+  "prepared_on": "2026-10-01",
+  "scope": "Targeted end-to-end validation of the approved did-question and counted-noun gap fixes; not a broad English quality score.",
+  "candidate_protocol": "evaluation/detection_gaps/protocol.json",
+  "candidate_protocol_sha256": "ceefa672bb78ffb302680f701199c5181659c04e1524f8a334a7e04215a6065a",
+  "approved_review": "evaluation/detection_gaps/review_approved.json",
+  "approved_review_sha256": "915dce6f9dfca9b8ff7962339f7c499f5223f987784051d1028223beaffa922a",
+  "planned_dataset": {
+    "total": 32,
+    "errors": 16,
+    "correct": 16,
+    "error_families": {
+      "did_questions": 8,
+      "counted_nouns": 8
+    },
+    "selection": "Create new standalone inputs and counterexamples; exclude all earlier evaluation sentences. Human-review labels before inference."
+  },
+  "planned_execution": [
+    "Verify code, XML, model and approved label identities before one attempt per input.",
+    "Use existing frozen Qwen3 4B sentence generation, then built-in and supplemental rule evidence plus the existing reason layer.",
+    "Send only original learner text to generation; references are for scoring only.",
+    "Retain raw outputs, withheld proposals and failures; do not substitute an authored correction for model output.",
+    "Review actual delivered edits and reasons. Record separate generation and checker time; batch averages are not conversational latency."
+  ],
+  "gates": {
+    "minimum_human_useful_error_cases": 13,
+    "error_denominator": 16,
+    "maximum_offers_on_correct_inputs": 0,
+    "maximum_unavailable": 0
+  },
+  "decision": "Any failure blocks integration. Even a pass only supports a limited targeted pilot. Explanation wording refinement and latency optimization remain deferred. Do not run on unreviewed labels or present this preparation as test results."
+}

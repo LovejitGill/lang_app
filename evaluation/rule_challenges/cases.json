@@ -1,0 +1,197 @@
+{
+  "status": "Assistant-authored engineering expectations; not user-reviewed or held-out evidence.",
+  "cases": [
+    {
+      "id": "challenge-01",
+      "kind": "positive",
+      "original": "She work nearby.",
+      "proposed": "She works nearby.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-02",
+      "kind": "positive",
+      "original": "The teachers likes coffee.",
+      "proposed": "The teachers like coffee.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-03",
+      "kind": "positive",
+      "original": "There are a book under the chair.",
+      "proposed": "There is a book under the chair.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-04",
+      "kind": "positive",
+      "original": "We might eats outside.",
+      "proposed": "We might eat outside.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-05",
+      "kind": "positive",
+      "original": "Did he ordered tea?",
+      "proposed": "Did he order tea?",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-06",
+      "kind": "positive",
+      "original": "I ordered five sandwich.",
+      "proposed": "I ordered five sandwiches.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-07",
+      "kind": "positive",
+      "original": "They have worked since seven weeks.",
+      "proposed": "They have worked for seven weeks.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-08",
+      "kind": "positive",
+      "original": "The bicycle is more faster.",
+      "proposed": "The bicycle is faster.",
+      "expected_state": "provisional",
+      "rationale": "Clear correction within the declared rule families; review wording separately."
+    },
+    {
+      "id": "challenge-09",
+      "kind": "boundary",
+      "original": "The note says \u201cHe can speaks French\u201d.",
+      "proposed": "The note says \u201cHe can speak French\u201d.",
+      "expected_state": "withheld",
+      "rationale": "Preserve quoted examples; do not silently edit quoted language."
+    },
+    {
+      "id": "challenge-10",
+      "kind": "positive",
+      "original": "The title is more shorter than expected.",
+      "proposed": "The title is shorter than expected.",
+      "expected_state": "provisional",
+      "rationale": "Positive control outside the original examples."
+    },
+    {
+      "id": "challenge-11",
+      "kind": "boundary",
+      "original": "I have lived here since five years ago.",
+      "proposed": "I have lived here for five years ago.",
+      "expected_state": "withheld",
+      "rationale": "Since can introduce a starting point expressed with ago."
+    },
+    {
+      "id": "challenge-12",
+      "kind": "boundary",
+      "original": "I paid for 2.5 book.",
+      "proposed": "I paid for 2.5 books.",
+      "expected_state": "withheld",
+      "rationale": "Fractional numbers are outside the declared integer rule, even when an edit may be useful."
+    },
+    {
+      "id": "challenge-13",
+      "kind": "boundary",
+      "original": "I ordered twenty-two box.",
+      "proposed": "I ordered twenty-two boxes.",
+      "expected_state": "withheld",
+      "rationale": "Compound numbers are outside the supported integer vocabulary."
+    },
+    {
+      "id": "challenge-14",
+      "kind": "boundary",
+      "original": "They likes tea.",
+      "proposed": "They like tea.",
+      "expected_state": "withheld",
+      "rationale": "Singular they uses like too, but the explanation must not assume multiple people."
+    },
+    {
+      "id": "challenge-15",
+      "kind": "boundary",
+      "original": "She walk home yesterday evening.",
+      "proposed": "She walks home yesterday evening.",
+      "expected_state": "withheld",
+      "rationale": "Present-tense change does not repair explicit past context."
+    },
+    {
+      "id": "challenge-16",
+      "kind": "boundary",
+      "original": "I suggest that she work here.",
+      "proposed": "I suggest that she works here.",
+      "expected_state": "withheld",
+      "rationale": "Subjunctive work is acceptable."
+    },
+    {
+      "id": "challenge-17",
+      "kind": "boundary",
+      "original": "There are a chair and two tables.",
+      "proposed": "There is a chair and two tables.",
+      "expected_state": "withheld",
+      "rationale": "Do not treat a coordinated list as a single thing."
+    },
+    {
+      "id": "challenge-18",
+      "kind": "boundary",
+      "original": "My brother and sister work nearby.",
+      "proposed": "My brother and sister works nearby.",
+      "expected_state": "withheld",
+      "rationale": "Compound subject is plural."
+    },
+    {
+      "id": "challenge-19",
+      "kind": "boundary",
+      "original": "I ordered three box sets.",
+      "proposed": "I ordered three boxes sets.",
+      "expected_state": "withheld",
+      "rationale": "Box modifies sets; it does not need a plural ending."
+    },
+    {
+      "id": "challenge-20",
+      "kind": "boundary",
+      "original": "She can takes a break and he need rest.",
+      "proposed": "She can take a break and he need rest.",
+      "expected_state": "withheld",
+      "rationale": "This bounded candidate must not offer a whole corrected sentence with an unreviewed second clause."
+    },
+    {
+      "id": "challenge-21",
+      "kind": "scope",
+      "original": "My cousin swim daily.",
+      "proposed": "My cousin swims daily.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal."
+    },
+    {
+      "id": "challenge-22",
+      "kind": "scope",
+      "original": "She read novels.",
+      "proposed": "She reads novels.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal."
+    },
+    {
+      "id": "challenge-23",
+      "kind": "scope",
+      "original": "He can speaks French.",
+      "proposed": "He can speak Spanish.",
+      "expected_state": "withheld",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal."
+    },
+    {
+      "id": "challenge-24",
+      "kind": "scope",
+      "original": "I eat rice.",
+      "proposed": "I eat rice.",
+      "expected_state": "no_proposal",
+      "rationale": "Unknown morphology, ambiguous tense, extra meaning change, or no proposal."
+    }
+  ]
+}

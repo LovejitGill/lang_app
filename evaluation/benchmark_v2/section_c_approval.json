@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-30",
+  "user_confirmation": "Failures are comfirmed",
+  "prior_draft_sha256": "e9d22049c39012ce08a5c992cacb78a9b0adb1c6454ac7cd6fc0067395e87e85",
+  "confirmed": [
+    {
+      "response_id": "ce5d2024ab0f47c98d7df3623dd0ed5b",
+      "display_row": 8,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "4686cf771b7846d1b4a1725d7d1d348e",
+      "display_row": 10,
+      "engine": "qwen",
+      "outcome": "incorrect_edit"
+    },
+    {
+      "response_id": "cf85886e3d244b9ab84d25c5de7b54c4",
+      "display_row": 16,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "ab5f4bd634124ef7bad109e9ddcf7ef0",
+      "display_row": 21,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "1b476daa6ba642d698f25fbd1c7b9bf9",
+      "display_row": 29,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "1134214c73ac46fc995ec6be27396aaf",
+      "display_row": 31,
+      "engine": "languagetool",
+      "outcome": "incorrect_edit"
+    },
+    {
+      "response_id": "526dc812ef8d451dafa83c3661bc8a35",
+      "display_row": 35,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "460c246986cc432286dc8fbdd3bbe4ef",
+      "display_row": 47,
+      "engine": "qwen",
+      "outcome": "incorrect_edit"
+    },
+    {
+      "response_id": "625ae537df6e4a16888b066f7a975043",
+      "display_row": 59,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "8fd7fcedc38a4e06bc510e3c2287c38b",
+      "display_row": 59,
+      "engine": "qwen",
+      "outcome": "incorrect_edit"
+    }
+  ]
+}

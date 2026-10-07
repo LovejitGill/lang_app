@@ -1,0 +1,483 @@
+{
+  "status": "pending owner review; assistant notes are not approved judgments",
+  "source_sha256": "aee0a4136274ba8aa3d6357bbf655395654f15646c1ec0e0ae441da73246b619",
+  "rows": [
+    {
+      "case_id": "D01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Authored choice avoids the prior unstated bag; model selects a packing question."
+    },
+    {
+      "case_id": "D02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Quotes name and hobby evidence, then asks specifically about hiking."
+    },
+    {
+      "case_id": "D05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Further review: cost question remains somewhat generic. Whether it develops the stated reason usefully needs human judgment."
+    },
+    {
+      "case_id": "D09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "D15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Keeps the unfinished assignment and stated disappointment; does not presume completion."
+    },
+    {
+      "case_id": "D16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Quotes Zoë and weaving, then asks specifically about weaving."
+    },
+    {
+      "case_id": "C06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Direct authored lend/borrow explanation and a clearly labeled illustrative example; no general QA claim."
+    },
+    {
+      "case_id": "C11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Further review: result question preserves the negation but remains generic."
+    },
+    {
+      "case_id": "C13",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Explains the actual prior question using the stated games topic."
+    },
+    {
+      "case_id": "C14",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C15",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "C16",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "N01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Asks the reason for the rice choice instead of confirming the already-stated plan."
+    },
+    {
+      "case_id": "N02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "N03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "N04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "N05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Asks an open question about the actual walk, without assuming scenery or fresh air. The take/took error remains outside the unchanged fast checker."
+    },
+    {
+      "case_id": "N06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Moves beyond the known feeling and caught bus; asks about a subsequent event."
+    },
+    {
+      "case_id": "N07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Further review: soup question is relevant but does not explicitly acknowledge the dairy restriction."
+    },
+    {
+      "case_id": "N08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "N09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Preserved earlier behavior; human quality review remains pending."
+    },
+    {
+      "case_id": "X01",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Retains the packing context without adding a bag, trip or completed donation."
+    },
+    {
+      "case_id": "X02",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Acknowledges the stated frustration and asks about help with the unfinished repair."
+    },
+    {
+      "case_id": "X03",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Does not reask the supplied recipe-choice reason or day; asks about preparation."
+    },
+    {
+      "case_id": "X04",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Does not reask the known travel purpose or relief. Review whether the subsequent-event question feels natural in this context."
+    },
+    {
+      "case_id": "X05",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Recalls separate name and hobby statements, then follows the hobby."
+    },
+    {
+      "case_id": "X06",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Quotes newer negative and positive hobby evidence; adds no question."
+    },
+    {
+      "case_id": "X07",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Quotes the learner’s unchosen-hobby statement; does not adopt roommate/tutor interests."
+    },
+    {
+      "case_id": "X08",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Reversed pair order still receives a direct consistent definition/example."
+    },
+    {
+      "case_id": "X09",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Names charge/fine and asks for missing sentence context; does not invent meanings for an absent sentence."
+    },
+    {
+      "case_id": "X10",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Simplifies the result question and resolves it to the learner’s stated stew."
+    },
+    {
+      "case_id": "X11",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Requests the missing actual question rather than inventing history."
+    },
+    {
+      "case_id": "X12",
+      "reply_useful": null,
+      "facts_preserved": null,
+      "natural_followup": null,
+      "correction_appropriate": null,
+      "owner_review_status": "pending",
+      "assistant_note": "Explains the first question about interest in singing; does not answer the frequency question."
+    }
+  ]
+}

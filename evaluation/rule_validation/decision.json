@@ -1,0 +1,13 @@
+{
+  "source_sha256": "6f025bc2e649df117b8bfe16e17470a0ba7b91e55b333ee1354229cc44397918",
+  "selected": false,
+  "reason": "At most 1/20 useful corrections can be delivered; frozen minimum is 12/20.",
+  "offered_corrections": 1,
+  "maximum_possible_useful_feedback": 1,
+  "denominator": 20,
+  "human_useful_feedback": null,
+  "raw_reference_matches_on_errors": 20,
+  "false_offers_on_correct_inputs": 0,
+  "unavailable": 0,
+  "next": "Redesign coverage using development data; no rule edits based on this validation followed by claiming a fresh held-out pass. New independent inputs required after tuning."
+}

@@ -1,0 +1,47 @@
+{
+  "frozen_on": "2026-09-30",
+  "name": "Whole corrected sentence with Python-derived spans v1",
+  "model": "qwen3:4b",
+  "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "dataset_sha256": "fc60b1261d36ec59719ec37d54cabd5865152d00d3c1ac6af6d39d24a9cb4f63",
+  "baseline_sha256": "587b52ee92cbfd8b2c60b566bc653433c4f52615640c8e970760937d8d53d1ed",
+  "prompt_sha256": "324377e98052dcecfe02e56d18a473e28deda60c84020b60b6fc30f8ed2c3e67",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "corrected_text": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      },
+      "explanation": {
+        "type": "string",
+        "maxLength": 240
+      }
+    },
+    "required": [
+      "corrected_text",
+      "explanation"
+    ],
+    "additionalProperties": false
+  },
+  "settings": {
+    "think": false,
+    "temperature": 0.2,
+    "num_predict": 256,
+    "num_ctx": 4096,
+    "seed": "unset",
+    "retries": 0
+  },
+  "scope": "Development only. Compare one candidate run to the finalized archived Qwen4B baseline, not a contemporaneous randomized speed trial. No app changes or held-out inference.",
+  "change": "Request corrected_text plus one explanation; derive at most two token edit regions using exact Python offsets. Same example sentences, model and decoding settings; explanation instructions retain the actual-rule requirement. The schema changes how explanations are represented (one per response).",
+  "mechanical_rejection": "Wrong keys/types/bounds, changed text without explanation, unchanged text with nonempty explanation, more than two derived regions, or failure to reconstruct. Retain raw output; rejection is not a no-error success.",
+  "selection_requirements": [
+    "All 30 acceptable inputs remain unchanged without rejection or service failure.",
+    "More than 17/30 useful explained corrections under the approved rubric and no decrease below baseline accepted-edit precision (80%).",
+    "Rejection count must not exceed baseline 4/60; no mean/median-only latency claims.",
+    "Before adoption, select on development, then review/freeze fresh held-out labels and meet the existing two-run held-out gates."
+  ],
+  "diagnostics": "Exact-reference sentence matches and reconstruction are mechanical diagnostics, not semantic success. Review all changed/rejected sentences and explanations. Repeat a promising candidate before attributing improvement to the design.",
+  "learning_limitations": "Token diff may produce more than one region for one linguistic edit; human review must resolve alignment rather than forcing one-to-one edit counts. Output schema alone cannot establish correctness, meaning preservation or pronunciation."
+}

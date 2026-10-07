@@ -1,0 +1,21 @@
+{
+  "status": "not selected for held-out validation or app integration",
+  "reason": "Fails frozen criterion: all 30 acceptable inputs must remain unchanged without failure; observed 29/30. Row 58 is an unnecessary rewrite accompanied by an incorrect grammar claim.",
+  "diagnostics": {
+    "attempts": 60,
+    "failures": 0,
+    "median_seconds": 4.3235,
+    "p95_seconds_nearest_rank": 7.4571,
+    "maximum_seconds": 15.6385,
+    "unchanged_correct_inputs": 29,
+    "exact_reference_matches_on_errors": 29,
+    "warning": "Exact-reference matching is diagnostic only, not a useful-feedback score. Alternative valid corrections may differ. Human explanation and meaning review required."
+  },
+  "useful_feedback_score": null,
+  "why_score_null": "Candidate explanations and meaning have not completed human review; exact-reference matches must not be substituted for useful-feedback scores.",
+  "baseline_correct_edits": 20,
+  "candidate_exact_reference_error_matches": 29,
+  "source_sha256": "eddc68d8127197875af55d6c0dc09fce553ad50b3a9965d5818b5ed3c66558c0",
+  "protocol_sha256": "084abae44964b0e1e21d7d512b616500e042244f6e60cde9a21cc6de14aec994",
+  "next_step": "Review focused explanation/overcorrection failures. Preserve this format as an experimental branch of evaluation; select one separately versioned next change before further inference. Do not promote based on sentence-match improvement alone."
+}

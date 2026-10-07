@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-30",
+  "source_sha256": "44ae461437227785a1e2cbf0aefa6fb35f0fa3498fa98a8f4c451497ab3cecd5",
+  "purpose": "Carry existing explicit user failure judgments into scorecard without requesting duplicate approval.",
+  "confirmed": [
+    {
+      "response_id": "6e08b437647649a8b4deb202b6d00705",
+      "display_row": 6,
+      "engine": "qwen",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "d8341c7cdbc54de3bf3fc6623d66e739",
+      "display_row": 6,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "a1c182a045434491b7d2c689ee72821c",
+      "display_row": 18,
+      "engine": "qwen",
+      "outcome": "rejected"
+    },
+    {
+      "response_id": "f538a2834d964269a473040c3099572c",
+      "display_row": 25,
+      "engine": "qwen",
+      "outcome": "rejected"
+    },
+    {
+      "response_id": "b3678ce02df24c90b02a4b4c65e5d0a1",
+      "display_row": 45,
+      "engine": "qwen",
+      "outcome": "incorrect_edit"
+    },
+    {
+      "response_id": "ba27a562223c420396e76656ded03224",
+      "display_row": 55,
+      "engine": "languagetool",
+      "outcome": "missed"
+    },
+    {
+      "response_id": "93dc54b010e847349726bcd105a71bd5",
+      "display_row": 55,
+      "engine": "qwen",
+      "outcome": "rejected"
+    },
+    {
+      "response_id": "9b9d857c39e34219b3e3bc0e8b61355e",
+      "display_row": 57,
+      "engine": "qwen",
+      "outcome": "rejected"
+    }
+  ]
+}

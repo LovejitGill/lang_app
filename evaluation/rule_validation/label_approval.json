@@ -1,0 +1,7 @@
+{
+  "quote": "approve",
+  "reviewed_on": "2026-09-30",
+  "scope": "All 40 displayed held-out labels; not model outputs or integration.",
+  "pending_sha256": "f2edd59958f442ecfd1856a9e96b07745fc23483f941968ef7de600ca057eafa",
+  "approved_sha256": "3d4c080d63590ec600e3ff3ea0e0bfc01ada8155ce0f05910139adf264447530"
+}

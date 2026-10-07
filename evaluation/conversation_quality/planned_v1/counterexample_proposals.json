@@ -1,0 +1,302 @@
+{
+  "created_on": "2026-10-06",
+  "scope": "Twelve proposed development counterexamples for the next conversation iteration. No model calls or human approvals recorded. Expectations are assistant-authored proposals, not scored results.",
+  "case_count": 12,
+  "cases": [
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": false,
+      "id": "X01",
+      "text": "I packed four blankets for the shelter, but I left the pillows at home.",
+      "history": [],
+      "expectation": "Follow the blankets or shelter donation and preserve that the pillows were left behind. Ask an unanswered question without assuming a bag, suitcase, trip, or delivered donation.",
+      "failure_signal": [
+        "Invents a container, journey, or delivery as fact",
+        "Treats the pillows as packed",
+        "Treats the already-stated shelter purpose as unknown"
+      ],
+      "focus": "packing; object negation; no invented setting",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": false,
+      "id": "X02",
+      "text": "I couldn't repair the chair, and I feel frustrated.",
+      "history": [
+        {
+          "learner_text": "One leg of my kitchen chair is loose.",
+          "tutor_reply": "What have you tried so far?"
+        }
+      ],
+      "expectation": "Acknowledge the stated frustration briefly and ask what made the chair repair difficult or what the learner plans next. Preserve that the repair was not completed; do not pretend to know its cause.",
+      "failure_signal": [
+        "Presupposes successful completion",
+        "Reasks how the learner feels without acknowledging frustration",
+        "Invents a missing tool or other cause",
+        "Repeats the previous what-have-you-tried question"
+      ],
+      "focus": "unfinished action; emotion; prior-question repetition",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": false,
+      "id": "X03",
+      "text": "I'm going to bake bread with my neighbor on Sunday.",
+      "history": [
+        {
+          "learner_text": "We chose a rye bread recipe because my neighbor likes rye.",
+          "tutor_reply": "When are you planning to bake it?"
+        }
+      ],
+      "expectation": "Treat baking as a future plan. Build on the known bread, companion, recipe, reason and day with an unanswered question about preparation or division of work.",
+      "failure_signal": [
+        "Reasks when, with whom, what bread, or why rye",
+        "Asks how the bread tasted or turned out already",
+        "Confirms the entire already-stated plan in a yes/no question",
+        "Invents a first attempt or successful bake"
+      ],
+      "focus": "future action; answered facts across turns",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": false,
+      "id": "X04",
+      "text": "My son caught the ferry and is relieved.",
+      "history": [
+        {
+          "learner_text": "My son needs the ferry to reach his college interview.",
+          "tutor_reply": "Did he catch it?"
+        }
+      ],
+      "expectation": "Preserve the successful ferry connection and relief. Acknowledge relief or continue to the upcoming interview with an unanswered question, without assuming the interview happened or went well.",
+      "failure_signal": [
+        "Reasks whether he caught it or how he feels as though unknown",
+        "Says he missed it or is upset",
+        "Reasks where he is going despite the interview purpose",
+        "Invents an interview result or punctual arrival"
+      ],
+      "focus": "successful transport; stated emotion; future event",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "introductions",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X05",
+      "text": "Can you remind me of my name and hobby?",
+      "history": [
+        {
+          "learner_text": "Please call me Ana.",
+          "tutor_reply": "What do you like doing after work?"
+        },
+        {
+          "learner_text": "I enjoy birdwatching.",
+          "tutor_reply": "Where do you usually watch birds?"
+        },
+        {
+          "learner_text": "Usually at the marsh near my home.",
+          "tutor_reply": "What birds have you seen there?"
+        }
+      ],
+      "expectation": "Answer Ana and birdwatching from separate learner turns. If adding a follow-up, connect it specifically to birdwatching without repeating the prior location or species question.",
+      "failure_signal": [
+        "Loses name or hobby because they occur in separate turns",
+        "Treats marsh as the hobby",
+        "Adds only Tell me more about that",
+        "Repeats a prior question or invents bird species"
+      ],
+      "focus": "positive recall; separate facts; relevant follow-up",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "intermediate",
+      "scenario": "introductions",
+      "require_followup": false,
+      "direct_answer_applicable": true,
+      "id": "X06",
+      "text": "What hobby do I enjoy now? Please don't ask another question.",
+      "history": [
+        {
+          "learner_text": "I enjoy jogging.",
+          "tutor_reply": "Where do you run?"
+        },
+        {
+          "learner_text": "I don't enjoy jogging anymore. Now I enjoy making jewelry.",
+          "tutor_reply": "What do you like making?"
+        },
+        {
+          "learner_text": "Mostly earrings.",
+          "tutor_reply": "What materials do you use?"
+        }
+      ],
+      "expectation": "Answer making jewelry as the current hobby, respecting no follow-up. Preserve the newer negation of jogging without confusing earrings with an unrelated hobby.",
+      "failure_signal": [
+        "Calls jogging current",
+        "Reports only the negative fact and misses making jewelry",
+        "Adds any follow-up question",
+        "Invents a reason for the change"
+      ],
+      "focus": "changed hobby; newer positive fact; no-follow-up control",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "introductions",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X07",
+      "text": "What hobby did I tell you I enjoy?",
+      "history": [
+        {
+          "learner_text": "My roommate enjoys ceramics. I haven't chosen a hobby.",
+          "tutor_reply": "You might enjoy photography."
+        }
+      ],
+      "expectation": "Say the learner has not named a hobby they enjoy, using their own statement. Ask about possible interests without assigning the roommate's ceramics or the tutor's photography suggestion to the learner.",
+      "failure_signal": [
+        "Answers ceramics or photography as the learner's stated hobby",
+        "Claims the learner dislikes hobbies",
+        "Uses a generic missing-person-or-place fallback",
+        "Ignores the not-yet-chosen statement"
+      ],
+      "focus": "unknown learner fact; other-person interest; assistant evidence contamination",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X08",
+      "text": "What's the difference between borrow and lend?",
+      "history": [],
+      "expectation": "Explain simply that borrow means receive something temporarily and lend means give it temporarily, with a consistent example using the same giver and receiver. Handle reversed pair order and the contraction.",
+      "failure_signal": [
+        "Reverses giver and receiver",
+        "Only says the mode cannot answer",
+        "Requests more context before this straightforward distinction",
+        "Examples contradict the explanation"
+      ],
+      "focus": "language reference; reversed pair order; direct answer",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "intermediate",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X09",
+      "text": "What is the difference between charge and fine in this sentence?",
+      "history": [],
+      "expectation": "Notice the sentence is absent and ask for it, naming charge and fine. A brief general distinction is acceptable but must not invent missing context or assume which meanings apply.",
+      "failure_signal": [
+        "Invents a sentence or legal situation as user context",
+        "Claims exact meanings here without the sentence",
+        "Gives only an unsupported-mode statement",
+        "Substitutes a lend/borrow answer"
+      ],
+      "focus": "language reference ambiguity; missing context; unknown pair boundary",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X10",
+      "text": "What do you mean by that question?",
+      "history": [
+        {
+          "learner_text": "I made lentil stew for dinner.",
+          "tutor_reply": "How did it turn out?"
+        }
+      ],
+      "expectation": "Explain the question asks about the result of cooking the stew, in simpler words such as asking how it tasted. Preserve the actual question and referent.",
+      "failure_signal": [
+        "Asks which question despite exactly one recent question",
+        "Repeats turn out without explanation",
+        "Explains an unrelated stored question",
+        "Claims the stew tasted good"
+      ],
+      "focus": "clarification; idiom; actual prior question",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X11",
+      "text": "Please explain your last question in simpler words.",
+      "history": [],
+      "expectation": "State briefly that the previous question is unavailable and ask the learner to paste or repeat it. Do not invent a previous tutor question.",
+      "failure_signal": [
+        "Invents a prior question",
+        "Claims to remember absent context",
+        "Explains a canned rewarding or turn-out question without evidence",
+        "Gives only a generic unsupported-mode disclaimer"
+      ],
+      "focus": "clarification with missing history",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    },
+    {
+      "level": "beginner",
+      "scenario": "daily activities",
+      "require_followup": true,
+      "direct_answer_applicable": true,
+      "id": "X12",
+      "text": "I don't understand the first question.",
+      "history": [
+        {
+          "learner_text": "I joined a choir last month.",
+          "tutor_reply": "What drew you to singing? How often do you practice?"
+        }
+      ],
+      "expectation": "Explain the first question as asking why the learner became interested in singing or joined the choir. Respect first instead of explaining practice frequency.",
+      "failure_signal": [
+        "Explains the second question",
+        "Asks which despite the explicit first reference",
+        "Repeats drew you without simplifying",
+        "Invents a reason such as family encouragement"
+      ],
+      "focus": "clarification; multiple questions; ordinal reference",
+      "origin": "Assistant-proposed development counterexample after inspection of natural_v4; not held-out or owner-approved.",
+      "human_judgment": null,
+      "quality_requirements": "Simple English; no padded example/detail endings; preserve person, tense and negation; answer applicable direct questions; add one relevant unanswered question only when appropriate."
+    }
+  ]
+}

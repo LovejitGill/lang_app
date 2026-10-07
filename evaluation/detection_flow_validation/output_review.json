@@ -1,0 +1,1186 @@
+{
+  "source": "results.json",
+  "source_sha256": "e9ae2ada70dc5b5a698fa1717b7384eceae4faaad56767062f98efab6759a938",
+  "status": "Input labels approved; actual model output judgments pending.",
+  "rows": [
+    {
+      "id": "E1",
+      "case_id": "flow-error-01",
+      "original": "Did your manager approved the schedule?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did your manager approve the schedule?",
+        "explanation": "Use singular verb 'approve' with singular subject 'manager'.",
+        "corrections": [
+          {
+            "start": 17,
+            "end": 25,
+            "original": "approved",
+            "replacement": "approve",
+            "explanation": "Use singular verb 'approve' with singular subject 'manager'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘approve’, not ‘approved’.",
+        "edit": {
+          "start": 17,
+          "end": 25,
+          "original": "approved",
+          "replacement": "approve"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C1",
+      "case_id": "flow-correct-01",
+      "original": "Did your manager approve the schedule?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did your manager approve the schedule?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E2",
+      "case_id": "flow-error-02",
+      "original": "Did Elena borrowed your umbrella?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did Elena borrow your umbrella?",
+        "explanation": "Use borrow for the past tense of borrow, not borrowed.",
+        "corrections": [
+          {
+            "start": 10,
+            "end": 18,
+            "original": "borrowed",
+            "replacement": "borrow",
+            "explanation": "Use borrow for the past tense of borrow, not borrowed.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘borrow’, not ‘borrowed’.",
+        "edit": {
+          "start": 10,
+          "end": 18,
+          "original": "borrowed",
+          "replacement": "borrow"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C2",
+      "case_id": "flow-correct-02",
+      "original": "Did Elena borrow your umbrella?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did Elena borrow your umbrella?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E3",
+      "case_id": "flow-error-03",
+      "original": "Did the courier delivered the package?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did the courier deliver the package?",
+        "explanation": "Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.",
+        "corrections": [
+          {
+            "start": 16,
+            "end": 25,
+            "original": "delivered",
+            "replacement": "deliver",
+            "explanation": "Use deliver (past tense) instead of delivered (past participle) after the auxiliary verb 'did'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘deliver’, not ‘delivered’.",
+        "edit": {
+          "start": 16,
+          "end": 25,
+          "original": "delivered",
+          "replacement": "deliver"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C3",
+      "case_id": "flow-correct-03",
+      "original": "Did you forget the password?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did you forget the password?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E4",
+      "case_id": "flow-error-04",
+      "original": "Did our neighbors moved last month?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did our neighbors move last month?",
+        "explanation": "Use singular verb 'move' for the plural subject 'neighbors'.",
+        "corrections": [
+          {
+            "start": 18,
+            "end": 23,
+            "original": "moved",
+            "replacement": "move",
+            "explanation": "Use singular verb 'move' for the plural subject 'neighbors'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘move’, not ‘moved’.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "moved",
+          "replacement": "move"
+        },
+        "match_index": 1,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C4",
+      "case_id": "flow-correct-04",
+      "original": "Did they choose a different route?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did they choose a different route?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E5",
+      "case_id": "flow-error-05",
+      "original": "Did you forgot the password?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did you forget the password?",
+        "explanation": "Use forget with the past tense verb for the question structure.",
+        "corrections": [
+          {
+            "start": 8,
+            "end": 14,
+            "original": "forgot",
+            "replacement": "forget",
+            "explanation": "Use forget with the past tense verb for the question structure.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘forget’, not ‘forgot’.",
+        "edit": {
+          "start": 8,
+          "end": 14,
+          "original": "forgot",
+          "replacement": "forget"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C5",
+      "case_id": "flow-correct-05",
+      "original": "I bought six oranges.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "I bought six oranges.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E6",
+      "case_id": "flow-error-06",
+      "original": "Did the mechanic fixed the engine?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did the mechanic fix the engine?",
+        "explanation": "Use past tense verb 'fix' instead of 'fixed' for the question.",
+        "corrections": [
+          {
+            "start": 17,
+            "end": 22,
+            "original": "fixed",
+            "replacement": "fix",
+            "explanation": "Use past tense verb 'fix' instead of 'fixed' for the question.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘fix’, not ‘fixed’.",
+        "edit": {
+          "start": 17,
+          "end": 22,
+          "original": "fixed",
+          "replacement": "fix"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C6",
+      "case_id": "flow-correct-06",
+      "original": "We packed nine towels.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "We packed nine towels.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E7",
+      "case_id": "flow-error-07",
+      "original": "Did they chose a different route?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did they choose a different route?",
+        "explanation": "Use choose for the past tense of the verb 'choose' in the question.",
+        "corrections": [
+          {
+            "start": 9,
+            "end": 14,
+            "original": "chose",
+            "replacement": "choose",
+            "explanation": "Use choose for the past tense of the verb 'choose' in the question.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘choose’, not ‘chose’.",
+        "edit": {
+          "start": 9,
+          "end": 14,
+          "original": "chose",
+          "replacement": "choose"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C7",
+      "case_id": "flow-correct-07",
+      "original": "I counted seven cherries.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "I counted seven cherries.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E8",
+      "case_id": "flow-error-08",
+      "original": "Did your brother broke the glass?",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "Did your brother break the glass?",
+        "explanation": "Use past tense verb 'break' instead of 'broke' for the correct past tense form.",
+        "corrections": [
+          {
+            "start": 17,
+            "end": 22,
+            "original": "broke",
+            "replacement": "break",
+            "explanation": "Use past tense verb 'break' instead of 'broke' for the correct past tense form.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "DID_PAST",
+        "explanation": "‘Did’ already marks the past, so use ‘break’, not ‘broke’.",
+        "edit": {
+          "start": 17,
+          "end": 22,
+          "original": "broke",
+          "replacement": "break"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "DID_BASEFORM",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C8",
+      "case_id": "flow-correct-08",
+      "original": "We washed five dishes.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "We washed five dishes.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E9",
+      "case_id": "flow-error-09",
+      "original": "I bought six orange.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "I bought six oranges.",
+        "explanation": "Plural form of orange is oranges.",
+        "corrections": [
+          {
+            "start": 13,
+            "end": 19,
+            "original": "orange",
+            "replacement": "oranges",
+            "explanation": "Plural form of orange is oranges.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Six’ means more than one, so use the plural ‘oranges’.",
+        "edit": {
+          "start": 13,
+          "end": 19,
+          "original": "orange",
+          "replacement": "oranges"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C9",
+      "case_id": "flow-correct-09",
+      "original": "Did the person called Alex leave early?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did the person called Alex leave early?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E10",
+      "case_id": "flow-error-10",
+      "original": "We packed nine towel.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "We packed nine towels.",
+        "explanation": "Plural form of 'towel' is 'towels'.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 20,
+            "original": "towel",
+            "replacement": "towels",
+            "explanation": "Plural form of 'towel' is 'towels'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Nine’ means more than one, so use the plural ‘towels’.",
+        "edit": {
+          "start": 15,
+          "end": 20,
+          "original": "towel",
+          "replacement": "towels"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C10",
+      "case_id": "flow-correct-10",
+      "original": "Did you see the damaged window?",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "Did you see the damaged window?",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E11",
+      "case_id": "flow-error-11",
+      "original": "They found four feather.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "They found four feathers.",
+        "explanation": "Plural form of 'feather' is 'feathers'.",
+        "corrections": [
+          {
+            "start": 16,
+            "end": 23,
+            "original": "feather",
+            "replacement": "feathers",
+            "explanation": "Plural form of 'feather' is 'feathers'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Four’ means more than one, so use the plural ‘feathers’.",
+        "edit": {
+          "start": 16,
+          "end": 23,
+          "original": "feather",
+          "replacement": "feathers"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C11",
+      "case_id": "flow-correct-11",
+      "original": "I bought four coffee mugs.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "I bought four coffee mugs.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E12",
+      "case_id": "flow-error-12",
+      "original": "I collected twelve button.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "I collected twelve buttons.",
+        "explanation": "Plural form of 'button' is 'buttons'.",
+        "corrections": [
+          {
+            "start": 19,
+            "end": 25,
+            "original": "button",
+            "replacement": "buttons",
+            "explanation": "Plural form of 'button' is 'buttons'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Twelve’ means more than one, so use the plural ‘buttons’.",
+        "edit": {
+          "start": 19,
+          "end": 25,
+          "original": "button",
+          "replacement": "buttons"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C12",
+      "case_id": "flow-correct-12",
+      "original": "We watched seven sheep.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "We watched seven sheep.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E13",
+      "case_id": "flow-error-13",
+      "original": "We ordered eight cup.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "We ordered eight cups.",
+        "explanation": "Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.",
+        "corrections": [
+          {
+            "start": 17,
+            "end": 20,
+            "original": "cup",
+            "replacement": "cups",
+            "explanation": "Use plural noun 'cups' for the countable object 'cup' when referring to multiple items.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Eight’ means more than one, so use the plural ‘cups’.",
+        "edit": {
+          "start": 17,
+          "end": 20,
+          "original": "cup",
+          "replacement": "cups"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C13",
+      "case_id": "flow-correct-13",
+      "original": "They photographed three deer.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "They photographed three deer.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E14",
+      "case_id": "flow-error-14",
+      "original": "They planted fifteen seed.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "They planted fifteen seeds.",
+        "explanation": "Plural form of 'seed' is 'seeds'.",
+        "corrections": [
+          {
+            "start": 21,
+            "end": 25,
+            "original": "seed",
+            "replacement": "seeds",
+            "explanation": "Plural form of 'seed' is 'seeds'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Fifteen’ means more than one, so use the plural ‘seeds’.",
+        "edit": {
+          "start": 21,
+          "end": 25,
+          "original": "seed",
+          "replacement": "seeds"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C14",
+      "case_id": "flow-correct-14",
+      "original": "I bought a six-cup tray.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "I bought a six-cup tray.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E15",
+      "case_id": "flow-error-15",
+      "original": "I counted seven cherry.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "I counted seven cherries.",
+        "explanation": "Pluralize 'cherry' to 'cherries' for countable nouns.",
+        "corrections": [
+          {
+            "start": 16,
+            "end": 22,
+            "original": "cherry",
+            "replacement": "cherries",
+            "explanation": "Pluralize 'cherry' to 'cherries' for countable nouns.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "SPEAKWELL_COUNT_HEAD",
+        "explanation": "‘Seven’ means more than one, so use the plural ‘cherries’.",
+        "edit": {
+          "start": 16,
+          "end": 22,
+          "original": "cherry",
+          "replacement": "cherries"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "canonical_rule_id": "CD_NN",
+        "evidence_source": "supplemental"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C15",
+      "case_id": "flow-correct-15",
+      "original": "We need more equipment.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "We need more equipment.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "E16",
+      "case_id": "flow-error-16",
+      "original": "We washed five dish.",
+      "expected_error": true,
+      "model_proposal": {
+        "corrected_text": "We washed five dishes.",
+        "explanation": "Plural form of 'dish' is 'dishes'.",
+        "corrections": [
+          {
+            "start": 15,
+            "end": 19,
+            "original": "dish",
+            "replacement": "dishes",
+            "explanation": "Plural form of 'dish' is 'dishes'.",
+            "explanation_scope": "whole response"
+          }
+        ]
+      },
+      "decision": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Five’ means more than one, so use the plural ‘dishes’.",
+        "edit": {
+          "start": 15,
+          "end": 19,
+          "original": "dish",
+          "replacement": "dishes"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "id": "C16",
+      "case_id": "flow-correct-16",
+      "original": "I paid five dollars.",
+      "expected_error": false,
+      "model_proposal": {
+        "corrected_text": "I paid five dollars.",
+        "explanation": "",
+        "corrections": []
+      },
+      "decision": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim.",
+        "evidence_source": "builtin"
+      },
+      "reference_match": true,
+      "flags": [],
+      "human_review": {
+        "correct_necessary_edit": null,
+        "meaning_preserved": null,
+        "explanation_accurate": null,
+        "useful_feedback": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}

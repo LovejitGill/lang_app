@@ -1,0 +1,426 @@
+{
+  "reviewer": "Assistant qualitative review; independent human review pending",
+  "raw_sha256": "7cb9a808d60902c617bbf978d43742f3da2eb030cc9e4542cc29baf68084c2db",
+  "runs": [
+    {
+      "run": 1,
+      "correct_inputs_appropriately_unchanged": 10,
+      "useful_corrections": 4,
+      "incorrect_inputs": 10,
+      "rejected_responses": 1,
+      "gate_pass": false,
+      "median_seconds": 1.329
+    },
+    {
+      "run": 2,
+      "correct_inputs_appropriately_unchanged": 10,
+      "useful_corrections": 5,
+      "incorrect_inputs": 10,
+      "rejected_responses": 1,
+      "gate_pass": false,
+      "median_seconds": 1.3165
+    }
+  ],
+  "rows": [
+    {
+      "run": 1,
+      "id": "heldout-01",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-02",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 1,
+      "id": "heldout-03",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-04",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 1,
+      "id": "heldout-05",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-06",
+      "status": "rejected",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Identical university/university proposal rejected; missing a/an correction."
+    },
+    {
+      "run": 1,
+      "id": "heldout-07",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-08",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 1,
+      "id": "heldout-09",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-10",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Expensive without more does not form the required comparative before than."
+    },
+    {
+      "run": 1,
+      "id": "heldout-11",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-12",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Replacing ten with ten years duplicates years and leaves incorrect since; explanation reverses the duration/start distinction."
+    },
+    {
+      "run": 1,
+      "id": "heldout-13",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-14",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Replacing must with have to leaves have to to leave; explanation must have to is wrong."
+    },
+    {
+      "run": 1,
+      "id": "heldout-15",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-16",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Missed expected good at skill collocation. Label merits independent review; accepting it would not change the failed gate."
+    },
+    {
+      "run": 1,
+      "id": "heldout-17",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-18",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 1,
+      "id": "heldout-19",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 1,
+      "id": "heldout-20",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": true,
+      "explanation_accurate": false,
+      "notes": "Replacement enjoy is correct; review explanation separately for each run. Explanation is contradictory and ends unfinished (is the)."
+    },
+    {
+      "run": 2,
+      "id": "heldout-01",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-02",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 2,
+      "id": "heldout-03",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-04",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 2,
+      "id": "heldout-05",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-06",
+      "status": "rejected",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Identical university/university proposal rejected; missing a/an correction."
+    },
+    {
+      "run": 2,
+      "id": "heldout-07",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-08",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 2,
+      "id": "heldout-09",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-10",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Expensive without more does not form the required comparative before than."
+    },
+    {
+      "run": 2,
+      "id": "heldout-11",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-12",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Replacing ten with ten years duplicates years and leaves incorrect since; explanation reverses the duration/start distinction."
+    },
+    {
+      "run": 2,
+      "id": "heldout-13",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-14",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Replacing must with have to leaves have to to leave; explanation must have to is wrong."
+    },
+    {
+      "run": 2,
+      "id": "heldout-15",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-16",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": false,
+      "replacement_correct": false,
+      "explanation_accurate": false,
+      "notes": "Missed expected good at skill collocation. Label merits independent review; accepting it would not change the failed gate."
+    },
+    {
+      "run": 2,
+      "id": "heldout-17",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-18",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    },
+    {
+      "run": 2,
+      "id": "heldout-19",
+      "status": "valid",
+      "appropriate_abstention": true,
+      "useful_correction": false,
+      "replacement_correct": null,
+      "explanation_accurate": null,
+      "notes": "Appropriate empty correction list on acceptable input."
+    },
+    {
+      "run": 2,
+      "id": "heldout-20",
+      "status": "valid",
+      "appropriate_abstention": false,
+      "useful_correction": true,
+      "replacement_correct": true,
+      "explanation_accurate": true,
+      "notes": "Appropriate correction and accurate explanation."
+    }
+  ]
+}

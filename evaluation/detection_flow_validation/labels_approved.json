@@ -1,0 +1,551 @@
+{
+  "version": "targeted-flow-v1-draft",
+  "split": "heldout",
+  "source": "New assistant-authored sentences after candidate freeze; pending project-owner label review. Eight correct inputs pair with references; eight are counterexamples. This is targeted validation, not a representative population sample.",
+  "cases": [
+    {
+      "id": "flow-error-01",
+      "display_id": "E1",
+      "text": "Did your manager approved the schedule?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did your manager approve the schedule?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-01",
+      "display_id": "C1",
+      "text": "Did your manager approve the schedule?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did your manager approve the schedule?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-02",
+      "display_id": "E2",
+      "text": "Did Elena borrowed your umbrella?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did Elena borrow your umbrella?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-02",
+      "display_id": "C2",
+      "text": "Did Elena borrow your umbrella?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did Elena borrow your umbrella?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-03",
+      "display_id": "E3",
+      "text": "Did the courier delivered the package?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did the courier deliver the package?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-03",
+      "display_id": "C3",
+      "text": "Did you forget the password?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did you forget the password?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-04",
+      "display_id": "E4",
+      "text": "Did our neighbors moved last month?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did our neighbors move last month?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-04",
+      "display_id": "C4",
+      "text": "Did they choose a different route?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did they choose a different route?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-05",
+      "display_id": "E5",
+      "text": "Did you forgot the password?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did you forget the password?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-05",
+      "display_id": "C5",
+      "text": "I bought six oranges.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "I bought six oranges."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-06",
+      "display_id": "E6",
+      "text": "Did the mechanic fixed the engine?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did the mechanic fix the engine?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-06",
+      "display_id": "C6",
+      "text": "We packed nine towels.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "We packed nine towels."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-07",
+      "display_id": "E7",
+      "text": "Did they chose a different route?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did they choose a different route?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-07",
+      "display_id": "C7",
+      "text": "I counted seven cherries.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "I counted seven cherries."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-08",
+      "display_id": "E8",
+      "text": "Did your brother broke the glass?",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "Did your brother break the glass?"
+      ],
+      "category": "did_questions",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-08",
+      "display_id": "C8",
+      "text": "We washed five dishes.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "We washed five dishes."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-09",
+      "display_id": "E9",
+      "text": "I bought six orange.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "I bought six oranges."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-09",
+      "display_id": "C9",
+      "text": "Did the person called Alex leave early?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did the person called Alex leave early?"
+      ],
+      "category": "past_participle_modifier",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-10",
+      "display_id": "E10",
+      "text": "We packed nine towel.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "We packed nine towels."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-10",
+      "display_id": "C10",
+      "text": "Did you see the damaged window?",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "Did you see the damaged window?"
+      ],
+      "category": "adjective_after_did",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-11",
+      "display_id": "E11",
+      "text": "They found four feather.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "They found four feathers."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-11",
+      "display_id": "C11",
+      "text": "I bought four coffee mugs.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "I bought four coffee mugs."
+      ],
+      "category": "noun_modifier",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-12",
+      "display_id": "E12",
+      "text": "I collected twelve button.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "I collected twelve buttons."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-12",
+      "display_id": "C12",
+      "text": "We watched seven sheep.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "We watched seven sheep."
+      ],
+      "category": "unchanged_plural",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-13",
+      "display_id": "E13",
+      "text": "We ordered eight cup.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "We ordered eight cups."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-13",
+      "display_id": "C13",
+      "text": "They photographed three deer.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "They photographed three deer."
+      ],
+      "category": "unchanged_plural",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-14",
+      "display_id": "E14",
+      "text": "They planted fifteen seed.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "They planted fifteen seeds."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-14",
+      "display_id": "C14",
+      "text": "I bought a six-cup tray.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "I bought a six-cup tray."
+      ],
+      "category": "compound_modifier",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-15",
+      "display_id": "E15",
+      "text": "I counted seven cherry.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "I counted seven cherries."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-15",
+      "display_id": "C15",
+      "text": "We need more equipment.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "We need more equipment."
+      ],
+      "category": "mass_noun",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-error-16",
+      "display_id": "E16",
+      "text": "We washed five dish.",
+      "expected_error": true,
+      "gold_error_count": 1,
+      "references": [
+        "We washed five dishes."
+      ],
+      "category": "counted_nouns",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    },
+    {
+      "id": "flow-correct-16",
+      "display_id": "C16",
+      "text": "I paid five dollars.",
+      "expected_error": false,
+      "gold_error_count": 0,
+      "references": [
+        "I paid five dollars."
+      ],
+      "category": "correct_plural",
+      "label_review": {
+        "status": "approved",
+        "reviewer": "Project owner",
+        "reviewed_on": "2026-10-01",
+        "rationale": "User confirmed: The reference corrections and acceptable inputs are good; subsequently instructed: run it."
+      }
+    }
+  ]
+}

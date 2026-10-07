@@ -1,0 +1,7 @@
+{
+  "recorded_on": "2026-10-01",
+  "feedback_summary": "User says the previous explanations are correct but do not sufficiently explain why the proposed sentence makes sense.",
+  "interpretation": "Improve sentence-specific teaching value; do not infer approval of rewritten explanations or a complete useful-feedback score.",
+  "source_results_sha256": "100e993671cfb49356408d50f892653c54e287c71d192f312a8c0c6786a6b42d",
+  "active_improvement": "Broader grammar-rule detection with concise explanations; ongoing."
+}

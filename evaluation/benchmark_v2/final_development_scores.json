@@ -1,0 +1,104 @@
+{
+  "status": "FINAL for this development run; project-owner-reviewed, not a held-out benchmark",
+  "review_date": "2026-09-30",
+  "report_sha256": "587b52ee92cbfd8b2c60b566bc653433c4f52615640c8e970760937d8d53d1ed",
+  "review_sha256": "99a43549d0fa4919a5ce8016b811806c6a94f478a1a0ec3760180c6dba2cae05",
+  "metrics": {
+    "languagetool": {
+      "attempts": 60,
+      "failures": 0,
+      "median_seconds": 0.03245,
+      "p95_seconds_nearest_rank": 0.0599,
+      "maximum_seconds": 4.4212,
+      "pending_reviews": 0,
+      "semantic_metrics": {
+        "tp": 21,
+        "fp": 2,
+        "fn": 9,
+        "precision": 0.9130434782608695,
+        "recall": 0.7,
+        "f0_5": 0.860655737704918,
+        "false_correction_rate": 0.0,
+        "useful_feedback_rate": 0.5,
+        "correct_inputs": 30,
+        "incorrect_inputs": 30
+      },
+      "label_status": "reviewed",
+      "per_run": {
+        "1": {
+          "attempts": 60,
+          "failures": 0,
+          "median_seconds": 0.03245,
+          "p95_seconds_nearest_rank": 0.0599,
+          "maximum_seconds": 4.4212,
+          "pending_reviews": 0,
+          "semantic_metrics": {
+            "tp": 21,
+            "fp": 2,
+            "fn": 9,
+            "precision": 0.9130434782608695,
+            "recall": 0.7,
+            "f0_5": 0.860655737704918,
+            "false_correction_rate": 0.0,
+            "useful_feedback_rate": 0.5,
+            "correct_inputs": 30,
+            "incorrect_inputs": 30
+          },
+          "label_status": "reviewed"
+        }
+      }
+    },
+    "qwen": {
+      "attempts": 60,
+      "failures": 4,
+      "median_seconds": 2.75195,
+      "p95_seconds_nearest_rank": 7.3238,
+      "maximum_seconds": 12.6218,
+      "pending_reviews": 0,
+      "semantic_metrics": {
+        "tp": 20,
+        "fp": 5,
+        "fn": 10,
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f0_5": 0.7692307692307693,
+        "false_correction_rate": 0.0,
+        "useful_feedback_rate": 0.5666666666666667,
+        "correct_inputs": 30,
+        "incorrect_inputs": 30
+      },
+      "label_status": "reviewed",
+      "per_run": {
+        "1": {
+          "attempts": 60,
+          "failures": 4,
+          "median_seconds": 2.75195,
+          "p95_seconds_nearest_rank": 7.3238,
+          "maximum_seconds": 12.6218,
+          "pending_reviews": 0,
+          "semantic_metrics": {
+            "tp": 20,
+            "fp": 5,
+            "fn": 10,
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f0_5": 0.7692307692307693,
+            "false_correction_rate": 0.0,
+            "useful_feedback_rate": 0.5666666666666667,
+            "correct_inputs": 30,
+            "incorrect_inputs": 30
+          },
+          "label_status": "reviewed"
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Single reviewer; assistant-proposed judgments; engine names visible.",
+    "Synthetic paired development examples, not representative real-world speech.",
+    "Precision counts accepted edits; four rejected Qwen responses separately count as missed errors.",
+    "Qwen row 16 is a confirmed borderline pass.",
+    "No new held-out inference, model changes, or app integration."
+  ],
+  "decision": "Neither engine meets the project useful-feedback target. No candidate selected for held-out validation or app adoption."
+}

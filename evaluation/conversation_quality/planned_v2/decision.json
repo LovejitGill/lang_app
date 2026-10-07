@@ -1,0 +1,11 @@
+{
+  "status": "not_promoted",
+  "reason": "Targeted output improvements observed; human naturalness review, broader multi-turn coverage and spoken latency still pending.",
+  "source_sha256": "aee0a4136274ba8aa3d6357bbf655395654f15646c1ec0e0ae441da73246b619",
+  "app_integrated": false,
+  "quality_pass_rate": null,
+  "within_two_seconds_text": 53,
+  "text_denominator": 53,
+  "voice_latency_verified": false,
+  "next_improvement": "Review and improve generic/context-sensitive responses under the same budget, then test fresh multi-turn dialogues before integration."
+}

@@ -1,0 +1,22 @@
+{
+  "source_sha256": "e9ae2ada70dc5b5a698fa1717b7384eceae4faaad56767062f98efab6759a938",
+  "status": "passed_targeted_validation",
+  "failed_gates": [],
+  "reference_matches_among_offered_error_corrections": 16,
+  "human_useful_feedback": 16,
+  "human_useful_upper_bound": 16,
+  "required_useful": 13,
+  "error_denominator": 16,
+  "offered_on_correct": 0,
+  "correct_denominator": 16,
+  "unavailable": 0,
+  "flags": [],
+  "app_integration": false,
+  "next": "Prepare an opt-in integration of the reviewed grammar flow, keeping conversational replies and grammar feedback separate. Measure reply and feedback delays separately. Broader explanation refinement remains deferred.",
+  "acceptable_inputs_preserved": 16,
+  "pending_judgments": 0,
+  "reviewed_on": "2026-10-01",
+  "approved_review": "output_review_approved.json",
+  "approved_review_sha256": "4313819050f254fd7a649d68d322675309242de20e5609d0df6f4273fe346e24",
+  "scope": "Eight did-question errors and eight counted-noun errors, plus sixteen acceptable inputs; not broad English or live voice validation."
+}

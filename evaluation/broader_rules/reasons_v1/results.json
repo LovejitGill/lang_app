@@ -1,0 +1,2775 @@
+{
+  "variant": "sentence-specific-reasons-v1",
+  "sources_sha256": {
+    "development": "86c656a01764ba0c3f3320fa692c7850471f7e619c10a1078bc2741571708d6a",
+    "fresh_component": "3dca587eb54d51670418444c24da24b779e1a19347acef78df544ca48fe7c0ca",
+    "checker": "587b52ee92cbfd8b2c60b566bc653433c4f52615640c8e970760937d8d53d1ed"
+  },
+  "code_sha256": {
+    "grammar_rule_detector.py": "81576ff6a80d786acf5b7ef02ca99645309f44c24706f620e61810cb6dc896f4",
+    "grammar_explanation_reasons.py": "9dc2da3aa79133ca9ce78357cd8b3851156299f96a207f8612b5f3febdc21494",
+    "grammar_reason_eval.py": "a36fcd37619d556dcf130062236ae8bb4fc2c20cedde34fbce26c7ff4ba400f8"
+  },
+  "scope": "Wording replay only. Previously fresh component cases are now inspected examples, not new validation. No accuracy approvals inherited for rewritten explanations.",
+  "summary": {
+    "cases": 88,
+    "detection_changes": 0,
+    "offered_explanations": 33,
+    "contextual_drafts": 33,
+    "needs_context_review": 0,
+    "model_calls": 0,
+    "checker_calls": 0
+  },
+  "rows": [
+    {
+      "cohort": "development",
+      "case_id": "development-01",
+      "original": "I live near the station.",
+      "proposed": "I live near the station.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-02",
+      "original": "She walk to work every morning.",
+      "proposed": "She walks to work every morning.",
+      "before": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "With ‘she’, use ‘walks’ in the present tense.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "walk",
+          "replacement": "walks"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "‘She’ is singular, meaning one. In the present tense, use ‘walks’.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "walk",
+          "replacement": "walks"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "With ‘she’, use ‘walks’ in the present tense.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-03",
+      "original": "Could we have separate bills, please?",
+      "proposed": "Could we have separate bills, please?",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-04",
+      "original": "I would like two sandwich, please.",
+      "proposed": "I would like two sandwiches, please.",
+      "before": {
+        "rule_id": "CD_NN",
+        "explanation": "Use a plural noun for more than one item.",
+        "edit": {
+          "start": 17,
+          "end": 25,
+          "original": "sandwich",
+          "replacement": "sandwiches"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Two’ means more than one, so use the plural ‘sandwiches’.",
+        "edit": {
+          "start": 17,
+          "end": 25,
+          "original": "sandwich",
+          "replacement": "sandwiches"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-05",
+      "original": "My sister and I cycle to work.",
+      "proposed": "My sister and I cycle to work.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-06",
+      "original": "I am engineer.",
+      "proposed": "I am an engineer.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-07",
+      "original": "I have been a teacher for six years.",
+      "proposed": "I have been a teacher for six years.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-08",
+      "original": "We visited the museum yesterday and buy a postcard.",
+      "proposed": "We visited the museum yesterday and bought a postcard.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-09",
+      "original": "There is some rice left.",
+      "proposed": "There is some rice left.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-10",
+      "original": "This restaurant is more cheaper than the cafe.",
+      "proposed": "This restaurant is cheaper than the cafe.",
+      "before": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘cheaper’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 19,
+          "end": 31,
+          "original": "more cheaper",
+          "replacement": "cheaper"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "‘Cheaper’ already makes a comparison, so adding ‘more’ repeats the same job.",
+        "edit": {
+          "start": 19,
+          "end": 31,
+          "original": "more cheaper",
+          "replacement": "cheaper"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘cheaper’ without ‘more’ when comparing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-11",
+      "original": "I would rather stay home tonight.",
+      "proposed": "I would rather stay home tonight.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-12",
+      "original": "I have lived here since five years.",
+      "proposed": "I have lived here for five years.",
+      "before": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "‘Five years’ is a length of time, so use ‘for’.",
+        "edit": {
+          "start": 18,
+          "end": 23,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘for’ to say how long something lasts.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-13",
+      "original": "I look forward to meeting you.",
+      "proposed": "I look forward to meeting you.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-14",
+      "original": "He can speaks Spanish.",
+      "proposed": "He can speak Spanish.",
+      "before": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 7,
+          "end": 13,
+          "original": "speaks",
+          "replacement": "speak"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "With ‘can’, the verb stays in its basic form for every subject: ‘speak’.",
+        "edit": {
+          "start": 7,
+          "end": 13,
+          "original": "speaks",
+          "replacement": "speak"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-15",
+      "original": "Neither option appeals to me.",
+      "proposed": "Neither option appeals to me.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-16",
+      "original": "I am interested on photography.",
+      "proposed": "I am interested in photography.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-17",
+      "original": "The soup tastes delicious.",
+      "proposed": "The soup tastes delicious.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-18",
+      "original": "There are a bowl on the table.",
+      "proposed": "There is a bowl on the table.",
+      "before": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "Use ‘there is’ for one thing.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "‘A bowl’ names one thing, so use ‘there is’.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘there is’ for one thing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-19",
+      "original": "I used to play chess after school.",
+      "proposed": "I used to play chess after school.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "development-20",
+      "original": "I did not ordered dessert.",
+      "proposed": "I did not order dessert.",
+      "before": {
+        "rule_id": "DID_BASEFORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 17,
+          "original": "ordered",
+          "replacement": "order"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "DID_BASEFORM",
+        "explanation": "‘Did’ already marks the past, so use ‘order’, not ‘ordered’.",
+        "edit": {
+          "start": 10,
+          "end": 17,
+          "original": "ordered",
+          "replacement": "order"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-01-error",
+      "original": "My aunt drive a bus.",
+      "proposed": "My aunt drives a bus.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-01-correct",
+      "original": "My aunt drives a bus.",
+      "proposed": "My aunt drives a bus.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-02-error",
+      "original": "The students needs more time.",
+      "proposed": "The students need more time.",
+      "before": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "Use the basic verb form with a plural subject.",
+        "edit": {
+          "start": 13,
+          "end": 18,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "‘The students’ means more than one, so use ‘need’ without ‘-s’.",
+        "edit": {
+          "start": 13,
+          "end": 18,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use the basic verb form with a plural subject.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-02-correct",
+      "original": "The students need more time.",
+      "proposed": "The students need more time.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-03-error",
+      "original": "He is an chef.",
+      "proposed": "He is a chef.",
+      "before": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘a’ before a consonant sound.",
+        "edit": {
+          "start": 6,
+          "end": 8,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "‘Chef’ starts with a consonant sound, so use ‘a’.",
+        "edit": {
+          "start": 6,
+          "end": 8,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘a’ before a consonant sound.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-03-correct",
+      "original": "He is a chef.",
+      "proposed": "He is a chef.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-04-error",
+      "original": "We saw a elephant.",
+      "proposed": "We saw an elephant.",
+      "before": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘an’ before a vowel sound.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "‘Elephant’ starts with a vowel sound, so use ‘an’.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘an’ before a vowel sound.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-04-correct",
+      "original": "We saw an elephant.",
+      "proposed": "We saw an elephant.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-05-error",
+      "original": "Last night I watch a film.",
+      "proposed": "Last night I watched a film.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-05-correct",
+      "original": "Last night I watched a film.",
+      "proposed": "Last night I watched a film.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-06-error",
+      "original": "Yesterday she bring her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-06-correct",
+      "original": "Yesterday she brought her lunch.",
+      "proposed": "Yesterday she brought her lunch.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-07-error",
+      "original": "I packed four shirt.",
+      "proposed": "I packed four shirts.",
+      "before": {
+        "rule_id": "CD_NN",
+        "explanation": "Use a plural noun for more than one item.",
+        "edit": {
+          "start": 14,
+          "end": 19,
+          "original": "shirt",
+          "replacement": "shirts"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "CD_NN",
+        "explanation": "‘Four’ means more than one, so use the plural ‘shirts’.",
+        "edit": {
+          "start": 14,
+          "end": 19,
+          "original": "shirt",
+          "replacement": "shirts"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use a plural noun for more than one item.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-07-correct",
+      "original": "I packed four shirts.",
+      "proposed": "I packed four shirts.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-08-error",
+      "original": "We need three box.",
+      "proposed": "We need three boxes.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-08-correct",
+      "original": "We need three boxes.",
+      "proposed": "We need three boxes.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-09-error",
+      "original": "You should takes a break.",
+      "proposed": "You should take a break.",
+      "before": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "takes",
+          "replacement": "take"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "With ‘should’, the verb stays in its basic form for every subject: ‘take’.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "takes",
+          "replacement": "take"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-09-correct",
+      "original": "You should take a break.",
+      "proposed": "You should take a break.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-10-error",
+      "original": "They might arrives early.",
+      "proposed": "They might arrive early.",
+      "before": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 18,
+          "original": "arrives",
+          "replacement": "arrive"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "With ‘might’, the verb stays in its basic form for every subject: ‘arrive’.",
+        "edit": {
+          "start": 11,
+          "end": 18,
+          "original": "arrives",
+          "replacement": "arrive"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-10-correct",
+      "original": "They might arrive early.",
+      "proposed": "They might arrive early.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-11-error",
+      "original": "Does she likes tea?",
+      "proposed": "Does she like tea?",
+      "before": {
+        "rule_id": "DOES_X_HAS",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 9,
+          "end": 14,
+          "original": "likes",
+          "replacement": "like"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "DOES_X_HAS",
+        "explanation": "‘Does’ already matches the subject, so ‘like’ does not take ‘-s’.",
+        "edit": {
+          "start": 9,
+          "end": 14,
+          "original": "likes",
+          "replacement": "like"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-11-correct",
+      "original": "Does she like tea?",
+      "proposed": "Does she like tea?",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-12-error",
+      "original": "He did not wrote the note.",
+      "proposed": "He did not write the note.",
+      "before": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "wrote",
+          "replacement": "write"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "‘Did’ already marks the past, so use ‘write’, not ‘wrote’.",
+        "edit": {
+          "start": 11,
+          "end": 16,
+          "original": "wrote",
+          "replacement": "write"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-12-correct",
+      "original": "He did not write the note.",
+      "proposed": "He did not write the note.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-13-error",
+      "original": "This route is more shorter.",
+      "proposed": "This route is shorter.",
+      "before": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘shorter’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 14,
+          "end": 26,
+          "original": "more shorter",
+          "replacement": "shorter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "‘Shorter’ already makes a comparison, so adding ‘more’ repeats the same job.",
+        "edit": {
+          "start": 14,
+          "end": 26,
+          "original": "more shorter",
+          "replacement": "shorter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘shorter’ without ‘more’ when comparing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-13-correct",
+      "original": "This route is shorter.",
+      "proposed": "This route is shorter.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-14-error",
+      "original": "Today is more colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "before": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘colder’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 9,
+          "end": 20,
+          "original": "more colder",
+          "replacement": "colder"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "‘Colder’ already makes a comparison, so adding ‘more’ repeats the same job.",
+        "edit": {
+          "start": 9,
+          "end": 20,
+          "original": "more colder",
+          "replacement": "colder"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘colder’ without ‘more’ when comparing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-14-correct",
+      "original": "Today is colder than Monday.",
+      "proposed": "Today is colder than Monday.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-15-error",
+      "original": "She has worked here since two months.",
+      "proposed": "She has worked here for two months.",
+      "before": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "‘Two months’ is a length of time, so use ‘for’.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘for’ to say how long something lasts.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-15-correct",
+      "original": "She has worked here for two months.",
+      "proposed": "She has worked here for two months.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-16-error",
+      "original": "They depend of public transport.",
+      "proposed": "They depend on public transport.",
+      "before": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "Use ‘depend on’ when something relies on something else.",
+        "edit": {
+          "start": 5,
+          "end": 14,
+          "original": "depend of",
+          "replacement": "depend on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "‘Depend on’ is a fixed word pair meaning ‘rely on’; ‘depend of’ is not used.",
+        "edit": {
+          "start": 5,
+          "end": 14,
+          "original": "depend of",
+          "replacement": "depend on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘depend on’ when something relies on something else.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-16-correct",
+      "original": "They depend on public transport.",
+      "proposed": "They depend on public transport.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-17-error",
+      "original": "I enjoy to swim.",
+      "proposed": "I enjoy swimming.",
+      "before": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 15,
+          "original": "enjoy to swim",
+          "replacement": "enjoy swimming"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "‘Swimming’ names the activity. After ‘enjoy’, we use this ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 15,
+          "original": "enjoy to swim",
+          "replacement": "enjoy swimming"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-17-correct",
+      "original": "I enjoy swimming.",
+      "proposed": "I enjoy swimming.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-18-error",
+      "original": "She decided studying medicine.",
+      "proposed": "She decided to study medicine.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-18-correct",
+      "original": "She decided to study medicine.",
+      "proposed": "She decided to study medicine.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-19-error",
+      "original": "Please give the key to I.",
+      "proposed": "Please give me the key to I.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-19-correct",
+      "original": "Please give the key to me.",
+      "proposed": "Please give me the key.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-20-error",
+      "original": "This is hers coat.",
+      "proposed": "This is her coat.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "development",
+      "case_id": "v2-development-20-correct",
+      "original": "This is her coat.",
+      "proposed": "This is her coat.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "no_proposal",
+        "reason": "No change proposed; not a correctness claim."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-01",
+      "original": "We should explores the cave.",
+      "proposed": "We should explore the cave.",
+      "before": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 18,
+          "original": "explores",
+          "replacement": "explore"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "NON3PRS_VERB",
+        "explanation": "With ‘should’, the verb stays in its basic form for every subject: ‘explore’.",
+        "edit": {
+          "start": 10,
+          "end": 18,
+          "original": "explores",
+          "replacement": "explore"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-02",
+      "original": "He can repairs the bicycle.",
+      "proposed": "He can repair the bicycle.",
+      "before": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 7,
+          "end": 14,
+          "original": "repairs",
+          "replacement": "repair"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "With ‘can’, the verb stays in its basic form for every subject: ‘repair’.",
+        "edit": {
+          "start": 7,
+          "end": 14,
+          "original": "repairs",
+          "replacement": "repair"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-03",
+      "original": "She might dances tonight.",
+      "proposed": "She might dance tonight.",
+      "before": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "edit": {
+          "start": 10,
+          "end": 16,
+          "original": "dances",
+          "replacement": "dance"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MD_BASEFORM",
+        "explanation": "With ‘might’, the verb stays in its basic form for every subject: ‘dance’.",
+        "edit": {
+          "start": 10,
+          "end": 16,
+          "original": "dances",
+          "replacement": "dance"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After words like ‘can’ or ‘should’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-04",
+      "original": "Did you visited the castle?",
+      "proposed": "Did you visit the castle?",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-05",
+      "original": "He does not calls often.",
+      "proposed": "He does not call often.",
+      "before": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "calls",
+          "replacement": "call"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM",
+        "explanation": "‘Does’ already matches the subject, so ‘call’ does not take ‘-s’.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "calls",
+          "replacement": "call"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘do’, ‘does’, or ‘did’, use the basic verb form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-06",
+      "original": "I packed seven bottle.",
+      "proposed": "I packed seven bottles.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-07",
+      "original": "We found eight coin.",
+      "proposed": "We found eight coins.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-08",
+      "original": "This lamp is more brighter.",
+      "proposed": "This lamp is brighter.",
+      "before": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "Use ‘brighter’ without ‘more’ when comparing.",
+        "edit": {
+          "start": 13,
+          "end": 26,
+          "original": "more brighter",
+          "replacement": "brighter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "MOST_COMPARATIVE",
+        "explanation": "‘Brighter’ already makes a comparison, so adding ‘more’ repeats the same job.",
+        "edit": {
+          "start": 13,
+          "end": 26,
+          "original": "more brighter",
+          "replacement": "brighter"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘brighter’ without ‘more’ when comparing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-09",
+      "original": "She is a honest person.",
+      "proposed": "She is an honest person.",
+      "before": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘an’ before a vowel sound.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "‘Honest’ starts with a vowel sound, so use ‘an’.",
+        "edit": {
+          "start": 7,
+          "end": 8,
+          "original": "a",
+          "replacement": "an"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘an’ before a vowel sound.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-10",
+      "original": "He wears an uniform.",
+      "proposed": "He wears a uniform.",
+      "before": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "Use ‘a’ before a consonant sound.",
+        "edit": {
+          "start": 9,
+          "end": 11,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "EN_A_VS_AN",
+        "explanation": "‘Uniform’ starts with a consonant sound, so use ‘a’.",
+        "edit": {
+          "start": 9,
+          "end": 11,
+          "original": "an",
+          "replacement": "a"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘a’ before a consonant sound.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-11",
+      "original": "I enjoy to sketch.",
+      "proposed": "I enjoy sketching.",
+      "before": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 17,
+          "original": "enjoy to sketch",
+          "replacement": "enjoy sketching"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "ADMIT_ENJOY_VB",
+        "explanation": "‘Sketching’ names the activity. After ‘enjoy’, we use this ‘-ing’ form.",
+        "edit": {
+          "start": 2,
+          "end": 17,
+          "original": "enjoy to sketch",
+          "replacement": "enjoy sketching"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "After ‘enjoy’, use the ‘-ing’ form.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-12",
+      "original": "The kittens needs water.",
+      "proposed": "The kittens need water.",
+      "before": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "Use the basic verb form with a plural subject.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "AGREEMENT_SENT_START",
+        "explanation": "‘The kittens’ means more than one, so use ‘need’ without ‘-s’.",
+        "edit": {
+          "start": 12,
+          "end": 17,
+          "original": "needs",
+          "replacement": "need"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use the basic verb form with a plural subject.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-13",
+      "original": "She bake bread.",
+      "proposed": "She bakes bread.",
+      "before": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "With ‘she’, use ‘bakes’ in the present tense.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "bake",
+          "replacement": "bakes"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "HE_VERB_AGR",
+        "explanation": "‘She’ is singular, meaning one. In the present tense, use ‘bakes’.",
+        "edit": {
+          "start": 4,
+          "end": 8,
+          "original": "bake",
+          "replacement": "bakes"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "With ‘she’, use ‘bakes’ in the present tense.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-14",
+      "original": "We have worked here since six weeks.",
+      "proposed": "We have worked here for six weeks.",
+      "before": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "Use ‘for’ to say how long something lasts.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "SINCE_FOR",
+        "explanation": "‘Six weeks’ is a length of time, so use ‘for’.",
+        "edit": {
+          "start": 20,
+          "end": 25,
+          "original": "since",
+          "replacement": "for"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘for’ to say how long something lasts.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-15",
+      "original": "It depends of the weather.",
+      "proposed": "It depends on the weather.",
+      "before": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "Use ‘depend on’ when something relies on something else.",
+        "edit": {
+          "start": 3,
+          "end": 13,
+          "original": "depends of",
+          "replacement": "depends on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "DEPEND_ON",
+        "explanation": "‘Depend on’ is a fixed word pair meaning ‘rely on’; ‘depend of’ is not used.",
+        "edit": {
+          "start": 3,
+          "end": 13,
+          "original": "depends of",
+          "replacement": "depends on"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘depend on’ when something relies on something else.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-16",
+      "original": "There are a lamp near the window.",
+      "proposed": "There is a lamp near the window.",
+      "before": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "Use ‘there is’ for one thing.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending."
+      },
+      "after": {
+        "rule_id": "THERE_VBP_NN",
+        "explanation": "‘A lamp’ names one thing, so use ‘there is’.",
+        "edit": {
+          "start": 6,
+          "end": 9,
+          "original": "are",
+          "replacement": "is"
+        },
+        "match_index": 0,
+        "state": "provisional",
+        "reason": "Matching local rule and proposal; human review pending.",
+        "previous_explanation": "Use ‘there is’ for one thing.",
+        "reason_status": "contextual_draft"
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-17",
+      "original": "He can repair the bicycle.",
+      "proposed": "He can repairs the bicycle.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-18",
+      "original": "Did you visit the castle?",
+      "proposed": "Did you visited the castle?",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-19",
+      "original": "I packed seven bottles.",
+      "proposed": "I packed seven bottle.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-20",
+      "original": "He wears a uniform.",
+      "proposed": "He wears an uniform.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-21",
+      "original": "She is an honest person.",
+      "proposed": "She is a honest person.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-22",
+      "original": "The can holds paint.",
+      "proposed": "The can hold paint.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-23",
+      "original": "I ask that she bake bread.",
+      "proposed": "I ask that she bakes bread.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-24",
+      "original": "She baked bread yesterday.",
+      "proposed": "She bakes bread yesterday.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-25",
+      "original": "We have worked here since six weeks ago.",
+      "proposed": "We have worked here for six weeks ago.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-26",
+      "original": "The quote is “He can repairs the bicycle”.",
+      "proposed": "The quote is “He can repair the bicycle”.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "Quoted or coordinated text needs review."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-27",
+      "original": "We should explores the cave.",
+      "proposed": "We should explore the forest.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    },
+    {
+      "cohort": "fresh_component",
+      "case_id": "fresh-28",
+      "original": "The cafe serves tea.",
+      "proposed": "The café serves tea.",
+      "before": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "after": {
+        "rule_id": null,
+        "explanation": null,
+        "edit": null,
+        "state": "withheld",
+        "reason": "No single supported rule exactly reconstructs the proposal."
+      },
+      "human_review": {
+        "accurate": null,
+        "explains_why": null,
+        "easy_to_understand": null,
+        "reviewer": ""
+      }
+    }
+  ]
+}
