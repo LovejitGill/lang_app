@@ -1,0 +1,482 @@
+{
+  "created_utc": "2026-10-07T00:54:13.074238+00:00",
+  "protocol_sha256": "3773590f676a068cfc2f2a3a0278afbb400ada60ae8c99810fb24d0d06365b7d",
+  "scope": "Real Streamlit Python AppTest, local Ollama and grammar, temporary SQLite; no browser rendering, microphone, STT or TTS.",
+  "sessions": [
+    [
+      "introductions",
+      [
+        "My name is Imani and I enjoy weaving.",
+        "I enjoy weaving because it helps me relax.",
+        "What is my name and what hobby did I mention? No follow-up."
+      ]
+    ],
+    [
+      "ordering food",
+      [
+        "I can't eat nuts and I would like tomato soup.",
+        "I would like tomato soup because it is warm.",
+        "What do you mean?"
+      ]
+    ],
+    [
+      "daily activities",
+      [
+        "She go to school by bus.",
+        "Thanks, that's enough practice for today."
+      ]
+    ]
+  ],
+  "rows": [
+    {
+      "id": "UI1-T1",
+      "text": "My name is Imani and I enjoy weaving.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 0.1915457949944539,
+      "reply": "Tell me what interests you about weaving.",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "deterministic",
+        "support": "guided_practice",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.08569607300159987
+        },
+        "candidate_seconds": 0.08612604599329643
+      },
+      "reply_seconds": 0.12085334000585135,
+      "feedback": {
+        "turn_id": 1,
+        "job_id": "fc0c6ea5-d857-4fab-bd78-3741e218cb4d",
+        "state": "no_proposal",
+        "reply_seconds": 0.12085334000585135,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.022050056999432854, \"generation\": 19.34671866100689, \"builtin_checker\": 0.04802889100392349, \"supplemental_checker\": 5.974131725990446, \"decision\": 3.0786002753302455e-05}, \"feedback_seconds\": 25.390977792994818, \"total_seconds\": 25.526936971000396}",
+        "session_id": "ace16420-5b7c-4af3-af1a-aa4be5c33410",
+        "learner_text": "My name is Imani and I enjoy weaving.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.022050056999432854,
+            "generation": 19.34671866100689,
+            "builtin_checker": 0.04802889100392349,
+            "supplemental_checker": 5.974131725990446,
+            "decision": 3.0786002753302455e-05
+          },
+          "feedback_seconds": 25.390977792994818,
+          "total_seconds": 25.526936971000396
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "deterministic",
+          "support": "guided_practice",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.08569607300159987
+          },
+          "candidate_seconds": 0.08612604599329643
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI1-T2",
+      "text": "I enjoy weaving because it helps me relax.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 1.4212302999949316,
+      "reply": "What else do you like about weaving?",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "model_selected",
+        "support": "planned_followup",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.1778296330012381
+        },
+        "candidate_seconds": 1.3041122869908577
+      },
+      "reply_seconds": 1.3321862800075905,
+      "feedback": {
+        "turn_id": 2,
+        "job_id": "92745182-35ce-407e-afd3-ded13cf5514a",
+        "state": "no_proposal",
+        "reply_seconds": 1.3321862800075905,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.029193251990363933, \"generation\": 4.630225143002463, \"builtin_checker\": 0.04029325100418646, \"supplemental_checker\": 5.276524909000727, \"decision\": 3.0512994271703064e-05}, \"feedback_seconds\": 9.976282718998846, \"total_seconds\": 11.329617859009886}",
+        "session_id": "ace16420-5b7c-4af3-af1a-aa4be5c33410",
+        "learner_text": "I enjoy weaving because it helps me relax.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.029193251990363933,
+            "generation": 4.630225143002463,
+            "builtin_checker": 0.04029325100418646,
+            "supplemental_checker": 5.276524909000727,
+            "decision": 3.0512994271703064e-05
+          },
+          "feedback_seconds": 9.976282718998846,
+          "total_seconds": 11.329617859009886
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "model_selected",
+          "support": "planned_followup",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.1778296330012381
+          },
+          "candidate_seconds": 1.3041122869908577
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI1-T3",
+      "text": "What is my name and what hobby did I mention? No follow-up.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 0.15015717700589448,
+      "reply": "You said: ‘My name is Imani’ ‘I enjoy weaving.’",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "deterministic",
+        "support": "quoted_recall",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.04025344699039124
+        },
+        "candidate_seconds": 0.04176766199816484
+      },
+      "reply_seconds": 0.06420066599093843,
+      "feedback": {
+        "turn_id": 3,
+        "job_id": "9bd69b87-7685-4647-bcbc-de787c5db987",
+        "state": "no_proposal",
+        "reply_seconds": 0.06420066599093843,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.02553775199339725, \"generation\": 5.72925293300068, \"builtin_checker\": 0.06998745200689882, \"supplemental_checker\": 5.342316677008057, \"decision\": 1.9924002117477357e-05}, \"feedback_seconds\": 11.167128247005166, \"total_seconds\": 11.251758077996783}",
+        "session_id": "ace16420-5b7c-4af3-af1a-aa4be5c33410",
+        "learner_text": "What is my name and what hobby did I mention? No follow-up.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.02553775199339725,
+            "generation": 5.72925293300068,
+            "builtin_checker": 0.06998745200689882,
+            "supplemental_checker": 5.342316677008057,
+            "decision": 1.9924002117477357e-05
+          },
+          "feedback_seconds": 11.167128247005166,
+          "total_seconds": 11.251758077996783
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "deterministic",
+          "support": "quoted_recall",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.04025344699039124
+          },
+          "candidate_seconds": 0.04176766199816484
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI2-T1",
+      "text": "I can't eat nuts and I would like tomato soup.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 1.4974481429962907,
+      "reply": "You can't eat nuts. What made you choose tomato soup?",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "local_fallback",
+        "support": "planned_followup",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.049997501002508216
+        },
+        "candidate_seconds": 1.4074544069881085
+      },
+      "reply_seconds": 1.430975932002184,
+      "feedback": {
+        "turn_id": 4,
+        "job_id": "f5b8fa1a-5a10-46cb-8850-4e318278651f",
+        "state": "no_proposal",
+        "reply_seconds": 1.430975932002184,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.022702690010191873, \"generation\": 4.726734564988874, \"builtin_checker\": 0.040234406988020055, \"supplemental_checker\": 5.4141254629939795, \"decision\": 2.6034002075903118e-05}, \"feedback_seconds\": 10.203837635999662, \"total_seconds\": 11.647005645005265}",
+        "session_id": "49af52d5-88aa-4ffb-9317-b60d8c088bb3",
+        "learner_text": "I can't eat nuts and I would like tomato soup.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.022702690010191873,
+            "generation": 4.726734564988874,
+            "builtin_checker": 0.040234406988020055,
+            "supplemental_checker": 5.4141254629939795,
+            "decision": 2.6034002075903118e-05
+          },
+          "feedback_seconds": 10.203837635999662,
+          "total_seconds": 11.647005645005265
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "local_fallback",
+          "support": "planned_followup",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.049997501002508216
+          },
+          "candidate_seconds": 1.4074544069881085
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI2-T2",
+      "text": "I would like tomato soup because it is warm.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 1.5037931880069664,
+      "reply": "You can't eat nuts. What would you like to have with tomato soup?",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "local_fallback",
+        "support": "planned_followup",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.04325394399347715
+        },
+        "candidate_seconds": 1.4038782919960795
+      },
+      "reply_seconds": 1.4252241399954073,
+      "feedback": {
+        "turn_id": 5,
+        "job_id": "3b96f2b5-8119-4a86-a669-b14bffad28dc",
+        "state": "no_proposal",
+        "reply_seconds": 1.4252241399954073,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.032021610997617245, \"generation\": 4.4349874400068074, \"builtin_checker\": 0.03827705299772788, \"supplemental_checker\": 5.388170853009797, \"decision\": 1.9975996110588312e-05}, \"feedback_seconds\": 9.893492943010642, \"total_seconds\": 11.333825686000637}",
+        "session_id": "49af52d5-88aa-4ffb-9317-b60d8c088bb3",
+        "learner_text": "I would like tomato soup because it is warm.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.032021610997617245,
+            "generation": 4.4349874400068074,
+            "builtin_checker": 0.03827705299772788,
+            "supplemental_checker": 5.388170853009797,
+            "decision": 1.9975996110588312e-05
+          },
+          "feedback_seconds": 9.893492943010642,
+          "total_seconds": 11.333825686000637
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "local_fallback",
+          "support": "planned_followup",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.04325394399347715
+          },
+          "candidate_seconds": 1.4038782919960795
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI2-T3",
+      "text": "What do you mean?",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 0.13064641298842616,
+      "reply": "What else would you like to eat with tomato soup?",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "deterministic",
+        "support": "question_clarification",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.03440965199843049
+        },
+        "candidate_seconds": 0.034767796998494305
+      },
+      "reply_seconds": 0.058019917996716686,
+      "feedback": {
+        "turn_id": 6,
+        "job_id": "8a62ffd4-b080-45d6-bed4-159c8e4eb669",
+        "state": "no_proposal",
+        "reply_seconds": 0.058019917996716686,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.02674689400009811, \"generation\": 3.3892884540109662, \"builtin_checker\": 0.034532816003775224, \"supplemental_checker\": 4.9376460399944335, \"decision\": 1.5685000107623637e-05}, \"feedback_seconds\": 8.388240831001895, \"total_seconds\": 8.456724550007493}",
+        "session_id": "49af52d5-88aa-4ffb-9317-b60d8c088bb3",
+        "learner_text": "What do you mean?",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.02674689400009811,
+            "generation": 3.3892884540109662,
+            "builtin_checker": 0.034532816003775224,
+            "supplemental_checker": 4.9376460399944335,
+            "decision": 1.5685000107623637e-05
+          },
+          "feedback_seconds": 8.388240831001895,
+          "total_seconds": 8.456724550007493
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "deterministic",
+          "support": "question_clarification",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.03440965199843049
+          },
+          "candidate_seconds": 0.034767796998494305
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI3-T1",
+      "text": "She go to school by bus.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 0.9030129429884255,
+      "reply": "How long does her bus journey to school take?",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "local_fallback",
+        "support": "guided_practice",
+        "correction": {
+          "state": "offered",
+          "corrected_text": "She goes to school by bus.",
+          "original": "go",
+          "replacement": "goes",
+          "explanation": "‘She’ is singular, meaning one. In the present tense, use ‘goes’.",
+          "rule_id": "HE_VERB_AGR",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.04131089599104598
+        },
+        "candidate_seconds": 0.819850610991125
+      },
+      "reply_seconds": 0.8396152909990633,
+      "feedback": {
+        "turn_id": 7,
+        "job_id": "5278cd81-5be9-4923-84ac-f510c2d0377a",
+        "state": "offered",
+        "reply_seconds": 0.8396152909990633,
+        "result_json": "{\"state\": \"offered\", \"corrected_text\": \"She goes to school by bus.\", \"edit\": {\"start\": 4, \"end\": 6, \"original\": \"go\", \"replacement\": \"goes\"}, \"explanation\": \"‘She’ is singular, meaning one. In the present tense, use ‘goes’.\", \"rule_id\": \"HE_VERB_AGR\", \"evidence_source\": \"builtin\", \"stage_seconds\": {\"model_check\": 0.02752933299052529, \"generation\": 5.069350531004602, \"builtin_checker\": 0.04018485300184693, \"supplemental_checker\": 5.439464737995877, \"decision\": 0.00014573500084225088}, \"feedback_seconds\": 10.576695626004948, \"total_seconds\": 11.428111908011488}",
+        "session_id": "de215d3b-9425-47e0-8c85-47531e641e0e",
+        "learner_text": "She go to school by bus.",
+        "result": {
+          "state": "offered",
+          "corrected_text": "She goes to school by bus.",
+          "edit": {
+            "start": 4,
+            "end": 6,
+            "original": "go",
+            "replacement": "goes"
+          },
+          "explanation": "‘She’ is singular, meaning one. In the present tense, use ‘goes’.",
+          "rule_id": "HE_VERB_AGR",
+          "evidence_source": "builtin",
+          "stage_seconds": {
+            "model_check": 0.02752933299052529,
+            "generation": 5.069350531004602,
+            "builtin_checker": 0.04018485300184693,
+            "supplemental_checker": 5.439464737995877,
+            "decision": 0.00014573500084225088
+          },
+          "feedback_seconds": 10.576695626004948,
+          "total_seconds": 11.428111908011488
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "local_fallback",
+          "support": "guided_practice",
+          "correction": {
+            "state": "offered",
+            "corrected_text": "She goes to school by bus.",
+            "original": "go",
+            "replacement": "goes",
+            "explanation": "‘She’ is singular, meaning one. In the present tense, use ‘goes’.",
+            "rule_id": "HE_VERB_AGR",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.04131089599104598
+          },
+          "candidate_seconds": 0.819850610991125
+        }
+      },
+      "refresh_verified": true
+    },
+    {
+      "id": "UI3-T2",
+      "text": "Thanks, that's enough practice for today.",
+      "attempt_state": "complete",
+      "submit_to_render_seconds": 0.14168594499642495,
+      "reply": "Thanks for practicing. Goodbye!",
+      "conversation": {
+        "engine": "planned_v4",
+        "path": "deterministic",
+        "support": "stop",
+        "correction": {
+          "state": "no_supported_correction",
+          "provenance": "resident_languagetool_rule_only",
+          "seconds": 0.03813600899593439
+        },
+        "candidate_seconds": 0.03850814500765409
+      },
+      "reply_seconds": 0.05838207999477163,
+      "feedback": {
+        "turn_id": 8,
+        "job_id": "979f18fb-8c5d-4a5e-938c-8e77d277fd53",
+        "state": "no_proposal",
+        "reply_seconds": 0.05838207999477163,
+        "result_json": "{\"state\": \"no_proposal\", \"message\": \"No correction suggested. This does not guarantee the message is error-free.\", \"stage_seconds\": {\"model_check\": 0.026435448991833255, \"generation\": 3.9650149410008453, \"builtin_checker\": 0.03506239299895242, \"supplemental_checker\": 4.999452986987308, \"decision\": 2.3335000150837004e-05}, \"feedback_seconds\": 9.02600180900481, \"total_seconds\": 9.102150081002037}",
+        "session_id": "de215d3b-9425-47e0-8c85-47531e641e0e",
+        "learner_text": "Thanks, that's enough practice for today.",
+        "result": {
+          "state": "no_proposal",
+          "message": "No correction suggested. This does not guarantee the message is error-free.",
+          "stage_seconds": {
+            "model_check": 0.026435448991833255,
+            "generation": 3.9650149410008453,
+            "builtin_checker": 0.03506239299895242,
+            "supplemental_checker": 4.999452986987308,
+            "decision": 2.3335000150837004e-05
+          },
+          "feedback_seconds": 9.02600180900481,
+          "total_seconds": 9.102150081002037
+        },
+        "conversation": {
+          "engine": "planned_v4",
+          "path": "deterministic",
+          "support": "stop",
+          "correction": {
+            "state": "no_supported_correction",
+            "provenance": "resident_languagetool_rule_only",
+            "seconds": 0.03813600899593439
+          },
+          "candidate_seconds": 0.03850814500765409
+        }
+      },
+      "refresh_verified": true
+    }
+  ],
+  "summary": {
+    "completed": 8,
+    "refresh_verified": true,
+    "reply_within_two_seconds": 8,
+    "render_within_two_seconds": 8,
+    "grammar_unavailable": 0
+  }
+}

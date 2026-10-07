@@ -1,0 +1,185 @@
+{
+  "reviewer": "assistant",
+  "status": "draft_for_owner_review",
+  "source_run_sha256": "93b854682708a1451fecfb0aa46e5c3f83e1d09530e5ed23567246bd21e9107b",
+  "owner_approved": false,
+  "meaning": "Useful means provisionally suitable for optional in-app trial on these inspected development inputs; it is not general natural-conversation or teaching accuracy.",
+  "rows": [
+    {
+      "id": "S01-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S01-T02",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S01-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Separates pottery from the supplied reason and asks for another aspect. Wording could still be more varied.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S01-T04",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S02-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Preserves the dietary statement and asks about food. Authored meal wording, not a safety recommendation.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S02-T02",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S02-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S02-T04",
+      "assistant_judgment": "needs_improvement",
+      "assistant_note": "The revised ability/preference is correctly acknowledged, but all authored questions are exhausted and the reply ends abruptly.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S03-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S03-T02",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Usable new question after the duration, but it may invite repetition of the earlier cost reason; owner review should consider whether it advances the conversation enough.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S03-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Simplifies the question actually asked. As above, the topic may invite repeating the cost reason.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S03-T04",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S04-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S04-T02",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S04-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S04-T04",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Acknowledges cancellation without claiming attendance or admission. The repetition of cancelled is stylistic rather than a fact error.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S05-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S05-T02",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S05-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Keeps the meal uncompleted and names the noodles. It does not assume the learner cooks with someone.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S05-T04",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S06-T01",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S06-T02",
+      "assistant_judgment": "needs_improvement",
+      "assistant_note": "Timeout delivered the generic fallback instead of developing the explicitly supplied bakery workplace.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S06-T03",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    },
+    {
+      "id": "S06-T04",
+      "assistant_judgment": "provisionally_usable",
+      "assistant_note": "Relevant to the stated input/history; no blocking fact, correction or control failure observed in this reply.",
+      "owner_judgment": null,
+      "owner_note": null
+    }
+  ],
+  "summary": {
+    "assistant_provisionally_usable": 22,
+    "assistant_needs_improvement": 2,
+    "denominator": 24,
+    "owner_useful": null,
+    "owner_review_status": "pending",
+    "assistant_blocking_failures_observed": 0
+  }
+}

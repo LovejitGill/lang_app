@@ -1,0 +1,28 @@
+{
+  "experiment": "planned_v4",
+  "status": "optional_streamlit_trial_available",
+  "app_integrated": true,
+  "app_default_changed": false,
+  "assistant_usability_gate": {
+    "assistant_provisionally_usable": 22,
+    "assistant_needs_improvement": 2,
+    "denominator": 24,
+    "owner_useful": null,
+    "owner_review_status": "pending",
+    "assistant_blocking_failures_observed": 0
+  },
+  "human_quality_score": null,
+  "spoken_latency_verified": false,
+  "live_app_check": "8/8 complete real-service AppTest turns; refresh verified; 8/8 reply/render timings below two seconds; full grammar work blocks the next send.",
+  "remaining_observed_limits": [
+    "S02-T04 abrupt acknowledgment after exhausted choices",
+    "S06-T02 generic fallback after timeout",
+    "Full grammar processing 8.388–25.391 seconds in the app run; Send remains disabled",
+    "Some follow-ups may invite a repeated cost reason; owner review pending"
+  ],
+  "next_priority": "Owner in-app review and concrete dialogue/integration failures; do not start a new model/prompt experiment or UI redesign before this usable candidate is tried.",
+  "github_checkpoint": "Useful integration checkpoint after owner in-app verification and file review. Local mvp-v2 exists; next optional sequential tag mvp-v3.",
+  "next_experiment": "Keep planned_v4 during in-app review; planned_v5 only for a justified new experiment.",
+  "git_actions_performed": false,
+  "remote_publication_verified": false
+}

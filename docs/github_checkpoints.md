@@ -1,24 +1,25 @@
 # GitHub checkpoints and experiment versions
 
-Recommendation after planned_v3 verification: **yes, this is a useful experimental
-commit/push checkpoint**, after you review the accumulated changes. The full suite
-passed 703 tests and the frozen run completed, but conversation review and actual
-spoken latency remain pending. This is not a stable app release.
+Recommendation after planned_v4 integration: **yes, this is a useful experimental
+commit/push checkpoint after your in-app verification and file review**. The suite
+passed 731 tests and eight real-service Streamlit AppTest turns completed. Owner
+conversation review and actual spoken latency remain pending; full grammar still
+blocks the next Send. See [integration and verification](conversation_integration.md).
 
-Local inspection found branch `main`, remote name `origin`, latest existing commit
-`991d368`, and tag `mvp-v1`. Remote publication has not been verified. The working
-tree includes many earlier untracked modules and evidence files, so the checkpoint
-must include reviewed dependencies rather than only the newest two helpers.
+Local inspection on 2026-10-06 found branch `main`, latest commit `f655a91`, and tags
+`mvp-v1` and `mvp-v2`. Remote publication has not been verified. The current working
+tree includes the new integration, tests and evidence; review the complete change.
 
 ## Keep three kinds of version separate
 
-- `planned_v3`: the frozen experiment, code identities, cases and results.
-- A Git checkpoint: your commit, optionally labeled `conversation-planned-v3`.
+- `planned_v4`: the experiment, frozen revisions, cases and results.
+- A Git checkpoint: your commit, optionally labeled `mvp-v3` after verification.
 - An application release: package version and integrated, app-tested behavior.
 
-The next experiment can be `planned_v4` after reviewing this iteration; that does
-not imply a stable app v4 release. A meaningful commit is sufficient for a checkpoint;
-a tag is optional. Preserve `mvp-v1` and never move an existing tag to new work.
+Keep `planned_v4` during in-app review; another experiment is not required merely
+because integration is available. It does not imply a stable app v4 release. A
+meaningful commit is sufficient for a checkpoint; a tag is optional. Preserve
+`mvp-v1` and `mvp-v2` and never move an existing tag to new work.
 
 ## User-managed checkpoint steps
 
@@ -28,6 +29,7 @@ staging, commit, tag or push commands below has been executed by the assistant.
 ### One-time cleanup after `git add .`
 
 Inspection on 2026-10-06 found 349 staged files and an already-tracked `AGENTS.md`.
+This describes the earlier cleanup; skip this subsection if you already completed it.
 The ignore rules now exclude the root `AGENTS.md`, but Git continues tracking it
 until you remove it from the index (Git's staging area). Keep the file locally;
 you are adding its path to `.gitignore`, not moving its contents into that file.
@@ -147,13 +149,13 @@ evaluation cases/results/frozen snapshots: they support reproducibility and revi
 3. Save the local checkpoint.
 
    ```bash
-   git commit -m "Checkpoint tutoring experiments through planned_v3"
+   git commit -m "Integrate the optional conversation candidate into Streamlit"
    ```
 
    `git commit` normally records the staged snapshot in local history; this message
    identifies the accumulated experimental work without labeling it a stable release.
 
-   Expected shape: `[main <new-hash>] Checkpoint tutoring experiments through planned_v3`.
+   Expected shape: `[main <new-hash>] Integrate the optional conversation candidate into Streamlit`.
    This confirms a local commit, not publication. If it says there is nothing to commit,
    inspect the current log/status rather than creating an empty commit.
 
@@ -173,7 +175,7 @@ evaluation cases/results/frozen snapshots: they support reproducibility and revi
 5. Optional: add a distinct experimental label after confirming it is unused.
 
    ```bash
-   git tag --list conversation-planned-v3
+   git tag --list mvp-v3
    ```
 
    `git tag --list` normally lists matching local tags; here an empty result verifies
@@ -183,8 +185,8 @@ evaluation cases/results/frozen snapshots: they support reproducibility and revi
    If the label is unused and you want it:
 
    ```bash
-   git tag conversation-planned-v3
-   git push origin conversation-planned-v3
+   git tag mvp-v3
+   git push origin mvp-v3
    ```
 
    `git tag` normally labels the current commit locally; the explicit tag push publishes
@@ -195,9 +197,8 @@ evaluation cases/results/frozen snapshots: they support reproducibility and revi
 
 ## Next improvement
 
-Review the actual planned_v3 replies, particularly conversational tone, then prepare
-fresh multi-turn validation as planned_v4 while keeping the same quality/latency focus.
-**GitHub checkpoint: yes for the tested experiment after the ignore/untracking cleanup
-and your file review; no stable app-version promotion yet.** Future Next improvement
-notes will state both checkpoint readiness and version guidance. You continue to own
-commits, tags and pushes.
+Try planned_v4 in Streamlit and review actual conversational usefulness, then fix
+concrete continuation/fallback failures. **GitHub checkpoint: yes after your in-app
+verification and file review; the next optional tag is mvp-v3.** Keep the experiment
+at planned_v4 during that review; neither label establishes stable general tutoring
+accuracy or two-second spoken dialogue. You continue to own commits, tags and pushes.

@@ -1,0 +1,1332 @@
+{
+  "created_utc": "2026-10-07T00:47:33.006360+00:00",
+  "protocol_sha256": "6dde467400d58f22951d13690f4daa2dcfce203fd9b60c44e35d1ce9aacd6341",
+  "dataset_sha256": "756429792f7348c241e0a10e0d6e6e70a97682c540648307559b92d7bac06261",
+  "source_sha256": {
+    "dialogue_planner.py": "ffccf69d8d6bff3e17a715d3844ad3d8bf66da1f26e1c61fe1983457f7dc07a9",
+    "dialogue_planner_eval.py": "66bf3129b6c339e607d096ddc87554591d501b41a63b205fcc38a63da7f7ad46",
+    "conversation_reference.py": "4e544d5dfb9dee5a3a015a0181031919a5d029456b25c5967cf8417c88fbb2de",
+    "learner_recall.py": "67d38662ab57815c8b043da4555480d855d6b5d362157ab7c9d04ad0b290e6d6",
+    "natural_conversation.py": "146bb7f57c603b41a0598f510e83fdc393c6539ac45f99cc48829c0d7b50be3d",
+    "timely_corrections.py": "8553934a7319fe883626508b6d68c5611ace5ddceb39529b33c9639c85eedf13",
+    "bounded_conversation.py": "1d1e29165e241fac6c05794d6109975e272a3a310eb1707356410cc5fcc4005c",
+    "contextual_conversation.py": "c0249bf2935b06d83f1258c8d6c1a4b16a3d3dd70212a789199df71e280b4654",
+    "contextual_followups.py": "83db8b8035be24947c08c40804e483d0f39a33046e39934202b24c4fa03e04ba",
+    "food_constraints.py": "e051d6352479c47540086c15531ad6850ef7101238f39c12ae45a863aa65a07d",
+    "conversation_sessions_eval.py": "1649a606f2a5595cf72ba472ddafb735f90e7caf790cdece5af5bed69d78911f",
+    "conversation_continuity.py": "64501e19d8ce8c9d3f4fe383699a3e4527b523d0b5f568c34cef94a36ec7dd71"
+  },
+  "condition": "prewarmed; actual earlier replies; no full grammar contention",
+  "timing_scope": "Confirmed text through complete response with limited fast checker; excludes readiness, SQLite, UI, full grammar, STT and TTS.",
+  "rows": [
+    {
+      "case_id": "S01-T01",
+      "session_id": "S01",
+      "learner_text": "My name is Nisha and I enjoy pottery.",
+      "history": [],
+      "attempt_state": "complete",
+      "reply": "Tell me what interests you about pottery.",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "My name is Nisha and I enjoy pottery.",
+        "prefix": "",
+        "options": [
+          "Tell me what interests you about pottery."
+        ],
+        "support": "guided_practice",
+        "anchors": [
+          "pottery"
+        ],
+        "frame": "interest"
+      },
+      "support": "guided_practice",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.027611188997980207
+      },
+      "display_text": "Tell me what interests you about pottery.",
+      "seconds": 0.028007943998090923,
+      "status": "valid"
+    },
+    {
+      "case_id": "S01-T02",
+      "session_id": "S01",
+      "learner_text": "What do you mean?",
+      "history": [
+        {
+          "learner_text": "My name is Nisha and I enjoy pottery.",
+          "tutor_reply": "Tell me what interests you about pottery."
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "What makes pottery interesting to you?",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "What do you mean?",
+        "prefix": "What makes pottery interesting to you?",
+        "options": [],
+        "support": "question_clarification",
+        "anchors": [],
+        "frame": "interest_to_interesting",
+        "reference": {
+          "reply": "What makes pottery interesting to you?",
+          "support": "question_clarification",
+          "reference_id": "interest_to_interesting",
+          "provenance": "authored_question_intent_mapping_v1"
+        }
+      },
+      "support": "question_clarification",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.02621456499036867
+      },
+      "display_text": "What makes pottery interesting to you?",
+      "seconds": 0.027800132011179812,
+      "status": "valid"
+    },
+    {
+      "case_id": "S01-T03",
+      "session_id": "S01",
+      "learner_text": "I enjoy pottery because I can make useful things.",
+      "history": [
+        {
+          "learner_text": "My name is Nisha and I enjoy pottery.",
+          "tutor_reply": "Tell me what interests you about pottery."
+        },
+        {
+          "learner_text": "What do you mean?",
+          "tutor_reply": "What makes pottery interesting to you?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:34.998547Z",
+        "message": {
+          "role": "assistant",
+          "content": "1"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 858166178,
+        "load_duration": 2080305,
+        "prompt_eval_count": 190,
+        "prompt_eval_cached_count": 63,
+        "prompt_eval_duration": 805270000,
+        "eval_count": 2,
+        "eval_duration": 46904000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 1,
+      "reply": "What else do you like about pottery?",
+      "question_intent": "interest_other_aspect",
+      "plan": {
+        "text": "I enjoy pottery because I can make useful things.",
+        "prefix": "",
+        "options": [
+          "When did you first become interested in pottery?",
+          "What else do you like about pottery?"
+        ],
+        "support": "planned_followup",
+        "anchors": [
+          "pottery",
+          "because",
+          "I",
+          "can",
+          "make",
+          "useful",
+          "things"
+        ],
+        "frame": "interest_reason_given",
+        "question_intents": [
+          "interest_beginning",
+          "interest_other_aspect"
+        ],
+        "known_information": {
+          "interest": "pottery",
+          "reason": "I can make useful things"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.0303813229984371
+      },
+      "display_text": "What else do you like about pottery?",
+      "seconds": 0.8832168969966006,
+      "status": "valid"
+    },
+    {
+      "case_id": "S01-T04",
+      "session_id": "S01",
+      "learner_text": "What is my name and what hobby did I mention? No follow-up.",
+      "history": [
+        {
+          "learner_text": "My name is Nisha and I enjoy pottery.",
+          "tutor_reply": "Tell me what interests you about pottery."
+        },
+        {
+          "learner_text": "What do you mean?",
+          "tutor_reply": "What makes pottery interesting to you?"
+        },
+        {
+          "learner_text": "I enjoy pottery because I can make useful things.",
+          "tutor_reply": "What else do you like about pottery?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "You said: ‘My name is Nisha’ ‘I enjoy pottery.’",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "What is my name and what hobby did I mention? No follow-up.",
+        "prefix": "You said: ‘My name is Nisha’ ‘I enjoy pottery.’",
+        "options": [],
+        "support": "quoted_recall",
+        "anchors": [],
+        "frame": "learner_recall",
+        "recall_evidence": {
+          "prefix": "You said: ‘My name is Nisha’ ‘I enjoy pottery.’",
+          "topic": "pottery",
+          "changed": false,
+          "missing": []
+        }
+      },
+      "support": "quoted_recall",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.03024121100315824
+      },
+      "display_text": "You said: ‘My name is Nisha’ ‘I enjoy pottery.’",
+      "seconds": 0.032219376997090876,
+      "status": "valid"
+    },
+    {
+      "case_id": "S02-T01",
+      "session_id": "S02",
+      "learner_text": "I can't eat dairy and I would like lentil soup.",
+      "history": [],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:36.088386Z",
+        "message": {
+          "role": "assistant",
+          "content": "2"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 1017942174,
+        "load_duration": 2317158,
+        "prompt_eval_count": 219,
+        "prompt_eval_cached_count": 63,
+        "prompt_eval_duration": 951475000,
+        "eval_count": 2,
+        "eval_duration": 55716000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 2,
+      "reply": "You can't eat dairy. Apart from lentil soup, what other meals do you enjoy?",
+      "question_intent": "other_meals",
+      "plan": {
+        "text": "I can't eat dairy and I would like lentil soup.",
+        "prefix": "You can't eat dairy.",
+        "options": [
+          "What made you choose lentil soup?",
+          "What would you like to have with lentil soup?",
+          "Apart from lentil soup, what other meals do you enjoy?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "food_constraint",
+        "question_intents": [
+          "meal_reason",
+          "meal_pairing",
+          "other_meals"
+        ],
+        "known_information": {
+          "meals": [
+            {
+              "kind": "meal",
+              "person": "learner",
+              "meal": "lentil soup",
+              "reason": null
+            }
+          ],
+          "constraints": [
+            {
+              "kind": "cannot",
+              "person": "learner",
+              "resource": "dairy"
+            }
+          ],
+          "meal_reason": null,
+          "evidence_scope": "explicit learner clauses; latest four turns"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.032101184988277964
+      },
+      "display_text": "You can't eat dairy. Apart from lentil soup, what other meals do you enjoy?",
+      "seconds": 1.0537243230064632,
+      "status": "valid"
+    },
+    {
+      "case_id": "S02-T02",
+      "session_id": "S02",
+      "learner_text": "What do you mean?",
+      "history": [
+        {
+          "learner_text": "I can't eat dairy and I would like lentil soup.",
+          "tutor_reply": "You can't eat dairy. Apart from lentil soup, what other meals do you enjoy?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "What do you mean?",
+        "prefix": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?",
+        "options": [],
+        "support": "question_clarification",
+        "anchors": [],
+        "frame": "unknown_question_form",
+        "reference": {
+          "reply": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?",
+          "support": "question_clarification",
+          "reference_id": "unknown_question_form",
+          "provenance": "authored_question_intent_mapping_v1"
+        }
+      },
+      "support": "question_clarification",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.029821506002917886
+      },
+      "display_text": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?",
+      "seconds": 0.030471927995677106,
+      "status": "valid"
+    },
+    {
+      "case_id": "S02-T03",
+      "session_id": "S02",
+      "learner_text": "I would like lentil soup because it is warm.",
+      "history": [
+        {
+          "learner_text": "I can't eat dairy and I would like lentil soup.",
+          "tutor_reply": "You can't eat dairy. Apart from lentil soup, what other meals do you enjoy?"
+        },
+        {
+          "learner_text": "What do you mean?",
+          "tutor_reply": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "You can't eat dairy. What would you like to have with lentil soup?",
+      "question_intent": "meal_pairing",
+      "plan": {
+        "text": "I would like lentil soup because it is warm.",
+        "prefix": "You can't eat dairy.",
+        "options": [
+          "What would you like to have with lentil soup?"
+        ],
+        "support": "planned_followup",
+        "anchors": [
+          "warm"
+        ],
+        "frame": "food_constraint",
+        "question_intents": [
+          "meal_pairing"
+        ],
+        "known_information": {
+          "meals": [
+            {
+              "kind": "meal",
+              "person": "learner",
+              "meal": "lentil soup",
+              "reason": "it is warm"
+            }
+          ],
+          "constraints": [
+            {
+              "kind": "cannot",
+              "person": "learner",
+              "resource": "dairy"
+            }
+          ],
+          "meal_reason": "it is warm",
+          "evidence_scope": "explicit learner clauses; latest four turns"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.029925309994723648
+      },
+      "display_text": "You can't eat dairy. What would you like to have with lentil soup?",
+      "seconds": 0.030496969004161656,
+      "status": "valid"
+    },
+    {
+      "case_id": "S02-T04",
+      "session_id": "S02",
+      "learner_text": "Actually, I can eat dairy now, but I don't like dairy. I would like lentil soup.",
+      "history": [
+        {
+          "learner_text": "I can't eat dairy and I would like lentil soup.",
+          "tutor_reply": "You can't eat dairy. Apart from lentil soup, what other meals do you enjoy?"
+        },
+        {
+          "learner_text": "What do you mean?",
+          "tutor_reply": "In ‘Apart from lentil soup, what other meals do you enjoy?’, which word or part would you like me to explain?"
+        },
+        {
+          "learner_text": "I would like lentil soup because it is warm.",
+          "tutor_reply": "You can't eat dairy. What would you like to have with lentil soup?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "You can eat dairy. You don't like dairy.",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Actually, I can eat dairy now, but I don't like dairy. I would like lentil soup.",
+        "prefix": "You can eat dairy. You don't like dairy.",
+        "options": [],
+        "support": "context_acknowledgment",
+        "anchors": [],
+        "frame": "food_constraint",
+        "known_information": {
+          "meals": [
+            {
+              "kind": "meal",
+              "person": "learner",
+              "meal": "lentil soup",
+              "reason": null
+            }
+          ],
+          "constraints": [
+            {
+              "kind": "can",
+              "person": "learner",
+              "resource": "dairy"
+            },
+            {
+              "kind": "dislike",
+              "person": "learner",
+              "resource": "dairy"
+            }
+          ],
+          "meal_reason": "it is warm",
+          "evidence_scope": "explicit learner clauses; latest four turns"
+        }
+      },
+      "support": "context_acknowledgment",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.07667167999898084
+      },
+      "display_text": "You can eat dairy. You don't like dairy.",
+      "seconds": 0.07715283300785813,
+      "status": "valid"
+    },
+    {
+      "case_id": "S03-T01",
+      "session_id": "S03",
+      "learner_text": "I take the bus to work because it costs less.",
+      "history": [],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:36.965374Z",
+        "message": {
+          "role": "assistant",
+          "content": "1"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 689471740,
+        "load_duration": 2496008,
+        "prompt_eval_count": 145,
+        "prompt_eval_cached_count": 63,
+        "prompt_eval_duration": 619156000,
+        "eval_count": 2,
+        "eval_duration": 46816000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 1,
+      "reply": "How long does your bus journey take?",
+      "question_intent": "journey_duration",
+      "plan": {
+        "text": "I take the bus to work because it costs less.",
+        "prefix": "",
+        "options": [
+          "What do you usually do during your bus journey?",
+          "How long does your bus journey take?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "commute_reason_given",
+        "question_intents": [
+          "journey_activity",
+          "journey_duration"
+        ],
+        "known_information": {
+          "mode": "bus",
+          "destination": "work",
+          "reason": "lower cost"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.03441264299908653
+      },
+      "display_text": "How long does your bus journey take?",
+      "seconds": 0.7292693380004494,
+      "status": "valid"
+    },
+    {
+      "case_id": "S03-T02",
+      "session_id": "S03",
+      "learner_text": "The journey takes twenty minutes.",
+      "history": [
+        {
+          "learner_text": "I take the bus to work because it costs less.",
+          "tutor_reply": "How long does your bus journey take?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:37.711208Z",
+        "message": {
+          "role": "assistant",
+          "content": "1"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 708939224,
+        "load_duration": 2544273,
+        "prompt_eval_count": 163,
+        "prompt_eval_cached_count": 62,
+        "prompt_eval_duration": 653230000,
+        "eval_count": 2,
+        "eval_duration": 46491000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 1,
+      "reply": "What do you like about travelling by bus?",
+      "question_intent": "journey_preference",
+      "plan": {
+        "text": "The journey takes twenty minutes.",
+        "prefix": "",
+        "options": [
+          "What do you usually do during your bus journey?",
+          "What do you like about travelling by bus?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "commute_duration_given",
+        "question_intents": [
+          "journey_activity",
+          "journey_preference"
+        ],
+        "known_information": {
+          "mode": "bus",
+          "duration": "twenty minutes"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.036998064009821974
+      },
+      "display_text": "What do you like about travelling by bus?",
+      "seconds": 0.7429456099926028,
+      "status": "valid"
+    },
+    {
+      "case_id": "S03-T03",
+      "session_id": "S03",
+      "learner_text": "What do you mean?",
+      "history": [
+        {
+          "learner_text": "I take the bus to work because it costs less.",
+          "tutor_reply": "How long does your bus journey take?"
+        },
+        {
+          "learner_text": "The journey takes twenty minutes.",
+          "tutor_reply": "What do you like about travelling by bus?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "What makes travelling by bus good for you?",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "What do you mean?",
+        "prefix": "What makes travelling by bus good for you?",
+        "options": [],
+        "support": "question_clarification",
+        "anchors": [],
+        "frame": "journey_preference",
+        "reference": {
+          "reply": "What makes travelling by bus good for you?",
+          "support": "question_clarification",
+          "reference_id": "journey_preference",
+          "provenance": "authored_question_intent_mapping_v1"
+        }
+      },
+      "support": "question_clarification",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.028930863991263323
+      },
+      "display_text": "What makes travelling by bus good for you?",
+      "seconds": 0.029226693004602566,
+      "status": "valid"
+    },
+    {
+      "case_id": "S03-T04",
+      "session_id": "S03",
+      "learner_text": "Please don't ask another question.",
+      "history": [
+        {
+          "learner_text": "I take the bus to work because it costs less.",
+          "tutor_reply": "How long does your bus journey take?"
+        },
+        {
+          "learner_text": "The journey takes twenty minutes.",
+          "tutor_reply": "What do you like about travelling by bus?"
+        },
+        {
+          "learner_text": "What do you mean?",
+          "tutor_reply": "What makes travelling by bus good for you?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "Understood. I will leave out the follow-up question.",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Please don't ask another question.",
+        "prefix": "Understood. I will leave out the follow-up question.",
+        "options": [],
+        "support": "guided_practice",
+        "anchors": [],
+        "frame": "general"
+      },
+      "support": "guided_practice",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.025773456000024453
+      },
+      "display_text": "Understood. I will leave out the follow-up question.",
+      "seconds": 0.02605118700012099,
+      "status": "valid"
+    },
+    {
+      "case_id": "S04-T01",
+      "session_id": "S04",
+      "learner_text": "My daughter has an interview at a college tomorrow.",
+      "history": [],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:38.435085Z",
+        "message": {
+          "role": "assistant",
+          "content": "1"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 624838127,
+        "load_duration": 3435504,
+        "prompt_eval_count": 144,
+        "prompt_eval_cached_count": 62,
+        "prompt_eval_duration": 559740000,
+        "eval_count": 2,
+        "eval_duration": 53194000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 1,
+      "reply": "How does your daughter feel about the interview?",
+      "question_intent": "interview_feeling",
+      "plan": {
+        "text": "My daughter has an interview at a college tomorrow.",
+        "prefix": "",
+        "options": [
+          "How is your daughter preparing for the interview?",
+          "How does your daughter feel about the interview?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "relative_interview_plan",
+        "question_intents": [
+          "interview_preparation",
+          "interview_feeling"
+        ],
+        "known_information": {
+          "relative": "daughter",
+          "place": "college",
+          "when": "tomorrow"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.04391226299048867
+      },
+      "display_text": "How does your daughter feel about the interview?",
+      "seconds": 0.6597121049999259,
+      "status": "valid"
+    },
+    {
+      "case_id": "S04-T02",
+      "session_id": "S04",
+      "learner_text": "My daughter is relieved because she caught her bus.",
+      "history": [
+        {
+          "learner_text": "My daughter has an interview at a college tomorrow.",
+          "tutor_reply": "How does your daughter feel about the interview?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "Your daughter feels relieved. How is your daughter preparing for the interview?",
+      "question_intent": "interview_preparation",
+      "plan": {
+        "text": "My daughter is relieved because she caught her bus.",
+        "prefix": "Your daughter feels relieved.",
+        "options": [
+          "How is your daughter preparing for the interview?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "relative_interview_transport",
+        "question_intents": [
+          "interview_preparation"
+        ],
+        "known_information": {
+          "relative": "daughter",
+          "transport": "bus",
+          "interview_completed": false
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.030582596999011002
+      },
+      "display_text": "Your daughter feels relieved. How is your daughter preparing for the interview?",
+      "seconds": 0.03174240699445363,
+      "status": "valid"
+    },
+    {
+      "case_id": "S04-T03",
+      "session_id": "S04",
+      "learner_text": "She wants to study chemistry.",
+      "history": [
+        {
+          "learner_text": "My daughter has an interview at a college tomorrow.",
+          "tutor_reply": "How does your daughter feel about the interview?"
+        },
+        {
+          "learner_text": "My daughter is relieved because she caught her bus.",
+          "tutor_reply": "Your daughter feels relieved. How is your daughter preparing for the interview?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "Your daughter wants to study chemistry. What interests your daughter about chemistry?",
+      "question_intent": "study_interest_reason",
+      "plan": {
+        "text": "She wants to study chemistry.",
+        "prefix": "Your daughter wants to study chemistry.",
+        "options": [
+          "What interests your daughter about chemistry?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "relative_subject_given",
+        "question_intents": [
+          "study_interest_reason"
+        ],
+        "known_information": {
+          "relative": "daughter",
+          "subject": "chemistry"
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.026061641998239793
+      },
+      "display_text": "Your daughter wants to study chemistry. What interests your daughter about chemistry?",
+      "seconds": 0.02672936399176251,
+      "status": "valid"
+    },
+    {
+      "case_id": "S04-T04",
+      "session_id": "S04",
+      "learner_text": "The interview was cancelled.",
+      "history": [
+        {
+          "learner_text": "My daughter has an interview at a college tomorrow.",
+          "tutor_reply": "How does your daughter feel about the interview?"
+        },
+        {
+          "learner_text": "My daughter is relieved because she caught her bus.",
+          "tutor_reply": "Your daughter feels relieved. How is your daughter preparing for the interview?"
+        },
+        {
+          "learner_text": "She wants to study chemistry.",
+          "tutor_reply": "Your daughter wants to study chemistry. What interests your daughter about chemistry?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "The interview is cancelled. What will happen now that the interview is cancelled?",
+      "question_intent": "cancellation_next_step",
+      "plan": {
+        "text": "The interview was cancelled.",
+        "prefix": "The interview is cancelled.",
+        "options": [
+          "What will happen now that the interview is cancelled?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "interview_cancelled",
+        "question_intents": [
+          "cancellation_next_step"
+        ],
+        "known_information": {
+          "interview_cancelled": true
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.02955494201160036
+      },
+      "display_text": "The interview is cancelled. What will happen now that the interview is cancelled?",
+      "seconds": 0.029860108988941647,
+      "status": "valid"
+    },
+    {
+      "case_id": "S05-T01",
+      "session_id": "S05",
+      "learner_text": "I will cook noodles tomorrow.",
+      "history": [],
+      "attempt_state": "complete",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:39.116654Z",
+        "message": {
+          "role": "assistant",
+          "content": "0"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 545383529,
+        "load_duration": 2428737,
+        "prompt_eval_count": 129,
+        "prompt_eval_cached_count": 63,
+        "prompt_eval_duration": 480454000,
+        "eval_count": 2,
+        "eval_duration": 46526000
+      },
+      "path": "model_selected",
+      "rejection": null,
+      "choice": 0,
+      "reply": "How will you prepare the noodles?",
+      "question_intent": "preparation_method",
+      "plan": {
+        "text": "I will cook noodles tomorrow.",
+        "prefix": "",
+        "options": [
+          "How will you prepare the noodles?",
+          "What made you choose the noodles?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "planned_meal",
+        "question_intents": [
+          "preparation_method",
+          "choice_reason"
+        ],
+        "known_information": {
+          "dish": "noodles",
+          "completed": false
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.03478595400520135
+      },
+      "display_text": "How will you prepare the noodles?",
+      "seconds": 0.5790145589999156,
+      "status": "valid"
+    },
+    {
+      "case_id": "S05-T02",
+      "session_id": "S05",
+      "learner_text": "I chose noodles because they are quick to make.",
+      "history": [
+        {
+          "learner_text": "I will cook noodles tomorrow.",
+          "tutor_reply": "How will you prepare the noodles?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "What do you need to prepare the noodles?",
+      "question_intent": "preparation_plan",
+      "plan": {
+        "text": "I chose noodles because they are quick to make.",
+        "prefix": "",
+        "options": [
+          "What do you need to prepare the noodles?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "future_meal_reason_given",
+        "question_intents": [
+          "preparation_plan"
+        ],
+        "known_information": {
+          "dish": "noodles",
+          "reason": "they are quick to make",
+          "completed": false
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.03343486700032372
+      },
+      "display_text": "What do you need to prepare the noodles?",
+      "seconds": 0.0338223300059326,
+      "status": "valid"
+    },
+    {
+      "case_id": "S05-T03",
+      "session_id": "S05",
+      "learner_text": "I have not cooked them yet.",
+      "history": [
+        {
+          "learner_text": "I will cook noodles tomorrow.",
+          "tutor_reply": "How will you prepare the noodles?"
+        },
+        {
+          "learner_text": "I chose noodles because they are quick to make.",
+          "tutor_reply": "What do you need to prepare the noodles?"
+        }
+      ],
+      "attempt_state": "complete",
+      "raw": null,
+      "path": "deterministic",
+      "rejection": null,
+      "choice": 0,
+      "reply": "You haven't cooked the noodles yet. Who will you cook the noodles with, if anyone?",
+      "question_intent": "preparation_company",
+      "plan": {
+        "text": "I have not cooked them yet.",
+        "prefix": "You haven't cooked the noodles yet.",
+        "options": [
+          "Who will you cook the noodles with, if anyone?"
+        ],
+        "support": "planned_followup",
+        "anchors": [],
+        "frame": "meal_not_completed",
+        "question_intents": [
+          "preparation_company"
+        ],
+        "known_information": {
+          "dish": "noodles",
+          "completed": false
+        }
+      },
+      "support": "planned_followup",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.02882092900108546
+      },
+      "display_text": "You haven't cooked the noodles yet. Who will you cook the noodles with, if anyone?",
+      "seconds": 0.029476135998265818,
+      "status": "valid"
+    },
+    {
+      "case_id": "S05-T04",
+      "session_id": "S05",
+      "learner_text": "Thanks, that's enough practice for today.",
+      "history": [
+        {
+          "learner_text": "I will cook noodles tomorrow.",
+          "tutor_reply": "How will you prepare the noodles?"
+        },
+        {
+          "learner_text": "I chose noodles because they are quick to make.",
+          "tutor_reply": "What do you need to prepare the noodles?"
+        },
+        {
+          "learner_text": "I have not cooked them yet.",
+          "tutor_reply": "You haven't cooked the noodles yet. Who will you cook the noodles with, if anyone?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "Thanks for practicing. Goodbye!",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Thanks, that's enough practice for today.",
+        "prefix": "Thanks for practicing. Goodbye!",
+        "options": [],
+        "support": "stop",
+        "anchors": [],
+        "frame": "general"
+      },
+      "support": "stop",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.030520806001732126
+      },
+      "display_text": "Thanks for practicing. Goodbye!",
+      "seconds": 0.030771121004363522,
+      "status": "valid"
+    },
+    {
+      "case_id": "S06-T01",
+      "session_id": "S06",
+      "learner_text": "Where does my cousin work?",
+      "history": [],
+      "attempt_state": "complete",
+      "reply": "I don't know where your cousin works. What kind of work does your cousin do?",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Where does my cousin work?",
+        "prefix": "I don't know where your cousin works. What kind of work does your cousin do?",
+        "options": [],
+        "support": "unknown_personal_fact",
+        "anchors": [],
+        "frame": "relative_fact"
+      },
+      "support": "unknown_personal_fact",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.034024740001768805
+      },
+      "display_text": "I don't know where your cousin works. What kind of work does your cousin do?",
+      "seconds": 0.034490532998461276,
+      "status": "valid"
+    },
+    {
+      "case_id": "S06-T02",
+      "session_id": "S06",
+      "learner_text": "My cousin works at a bakery.",
+      "history": [
+        {
+          "learner_text": "Where does my cousin work?",
+          "tutor_reply": "I don't know where your cousin works. What kind of work does your cousin do?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "Does your cousin like working at the bakery?",
+      "path": "model_generated",
+      "raw": {
+        "model": "qwen3:1.7b",
+        "created_at": "2026-10-07T00:47:40.227574Z",
+        "message": {
+          "role": "assistant",
+          "content": "Does your cousin like working at the bakery?"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 921212164,
+        "load_duration": 2191453,
+        "prompt_eval_count": 191,
+        "prompt_eval_cached_count": 137,
+        "prompt_eval_duration": 456123000,
+        "eval_count": 10,
+        "eval_duration": 453527000
+      },
+      "rejection": null,
+      "plan": {
+        "text": "My cousin works at a bakery.",
+        "prefix": "",
+        "options": [
+          "Tell me more about them and what happens.",
+          "Describe that situation."
+        ],
+        "support": "guided_practice",
+        "anchors": [],
+        "frame": "general"
+      },
+      "support": "guided_practice",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.040905500005465
+      },
+      "display_text": "Does your cousin like working at the bakery?",
+      "seconds": 0.9590903759963112,
+      "status": "valid"
+    },
+    {
+      "case_id": "S06-T03",
+      "session_id": "S06",
+      "learner_text": "Where does my cousin work? No follow-up.",
+      "history": [
+        {
+          "learner_text": "Where does my cousin work?",
+          "tutor_reply": "I don't know where your cousin works. What kind of work does your cousin do?"
+        },
+        {
+          "learner_text": "My cousin works at a bakery.",
+          "tutor_reply": "Does your cousin like working at the bakery?"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "In our recent conversation, you said: ‘My cousin works at a bakery.’",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Where does my cousin work? No follow-up.",
+        "prefix": "In our recent conversation, you said: ‘My cousin works at a bakery.’",
+        "options": [],
+        "support": "quoted_location",
+        "anchors": [],
+        "frame": "general"
+      },
+      "support": "quoted_location",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.033021855997503735
+      },
+      "display_text": "In our recent conversation, you said: ‘My cousin works at a bakery.’",
+      "seconds": 0.033973565994529054,
+      "status": "valid"
+    },
+    {
+      "case_id": "S06-T04",
+      "session_id": "S06",
+      "learner_text": "Could you compare learn and teach?",
+      "history": [
+        {
+          "learner_text": "Where does my cousin work?",
+          "tutor_reply": "I don't know where your cousin works. What kind of work does your cousin do?"
+        },
+        {
+          "learner_text": "My cousin works at a bakery.",
+          "tutor_reply": "Does your cousin like working at the bakery?"
+        },
+        {
+          "learner_text": "Where does my cousin work? No follow-up.",
+          "tutor_reply": "In our recent conversation, you said: ‘My cousin works at a bakery.’"
+        }
+      ],
+      "attempt_state": "complete",
+      "reply": "‘Learn’ means gain knowledge or a skill. ‘Teach’ means help someone gain knowledge or a skill. Example: A teacher teaches English; a student learns English.",
+      "path": "deterministic",
+      "raw": null,
+      "rejection": null,
+      "plan": {
+        "text": "Could you compare learn and teach?",
+        "prefix": "‘Learn’ means gain knowledge or a skill. ‘Teach’ means help someone gain knowledge or a skill. Example: A teacher teaches English; a student learns English.",
+        "options": [],
+        "support": "local_reference",
+        "anchors": [],
+        "frame": "teach_learn",
+        "reference": {
+          "reply": "‘Learn’ means gain knowledge or a skill. ‘Teach’ means help someone gain knowledge or a skill. Example: A teacher teaches English; a student learns English.",
+          "support": "local_reference",
+          "reference_id": "teach_learn",
+          "provenance": "authored_comparison_catalog_v1"
+        }
+      },
+      "support": "local_reference",
+      "correction": {
+        "state": "no_supported_correction",
+        "provenance": "resident_languagetool_rule_only",
+        "seconds": 0.025002624999615364
+      },
+      "display_text": "‘Learn’ means gain knowledge or a skill. ‘Teach’ means help someone gain knowledge or a skill. Example: A teacher teaches English; a student learns English.",
+      "seconds": 0.025288969001849182,
+      "status": "valid"
+    }
+  ],
+  "model": {
+    "name": "qwen3:1.7b",
+    "model": "qwen3:1.7b",
+    "modified_at": "2026-09-22T19:32:46.067236479-04:00",
+    "size": 1359293444,
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 40960,
+      "embedding_length": 2048
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "readiness_raw": {
+    "model": "qwen3:1.7b",
+    "created_at": "2026-10-07T00:47:33.062625Z",
+    "message": {
+      "role": "assistant",
+      "content": ""
+    },
+    "done": true,
+    "done_reason": "load"
+  },
+  "generation_readiness": {
+    "reply": "How did a meal turn out?",
+    "path": "local_fallback",
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-07T00:47:33.4586Z",
+      "message": {
+        "role": "assistant",
+        "content": "What did you cook?"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 386096609,
+      "load_duration": 1880124,
+      "prompt_eval_count": 155,
+      "prompt_eval_cached_count": 137,
+      "prompt_eval_duration": 132360999,
+      "eval_count": 6,
+      "eval_duration": 248624000
+    },
+    "rejection": "lost_topic"
+  },
+  "selector_readiness": {
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-07T00:47:34.035042Z",
+      "message": {
+        "role": "assistant",
+        "content": "1"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 573288111,
+      "load_duration": 2453230,
+      "prompt_eval_count": 123,
+      "prompt_eval_cached_count": 63,
+      "prompt_eval_duration": 512087999,
+      "eval_count": 2,
+      "eval_duration": 46186000
+    },
+    "path": "model_selected",
+    "rejection": null,
+    "choice": 1,
+    "reply": "How did you decide what to pack?",
+    "question_intent": "packing_choice"
+  },
+  "checker_readiness": {
+    "name": "LanguageTool",
+    "version": "6.6",
+    "buildDate": "2025-03-27 20:50:25 +0100",
+    "apiVersion": 1,
+    "premium": false,
+    "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+    "status": ""
+  },
+  "readiness_seconds": 1.0475178599881474,
+  "summary": {
+    "denominator": 24,
+    "completed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "timing": {
+      "attempts": 24,
+      "failures": 0,
+      "median_seconds": 0.031980891995772254,
+      "p95_seconds_nearest_rank": 0.9590903759963112,
+      "maximum_seconds": 1.0537243230064632
+    },
+    "within_two_seconds": 24,
+    "paths": {
+      "deterministic": 17,
+      "model_selected": 6,
+      "model_generated": 1,
+      "local_fallback": 0
+    },
+    "checker_unavailable": 0,
+    "human_useful": null,
+    "human_review_status": "pending"
+  }
+}

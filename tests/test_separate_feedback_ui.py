@@ -15,6 +15,7 @@ import db
 import feedback_store
 import feedback_worker
 import llm_client
+import planned_conversation
 import separate_feedback
 import stt
 
@@ -171,5 +172,66 @@ def test_interrupted_job_after_restart_is_not_retried(ui):
     assert any("interrupted" in w.value for w in fresh.warning)
     assert any(t.value == "Tell me about your day." for t in fresh.text)
     assert not fresh.button(key="send").disabled
+    chat.assert_not_called()
+    checker.assert_not_called()
+
+
+def test_planned_reply_and_fast_correction_survive_refresh_without_polluting_history(
+    ui, monkeypatch
+):
+    at, path, worker, entered, release, result, chat, checker = ui
+    details = {
+        "engine": "planned_v4",
+        "path": "deterministic",
+        "support": "guided_practice",
+        "correction": {
+            "state": "offered",
+            "corrected_text": "She goes to work by train.",
+            "explanation": "Use goes with she in the present tense.",
+        },
+    }
+    planned = MagicMock(return_value=("How long does her train journey take?", details))
+    monkeypatch.setattr(planned_conversation, "conversation_reply", planned)
+    at.checkbox(key="planned_conversation").check().run()
+    send(at, "She go to work by train.")
+    assert entered.wait(1)
+    shown = [t.value for t in at.text]
+    assert shown.index(details["correction"]["corrected_text"]) < shown.index(
+        "How long does her train journey take?"
+    )
+    session = at.session_state.conversation["session_id"]
+    assert (
+        db.get_history(session, db_path=path)[0]["tutor_reply"]
+        == "How long does her train journey take?"
+    )
+    chat.assert_not_called()
+    assert at.checkbox(key="planned_conversation").disabled
+    result.clear()
+    result.update(state="unavailable", message="Grammar unavailable.")
+    release.set()
+    worker.close()
+    fresh = AppTest.from_file(APP)
+    fresh.query_params["session"] = session
+    fresh.run()
+    assert not fresh.exception
+    assert fresh.checkbox(key="planned_conversation").value
+    assert any(t.value == details["correction"]["corrected_text"] for t in fresh.text)
+    assert any(t.value == "How long does her train journey take?" for t in fresh.text)
+    planned.assert_called_once()
+    checker.assert_called_once_with("She go to work by train.")
+
+
+def test_planned_service_failure_keeps_draft_and_does_not_save(ui, monkeypatch):
+    at, path, _worker, _entered, _release, _result, chat, checker = ui
+    monkeypatch.setattr(
+        planned_conversation,
+        "conversation_reply",
+        MagicMock(side_effect=llm_client.LLMError("Local model unavailable.")),
+    )
+    at.checkbox(key="planned_conversation").check().run()
+    send(at, "I enjoy cycling.")
+    assert at.text_area(key="draft").value == "I enjoy cycling."
+    assert any("Local model unavailable" in e.value for e in at.error)
+    assert not db.load_session(at.session_state.conversation["session_id"], path)[1]
     chat.assert_not_called()
     checker.assert_not_called()

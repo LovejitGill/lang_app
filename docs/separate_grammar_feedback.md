@@ -5,6 +5,12 @@ confirmed learner text with the reviewed grammar flow. Enable **Separate grammar
 feedback (experimental)** in the sidebar. Existing conversations and the earlier
 combined mode remain available.
 
+The sidebar now also offers **Context-aware conversation (experimental)** within
+this mode. It integrates the planned_v4 conversation candidate while retaining this
+same full grammar flow. See the [current integration guide](conversation_integration.md)
+for activation, actual app timings and remaining limitations. The timings and test
+counts below describe the original separate-feedback checkpoint.
+
 The conversational model receives a reply-only prompt and recent saved history.
 The grammar model sees only the submitted learner text; it does not receive
 reference answers or conversation history. The app displays a correction only

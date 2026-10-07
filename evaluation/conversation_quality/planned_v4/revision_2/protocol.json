@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-10-07T00:53:19.352684+00:00",
+  "status": "Frozen before final multi-turn and optional Streamlit integration runs. One clarification added after revision_1; same development cases.",
+  "model": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "options": {
+    "num_ctx": 2048,
+    "num_predict": 64,
+    "temperature": 0,
+    "seed": 42
+  },
+  "selector_options": {
+    "num_ctx": 2048,
+    "num_predict": 8,
+    "temperature": 0,
+    "seed": 42
+  },
+  "source_sha256": {
+    "dialogue_planner.py": "ffccf69d8d6bff3e17a715d3844ad3d8bf66da1f26e1c61fe1983457f7dc07a9",
+    "dialogue_planner_eval.py": "66bf3129b6c339e607d096ddc87554591d501b41a63b205fcc38a63da7f7ad46",
+    "conversation_reference.py": "8178fc8d40de64f6918dda72ea20e11217d79886107f4524acd097199bdff372",
+    "learner_recall.py": "67d38662ab57815c8b043da4555480d855d6b5d362157ab7c9d04ad0b290e6d6",
+    "natural_conversation.py": "146bb7f57c603b41a0598f510e83fdc393c6539ac45f99cc48829c0d7b50be3d",
+    "timely_corrections.py": "8553934a7319fe883626508b6d68c5611ace5ddceb39529b33c9639c85eedf13",
+    "bounded_conversation.py": "1d1e29165e241fac6c05794d6109975e272a3a310eb1707356410cc5fcc4005c",
+    "contextual_conversation.py": "c0249bf2935b06d83f1258c8d6c1a4b16a3d3dd70212a789199df71e280b4654",
+    "contextual_followups.py": "83db8b8035be24947c08c40804e483d0f39a33046e39934202b24c4fa03e04ba",
+    "food_constraints.py": "e051d6352479c47540086c15531ad6850ef7101238f39c12ae45a863aa65a07d",
+    "conversation_sessions_eval.py": "ae68730ed6602bf2280d3393d81e1f10671b900290c028f6cea72a333e422550",
+    "conversation_continuity.py": "64501e19d8ce8c9d3f4fe383699a3e4527b523d0b5f568c34cef94a36ec7dd71",
+    "app.py": "add179a263088af61469e7c826fdfe50d1437cbd60f525a71d158f7c268deb5f",
+    "feedback_store.py": "fa3321035f059a8a18586dc2dff4e5db7f603930cee6edcbdd7515635497b486",
+    "planned_conversation.py": "b663944d547e7b7900883da5d92a7f24f0522f898c4ccf5887fac6556510433e",
+    "conversation_quality_eval.py": "3922583b9c9309b546491f83d6261d3d5a036c4bf0ce94cc21c11477da615360",
+    "scripts/smoke_planned_conversation.py": "7312610d6185343c04b20aed9c2bcda32acb542484f4804b80bdc42b18020866"
+  },
+  "dataset_sha256": "756429792f7348c241e0a10e0d6e6e70a97682c540648307559b92d7bac06261",
+  "prior_experiment": "planned_v3",
+  "design": "One attempt per turn, six independent sessions, four actual prior turns at most. References never enter inference. No retries for preferred output. A failed turn skips dependent turns; all rows are retained.",
+  "integration_gates": {
+    "usable_turns_minimum": 22,
+    "denominator": 24,
+    "blocking_failures_allowed": 0,
+    "blocking_failures": "Invented facts/experiences, wrong person or negation, missed supplied fact on explicit recall, repeated topic loop, stop/no-follow-up violations, unsupported correction.",
+    "warm_complete_text_seconds_maximum": 2,
+    "human_quality": "Pending; assistant review remains separately attributed.",
+    "app_gate": "After usable candidate, prioritize opt-in Streamlit integration plus real SQLite/history/grammar, refresh and failure checks. Do not require stylistic perfection.",
+    "spoken_latency": "Separate unfinished target; text timing does not establish it."
+  },
+  "integration_overrides": {
+    "app.py": "add179a263088af61469e7c826fdfe50d1437cbd60f525a71d158f7c268deb5f",
+    "feedback_store.py": "fa3321035f059a8a18586dc2dff4e5db7f603930cee6edcbdd7515635497b486"
+  },
+  "integration_scope": "Optional app mode only; approved full grammar source and decisions unchanged. UI/storage updates explicitly pinned; historical protocol remains intact."
+}

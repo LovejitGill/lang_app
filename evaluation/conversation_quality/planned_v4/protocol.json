@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-10-07T00:42:02.858182+00:00",
+  "status": "Frozen before live inference; unchanged planned_v3 candidate assessed in multi-turn sessions.",
+  "model": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "options": {
+    "num_ctx": 2048,
+    "num_predict": 64,
+    "temperature": 0,
+    "seed": 42
+  },
+  "selector_options": {
+    "num_ctx": 2048,
+    "num_predict": 8,
+    "temperature": 0,
+    "seed": 42
+  },
+  "source_sha256": {
+    "dialogue_planner.py": "514a5a2a4d2a3d769a187e9be2b9189e2a8e66598de101a5579e33b07815118f",
+    "dialogue_planner_eval.py": "66bf3129b6c339e607d096ddc87554591d501b41a63b205fcc38a63da7f7ad46",
+    "conversation_reference.py": "bfae1129cb8eb667d6524bafacae1dfc7d03df2b47ef6fa50cb2f21fbada4aa0",
+    "learner_recall.py": "67d38662ab57815c8b043da4555480d855d6b5d362157ab7c9d04ad0b290e6d6",
+    "natural_conversation.py": "146bb7f57c603b41a0598f510e83fdc393c6539ac45f99cc48829c0d7b50be3d",
+    "timely_corrections.py": "8553934a7319fe883626508b6d68c5611ace5ddceb39529b33c9639c85eedf13",
+    "bounded_conversation.py": "1d1e29165e241fac6c05794d6109975e272a3a310eb1707356410cc5fcc4005c",
+    "contextual_conversation.py": "c0249bf2935b06d83f1258c8d6c1a4b16a3d3dd70212a789199df71e280b4654",
+    "contextual_followups.py": "83db8b8035be24947c08c40804e483d0f39a33046e39934202b24c4fa03e04ba",
+    "food_constraints.py": "8deb5bd7b06ad5cd8d94ce5ebd9a35f97132687db2150f38a51973d9b5bade9a",
+    "conversation_sessions_eval.py": "3b6d3681f38c26793f7f44da4df63c6860de9354e755565b54017cb3c4d4f5bf"
+  },
+  "dataset_sha256": "756429792f7348c241e0a10e0d6e6e70a97682c540648307559b92d7bac06261",
+  "prior_experiment": "planned_v3",
+  "design": "One attempt per turn, six independent sessions, four actual prior turns at most. References never enter inference. No retries for preferred output. A failed turn skips dependent turns; all rows are retained.",
+  "integration_gates": {
+    "usable_turns_minimum": 22,
+    "denominator": 24,
+    "blocking_failures_allowed": 0,
+    "blocking_failures": "Invented facts/experiences, wrong person or negation, missed supplied fact on explicit recall, repeated topic loop, stop/no-follow-up violations, unsupported correction.",
+    "warm_complete_text_seconds_maximum": 2,
+    "human_quality": "Pending; assistant review remains separately attributed.",
+    "app_gate": "After usable candidate, prioritize opt-in Streamlit integration plus real SQLite/history/grammar, refresh and failure checks. Do not require stylistic perfection.",
+    "spoken_latency": "Separate unfinished target; text timing does not establish it."
+  }
+}

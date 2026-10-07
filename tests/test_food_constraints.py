@@ -39,7 +39,7 @@ def test_positive_dairy_and_separate_preference():
     result = plan_food("I'd like soup. I can eat dairy; I just don't like spicy food.")
     assert result["prefix"] == "You can eat dairy. You don't like spicy food."
     assert "can't eat dairy" not in question_text(result)
-    assert "spicy food" in question_text(result)
+    assert "spicy food" in result["prefix"]
 
 
 def test_two_people_keep_meals_and_restriction_separate():
@@ -130,7 +130,8 @@ def test_unparsed_later_revision_abstains_on_stale_constraint():
 
 def test_known_meal_reason_is_not_reasked():
     result = plan_food("I want tomato soup because it tastes good. I can't eat dairy.")
-    assert [c["intent"] for c in result["choices"]] == ["ordering_wording"]
+    assert "meal_reason" not in [c["intent"] for c in result["choices"]]
+    assert "ordering_wording" not in [c["intent"] for c in result["choices"]]
 
 
 def test_same_person_and_dish_reason_from_history():

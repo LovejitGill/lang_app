@@ -1,0 +1,27 @@
+{
+  "source_run_sha256": "95317501b43bc2294e5fcbbbf2c8cbecf68bcd95a3a715bc2ab87f52c91a6c79",
+  "note": "Derived from all saved raw rows after summary-only KeyError(status). No inference repeated and original evidence unchanged.",
+  "summary": {
+    "denominator": 24,
+    "completed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "timing": {
+      "attempts": 24,
+      "failures": 0,
+      "median_seconds": 0.07113446650328115,
+      "p95_seconds_nearest_rank": 1.4060548300039954,
+      "maximum_seconds": 1.4069214920018567
+    },
+    "within_two_seconds": 24,
+    "paths": {
+      "deterministic": 13,
+      "model_selected": 3,
+      "model_generated": 5,
+      "local_fallback": 3
+    },
+    "checker_unavailable": 0,
+    "human_useful": null,
+    "human_review_status": "pending"
+  }
+}

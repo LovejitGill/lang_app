@@ -1,0 +1,53 @@
+{
+  "tests": {
+    "passed": 731,
+    "seconds": 22.84
+  },
+  "lint": "Changed Python files pass targeted ruff check.",
+  "whitespace": "git diff --check passed.",
+  "multi_turn": {
+    "denominator": 24,
+    "completed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "timing": {
+      "attempts": 24,
+      "failures": 0,
+      "median_seconds": 0.055542864502058364,
+      "p95_seconds_nearest_rank": 1.2795524039975135,
+      "maximum_seconds": 1.4082064760004869
+    },
+    "within_two_seconds": 24,
+    "paths": {
+      "deterministic": 17,
+      "model_selected": 6,
+      "model_generated": 0,
+      "local_fallback": 1
+    },
+    "checker_unavailable": 0,
+    "human_useful": null,
+    "human_review_status": "pending"
+  },
+  "streamlit": {
+    "completed": 8,
+    "refresh_verified": true,
+    "reply_within_two_seconds": 8,
+    "render_within_two_seconds": 8,
+    "grammar_unavailable": 0
+  },
+  "app_reply_seconds": {
+    "minimum": 0.058019917996716686,
+    "maximum": 1.430975932002184
+  },
+  "app_render_seconds": {
+    "minimum": 0.13064641298842616,
+    "maximum": 1.5037931880069664
+  },
+  "grammar_seconds": {
+    "minimum": 8.388240831001895,
+    "maximum": 25.390977792994818
+  },
+  "browser_microphone_and_spoken_latency_verified": false,
+  "owner_review_status": "pending",
+  "approved_grammar_protection": "Integration manifest permits explicitly hashed app.py/feedback_store.py only; approved grammar source, evidence and grammar_feedback AST remain pinned."
+}

@@ -1,0 +1,152 @@
+"""Opt-in Streamlit smoke run with real local models and an isolated temporary DB."""
+
+import argparse
+import json
+import os
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from time import perf_counter, sleep
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+import streamlit  # noqa: E402
+from streamlit.testing.v1 import AppTest  # noqa: E402
+
+import db  # noqa: E402
+import feedback_store  # noqa: E402
+from benchmark import digest, save  # noqa: E402
+from conversation_sessions_eval import DIRECTORY, load_protocol  # noqa: E402
+
+SESSIONS = [
+    (
+        "introductions",
+        [
+            "My name is Imani and I enjoy weaving.",
+            "I enjoy weaving because it helps me relax.",
+            "What is my name and what hobby did I mention? No follow-up.",
+        ],
+    ),
+    (
+        "ordering food",
+        [
+            "I can't eat nuts and I would like tomato soup.",
+            "I would like tomato soup because it is warm.",
+            "What do you mean?",
+        ],
+    ),
+    (
+        "daily activities",
+        ["She go to school by bus.", "Thanks, that's enough practice for today."],
+    ),
+]
+
+
+def run(output):
+    if output.exists():
+        raise ValueError("Preserve earlier attempts; choose a new output file.")
+    load_protocol(DIRECTORY)
+    report = {
+        "created_utc": datetime.now(UTC).isoformat(),
+        "protocol_sha256": digest(DIRECTORY / "protocol.json"),
+        "scope": "Real Streamlit Python AppTest, local Ollama and grammar, temporary SQLite; no browser rendering, microphone, STT or TTS.",
+        "sessions": SESSIONS,
+        "rows": [],
+    }
+    save(output, report, exclusive=True)
+    streamlit.cache_resource.clear()
+    with TemporaryDirectory(prefix="speakwell-planned-ui-") as temporary:
+        path = Path(temporary) / "demo.sqlite"
+        os.environ["SPEAKWELL_DB_PATH"] = str(path)
+        for number, (scenario, messages) in enumerate(SESSIONS, 1):
+            at = AppTest.from_file(ROOT / "app.py", default_timeout=15).run()
+            at.selectbox[1].select(scenario).run()
+            at.checkbox(key="separate_grammar").check().run()
+            at.checkbox(key="planned_conversation").check().run()
+            at.button(key="start").click().run()
+            assert not at.exception
+            session = at.session_state.conversation["session_id"]
+            for index, text in enumerate(messages, 1):
+                row = {
+                    "id": f"UI{number}-T{index}",
+                    "text": text,
+                    "attempt_state": "started",
+                }
+                report["rows"].append(row)
+                save(output, report)
+                began = perf_counter()
+                try:
+                    at.text_area(key="draft").input(text)
+                    at.button(key="send").click().run()
+                    row["submit_to_render_seconds"] = perf_counter() - began
+                    assert not at.exception and not at.error
+                    turn = at.session_state.turns[-1]
+                    assert turn["learner_text"] == text and turn["saved"]
+                    row.update(
+                        reply=turn["tutor_reply"],
+                        conversation=turn["conversation"],
+                        reply_seconds=turn["grammar"]["reply_seconds"],
+                    )
+                    save(output, report)
+                    # Poll status only. Never resubmit a model request to obtain a preferred answer.
+                    deadline = perf_counter() + 50
+                    while at.button(key="send").disabled and perf_counter() < deadline:
+                        sleep(0.25)
+                        at.run()
+                    assert not at.button(key="send").disabled, (
+                        "Grammar did not complete within 50 seconds."
+                    )
+                    turn = at.session_state.turns[-1]
+                    row["feedback"] = turn["grammar"]
+                    before = db.load_session(session, path)[1]
+                    fresh = AppTest.from_file(ROOT / "app.py", default_timeout=15)
+                    fresh.query_params["session"] = session
+                    fresh.run()
+                    assert not fresh.exception
+                    assert fresh.checkbox(key="planned_conversation").value
+                    assert fresh.session_state.turns[-1]["tutor_reply"] == row["reply"]
+                    assert db.load_session(session, path)[1] == before
+                    assert (
+                        feedback_store.load(session, path)[turn["id"]]["conversation"]
+                        == row["conversation"]
+                    )
+                    at = fresh
+                    row.update(attempt_state="complete", refresh_verified=True)
+                except Exception as exc:  # noqa: BLE001
+                    row.update(
+                        attempt_state="failed",
+                        error_type=type(exc).__name__,
+                        error=str(exc),
+                    )
+                    save(output, report)
+                    raise
+                save(output, report)
+                print(
+                    f"{row['id']} reply={row['reply_seconds']:.3f}s rendered={row['submit_to_render_seconds']:.3f}s grammar={row['feedback']['state']}: {row['reply']}",
+                    flush=True,
+                )
+        report["summary"] = {
+            "completed": len(report["rows"]),
+            "refresh_verified": all(r["refresh_verified"] for r in report["rows"]),
+            "reply_within_two_seconds": sum(
+                r["reply_seconds"] <= 2 for r in report["rows"]
+            ),
+            "render_within_two_seconds": sum(
+                r["submit_to_render_seconds"] <= 2 for r in report["rows"]
+            ),
+            "grammar_unavailable": sum(
+                r["feedback"]["state"] == "unavailable" for r in report["rows"]
+            ),
+        }
+        save(output, report)
+    streamlit.cache_resource.clear()
+    return report
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    run(args.output)

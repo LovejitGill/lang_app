@@ -8,11 +8,17 @@ SpeakWell is a proposed voice-based language-learning application designed to he
 
 **Project status: Recorded-turn voice input implemented (Milestones 0–5).** Record a short English message, transcribe it locally, review/edit the text, then send it through the existing tutor and SQLite history. Typed input remains available. See [recorded voice setup and verification](docs/recorded_voice.md); live turn detection, spoken replies, and pronunciation assessment remain planned. Model feedback is still inaccurate in observed cases.
 
+**Optional conversation integration (planned_v4):** Enable **Separate grammar
+feedback (experimental)** and **Context-aware conversation (experimental)** in the
+sidebar to try the measured conversation candidate. It uses actual recent replies
+to guide follow-ups and keeps supported quick corrections before the reply, with
+the reviewed full grammar check afterward. See [setup, verification and limitations](docs/conversation_integration.md).
+
 **Milestone 6:** Testing and evaluation completed with documented failures in
 feedback quality, recall, and response time. See [evaluation evidence](docs/evaluation.md).
 
-**Milestone 7:** Freeze preparation is verified; the user will create the commit
-and `mvp-v1` tag. See [checkpoint and recovery instructions](docs/mvp_freeze.md).
+**Milestone 7:** Local `mvp-v1` and `mvp-v2` checkpoints exist. See the historical
+[baseline recovery instructions](docs/mvp_freeze.md) and [current checkpoint guidance](docs/github_checkpoints.md).
 A checkpoint will preserve known limitations, not mark feedback quality or the two-second target as passed.
 
 ## Why SpeakWell?
@@ -111,7 +117,7 @@ See [Streamlit audio input](https://docs.streamlit.io/develop/api-reference/widg
 
 ## Running the App
 
-Follow [Environment Setup](docs/environment_setup.md), then the [Streamlit launch and verification guide](docs/streamlit_ui.md). The working UI is text-only; the voice workflow elsewhere in this README remains the planned product vision. The [terminal LLM component](docs/llm_call.md) remains available independently.
+Follow [Environment Setup](docs/environment_setup.md), then the [Streamlit launch and verification guide](docs/streamlit_ui.md). The working UI accepts typed text or completed recordings with editable transcripts; continuous voice and spoken replies remain planned. The [terminal LLM component](docs/llm_call.md) remains available independently.
 
 For structured language feedback, add `--tutor` and a learner sentence. See
 [Tutoring Prompt Design](docs/tutoring_prompt.md) for the full command guide and
@@ -129,7 +135,7 @@ The application will run locally instead of in Google Colab. The proposed local 
 
 The target computer has a 2.4 GHz 8-core Intel Core i9, Intel UHD Graphics 630, and 32 GB DDR4 RAM. Budget: no paid APIs, hosting subscriptions, or paid compute for the initial project.
 
-Ollama supports Intel Macs through CPU inference; the Intel integrated GPU will not accelerate this Ollama setup. Its current macOS requirement is Sonoma 14 or newer, which must be checked before installation. The available RAM gives room for the proposed small models, but CPU latency is the main feasibility question. No speed measurements have been made.
+Ollama supports Intel Macs through CPU inference; the Intel integrated GPU will not accelerate this Ollama setup. Verify the installed runtime's macOS requirements before installation. CPU latency remains a constraint; measured text, app and grammar timings are recorded in the evaluation sections and guides below.
 
 - Default LLM: quantized `qwen3:1.7b`, with thinking disabled, a 4,096-token context, and brief spoken replies. Ollama lists a download of approximately 1.4 GB, excluding runtime memory and other models.
 - Optional quality comparison: `qwen3:4b-instruct` (approximately 2.5 GB download). Only choose it over 1.7B if measured correction quality improves enough to justify its response time.
@@ -386,3 +392,25 @@ Next: review tone, then test fresh multi-turn dialogue as planned_v4. **GitHub
 checkpoint: yes for this tested experimental snapshot after reviewing accumulated
 changes**, following the [user-managed checkpoint steps](docs/github_checkpoints.md).
 This is not a stable app v3/v4 release. No commit, tag or push was performed.
+
+### Multi-turn conversations integrated as an optional app mode — planned_v4
+
+The [integration guide](docs/conversation_integration.md) explains the bounded
+continuity improvements, actual-reply history, model identity check and separate
+storage for quick corrections. The earlier sections describe historical experiments;
+this candidate is now available in Streamlit as an optional mode.
+
+731 automated tests passed. All 24 final development replies completed within two
+seconds (maximum 1.408 s). In a separate live Streamlit AppTest run with local models
+and temporary SQLite, eight of eight replies rendered in 0.131–1.504 s and survived
+refresh. This measures the Python UI flow, not browser painting, microphone input
+or spoken response latency. Full grammar processing took 8.388–25.391 s, and Send
+still waits for it. The reviewed full grammar logic and evidence are unchanged.
+
+[Actual before/after replies](evaluation/conversation_quality/planned_v4/review.md)
+retain the two weak final responses and pending owner judgments. Assistant review
+considers 22/24 provisionally usable for an optional app trial; this is not a human
+quality score or broad accuracy claim. The next priority is actual in-app review
+and concrete conversation/integration failures, before another prompt experiment
+or UI redesign. Local `mvp-v2` now exists; `mvp-v3` is a possible next checkpoint
+after your verification, distinct from the experiment name `planned_v4`.

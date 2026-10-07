@@ -100,7 +100,16 @@ def test_dataset_identity_checked_before_inference(tmp_path):
 
 def test_every_attempt_checkpointed_and_order_alternates(tmp_path, monkeypatch):
     path = tmp_path / "results.json"
-    protocol, data = evaluation.verify()
+    # The old experiment intentionally pins pre-integration UI/storage sources.
+    # Give this runner-behavior test its own current-source protocol fixture.
+    protocol = json.loads((evaluation.DIRECTORY / "protocol.json").read_text())
+    data = json.loads((evaluation.DIRECTORY / "cases.json").read_text())
+    protocol["protected_sha256"] = {
+        name: evaluation.digest(evaluation.ROOT / name)
+        for name in protocol["protected_sha256"]
+    }
+    (tmp_path / "protocol.json").write_text(json.dumps(protocol))
+    shutil.copy(evaluation.DIRECTORY / "cases.json", tmp_path / "cases.json")
     response = MagicMock()
     response.json.return_value = {
         "models": [{"name": protocol["model"], "digest": protocol["model_digest"]}]
@@ -128,7 +137,7 @@ def test_every_attempt_checkpointed_and_order_alternates(tmp_path, monkeypatch):
         }
 
     monkeypatch.setattr(evaluation, "run_attempt", attempt)
-    result = evaluation.run(path)
+    result = evaluation.run(path, directory=tmp_path)
     assert len(seen) == 32
     for i, case in enumerate(data["cases"]):
         variants = (
@@ -139,6 +148,11 @@ def test_every_attempt_checkpointed_and_order_alternates(tmp_path, monkeypatch):
         assert seen[2 * i : 2 * i + 2] == [(case["id"], v) for v in variants]
     assert all(r["attempt_state"] == "complete" for r in result["rows"])
     assert result["summary"]["baseline-v1"]["valid"] == 16
+
+
+def test_integration_override_cannot_replace_approved_grammar_identity():
+    with pytest.raises(ValueError, match="Only explicit UI/storage"):
+        evaluation.verify(protected_overrides={"grammar_gap_detector.py": "arbitrary"})
 
 
 def test_structured_candidate_combines_fields_in_one_model_call(monkeypatch, tmp_path):

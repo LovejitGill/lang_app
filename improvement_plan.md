@@ -1658,3 +1658,83 @@ was performed, and GitHub remote publication was not verified.
    experiment after this checkpoint/review. This is **not** a stable app v3/v4
    release and does not change package 0.1.0. Preserve the existing local mvp-v1 tag.
    An optional distinct Git label such as conversation-planned-v3 is only a proposal.
+
+## Milestone 2 — Smallest Working Component: Call the LLM
+
+### 2026-10-06 — planned_v4: multi-turn continuity and optional Streamlit integration
+
+**Owner priority:** Complete the bounded conversation experiments with the goal of
+integrating a usable candidate into Streamlit. Once usable, integration takes priority
+over another model/prompt refinement cycle or UI redesign. This direction is recorded
+in local AGENTS.md; the original spoken two-second target remains active and unverified.
+
+**Implemented:** `conversation_sessions_eval.py` evaluates six four-turn conversations
+using actual tutor replies as subsequent history. It keeps only conversation text in
+history, isolates sessions, excludes expectations from inference, and records failed
+and skipped turns rather than inventing missing replies. The initial 24 replies were
+preserved when summary processing raised `KeyError` for a missing status field; the
+summary was repaired from saved rows without repeating inference. A regression test
+now checks completion/failure denominators and retains failure latency.
+
+`conversation_continuity.py` develops already-supplied reasons and durations, preserves
+future/incomplete meals and cancelled interviews, and avoids assigning an ambiguous
+relative's study subject. Food questions now concern food rather than requiring ordering
+dialogue. Supported clarification requests simplify the question actually asked.
+The candidate remains a bounded combination of authored replies, model-selected wording,
+validated generation and recorded fallbacks, not unrestricted semantic understanding.
+
+`planned_conversation.py` and the new **Context-aware conversation (experimental)**
+checkbox integrate the candidate into the separate-grammar mode. The adapter verifies
+the prepared local model, reads completed SQLite dialogue, and retains quick corrections
+separately from conversational history. Additive `conversation_details` storage keeps
+the engine, response path and correction provenance with the exact turn. Refresh restores
+the mode and correction without inference. A model/service failure preserves the draft;
+an unsaved reply does not start an unattached grammar job. The combined/default mode and
+the reviewed full grammar function, sources, model identity and evidence are unchanged.
+
+**Verification:** 731 tests passed in 22.84 s, covering real temporary SQLite, Streamlit
+AppTest, model failures, correction-first display, refresh and historical grammar decisions.
+Targeted lint and whitespace checks passed. Final multi-turn revision_2 completed 24/24
+text responses within two seconds: maximum 1.408 s, p95 1.280 s. Paths were 17 authored
+deterministic, six model-selected authored and one authored fallback; none was newly
+generated prose. Readiness and the full app/grammar/audio workload are excluded here.
+
+A separate live Streamlit AppTest run used real local services and eight synthetic turns
+in a temporary database. All eight replies rendered in 0.131–1.504 s, all survived refresh,
+and the fast `go → goes` correction appeared before its reply. Full grammar returned seven
+no-proposal results and one supported correction, with no unavailable outcomes. It took
+8.388–25.391 s to process; the next Send/Transcribe remained disabled. Three conversation
+calls used recorded fallbacks under the full workload. These are Python UI measurements,
+not browser paint times, actual microphone/STT performance or spoken conversation latency.
+
+**Observed limitations:** Assistant review flags S02-T04's abrupt acknowledgment after
+exhausting authored questions and S06-T02's generic fallback on timeout. The bus-preference
+question may also invite repeating the known cost reason. The assistant considers 22/24
+final development turns provisionally usable for an optional trial; every owner quality
+judgment remains pending. This is not benchmark approval or a broad accuracy estimate.
+New syntax, long conversations and natural learner replies outside the inspected cases
+remain unvalidated. The full grammar wait prevents phone-like turn-taking, despite fast
+reply display. UI integration does not resolve the earlier inaccurate-feedback limitation.
+
+**Evidence:** `evaluation/conversation_quality/planned_v4/` retains initial, revision_1,
+revision_2 and app integration protocols, source snapshots and raw outputs. Historical
+protocols are unchanged; current integration explicitly pins new app/storage identities
+while continuing to verify approved grammar identities. The smoke runner's later lint
+cleanup is pinned separately in the app protocol. `review.md` shows every initial/final
+reply with provisional assistant notes and pending owner fields. The learning guide is
+`docs/conversation_integration.md`; no model training, new dependency or paid service
+was introduced. No staging, commit, tag, push or remote verification was performed.
+
+**Next improvement — prioritize the integrated product:**
+
+1. Try the optional mode in Streamlit and review actual conversational usefulness,
+   including the two flagged outputs. Keep this as planned_v4; do not start planned_v5
+   or a UI redesign simply to defer in-app validation.
+2. Fix concrete in-app continuation/fallback failures before further stylistic tuning.
+   Preserve the full grammar behavior and track reply display separately from the time
+   until another message can be sent. Any scheduling change needs new contention and
+   turn-association checks before claiming continuous conversation.
+3. **GitHub checkpoint:** useful after your in-app verification and file review.
+   Local tags mvp-v1 and mvp-v2 were verified; mvp-v3 is the next optional sequential
+   checkpoint. planned_v4 is an experiment, not an app v4 release. The owner handles
+   Git actions; remote publication is not established by the local tag inspection.

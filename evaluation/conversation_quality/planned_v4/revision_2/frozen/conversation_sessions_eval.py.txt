@@ -1,0 +1,190 @@
+"""Replay short conversations with actual prior replies, preserving every attempt."""
+
+import argparse
+import asyncio
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+from time import perf_counter
+
+import httpx
+
+import bounded_conversation as base
+import dialogue_planner as flow
+from benchmark import ROOT, digest, save, timing
+from conversation_quality_eval import verify as verify_grammar
+
+DIRECTORY = ROOT / "evaluation/conversation_quality/planned_v4/revision_2"
+
+
+def load_protocol(directory):
+    protocol = json.loads((directory / "protocol.json").read_text())
+    if digest(directory / "sessions.json") != protocol["dataset_sha256"]:
+        raise ValueError("Prepared conversations changed.")
+    for name, expected in protocol["source_sha256"].items():
+        if digest(ROOT / name) != expected:
+            raise ValueError(f"Prepared source changed: {name}")
+    verify_grammar(protected_overrides=protocol.get("integration_overrides"))
+    sessions = json.loads((directory / "sessions.json").read_text())["sessions"]
+    identifiers = [turn["id"] for s in sessions for turn in s["turns"]]
+    if not identifiers or len(set(identifiers)) != len(identifiers):
+        raise ValueError("Conversation turns must have unique IDs.")
+    return protocol, sessions
+
+
+async def collect(sessions, responder, checkpoint):
+    """Only learner text, actual replies and settings reach the candidate."""
+    rows = []
+    for session in sessions:
+        history = []
+        failed = False
+        for turn in session["turns"]:
+            row = {
+                "case_id": turn["id"],
+                "session_id": session["id"],
+                "learner_text": turn["text"],
+                "history": [dict(r) for r in history[-4:]],
+                "attempt_state": "skipped" if failed else "started",
+            }
+            rows.append(row)
+            checkpoint(rows)
+            if failed:
+                row["reason"] = "Earlier turn failed; do not invent its reply."
+                checkpoint(rows)
+                continue
+            began = perf_counter()
+            try:
+                result = await responder(
+                    turn["text"],
+                    history=[dict(r) for r in row["history"]],
+                    level=session["level"],
+                    scenario=session["scenario"],
+                )
+                if (
+                    not isinstance(result.get("reply"), str)
+                    or not result["reply"].strip()
+                ):
+                    raise ValueError("Candidate returned no conversational reply.")
+                row.update(result, attempt_state="complete", status="valid")
+                # Grammar display text is not conversational history in the app.
+                history.append(
+                    {"learner_text": turn["text"], "tutor_reply": result["reply"]}
+                )
+            except Exception as exc:  # noqa: BLE001
+                # Preserve failed attempts; never retry for a better reply.
+                row.update(
+                    attempt_state="failed",
+                    status="unavailable",
+                    error_type=type(exc).__name__,
+                )
+                failed = True
+            row["seconds"] = perf_counter() - began
+            checkpoint(rows)
+            print(
+                f"{turn['id']} {row['attempt_state']} {row['seconds']:.3f}s: {row.get('display_text', row.get('reply', ''))}",
+                flush=True,
+            )
+    return rows
+
+
+def summarize(rows, denominator):
+    completed = [r for r in rows if r["attempt_state"] == "complete"]
+    measured = [
+        {**r, "status": "valid" if r["attempt_state"] == "complete" else "unavailable"}
+        for r in rows
+        if "seconds" in r
+    ]
+    return {
+        "denominator": denominator,
+        "completed": len(completed),
+        "failed": sum(r["attempt_state"] == "failed" for r in rows),
+        "skipped": sum(r["attempt_state"] == "skipped" for r in rows),
+        "timing": timing(measured),
+        "within_two_seconds": sum(r["seconds"] <= 2 for r in completed),
+        "paths": {
+            p: sum(r["path"] == p for r in completed)
+            for p in (
+                "deterministic",
+                "model_selected",
+                "model_generated",
+                "local_fallback",
+            )
+        },
+        "checker_unavailable": sum(
+            r["correction"]["state"] == "unavailable" for r in completed
+        ),
+        "human_useful": None,
+        "human_review_status": "pending",
+    }
+
+
+async def run(output, *, directory=DIRECTORY):
+    if output.exists():
+        raise ValueError("Choose an unused output path; preserve earlier attempts.")
+    protocol, sessions = load_protocol(directory)
+    report = {
+        "created_utc": datetime.now(UTC).isoformat(),
+        "protocol_sha256": digest(directory / "protocol.json"),
+        "dataset_sha256": protocol["dataset_sha256"],
+        "source_sha256": protocol["source_sha256"],
+        "condition": "prewarmed; actual earlier replies; no full grammar contention",
+        "timing_scope": "Confirmed text through complete response with limited fast checker; excludes readiness, SQLite, UI, full grammar, STT and TTS.",
+        "rows": [],
+    }
+    save(output, report, exclusive=True)
+    began = perf_counter()
+    async with httpx.AsyncClient(trust_env=False, timeout=30) as client:
+        response = await client.get(base.HOST + "/api/tags")
+        response.raise_for_status()
+        model = next(
+            (m for m in response.json()["models"] if m["name"] == base.MODEL), None
+        )
+        if not model or model["digest"] != protocol["model_digest"]:
+            raise ValueError("Expected the prepared local model digest.")
+        report["model"] = model
+        response = await client.post(
+            base.HOST + "/api/chat",
+            json={
+                "model": base.MODEL,
+                "messages": [],
+                "stream": False,
+                "keep_alive": "10m",
+                "options": flow.OPTIONS,
+            },
+        )
+        response.raise_for_status()
+        report["readiness_raw"] = response.json()
+        # Warm generation and selection separately, using the same request settings.
+        report["generation_readiness"] = await flow._reply(
+            flow.prepare("I prepared a meal."), [], 15, client
+        )
+        report["selector_readiness"] = await flow._reply(
+            flow.prepare("I packed my clothes."), [], 15, client
+        )
+        check = await client.post(
+            "http://127.0.0.1:8081/v2/check",
+            data={"language": "en-US", "text": "We practice English."},
+        )
+        check.raise_for_status()
+        report["checker_readiness"] = check.json()["software"]
+        if report["selector_readiness"]["path"] != "model_selected":
+            raise ValueError("Selector warm-up did not complete.")
+    report["readiness_seconds"] = perf_counter() - began
+    save(output, report)
+
+    def checkpoint(rows):
+        report["rows"] = rows
+        save(output, report)
+
+    rows = await collect(sessions, flow.respond, checkpoint)
+    report["summary"] = summarize(rows, sum(len(s["turns"]) for s in sessions))
+    save(output, report)
+    return report
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--directory", type=Path, default=DIRECTORY)
+    args = parser.parse_args()
+    asyncio.run(run(args.output, directory=args.directory))

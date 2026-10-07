@@ -1,0 +1,173 @@
+{
+  "design": "Assistant-authored, inspected usability scenarios; not a held-out or owner-approved benchmark. Later turns use actual replies, not scripted tutor histories. Some control requests intentionally repeat prior tests.",
+  "sessions": [
+    {
+      "id": "S01",
+      "purpose": "Introduction, clarification, elaboration and recall",
+      "level": "beginner",
+      "scenario": "introductions",
+      "turns": [
+        {
+          "id": "S01-T01",
+          "text": "My name is Nisha and I enjoy pottery.",
+          "expected": "Ask a relevant question about pottery; do not invent details."
+        },
+        {
+          "id": "S01-T02",
+          "text": "What do you mean?",
+          "expected": "Explain the actual previous question in easier English."
+        },
+        {
+          "id": "S01-T03",
+          "text": "I enjoy pottery because I can make useful things.",
+          "expected": "Acknowledge the reason and develop the topic without asking that reason again."
+        },
+        {
+          "id": "S01-T04",
+          "text": "What is my name and what hobby did I mention? No follow-up.",
+          "expected": "Recall Nisha and pottery from learner evidence; honor no follow-up."
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "purpose": "Food restriction, clarification, reason and revised preference",
+      "level": "beginner",
+      "scenario": "ordering food",
+      "turns": [
+        {
+          "id": "S02-T01",
+          "text": "I can't eat dairy and I would like lentil soup.",
+          "expected": "Keep the dairy restriction; ask a natural question about this meal without inferring ingredients."
+        },
+        {
+          "id": "S02-T02",
+          "text": "What do you mean?",
+          "expected": "Clarify the actual prior question without changing the subject."
+        },
+        {
+          "id": "S02-T03",
+          "text": "I would like lentil soup because it is warm.",
+          "expected": "Keep the restriction in context, do not ask why lentil soup was chosen again."
+        },
+        {
+          "id": "S02-T04",
+          "text": "Actually, I can eat dairy now, but I don't like dairy. I would like lentil soup.",
+          "expected": "Preserve permission versus dislike; do not claim inability or safe ingredients."
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "purpose": "Commute, supplied duration, clarification and no-question control",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "turns": [
+        {
+          "id": "S03-T01",
+          "text": "I take the bus to work because it costs less.",
+          "expected": "Develop the bus commute without asking the already-stated cost reason."
+        },
+        {
+          "id": "S03-T02",
+          "text": "The journey takes twenty minutes.",
+          "expected": "Use the duration as an answer about the bus journey; do not reask duration."
+        },
+        {
+          "id": "S03-T03",
+          "text": "What do you mean?",
+          "expected": "Explain the actual previous question simply."
+        },
+        {
+          "id": "S03-T04",
+          "text": "Please don't ask another question.",
+          "expected": "Acknowledge the request without a question or a command to elaborate."
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "purpose": "Relative, upcoming interview, subject and cancellation",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "turns": [
+        {
+          "id": "S04-T01",
+          "text": "My daughter has an interview at a college tomorrow.",
+          "expected": "Keep daughter and future timing; do not imply admission."
+        },
+        {
+          "id": "S04-T02",
+          "text": "My daughter is relieved because she caught her bus.",
+          "expected": "Keep the daughter/interview context without implying arrival or admission."
+        },
+        {
+          "id": "S04-T03",
+          "text": "She wants to study chemistry.",
+          "expected": "Connect her stated subject to the same daughter without reasking it."
+        },
+        {
+          "id": "S04-T04",
+          "text": "The interview was cancelled.",
+          "expected": "Acknowledge cancellation; do not imply she attended or remains scheduled."
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "purpose": "Meal preparation, supplied reason, future event and stop",
+      "level": "beginner",
+      "scenario": "daily activities",
+      "turns": [
+        {
+          "id": "S05-T01",
+          "text": "I will cook noodles tomorrow.",
+          "expected": "Ask about a future meal, not its completed taste."
+        },
+        {
+          "id": "S05-T02",
+          "text": "I chose noodles because they are quick to make.",
+          "expected": "Develop preparation or preference without repeating the given reason."
+        },
+        {
+          "id": "S05-T03",
+          "text": "I have not cooked them yet.",
+          "expected": "Honor the uncompleted meal and resolve them from context."
+        },
+        {
+          "id": "S05-T04",
+          "text": "Thanks, that's enough practice for today.",
+          "expected": "End without another question."
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "purpose": "Unknown fact, provided fact, recall and direct teaching",
+      "level": "beginner",
+      "scenario": "introductions",
+      "turns": [
+        {
+          "id": "S06-T01",
+          "text": "Where does my cousin work?",
+          "expected": "Admit the workplace is unknown; mention cousin or work."
+        },
+        {
+          "id": "S06-T02",
+          "text": "My cousin works at a bakery.",
+          "expected": "Use the supplied workplace without inventing the cousin's role."
+        },
+        {
+          "id": "S06-T03",
+          "text": "Where does my cousin work? No follow-up.",
+          "expected": "Answer bakery from learner history without a follow-up."
+        },
+        {
+          "id": "S06-T04",
+          "text": "Could you compare learn and teach?",
+          "expected": "Explain both words correctly with an accessible example."
+        }
+      ]
+    }
+  ]
+}
